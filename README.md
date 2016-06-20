@@ -1,2 +1,2 @@
-# prachand.github.io
+# WebEdits.github.io
 Manage Personal Page
