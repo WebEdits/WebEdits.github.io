@@ -14,6 +14,9 @@ body {
   position: relative;
   width: auto;
   min-height: 100%;
+  margin: 0 auto -60 px;
+  height: auto;
+  padding: 0 0 60 px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -66,7 +69,7 @@ p {
   color: white;
 }
 .text-faded {
-  color: rgba(255, 255, 255, 0.7);
+  color: white; /*rgba(255, 255, 255, 0.7);*/
 }
 section {
   padding: 100px 0;
@@ -155,7 +158,7 @@ aside {
   .navbar-default.affix .nav > li > a:focus:hover {
     color: #f05f40;
   }
-}
+/*}*/
 header {
   position: relative;
   width: 100%;
@@ -213,7 +216,7 @@ header .header-content .header-content-inner p {
     margin-left: auto;
     margin-right: auto;
   }
-}
+/*}*/
 .section-heading {
   margin-top: 0;
 }
@@ -225,7 +228,7 @@ header .header-content .header-content-inner p {
   .service-box {
     margin: 20px auto 0;
   }
-}
+/*}*/
 .service-box p {
   margin-bottom: 0;
 }
@@ -282,7 +285,7 @@ header .header-content .header-content-inner p {
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 22px;
   }
-}
+/*}*/
 .call-to-action h2 {
   margin: 0 auto 20px;
 }
@@ -458,7 +461,7 @@ body {
   .navbar-custom .nav li a:focus {
     color: rgba(255, 255, 255, 0.8);
   }
-}
+/*}*/
 @media only screen and (min-width: 1170px) {
   .navbar-custom {
     -webkit-transition: background-color 0.3s;
@@ -505,8 +508,9 @@ body {
     -o-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
-}
+/*}*/
 footer {
+  height: 60 px;  
   padding: 50px 0 65px;
 }
 footer .list-inline {
