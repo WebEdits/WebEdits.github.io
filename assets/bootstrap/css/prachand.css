@@ -14,9 +14,9 @@ body {
   position: relative;
   width: auto;
   min-height: 100%;
-  margin: 0 auto -60 px;
+  /*margin: 0 auto -60px;
   height: auto;
-  padding: 0 0 60 px;
+  padding: 0 0 60px;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -510,7 +510,7 @@ body {
   }
 /*}*/
 footer {
-  height: 60 px;  
+  /*height: 60px;  */
   padding: 50px 0 65px;
 }
 footer .list-inline {
