@@ -24,7 +24,7 @@ body {
   background-position: center;
   background-image: url('../../../assets/images/ganga-oil3-2816x2112-97.jpg');
   text-align: center;
-  color: white;
+  /*color: white;*/
 }
 hr {
   border-color: white;/*#f05f40;*/
@@ -38,7 +38,7 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: transparent; /*#f05f40*/;
+  color: white; /*#f05f40;*/
 }
 a:hover,
 a:focus {
@@ -76,6 +76,7 @@ section {
 }
 
 footer {
+  /*position: relative;  */
   bottom: 0;
   /*height: 0;  
   padding: 50px 0 65px;*/
@@ -218,7 +219,6 @@ aside {
     -moz-transition: background-color 0.3s;
     transition: background-color 0.3s;
     /* Force Hardware Acceleration in WebKit */
-    /*
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -229,7 +229,6 @@ aside {
   }
   .navbar-custom.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
-  /*
     position: fixed;
     top: -61px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -254,13 +253,107 @@ aside {
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
-  /*
     -webkit-transform: translate3d(0, 100%, 0);
     -moz-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
     -o-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
+.btn-amazon:hover,
+.btn-amazon:focus,
+.btn-amazon.focus,
+.btn-amazon:active,
+.btn-amazon.active,
+.open > .dropdown-toggle.btn-amazon {
+  /*color: #ffffff;*/
+  background-color: #ff9900;/*#ee4b28;
+  border-color: #ed431f;*/
+}
+.btn-amazon:active,
+.btn-amazon.active,
+.open > .dropdown-toggle.btn-amazon {
+  background-image: none;
+}
+
+.btn-flipkart:hover,
+.btn-flipkart:focus,
+.btn-flipkart.focus,
+.btn-flipkart:active,
+.btn-flipkart.active,
+.open > .dropdown-toggle.btn-flipkart {
+  /*color: #ffffff;*/
+  background-color: yellow;/*#ee4b28;
+  border-color: #ed431f;*/
+}
+.btn-flipkart:active,
+.btn-flipkart.active,
+.open > .dropdown-toggle.btn-flipkart {
+  background-image: none;
+}
+
+.btn-infibeam:hover,
+.btn-infibeam:focus,
+.btn-infibeam.focus,
+.btn-infibeam:active,
+.btn-infibeam.active,
+.open > .dropdown-toggle.btn-infibeam {
+  color: #ffffff;
+  background-color: #ffa500;/*#ee4b28;
+  border-color: #ed431f;*/
+}
+.btn-infibeam:active,
+.btn-infibeam.active,
+.open > .dropdown-toggle.btn-infibeam {
+  background-image: none;
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook.focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open > .dropdown-toggle.btn-facebook {
+  color: #ffffff;
+  background-color: #3b5998;/*#ee4b28;
+  border-color: #ed431f;*/
+}
+.btn-facebook:active,
+.btn-facebook.active,
+.open > .dropdown-toggle.btn-facebook {
+  background-image: none;
+}
+
+.btn-google-plus:hover,
+.btn-google-plus:focus,
+.btn-google-plus.focus,
+.btn-google-plus:active,
+.btn-google-plus.active,
+.open > .dropdown-toggle.btn-google-plus {
+  color: #ffffff;
+  background-color: #dd4b39;/*#ee4b28;
+  border-color: #ed431f;*/
+}
+.btn-google-plus:active,
+.btn-google-plus.active,
+.open > .dropdown-toggle.btn-google-plus {
+  background-image: none;
+}
+
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter.focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.open > .dropdown-toggle.btn-twitter {
+  color: #ffffff;
+  background-color: #55acee;/*#ee4b28;
+  border-color: #ed431f;*/
+}
+.btn-twitter:active,
+.btn-twitter.active,
+.open > .dropdown-toggle.btn-twitter {
+  background-image: none;
+}
 /*
 header {
   position: relative;
