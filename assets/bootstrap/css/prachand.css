@@ -261,15 +261,53 @@ aside {
     -o-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
+
 .btn-amazon:hover,
 .btn-amazon:focus,
 .btn-amazon.focus,
 .btn-amazon:active,
 .btn-amazon.active,
 .open > .dropdown-toggle.btn-amazon {
-  /*color: #ffffff;*/
-  background-color: #ff9900;/*#ee4b28;
-  border-color: #ed431f;*/
+  background-color: #ff9900;
+}
+.btn-amazon:active,
+.btn-amazon.active,
+.open > .dropdown-toggle.btn-amazon {
+  background-image: none;
+}
+.btn-amazon.disabled,
+.btn-amazon[disabled],
+fieldset[disabled] .btn-amazon,
+.btn-amazon.disabled:hover,
+.btn-amazon[disabled]:hover,
+fieldset[disabled] .btn-amazon:hover,
+.btn-amazon.disabled:focus,
+.btn-amazon[disabled]:focus,
+fieldset[disabled] .btn-amazon:focus,
+.btn-amazon.disabled.focus,
+.btn-amazon[disabled].focus,
+fieldset[disabled] .btn-amazon.focus,
+.btn-amazon.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-amazon:active,
+.btn-amazon.disabled.active,
+.btn-amazon[disabled].active,
+fieldset[disabled] .btn-amazon.active {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.btn-amazon .badge {
+  color: #ffffff;
+  background-color: #222222;
+}
+
+.btn-amazon:hover,
+.btn-amazon:focus,
+.btn-amazon.focus,
+.btn-amazon:active,
+.btn-amazon.active,
+.open > .dropdown-toggle.btn-amazon {
+  background-color: #ff9900;
 }
 .btn-amazon:active,
 .btn-amazon.active,
@@ -283,9 +321,7 @@ aside {
 .btn-flipkart:active,
 .btn-flipkart.active,
 .open > .dropdown-toggle.btn-flipkart {
-  /*color: #ffffff;*/
-  background-color: yellow;/*#ee4b28;
-  border-color: #ed431f;*/
+  background-color: yellow;
 }
 .btn-flipkart:active,
 .btn-flipkart.active,
@@ -299,9 +335,7 @@ aside {
 .btn-infibeam:active,
 .btn-infibeam.active,
 .open > .dropdown-toggle.btn-infibeam {
-  color: #ffffff;
-  background-color: #ffa500;/*#ee4b28;
-  border-color: #ed431f;*/
+  background-color: #ffa500;
 }
 .btn-infibeam:active,
 .btn-infibeam.active,
@@ -315,9 +349,7 @@ aside {
 .btn-facebook:active,
 .btn-facebook.active,
 .open > .dropdown-toggle.btn-facebook {
-  color: #ffffff;
-  background-color: #3b5998;/*#ee4b28;
-  border-color: #ed431f;*/
+  background-color: #3b5998;
 }
 .btn-facebook:active,
 .btn-facebook.active,
@@ -331,9 +363,7 @@ aside {
 .btn-google-plus:active,
 .btn-google-plus.active,
 .open > .dropdown-toggle.btn-google-plus {
-  color: #ffffff;
-  background-color: #dd4b39;/*#ee4b28;
-  border-color: #ed431f;*/
+  background-color: #dd4b39;
 }
 .btn-google-plus:active,
 .btn-google-plus.active,
@@ -347,9 +377,7 @@ aside {
 .btn-twitter:active,
 .btn-twitter.active,
 .open > .dropdown-toggle.btn-twitter {
-  color: #ffffff;
-  background-color: #55acee;/*#ee4b28;
-  border-color: #ed431f;*/
+  background-color: #55acee;
 }
 .btn-twitter:active,
 .btn-twitter.active,
