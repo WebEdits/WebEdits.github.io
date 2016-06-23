@@ -40,10 +40,12 @@ a {
   transition: all 0.35s;
   color: white; /*#f05f40;*/
 }
+/*
 a:hover,
 a:focus {
   color: #eb3812;
 }
+*/
 h1,
 h2,
 h3,
