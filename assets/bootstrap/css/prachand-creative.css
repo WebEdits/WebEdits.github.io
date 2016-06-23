@@ -27,7 +27,7 @@ body {
   color: white;
 }
 hr {
-  border-color: white;/*#f05f40;*/
+  border-color: #f05f40;
   border-width: 3px;
   max-width: 200px;
 }
@@ -69,7 +69,7 @@ p {
   color: white;
 }
 .text-faded {
-  color: white; 
+  color: white; /*rgba(255, 255, 255, 0.7);*/
 }
 section {
   padding: 100px 0;
