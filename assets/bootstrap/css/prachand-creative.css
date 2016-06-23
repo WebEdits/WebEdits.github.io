@@ -14,9 +14,9 @@ body {
   position: relative;
   width: auto;
   min-height: 100%;
-  /*margin: 0 auto -60px;
+  margin: 0 auto -60 px;
   height: auto;
-  padding: 0 0 60px;*/
+  padding: 0 0 60 px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -27,7 +27,7 @@ body {
   color: white;
 }
 hr {
-  border-color: white;/*#f05f40;*/
+  border-color: #f05f40;
   border-width: 3px;
   max-width: 200px;
 }
@@ -69,7 +69,7 @@ p {
   color: white;
 }
 .text-faded {
-  color: white; 
+  color: white; /*rgba(255, 255, 255, 0.7);*/
 }
 section {
   padding: 100px 0;
@@ -510,7 +510,7 @@ body {
   }
 /*}*/
 footer {
-  /*height: 60px;  */
+  height: 60 px;  
   padding: 50px 0 65px;
 }
 footer .list-inline {
