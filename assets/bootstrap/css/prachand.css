@@ -79,7 +79,7 @@ p {
 
 section {
   position: relative;
-  padding: 60px 0;
+  padding: 100px 0;
 }
 
 footer {
@@ -97,14 +97,6 @@ footer .copyright {
   text-align: center;
   margin-bottom: 0;
 }
-.embed-responsive {
-    position: relative;
-    display: block;
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
 /*
 .wrap { width: 600px; height: 390px; padding: 0; overflow: hidden; }
 .frame { width: 800px; height: 520px; border: 1px solid black; }
@@ -118,6 +110,13 @@ footer .copyright {
   -webkit-transform-origin: 0 0;
 }                                  }
 
+.embed-responsive {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
 .embed-responsive .embed-responsive-item,
 .embed-responsive iframe,
 .embed-responsive embed,
