@@ -73,6 +73,10 @@ p {
 .text-faded {
   color: white; 
 }
+.portfolio-item {
+        margin-bottom: 25px;
+    }
+
 section {
   padding: 100px 0;
 }
