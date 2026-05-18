@@ -2,155 +2,374 @@
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="assets/images/prachand-praveer-207x244-82.jpg" type="image/x-icon">
-  <meta name="description" content="प्रचण्ड प्रवीर">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="प्रचण्ड प्रवीर — हिन्दी लेखक, सिनेमा सिद्धान्तकार, मुंगेर बिहार">
   <meta name="author" content="प्रचण्ड प्रवीर">
+  <!-- base-path tells main.js where to fetch data/ from -->
+  <meta name="base-path" content="">
   <title>प्रचण्ड प्रवीर</title>
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- Custom Fonts -->
-    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" type="text/css"-->
-    <link rel="stylesheet" href="assets/bootstrap/font-awesome/css/font-awesome.min.css" type="text/css">
-    <!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" type="text/css"-->
-    <!--link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" type="text/css"-->
-    <!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&amp;subset=cyrillic,latin,greek,vietnamese"-->
-
-    <!-- Plugin CSS -->
-    <!--link rel="stylesheet" href="assets/bootstrap/css/magnific-popup.css" type="text/css"-->
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/prachand.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/language.css" type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-  <!--link rel="stylesheet" href="assets/animate.css/animate.min.css"-->
+  <link rel="shortcut icon" href="assets/images/prachand-praveer-207x244-82.jpg" type="image/x-icon">
+  <!-- Fonts: EB Garamond (serif) + DM Sans (sans) — only external dependency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1">
-                    <span class="visually-hidden">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!--a class="navbar-brand" href="index.html">
-                    <img src="assets/images/prachand-praveer-207x244-82.jpg" alt="प्रचण्ड प्रवीर">
-                </a-->
-                <a class="navbar-brand" href="en-index.html">प्रचण्ड प्रवीर </a>
-                <a href="en-index.html"><span class="lang-lg lang-lbl" lang="en"></span></a>
-            </div>
+<!-- ═══════════════════════════════════════════════════════ NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a class="nav__brand" href="index.html">प्रचण्ड <span>प्रवीर</span></a>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a class="page-scroll" href="books.html">पुस्तकें </a></li>
-                    <li><a class="page-scroll" href="writings.html">लेखन</a></li>
-                    <li><a class="page-scroll" href="discussions.html">चर्चा</a></li>
-                    <li><a class="page-scroll" href="news.html">सन्दर्भ</a></li>
-                    <li><a class="page-scroll" href="gallery.html">दीर्घा</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+  <ul class="nav__links" aria-label="Desktop nav">
+    <li><a href="#books"         data-hi="पुस्तकें"  data-en="Books">पुस्तकें</a></li>
+    <li><a href="#testimonials"  data-hi="समीक्षाएँ" data-en="Reviews">समीक्षाएँ</a></li>
+    <li><a href="#press"         data-hi="सन्दर्भ"   data-en="Press">सन्दर्भ</a></li>
+    <li><a href="#talks"         data-hi="चर्चाएँ"   data-en="Talks">चर्चाएँ</a></li>
+    <li><a href="#gallery"       data-hi="दीर्घा"    data-en="Gallery">दीर्घा</a></li>
+    <li><a href="#contact"       data-hi="सम्पर्क"   data-en="Contact">सम्पर्क</a></li>
+  </ul>
+
+  <div class="nav__right">
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button data-lang="hi" class="active" aria-pressed="true">हि</button>
+      <button data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="nav__ham" id="nav-ham" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<nav id="nav-drawer" class="nav__drawer" aria-label="Mobile navigation">
+  <li><a href="#books"        data-hi="पुस्तकें"  data-en="Books">पुस्तकें</a></li>
+  <li><a href="#testimonials" data-hi="समीक्षाएँ" data-en="Reviews">समीक्षाएँ</a></li>
+  <li><a href="#press"        data-hi="सन्दर्भ"   data-en="Press">सन्दर्भ</a></li>
+  <li><a href="#talks"        data-hi="चर्चाएँ"   data-en="Talks">चर्चाएँ</a></li>
+  <li><a href="#gallery"      data-hi="दीर्घा"    data-en="Gallery">दीर्घा</a></li>
+  <li><a href="#contact"      data-hi="सम्पर्क"   data-en="Contact">सम्पर्क</a></li>
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button data-lang="hi" class="active">हि</button>
+    <button data-lang="en">EN</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════ NEWS BANNER -->
+<!-- Shown only when news.json has items; hidden by default -->
+<div id="news-banner-wrap" style="display:none">
+  <div class="news-banner" id="news-banner" role="alert"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ HERO -->
+<section class="hero" id="home" aria-label="परिचय">
+  <div class="hero__text">
+    <p class="label hero__eyebrow"
+       data-hi="मुंगेर, बिहार से — लेखक एवं सिनेमा सिद्धान्तकार"
+       data-en="Author & Cinema Theorist from Munger, Bihar">
+      मुंगेर, बिहार से — लेखक एवं सिनेमा सिद्धान्तकार
+    </p>
+
+    <h1 class="hero__name" data-hi="प्रचण्ड प्रवीर" data-en="Prachand Praveer">
+      प्रचण्ड प्रवीर
+    </h1>
+    <p class="hero__name-sub" data-hi="Prachand Praveer" data-en="प्रचण्ड प्रवीर">
+      Prachand Praveer
+    </p>
+
+    <p class="hero__bio"
+       data-hi="मुंगेर, बिहार में जन्मे एवं पले-बढ़े। आई.आई.टी. दिल्ली से रासायनिक अभियांत्रिकी में बी.टेक.। हिन्दी उपन्यासकार, कहानीकार और सिनेमा सिद्धान्तकार जो भारतीय शास्त्रीय सौन्दर्यशास्त्र को समकालीन साहित्य एवं विश्व सिनेमा से जोड़ते हैं। अब तक ग्यारह पुस्तकें प्रकाशित।"
+       data-en="Born and raised in Munger, Bihar. B.Tech in Chemical Engineering from IIT Delhi. Hindi novelist, story writer and cinema theorist who bridges classical Indian aesthetics with contemporary literature and world cinema. Eleven books published to date.">
+      मुंगेर, बिहार में जन्मे एवं पले-बढ़े। आई.आई.टी. दिल्ली से रासायनिक अभियांत्रिकी में बी.टेक.। हिन्दी उपन्यासकार, कहानीकार और सिनेमा सिद्धान्तकार जो भारतीय शास्त्रीय सौन्दर्यशास्त्र को समकालीन साहित्य एवं विश्व सिनेमा से जोड़ते हैं। अब तक ग्यारह पुस्तकें प्रकाशित।
+    </p>
+
+    <div class="hero__cta">
+      <a href="#books" class="btn btn-primary"
+         data-hi="पुस्तकें देखें" data-en="Explore Books">पुस्तकें देखें</a>
+      <a href="#contact" class="btn btn-outline"
+         data-hi="सम्पर्क करें" data-en="Get in Touch">सम्पर्क करें</a>
+    </div>
+  </div>
+
+  <div class="hero__image" aria-hidden="true">
+    <img src="assets/images/ganga-oil3-2816x2112-97.jpg"
+         alt="गंगा — मुंगेर, बिहार"
+         onerror="this.style.display='none'">
+    <div class="hero__image-overlay"></div>
+    <p class="hero__caption">गंगा · मुंगेर, बिहार</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════ BOOKS -->
+<section class="section section--books" id="books">
+  <div class="container">
+    <p class="label label--light fade-up"
+       data-hi="प्रकाशित कृतियाँ" data-en="Published Works">प्रकाशित कृतियाँ</p>
+    <h2 class="fade-up" style="color:var(--paper); margin-bottom:0.5rem"
+        data-hi="पुस्तकें" data-en="Books">पुस्तकें</h2>
+
+    <!-- Genre filter — populated by JS -->
+    <div class="books-filter" id="books-filter" role="group" aria-label="Filter by genre"></div>
+
+    <!-- Book cards — populated by JS from data/books.json -->
+    <div class="books-grid" id="books-grid" aria-live="polite">
+      <p style="color:#a08060; padding:2rem 0;">पुस्तकें लोड हो रही हैं…</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider" style="background:rgba(255,255,255,0.08)"></div>
+
+<!-- ══════════════════════════════════════════════ TESTIMONIALS -->
+<section class="section section--testimonials" id="testimonials">
+  <div class="container">
+    <p class="label fade-up"
+       data-hi="विद्वानों के विचार" data-en="Scholarly Reviews">विद्वानों के विचार</p>
+    <h2 class="fade-up"
+        data-hi="समीक्षाएँ एवं प्रशंसापत्र" data-en="Reviews & Endorsements">
+      समीक्षाएँ एवं प्रशंसापत्र
+    </h2>
+
+    <!-- Testimonial cards — populated by JS from data/testimonials.json -->
+    <div class="testimonials-grid" id="testimonials-grid"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════ PRESS -->
+<section class="section section--press" id="press">
+  <div class="container">
+    <p class="label fade-up"
+       data-hi="मीडिया में" data-en="In the Media">मीडिया में</p>
+    <h2 class="fade-up"
+        data-hi="आलोचकों के विचार" data-en="What Critics Say">आलोचकों के विचार</h2>
+
+    <!-- Press items — populated by JS from data/testimonials.json (press array) -->
+    <div class="press-list fade-up" id="press-list"></div>
+
+    <!-- Static articles section -->
+    <div style="margin-top:3rem" class="fade-up">
+      <p class="label" style="margin-bottom:1rem"
+         data-hi="लेखक के आलेख" data-en="Articles by the Author">लेखक के आलेख</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.75rem">
+        <a href="http://epaper.navbharattimes.com/details/12209-53018-1.html"
+           target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+          चुनाव में पीछे छूट गया शिष्टाचार
+        </a>
+        <a href="http://m.livehindustan.com/mobile/news/editorial/guestcolumn/article1-story-57-62-401198.html"
+           target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+          किताबों का मेला
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════ TALKS -->
+<section class="section section--talks" id="talks">
+  <div class="container">
+    <p class="label fade-up"
+       data-hi="वीडियो एवं चर्चाएँ" data-en="Talks & Discussions">वीडियो एवं चर्चाएँ</p>
+    <h2 class="fade-up"
+        data-hi="संवाद में" data-en="In Conversation">संवाद में</h2>
+
+    <div class="talks-grid">
+      <div class="talk-card fade-up">
+        <iframe src="https://www.youtube.com/embed/FdtHBm0DiWU?rel=0"
+                title="World Book Fair 2014"
+                allowfullscreen loading="lazy"></iframe>
+        <div class="talk-card__body">
+          <h3 class="talk-card__title"
+              data-hi="विश्व पुस्तक मेला 2014" data-en="World Book Fair 2014">
+            विश्व पुस्तक मेला 2014
+          </h3>
+          <p class="talk-card__desc"
+             data-hi="हिन्दी लोकप्रिय लेखन और बेस्टसेलर पर परिचर्चा — 22वाँ विश्व पुस्तक मेला, नई दिल्ली, 20 फ़रवरी 2014"
+             data-en="Panel discussion on Hindi popular writing and bestsellers — 22nd World Book Fair, New Delhi, Feb 20, 2014">
+            हिन्दी लोकप्रिय लेखन और बेस्टसेलर पर परिचर्चा — 22वाँ विश्व पुस्तक मेला, नई दिल्ली, 20 फ़रवरी 2014
+          </p>
         </div>
-        <!-- /.container -->
-    </nav>
+      </div>
 
-    <section id="about">
-    <div class="container">
-            <div class="row">
-                <div class="col-sm-6"></div>
-                <div class="bg-transparent col-sm-6 text-center">
-                    <h2 class="section-heading text-faded"><strong>परिचय</strong></h2>
-                    <hr class="light">
-                    <p class="text-faded">
-                        प्रचण्ड प्रवीर बिहार के मुँगेर जिले में जन्मे और पले बढ़े हैं. इन्होंने सन् २००५ में भारतीय प्रौद्योगिकी संस्थान दिल्ली से रासायनिक अभियांत्रिकी में प्रौद्योगिकी स्नातक की उपाधि ग्रहण की. सन् २०१० में हार्पर हिन्दी से प्रकाशित इनके पहले उपन्यास 'अल्पाहारी गृहत्यागी: आई आई टी से पहले' ने कई युवा हिन्दी लेखकों को
-                        प्रेरित किया. दख़ल प्रकाशन से, सन् २०१६ में प्रकाशित इनकी दूसरी पुस्तक, 'अभिनव सिनेमा: रस सिद्धांत के आलोक में विश्व सिनेमा का परिचय', हिन्दी के वरिष्ठ आलोचकों द्वारा बेहद सराही गई. इन दिनों प्रचण्ड प्रवीर गुड़गाँव में एक रिस्क मैनेजमेण्ट फर्म में काम करते हैं.​
-                    </p>
-                    <p align="center" class="text-faded">contact@prachandpraveer.com</p>
-                    <p><span class="lang-sm lang-lbl" lang="hi"></span></p>
-                </div>
-            </div>
+      <div class="talk-card fade-up">
+        <iframe src="https://www.youtube.com/embed/IKOD-PZpn4c?rel=0"
+                title="Alpahari Grihtyagi discussion"
+                allowfullscreen loading="lazy"></iframe>
+        <div class="talk-card__body">
+          <h3 class="talk-card__title"
+              data-hi="अल्पाहारी गृहत्यागी" data-en="Alpahari Grihtyagi">
+            अल्पाहारी गृहत्यागी
+          </h3>
+          <p class="talk-card__desc"
+             data-hi="उपन्यास पर विशेष चर्चा — युवा महत्त्वाकांक्षा और आई.आई.टी. स्वप्न के विषय में"
+             data-en="A discussion on the novel — themes of youth, aspiration and the IIT dream">
+            उपन्यास पर विशेष चर्चा — युवा महत्त्वाकांक्षा और आई.आई.टी. स्वप्न के विषय में
+          </p>
         </div>
-    </section>
+      </div>
 
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a class="btn btn-google-plus" href="https://plus.google.com/share?url=http://prachandpraveer.com/books.html">
-                                    <i class="fa fa-google-plus fa-2x fa-fw fa-inverse"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="btn btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://prachandpraveer.com/books.html">
-                                    <i class="fa fa-facebook fa-2x fa-fw fa-inverse"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="btn btn-twitter" href="http://twitter.com/home?status=http://prachandpraveer.com/books.html">
-                                    <i class="fa fa-twitter fa-2x fa-fw fa-inverse"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!--ul class="list-inline text-center">
-                        <li>
-                            <a href="https://plus.google.com/share?url=http://prachandpraveer.com/">
-                                <span class="fa-stack fa-lg" style="color:#DD4B39">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://prachandpraveer.com/">
-                                <span class="fa-stack fa-lg" style="color:#3B5998">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://twitter.com/home?status=http://prachandpraveer.com/">
-                                <span class="fa-stack fa-lg" style="color:#55ACEE">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul-->
-                    <!--p align="center" class="copyright text-info">Copyright &copy; प्रचण्ड प्रवीर 2016</p-->
-                </div>
-            </div>
+      <div class="talk-card fade-up">
+        <iframe src="https://www.youtube.com/embed/bMTBu55tajs?rel=0"
+                title="CLF 2014"
+                allowfullscreen loading="lazy"></iframe>
+        <div class="talk-card__body">
+          <h3 class="talk-card__title" data-hi="CLF 2014" data-en="CLF 2014">CLF 2014</h3>
+          <p class="talk-card__desc"
+             data-hi="सत्यानन्द निरुपम के साथ संवाद — चण्डीगढ़ साहित्य महोत्सव"
+             data-en="In conversation with Satyanand Nirupam — Chandigarh Literature Festival">
+            सत्यानन्द निरुपम के साथ संवाद — चण्डीगढ़ साहित्य महोत्सव
+          </p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<div class="divider"></div>
 
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
+<!-- ══════════════════════════════════════════════════ GALLERY -->
+<section class="section section--gallery" id="gallery">
+  <div class="container">
+    <p class="label label--light fade-up"
+       data-hi="छायाचित्र" data-en="Photography">छायाचित्र</p>
+    <h2 class="fade-up"
+        data-hi="मुंगेर — गंगा किनारे का एक शहर"
+        data-en="Monghyr — A City on the Ganga">
+      मुंगेर — गंगा किनारे का एक शहर
+    </h2>
+
+    <div class="gallery-grid fade-up" role="list" aria-label="Gallery">
+      <div class="gallery-item" role="listitem">
+        <img src="assets/images/chandi-sthan-774x509-88.jpg" alt="चण्डी स्थान" loading="lazy">
+        <p class="gallery-item__caption">चण्डी स्थान</p>
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="assets/images/pirpahari-750x500-30.jpg" alt="पीरपहाड़ी" loading="lazy">
+        <p class="gallery-item__caption">पीरपहाड़ी</p>
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="assets/images/machli-talab-876x604-70.jpg" alt="मछली तालाब" loading="lazy">
+        <p class="gallery-item__caption">मछली तालाब</p>
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="assets/images/market-500x331-89.jpg" alt="बाज़ार" loading="lazy">
+        <p class="gallery-item__caption">बाज़ार</p>
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="assets/images/jamalpur-400x309-1.jpg" alt="जमालपुर" loading="lazy">
+        <p class="gallery-item__caption">जमालपुर</p>
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="assets/images/keela-2048x1536-29.jpg" alt="क़िला" loading="lazy">
+        <p class="gallery-item__caption">क़िला</p>
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="assets/images/kasthharini-640x450-75.jpg" alt="कष्टहरणी घाट" loading="lazy">
+        <p class="gallery-item__caption">कष्टहरणी घाट</p>
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="assets/images/yogashram-456x320-89.jpg" alt="योगाश्रम" loading="lazy">
+        <p class="gallery-item__caption">योगाश्रम</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" style="background:rgba(255,255,255,0.08)"></div>
+
+<!-- ═══════════════════════════════════════════════════ CONTACT -->
+<section class="section section--contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="fade-up">
+        <p class="label"
+           data-hi="सम्पर्क" data-en="Contact">सम्पर्क</p>
+        <h2 data-hi="सम्पर्क करें" data-en="Get in Touch" style="margin-bottom:1.5rem">
+          सम्पर्क करें
+        </h2>
+        <p data-hi="साक्षात्कार, पाठ-कार्यक्रम, या साहित्यिक संवाद के लिए सम्पर्क करें। प्रचण्ड प्रवीर हिन्दी साहित्य, सिनेमा सिद्धान्त और भारतीय शास्त्रीय सौन्दर्यशास्त्र पर चर्चा का स्वागत करते हैं।"
+           data-en="For interviews, readings, or literary discussions, please reach out. Prachand Praveer welcomes conversations about Hindi literature, cinema theory and classical Indian aesthetics.">
+          साक्षात्कार, पाठ-कार्यक्रम, या साहित्यिक संवाद के लिए सम्पर्क करें। प्रचण्ड प्रवीर हिन्दी साहित्य, सिनेमा सिद्धान्त और भारतीय शास्त्रीय सौन्दर्यशास्त्र पर चर्चा का स्वागत करते हैं।
+        </p>
+      </div>
+
+      <div class="fade-up">
+        <!--
+          CONTACT FORM — FORMSPREE SETUP INSTRUCTIONS:
+          1. Go to https://formspree.io and create a free account
+          2. Create a new form linked to Prachand's email
+          3. Replace YOUR_FORMSPREE_ID below with your form ID (e.g. xpwzgkqv)
+          4. Remove the disabled attribute from the submit button
+          To disable the form temporarily, set action="#" and add the disabled attr back.
+        -->
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+          method="POST"
+        >
+          <div class="contact-form">
+            <div class="form-group">
+              <label for="name" data-hi="नाम" data-en="Name">नाम</label>
+              <input type="text" id="name" name="name" required
+                     placeholder="आपका नाम" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="email" data-hi="ईमेल" data-en="Email">ईमेल</label>
+              <input type="email" id="email" name="email" required
+                     placeholder="your@email.com" autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="message" data-hi="सन्देश" data-en="Message">सन्देश</label>
+              <textarea id="message" name="message" required
+                        placeholder="आपका सन्देश…"></textarea>
+            </div>
+            <p class="form-note"
+               data-hi="आपकी जानकारी केवल सम्पर्क के लिए उपयोग होगी, सार्वजनिक नहीं की जाएगी।"
+               data-en="Your information will be used only for correspondence and will not be made public.">
+              आपकी जानकारी केवल सम्पर्क के लिए उपयोग होगी, सार्वजनिक नहीं की जाएगी।
+            </p>
+            <button type="submit" class="btn btn-primary" style="align-self:flex-start"
+                    data-hi="सन्देश भेजें" data-en="Send Message">
+              सन्देश भेजें
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ FOOTER -->
+<footer class="footer">
+  <p>
+    &copy; <span id="year"></span> प्रचण्ड प्रवीर &nbsp;·&nbsp;
+    मुंगेर, बिहार &nbsp;·&nbsp;
+    <a href="https://www.facebook.com/profile.php?id=100006989387771"
+       target="_blank" rel="noopener">Facebook</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.goodreads.com/author/show/4144083.Prachand_Praveer"
+       target="_blank" rel="noopener">Goodreads</a>
+  </p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  // Set current year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Show news banner wrap when JS populates it
+  const nb = document.getElementById('news-banner');
+  if (nb) {
+    const wrap = document.getElementById('news-banner-wrap');
+    const observer = new MutationObserver(() => {
+      if (nb.textContent.trim()) wrap.style.display = '';
+    });
+    observer.observe(nb, { childList: true });
+  }
+</script>
 </body>
 </html>
-

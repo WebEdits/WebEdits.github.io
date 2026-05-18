@@ -1,0 +1,192 @@
+[
+  {
+    "id": "abhinav-cinema",
+    "year": 2016,
+    "latest_edition": "3rd edition, 2026",
+    "genre": { "hi": "सिनेमा सिद्धान्त", "en": "Cinema Theory" },
+    "title": { "hi": "अभिनव सिनेमा", "en": "Abhinav Cinema" },
+    "subtitle": {
+      "hi": "रस सिद्धान्त के आलोक में विश्व सिनेमा का परिचय",
+      "en": "Introduction to World Cinema in Light of Rasa Theory"
+    },
+    "publisher": "Dakhal Prakashan",
+    "cover": "assets/images/covers/abhinav-cinema.jpg",
+    "new_edition": true,
+    "description": {
+      "hi": "यह पुस्तक भरतमुनि के नाट्यशास्त्र और अभिनवगुप्त की अभिनवभारती के परिप्रेक्ष्य में विश्व सिनेमा की प्रमुख कृतियों का विवेचन करती है। ऑर्सन वेल्स, इंगमार बर्गमैन, आंद्रेई तार्कोव्स्की, अकीरा कुरोसावा जैसे महान निर्देशकों की फ़िल्मों को रस सिद्धान्त के आलोक में परखा गया है।",
+      "en": "This book examines major works of world cinema through Rasa theory from Bharatmuni's Natyashastra and Abhinavagupta's 10th-century Abhinavabharati. Directors such as Orson Welles, Ingmar Bergman, Andrei Tarkovsky, Akira Kurosawa, Alfred Hitchcock and Satyajit Ray are assessed through the lens of classical Indian aesthetics."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/dp/9364079485/",
+      "flipkart": "https://www.flipkart.com/search?q=abhinav+cinema+prachand+praveer"
+    }
+  },
+  {
+    "id": "cinema-through-rasa",
+    "year": 2021,
+    "genre": { "hi": "सिनेमा सिद्धान्त (अंग्रेज़ी)", "en": "Cinema Theory (English)" },
+    "title": { "hi": "Cinema Through Rasa", "en": "Cinema Through Rasa" },
+    "subtitle": {
+      "hi": "A Tryst with Masterpieces in the Light of Rasa Siddhānta",
+      "en": "A Tryst with Masterpieces in the Light of Rasa Siddhānta"
+    },
+    "publisher": "D.K. Printworld",
+    "isbn": "9788124610985",
+    "cover": "assets/images/covers/cinema-through-rasa.jpg",
+    "description": {
+      "hi": "अभिनव सिनेमा का अंग्रेज़ी अनुवाद। पौरस्त्य सौन्दर्यशास्त्र के निकष पर विश्व सिनेमा का अंग्रेज़ी में मूल्यांकन।",
+      "en": "The English translation of Abhinav Cinema. An assessment of world cinema masterpieces through the prism of Eastern aesthetics, making India's classical Rasa theory accessible to an international audience."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/dp/8124610983"
+    }
+  },
+  {
+    "id": "kal-ki-baat-shadj",
+    "year": 2021,
+    "genre": { "hi": "कहानी संग्रह", "en": "Short Stories" },
+    "title": { "hi": "कल की बात : षड्ज", "en": "Kal Ki Baat : Shadj" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "Vani Prakashan",
+    "cover": "assets/images/covers/kal-ki-baat-shadj.jpg",
+    "description": {
+      "hi": "संगीत के सात स्वरों की तर्ज़ पर रची गई कहानियों की श्रृंखला 'कल की बात' का पहला भाग। षड्ज — वह स्वर जो सभी रागों की नींव है।",
+      "en": "The first volume of a story cycle inspired by the seven musical notes of Indian classical music. Shadj — the foundational note from which all ragas emerge."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/s?k=kal+ki+baat+shadj+prachand+praveer"
+    }
+  },
+  {
+    "id": "kal-ki-baat-rishabh",
+    "year": 2021,
+    "genre": { "hi": "कहानी संग्रह", "en": "Short Stories" },
+    "title": { "hi": "कल की बात : ऋषभ", "en": "Kal Ki Baat : Rishabh" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "Vani Prakashan",
+    "cover": "assets/images/covers/kal-ki-baat-rishabh.jpg",
+    "description": {
+      "hi": "'कल की बात' श्रृंखला का दूसरा भाग — ऋषभ स्वर पर आधारित। आधुनिक जीवन की जटिलताओं को शास्त्रीय स्वरों की लय में पिरोती कहानियाँ।",
+      "en": "The second volume of the Kal Ki Baat series, structured around the note Rishabh. Stories that weave the complexities of modern life into the rhythm of classical Indian music."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/s?k=kal+ki+baat+rishabh+prachand+praveer"
+    }
+  },
+  {
+    "id": "kal-ki-baat-gandhar",
+    "year": 2021,
+    "genre": { "hi": "कहानी संग्रह", "en": "Short Stories" },
+    "title": { "hi": "कल की बात : गान्धार", "en": "Kal Ki Baat : Gandhar" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "Vani Prakashan",
+    "cover": "assets/images/covers/kal-ki-baat-gandhar.jpg",
+    "description": {
+      "hi": "'कल की बात' श्रृंखला का तीसरा भाग — गान्धार स्वर पर केन्द्रित। भारतीय शास्त्रीय परम्परा और समकालीन जीवन का संगम।",
+      "en": "The third volume of the Kal Ki Baat series, centred on the note Gandhar. A confluence of Indian classical tradition and contemporary life."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/s?k=kal+ki+baat+gandhar+prachand+praveer"
+    }
+  },
+  {
+    "id": "uttarayan",
+    "year": 2019,
+    "genre": { "hi": "कहानी संग्रह", "en": "Short Stories" },
+    "title": { "hi": "उत्तरायण", "en": "Uttarayan" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "Vani Prakashan",
+    "cover": "assets/images/covers/uttarayan.jpg",
+    "description": {
+      "hi": "उत्तरायण-दक्षिणायन द्विभाग श्रृंखला का पहला भाग। सूर्य की उत्तरायण यात्रा की भाँति इन कहानियों में एक आरोही चेतना का संचार है।",
+      "en": "Book one of the Uttarayan-Dakshinayan duology. Like the sun's northward journey, these stories carry an ascending consciousness — a search for light amid the ordinary."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/s?k=uttarayan+prachand+praveer"
+    }
+  },
+  {
+    "id": "dakshinayan",
+    "year": 2019,
+    "genre": { "hi": "कहानी संग्रह", "en": "Short Stories" },
+    "title": { "hi": "दक्षिणायन", "en": "Dakshinayan" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "Vani Prakashan",
+    "cover": "assets/images/covers/dakshinayan.jpg",
+    "description": {
+      "hi": "उत्तरायण-दक्षिणायन श्रृंखला का दूसरा भाग। दक्षिणायन की अवरोही छाया में मानवीय अनुभवों की विविधता और गहराई।",
+      "en": "Book two of the Uttarayan-Dakshinayan duology. In the descending arc of the sun's southward journey, these stories explore the full depth and diversity of human experience."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/s?k=dakshinayan+prachand+praveer"
+    }
+  },
+  {
+    "id": "mitne-ka-adhikar",
+    "year": 2024,
+    "genre": { "hi": "उपन्यास", "en": "Novel" },
+    "title": { "hi": "मिटने का अधिकार", "en": "Mitne Ka Adhikar" },
+    "subtitle": { "hi": "Right to Perish", "en": "Right to Perish" },
+    "publisher": "Vani Prakashan",
+    "cover": "assets/images/covers/mitne-ka-adhikar.jpg",
+    "description": {
+      "hi": "एक ऐसे समय में जब सब कुछ दर्ज़ होता है, डिजिटल होता है और स्थायी होता है — क्या किसी को मिटने का अधिकार है? यह उपन्यास उस अधिकार की खोज करता है।",
+      "en": "In an age when everything is recorded, digitised and made permanent — does anyone retain the right to perish, to be forgotten? This novel searches for that right."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/s?k=mitne+ka+adhikar+prachand+praveer"
+    }
+  },
+  {
+    "id": "bhootnath-meets-bhairavi",
+    "year": 2017,
+    "genre": { "hi": "उपन्यास", "en": "Novel" },
+    "title": { "hi": "Bhootnath Meets Bhairavi", "en": "Bhootnath Meets Bhairavi" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "Harper Collins India",
+    "cover": "assets/images/covers/bhootnath-meets-bhairavi.jpg",
+    "description": {
+      "hi": "भूतनाथ और भैरवी की असाधारण मुलाकात पर केन्द्रित यह उपन्यास हास्य, करुणा और आध्यात्मिक जिज्ञासा का अद्भुत संगम है।",
+      "en": "A novel centred on the extraordinary meeting of Bhootnath and Bhairavi — a remarkable confluence of humour, pathos and spiritual inquiry."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/s?k=bhootnath+meets+bhairavi+prachand+praveer"
+    }
+  },
+  {
+    "id": "jaana-nahi-dil-se-door",
+    "year": 2015,
+    "genre": { "hi": "कहानी संग्रह", "en": "Short Stories" },
+    "title": { "hi": "जाना नहीं दिल से दूर", "en": "Jaana Nahi Dil Se Door" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "Harper Collins India",
+    "isbn": "9789351777816",
+    "cover": "assets/images/covers/jaana-nahi.jpg",
+    "description": {
+      "hi": "प्यार, जवानी, मौत और बुढ़ापे जैसे विषयों पर लिखी कहानियाँ — एक भागा हुआ छात्र, एक हथेली-पढ़ने वाला जो अनजाने में सबका स्वीकारोक्ति-पात्र बन जाता है। सामान्य जीवन के दुःख और हास्य का अनूठा साक्ष्य।",
+      "en": "Stories on love, youth, death and old age — a runaway student in Kolkata, a boy who befriends a prostitute's son, a palmist who becomes an accidental confessor. Testimony to the pathos and humour hidden in all things ordinary."
+    },
+    "links": {
+      "amazon_in": "http://www.amazon.in/Jaana-Nahi-Dil-Se-Door/dp/9351777812/",
+      "flipkart": "http://www.flipkart.com/jaana-nahi-dil-se-door/p/itmegnvxbtfgn3rn"
+    }
+  },
+  {
+    "id": "alpahari-grihtyagi",
+    "year": 2010,
+    "genre": { "hi": "उपन्यास", "en": "Novel" },
+    "title": { "hi": "अल्पाहारी गृहत्यागी", "en": "Alpahari Grihtyagi" },
+    "subtitle": { "hi": "आई.आई.टी. से पहले", "en": "IIT se Pehle" },
+    "publisher": "Harper Collins India",
+    "isbn": "9788172239275",
+    "cover": "assets/images/covers/alpahari-grihtyagi.jpg",
+    "description": {
+      "hi": "घर से दूर, हज़ारों युवा आई.आई.टी. प्रवेश परीक्षा की तैयारी के लिए आते हैं। गुल फ़ैक्ट्री बॉयज़ हॉस्टल में सव्यसाची, सत्य, तरंग और परमहंस अपनी-अपनी दुनिया में खोए हुए हैं। एक बेहद चर्चित और प्रेरक पहला उपन्यास।",
+      "en": "Miles from home, thousands gather to prepare for the IIT entrance examination. At the Gul Factory boys' hostel, Savyasachi, Satya, Tarang and Paramhans are each lost in their own quixotic quest. A landmark debut that inspired a generation of young Hindi writers."
+    },
+    "links": {
+      "amazon_in": "http://www.amazon.in/Alpahari-Grehtyag-IIT-Se-Pehle/dp/8172239270/",
+      "flipkart": "http://www.flipkart.com/alphari-grihtyagi-iit-se-pehele/p/itmdyu4cfqtn3zgw"
+    }
+  }
+]

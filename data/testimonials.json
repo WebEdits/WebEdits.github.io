@@ -1,0 +1,79 @@
+{
+  "author": [
+    {
+      "id": "rastogi",
+      "book_id": "abhinav-cinema",
+      "quote": {
+        "hi": "भारतीय चिन्तना की प्रखर ओजस्विता के पुनरुत्थान और पुनरुत्थापन दोनों के लिए 'इतिहास' और 'निकषों' की अस्मिता का स्वायत्तता-बोध और उसके सापेक्ष वैश्विक सर्जनाव्यापार का मूल्याङ्कन किसी भी सार्थक, उर्वर और प्रासंगिक विमर्श की अनिवार्य शर्त है। प्रचण्ड प्रवीर इस शर्त को बेझिझक पूरा करते हैं।",
+        "en": "For both the revival and re-establishment of the vigorous brilliance of Indian thought, an autonomous sense of the identity of 'history' and 'criteria' and the evaluation of global creative enterprise relative to it is an indispensable condition for any meaningful, fertile and relevant discourse. Prachand Praveer fulfils this condition without hesitation."
+      },
+      "attribution": { "hi": "डॉ॰ नवजीवन रस्तोगी", "en": "Dr. Navjivan Rastogi" },
+      "role": { "hi": "वरिष्ठ विद्वान, कश्मीर शैवदर्शन", "en": "Senior Scholar, Kashmir Shaivism" }
+    },
+    {
+      "id": "gupt",
+      "book_id": "abhinav-cinema",
+      "quote": {
+        "hi": "प्रचण्ड प्रवीर ने एक मौलिक और नई दिशा देने वाली पुस्तक लिखी है। उसने शास्त्रों का अध्ययन कर, भरतमुनि का नाट्यशास्त्र और उस पर प्रसिद्ध टीका, अभिनवभारती के परिप्रेक्ष्य में नाट्य सम्बन्धी प्राचीन विचारों को सिनेमा जैसे आधुनिक माध्यम से जोड़ा है।",
+        "en": "Prachand Praveer has written a path-breaking book that points in a genuinely new direction. He has studied the classical texts — Bharatmuni's Natyashastra and its celebrated commentary Abhinavabharati — and connected ancient dramatic thought to the modern medium of cinema."
+      },
+      "attribution": { "hi": "डॉ॰ भरत गुप्त", "en": "Dr. Bharat Gupt" },
+      "role": { "hi": "प्राध्यापक, दिल्ली विश्वविद्यालय", "en": "Professor, University of Delhi" }
+    },
+    {
+      "id": "tripathi",
+      "book_id": "abhinav-cinema",
+      "quote": {
+        "hi": "कला के भारतीय मानदण्डों — विशेषतः रससिद्धान्त के आधार पर विश्व सिनेमा का आकलन करते हुए प्रचण्ड प्रवीर ने इस दिशा में बहुत अच्छी पहल की है। निश्चित ही यह उनका कार्य पूर्व और पश्चिम के बीच संवाद के सेतु रचेगा।",
+        "en": "In assessing world cinema through the Indian standards of art — especially Rasa theory — Prachand Praveer has made an excellent beginning. This work will certainly build a bridge of dialogue between East and West, expanding the horizons of thought on both sides."
+      },
+      "attribution": { "hi": "आचार्य राधावल्लभ त्रिपाठी", "en": "Acharya Radhavallabh Tripathi" },
+      "role": { "hi": "संस्कृत विद्वान एवं साहित्यकार", "en": "Sanskrit Scholar and Litterateur" }
+    },
+    {
+      "id": "sharma",
+      "book_id": "abhinav-cinema",
+      "quote": {
+        "hi": "'अभिनव सिनेमा' नाट्य की भारतीय सैद्धान्तिकी का गहन विमर्श करते हुए उसे समकाल में श्लाघनीय रूप से प्रतिष्ठित करने वाली एक महत्त्वपूर्ण कृति है। यह पुस्तक परम्परा का क्षैतिज विस्तार करती है।",
+        "en": "Abhinav Cinema is an important work that conducts a profound discussion of Indian dramatic theory and establishes it commendably in the contemporary moment. This book extends tradition horizontally into the present."
+      },
+      "attribution": { "hi": "डॉ॰ अम्बिकादत्त शर्मा", "en": "Dr. Ambikadatt Sharma" },
+      "role": { "hi": "साहित्यकार एवं समालोचक", "en": "Scholar and Critic" }
+    }
+  ],
+  "press": [
+    {
+      "id": "lallantop",
+      "source": "The Lallantop",
+      "book_id": "alpahari-grihtyagi",
+      "quote": {
+        "hi": "नई खेप में सबसे अच्छा राइटर तो प्रचंड प्रवीर है। उसे उस तरह की पब्लिसिटी नहीं मिली। उनकी कमाल किताब है, अल्पाहारी गृहत्यागी।",
+        "en": "The best writer of the new generation is Prachand Praveer. He hasn't received the publicity he deserves. His book Alpahari Grihtyagi is remarkable."
+      },
+      "attribution": { "hi": "प्रभात रंजन", "en": "Prabhat Ranjan" },
+      "url": "http://www.thelallantop.com/bherant/exclusive-interview-with-kothagoi-author-and-blogger-prabhat-ranjan/"
+    },
+    {
+      "id": "nbt-khare",
+      "source": "Navbharat Times",
+      "book_id": "abhinav-cinema",
+      "quote": {
+        "hi": "मुंगेर, बिहार के एक युवा उपन्यासकार प्रचण्ड प्रवीर ने हिंदी फिल्म सैद्धांतिकी के 'वर्जिन' मुक्ताकाश में एक क्वांटम उड़ान भरी है और संस्कृत के रस-सिद्धांत को विश्व-सिनेमा पर लागू करने की कोशिश की है।",
+        "en": "A young novelist from Munger, Bihar, Prachand Praveer has made a quantum leap into the virgin sky of Hindi film theory, attempting to apply Sanskrit's Rasa theory to world cinema."
+      },
+      "attribution": { "hi": "विष्णु खरे", "en": "Vishnu Khare" },
+      "url": "http://blogs.navbharattimes.indiatimes.com/vishnukhare/prachand-praveers-book/"
+    },
+    {
+      "id": "outlook",
+      "source": "Outlook Hindi",
+      "book_id": "alpahari-grihtyagi",
+      "quote": {
+        "hi": "प्रचंड प्रवीर ने अल्पाहारी गृहत्यागी लिख कर आईआईटी जाने की बाधाओं पर रोशनी डाली। उसके बाद तो आईआईटियनों और इंजीनियरों की लाइन लग गई।",
+        "en": "With Alpahari Grihtyagi, Prachand Praveer shed light on the obstacles of the IIT journey. After this, a whole generation of IITians and engineers followed into Hindi literature."
+      },
+      "attribution": { "hi": "आउटलुक हिंदी", "en": "Outlook Hindi" },
+      "url": "http://www.outlookhindi.com/art-and-culture/diary/engineering-students-in-hindi-literature-3908"
+    }
+  ]
+}
