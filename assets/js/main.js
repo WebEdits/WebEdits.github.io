@@ -44,7 +44,10 @@
     });
 
     // Re-render everything
-    if (allBooks.length)        renderBooks();
+    if (allBooks.length) {
+      renderFilterButtons();
+      renderBooks();
+    }
     if (allTestimonials.author) renderTestimonials();
     if (allTestimonials.press)  renderPress();
     if (allNews.length)         renderNews();
@@ -125,10 +128,11 @@
     const grid = qs('#books-grid');
     if (!grid) return;
 
+    const sorted = [...allBooks].sort((a, b) => b.year - a.year);
     const filtered = activeFilter === 'all'
-      ? allBooks
-      : allBooks.filter(b => {
-          const genre = t(b.genre).toLowerCase();
+      ? sorted
+      : sorted.filter(b => {
+          const genre = b.genre?.en?.toLowerCase() || '';
           return genre.includes(activeFilter);
         });
 
@@ -157,7 +161,7 @@
         ? `<p class="book-card__subtitle">${t(book.subtitle)}</p>` : '';
 
       return `
-        <div class="book-card" data-genre="${t(book.genre).toLowerCase()}">
+        <div class="book-card" data-genre="${book.genre?.en?.toLowerCase() || ''}">
           <div class="book-card__cover">${coverHTML}</div>
           <div class="book-card__body">
             <p class="book-card__meta">${t(book.genre)} · ${book.latest_edition || book.year}</p>
@@ -202,12 +206,15 @@
       return `<button data-genre="${g}" class="${g === activeFilter ? 'active' : ''}">${label}</button>`;
     }).join('');
 
-    container.addEventListener('click', (e) => {
-      if (!e.target.matches('button')) return;
-      activeFilter = e.target.dataset.genre;
-      qsa('button', container).forEach(b => b.classList.toggle('active', b.dataset.genre === activeFilter));
-      renderBooks();
-    });
+    if (!container._filterInit) {
+      container._filterInit = true;
+      container.addEventListener('click', (e) => {
+        if (!e.target.matches('button')) return;
+        activeFilter = e.target.dataset.genre;
+        qsa('button', container).forEach(btn => btn.classList.toggle('active', btn.dataset.genre === activeFilter));
+        renderBooks();
+      });
+    }
   }
 
   // ── Render: Testimonials ──────────────────────────────────
@@ -296,6 +303,70 @@
     });
   }
 
+  // ── Gallery carousel ──────────────────────────────────
+  function initGalleryCarousel() {
+    const items = qsa('.gallery-item');
+    if (!items.length) return;
+
+    const images = items.map(item => ({
+      src: item.querySelector('img')?.src || '',
+      caption: item.querySelector('.gallery-item__caption')?.textContent || ''
+    }));
+
+    const lb = document.createElement('div');
+    lb.id = 'gallery-lightbox';
+    lb.setAttribute('role', 'dialog');
+    lb.setAttribute('aria-modal', 'true');
+    lb.innerHTML = `
+      <div class="lightbox__backdrop"></div>
+      <button class="lightbox__close" aria-label="Close">&#x2715;</button>
+      <button class="lightbox__prev" aria-label="Previous">&#x2039;</button>
+      <button class="lightbox__next" aria-label="Next">&#x203A;</button>
+      <div class="lightbox__content">
+        <img class="lightbox__img" src="" alt="">
+        <p class="lightbox__caption"></p>
+      </div>`;
+    document.body.appendChild(lb);
+
+    let cur = 0;
+
+    function showAt(idx) {
+      cur = ((idx % images.length) + images.length) % images.length;
+      const img = lb.querySelector('.lightbox__img');
+      img.src = images[cur].src;
+      img.alt = images[cur].caption;
+      lb.querySelector('.lightbox__caption').textContent = images[cur].caption;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLb() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    items.forEach((item, i) => {
+      item.setAttribute('role', 'button');
+      item.setAttribute('tabindex', '0');
+      item.addEventListener('click', () => showAt(i));
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showAt(i); }
+      });
+    });
+
+    lb.querySelector('.lightbox__backdrop').addEventListener('click', closeLb);
+    lb.querySelector('.lightbox__close').addEventListener('click', closeLb);
+    lb.querySelector('.lightbox__prev').addEventListener('click', () => showAt(cur - 1));
+    lb.querySelector('.lightbox__next').addEventListener('click', () => showAt(cur + 1));
+
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLb();
+      if (e.key === 'ArrowLeft') showAt(cur - 1);
+      if (e.key === 'ArrowRight') showAt(cur + 1);
+    });
+  }
+
   // ── Boot ──────────────────────────────────────────────────
   async function init() {
     initLangToggle();
@@ -320,6 +391,7 @@
     renderStaticText();
     initScrollAnim();
     initContactForm();
+    initGalleryCarousel();
   }
 
   document.addEventListener('DOMContentLoaded', init);
