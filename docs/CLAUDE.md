@@ -7,9 +7,9 @@ help maintain this website correctly without asking basic questions.
 
 ## Project identity
 
-**Site:** prachandpraveer.com — personal website of Hindi author Prachand Praveer  
-**Hosting:** GitHub Pages, repo `WebEdits/WebEdits.github.io`, branch `master`  
-**Custom domain:** `prachandpraveer.com` → CNAME → `WebEdits.github.io`  
+**Site:** prachandpraveer.com — personal website of Hindi author Prachand Praveer
+**Hosting:** GitHub Pages, repo `WebEdits/WebEdits.github.io`, branch `master`
+**Custom domain:** `prachandpraveer.com` → CNAME → `WebEdits.github.io`
 **Primary language:** Hindi (हिन्दी). English is secondary via a toggle.
 
 ## Architecture
@@ -51,7 +51,7 @@ help maintain this website correctly without asking basic questions.
 
 ### books.json — array of book objects
 
-Required fields: `id`, `year`, `genre`, `title`, `description`  
+Required fields: `id`, `year`, `genre`, `title`, `description`
 Optional: `subtitle`, `publisher`, `isbn`, `cover`, `new_edition`, `latest_edition`, `links`
 
 `genre` values (must match exactly for filter to work):
@@ -64,14 +64,14 @@ Optional: `subtitle`, `publisher`, `isbn`, `cover`, `new_edition`, `latest_editi
 
 ### testimonials.json — object with two arrays
 
-`author[]`: scholarly endorsements. Fields: `id`, `book_id`, `quote`, `attribution`, `role`  
+`author[]`: scholarly endorsements. Fields: `id`, `book_id`, `quote`, `attribution`, `role`
 `press[]`: media mentions. Fields: `id`, `source`, `book_id`, `quote`, `attribution`, `url`
 
 `book_id` must match a book `id` in `books.json`. Used to label the testimonial.
 
 ### news.json — array of announcement objects
 
-Fields: `id`, `date` (YYYY-MM), `type`, `title`, `body`, `book_id` (optional), `link` (optional)  
+Fields: `id`, `date` (YYYY-MM), `type`, `title`, `body`, `book_id` (optional), `link` (optional)
 Only the first item (index 0) is displayed in the banner. Empty array `[]` hides the banner.
 
 ## CSS custom properties (design tokens)
@@ -102,8 +102,8 @@ Formspree relays submissions to Prachand's private email — his address is neve
 
 ## Maintainers
 
-- **Pankaj Parag** — primary technical maintainer (younger brother of Prachand)
-- **Parimal** — editor (oldest brother)
+- **Pankaj Parag** — primary technical maintainer
+- **Parimal Parag** — editor
 - **Prachand Praveer** — content owner and author
 
 ## What NOT to do
