@@ -19,6 +19,7 @@
   let allTestimonials = {};
   let allNews = [];
   let activeFilter = 'all';
+  let currentPage = 0;
 
   // ── Helpers ───────────────────────────────────────────────
   const t  = (obj) => (obj && obj[lang]) || obj?.hi || obj?.en || '';
@@ -136,7 +137,11 @@
           return genre.includes(activeFilter);
         });
 
-    grid.innerHTML = filtered.map(book => {
+    const totalPages = Math.ceil(filtered.length / 2);
+    if (currentPage >= totalPages) currentPage = 0;
+    const pageBooks = filtered.slice(currentPage * 2, currentPage * 2 + 2);
+
+    grid.innerHTML = pageBooks.map(book => {
       const hasCover = book.cover;
       const coverHTML = hasCover
         ? `<img src="${book.cover}" alt="${t(book.title)}" loading="lazy"
@@ -172,6 +177,25 @@
           </div>
         </div>`;
     }).join('');
+
+    // Pagination controls
+    let pager = qs('#books-pagination');
+    if (!pager) {
+      pager = document.createElement('div');
+      pager.id = 'books-pagination';
+      pager.className = 'books-pagination';
+      grid.after(pager);
+    }
+    if (totalPages > 1) {
+      pager.innerHTML = `
+        <button data-dir="-1" aria-label="${lang === 'hi' ? 'पिछला' : 'Previous'}" ${currentPage === 0 ? 'disabled' : ''}>&#x2039;</button>
+        <span>${currentPage + 1} / ${totalPages}</span>
+        <button data-dir="1" aria-label="${lang === 'hi' ? 'अगला' : 'Next'}" ${currentPage >= totalPages - 1 ? 'disabled' : ''}>&#x203A;</button>`;
+      pager.querySelector('[data-dir="-1"]').addEventListener('click', () => { currentPage--; renderBooks(); });
+      pager.querySelector('[data-dir="1"]').addEventListener('click', () => { currentPage++; renderBooks(); });
+    } else {
+      pager.innerHTML = '';
+    }
 
     // Re-observe new elements
     qsa('.book-card', grid).forEach(el => {
@@ -211,6 +235,7 @@
       container.addEventListener('click', (e) => {
         if (!e.target.matches('button')) return;
         activeFilter = e.target.dataset.genre;
+        currentPage = 0;
         qsa('button', container).forEach(btn => btn.classList.toggle('active', btn.dataset.genre === activeFilter));
         renderBooks();
       });

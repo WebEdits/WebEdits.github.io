@@ -173,6 +173,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 }
 
 /* ── NEWS BANNER ────────────────────────────────────── */
+#news-banner-wrap { margin-top: 57px; }
 .news-banner {
   background: var(--saffron); color: #fff;
   padding: 0.75rem 2rem;
@@ -222,9 +223,12 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 .book-card__cover {
   width: 100%; aspect-ratio: 3/4; overflow: hidden;
   background: #0e0b07;
-  display: flex; align-items: center; justify-content: center;
+  position: relative;
 }
-.book-card__cover img { width: 100%; height: 100%; object-fit: contain; }
+.book-card__cover img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: contain;
+}
 .book-card__cover-placeholder {
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
@@ -245,6 +249,19 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 .book-card__subtitle { font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: #a09070; }
 .book-card__desc { font-size: 0.9rem; color: #c0a888; line-height: 1.75; flex: 1; }
 .book-card__links { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: auto; padding-top: 0.5rem; }
+
+.books-pagination {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.5rem; margin-top: 2rem; color: #c8a068;
+}
+.books-pagination button {
+  background: transparent; border: 1px solid rgba(200,160,104,0.5);
+  color: #c8a068; cursor: pointer; font-size: 2rem; line-height: 1;
+  padding: 0.25rem 0.85rem; border-radius: 2px; transition: background 0.2s;
+}
+.books-pagination button:hover:not([disabled]) { background: rgba(200,160,104,0.12); }
+.books-pagination button[disabled] { opacity: 0.3; cursor: default; }
+.books-pagination span { font-family: var(--serif); font-size: 1rem; letter-spacing: 0.04em; }
 
 /* ── TESTIMONIALS ───────────────────────────────────── */
 .section--testimonials { background: var(--paper-2); }
