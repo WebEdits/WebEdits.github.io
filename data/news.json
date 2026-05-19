@@ -4,14 +4,14 @@
     "date": "2026-01",
     "type": "new_edition",
     "title": {
-      "hi": "अभिनव सिनेमा का तीसरा संस्करण उपलब्ध",
+      "hi": "अभिनव सिनेमा का तृतीय संस्करण उपलब्ध",
       "en": "Third Edition of Abhinav Cinema Now Available"
     },
     "body": {
       "hi": "बहुचर्चित पुस्तक अभिनव सिनेमा का नया संस्करण अब उपलब्ध है। यह पुस्तक पिछले कुछ सालों से अनुपलब्ध थी।",
       "en": "The much-discussed Abhinav Cinema is back in print with a new third edition after being unavailable for some years."
     },
-    "book_id": "abhinav-cinema",
+    "book_id": "abhinav-cinema-3",
     "link": "https://www.amazon.in/dp/9364079485/"
   }
 ]

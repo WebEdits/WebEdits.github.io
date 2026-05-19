@@ -1,192 +1,471 @@
 [
   {
-    "id": "abhinav-cinema",
+    "id": "alpahari-grihtyagi-1",
+    "canonical_id": "alpahari-grihtyagi",
+    "year": 2010,
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०१०", "en": "1st edition, 2010" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
+    "title": { "hi": "अल्पाहारी गृहत्यागी", "en": "Alpahari Grihtyagi" },
+    "subtitle": { "hi": "आई.आई.टी. से पहले", "en": "IIT se Pehle" },
+    "publisher": "Harper Hindi, Noida",
+    "isbn": "978-8172239275",
+    "cover": "assets/images/covers/alpahari-grihtyagi-1.png",
+    "description": {
+      "hi": "घर से दूर, हज़ारों युवा आई.आई.टी. प्रवेश परीक्षा की तैयारी के लिए आते हैं। गुल फ़ैक्ट्री बॉयज़ हॉस्टल में सव्यसाची, सत्य, तरंग और परमहंस अपनी-अपनी दुनिया में खोए हुए हैं। एक पीढ़ी के युवा लेखकों को प्रेरणा देने वाला पहला उपन्यास।",
+      "en": "Miles from home, thousands gather to prepare for the IIT entrance examination. At the Gul Factory boys' hostel, Savyasachi, Satya, Tarang and Paramhans are each lost in their own quixotic quest. A landmark debut that inspired a generation of young Hindi writers."
+    },
+    "links": {}
+  },
+  {
+    "id": "abhinav-cinema-1",
+    "canonical_id": "abhinav-cinema",
     "year": 2016,
-    "latest_edition": "3rd edition, 2026",
-    "genre": { "hi": "सिनेमा सिद्धान्त", "en": "Cinema Theory" },
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०१६", "en": "1st edition, 2016" },
+    "genre": { "key": "hindi-nonfiction", "hi": "हिन्दी कथेतर गद्य", "en": "Hindi Non-Fiction" },
     "title": { "hi": "अभिनव सिनेमा", "en": "Abhinav Cinema" },
     "subtitle": {
       "hi": "रस सिद्धान्त के आलोक में विश्व सिनेमा का परिचय",
       "en": "Introduction to World Cinema in Light of Rasa Theory"
     },
-    "publisher": "Dakhal Prakashan",
-    "cover": "assets/images/covers/abhinav-cinema.jpg",
-    "new_edition": true,
+    "publisher": "Dakhal Prakashan, New Delhi",
+    "isbn": "978-9384159283",
+    "cover": "assets/images/covers/abhinav-cinema-1.png",
     "description": {
-      "hi": "यह पुस्तक भरतमुनि के नाट्यशास्त्र और अभिनवगुप्त की अभिनवभारती के परिप्रेक्ष्य में विश्व सिनेमा की प्रमुख कृतियों का विवेचन करती है। ऑर्सन वेल्स, इंगमार बर्गमैन, आंद्रेई तार्कोव्स्की, अकीरा कुरोसावा जैसे महान निर्देशकों की फ़िल्मों को रस सिद्धान्त के आलोक में परखा गया है।",
-      "en": "This book examines major works of world cinema through Rasa theory from Bharatmuni's Natyashastra and Abhinavagupta's 10th-century Abhinavabharati. Directors such as Orson Welles, Ingmar Bergman, Andrei Tarkovsky, Akira Kurosawa, Alfred Hitchcock and Satyajit Ray are assessed through the lens of classical Indian aesthetics."
+      "hi": "भरतमुनि के नाट्यशास्त्र और अभिनवगुप्त की अभिनवभारती के परिप्रेक्ष्य में विश्व सिनेमा की प्रमुख कृतियों का विवेचन। ऑर्सन वेल्स, इंगमार बर्गमैन, आंद्रेई तार्कोव्स्की, अकीरा कुरोसावा, अल्फ्रेड हिचकॉक और सत्यजित राय की फ़िल्मों को रस सिद्धान्त के आलोक में परखा गया है।",
+      "en": "An examination of major world cinema through Rasa theory from Bharatmuni's Natyashastra and Abhinavagupta's Abhinavabharati. Directors including Orson Welles, Ingmar Bergman, Andrei Tarkovsky, Akira Kurosawa, Alfred Hitchcock and Satyajit Ray assessed through classical Indian aesthetics."
+    },
+    "links": {}
+  },
+  {
+    "id": "jaana-nahi-dil-se-door",
+    "canonical_id": "jaana-nahi-dil-se-door",
+    "year": 2016,
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०१६", "en": "1st edition, 2016" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
+    "title": { "hi": "जाना नहीं दिल से दूर", "en": "Jaana Nahi Dil Se Door" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "Harper Hindi, Noida",
+    "isbn": "978-9351777816",
+    "cover": "assets/images/covers/jaana-nahi-dil-se-door.png",
+    "description": {
+      "hi": "प्यार, जवानी, मौत और बुढ़ापे जैसे विषयों पर लिखी कहानियाँ — एक भागा हुआ छात्र, एक हथेली-पढ़ने वाला जो अनजाने में सबका स्वीकारोक्ति-पात्र बन जाता है। हिन्दी कहानी में एक नये अध्याय की शुरुआत।",
+      "en": "Stories on love, youth, death and old age — a runaway student in Kolkata, a boy who befriends a prostitute's son, a palmist who becomes an accidental confessor. Hailed as a new chapter in Hindi short story writing."
     },
     "links": {
-      "amazon_in": "https://www.amazon.in/dp/9364079485/",
-      "flipkart": "https://www.flipkart.com/search?q=abhinav+cinema+prachand+praveer"
+      "amazon_in": "https://www.amazon.in/dp/9351777812/"
     }
   },
   {
+    "id": "bhootnath-meets-bhairavi",
+    "canonical_id": "bhootnath-meets-bhairavi",
+    "year": 2017,
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०१७", "en": "1st edition, 2017" },
+    "genre": { "key": "english-fiction", "hi": "English Fiction", "en": "English Fiction" },
+    "title": { "hi": "Bhootnath Meets Bhairavi", "en": "Bhootnath Meets Bhairavi" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "Infolimner, Jaipur",
+    "isbn": "978-8193122075",
+    "cover": "assets/images/covers/bhootnath-meets-bhairavi.png",
+    "description": {
+      "hi": "अंग्रेज़ी में लिखी कहानियों का पहला संग्रह। भूतनाथ और भैरवी की असाधारण मुलाकात — हास्य, करुणा और आध्यात्मिक जिज्ञासा का अद्भुत संगम।",
+      "en": "The author's first English short story collection. The extraordinary meeting of Bhootnath and Bhairavi — a confluence of humour, pathos and spiritual inquiry set in contemporary India."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/dp/8193122070/"
+    }
+  },
+  {
+    "id": "abhinav-cinema-2",
+    "canonical_id": "abhinav-cinema",
+    "year": 2018,
+    "edition": 2,
+    "edition_label": { "hi": "द्वितीय संस्करण, २०१८", "en": "2nd edition, 2018" },
+    "genre": { "key": "hindi-nonfiction", "hi": "हिन्दी कथेतर गद्य", "en": "Hindi Non-Fiction" },
+    "title": { "hi": "अभिनव सिनेमा", "en": "Abhinav Cinema" },
+    "subtitle": {
+      "hi": "रस सिद्धान्त के आलोक में विश्व सिनेमा का परिचय",
+      "en": "Introduction to World Cinema in Light of Rasa Theory"
+    },
+    "publisher": "Vani Prakashan, New Delhi",
+    "isbn": "978-9387648241",
+    "cover": "assets/images/covers/abhinav-cinema-2.png",
+    "description": {
+      "hi": "अभिनव सिनेमा का द्वितीय संस्करण — वाणी प्रकाशन द्वारा। विद्वानों और पाठकों की माँग पर पुनर्प्रकाशित, पेपरबैक और हार्डबाउंड दोनों रूपों में।",
+      "en": "The second edition of Abhinav Cinema, republished by Vani Prakashan in response to sustained scholarly and reader demand. Available in both paperback and hardbound."
+    },
+    "links": {}
+  },
+  {
+    "id": "alpahari-grihtyagi-2",
+    "canonical_id": "alpahari-grihtyagi",
+    "year": 2019,
+    "edition": 2,
+    "edition_label": { "hi": "द्वितीय संस्करण, २०१९", "en": "2nd edition, 2019" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
+    "title": { "hi": "अल्पाहारी गृहत्यागी", "en": "Alpahari Grihtyagi" },
+    "subtitle": { "hi": "आई.आई.टी. से पहले", "en": "IIT se Pehle" },
+    "publisher": "Nitya Prakashan, Jaipur",
+    "isbn": "978-8193427132",
+    "cover": "assets/images/covers/alpahari-grihtyagi-2.png",
+    "description": {
+      "hi": "अल्पाहारी गृहत्यागी का द्वितीय संस्करण — नित्य प्रकाशन द्वारा। नयी पीढ़ी के पाठकों के लिए यह प्रिय उपन्यासिका नये रूप में।",
+      "en": "The second edition of the beloved debut novella, republished by Nitya Prakashan for a new generation of readers."
+    },
+    "links": {}
+  },
+  {
+    "id": "uttarayan-1",
+    "canonical_id": "uttarayan",
+    "year": 2019,
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०१९", "en": "1st edition, 2019" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
+    "title": { "hi": "उत्तरायण", "en": "Uttarayan" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "Nitya Prakashan, Jaipur",
+    "isbn": "978-8193427170",
+    "cover": "assets/images/covers/uttarayan-1.png",
+    "description": {
+      "hi": "उत्तरायण-दक्षिणायन द्विभाग श्रृंखला का पहला भाग — बारह राशियों पर आधारित। सूर्य की उत्तरायण यात्रा की भाँति इन कहानियों में एक आरोही चेतना का संचार है।",
+      "en": "Book one of the Uttarayan-Dakshinayan duology, inspired by the twelve zodiac signs. Like the sun's northward journey, these stories carry an ascending consciousness."
+    },
+    "links": {}
+  },
+  {
+    "id": "dakshinayan-1",
+    "canonical_id": "dakshinayan",
+    "year": 2019,
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०१९", "en": "1st edition, 2019" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
+    "title": { "hi": "दक्षिणायन", "en": "Dakshinayan" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "Nitya Prakashan, Jaipur",
+    "isbn": "978-8193427187",
+    "cover": "assets/images/covers/dakshinayan-1.png",
+    "description": {
+      "hi": "उत्तरायण-दक्षिणायन श्रृंखला का दूसरा भाग। दक्षिणायन की अवरोही छाया में मानवीय अनुभवों की विविधता और गहराई।",
+      "en": "Book two of the Uttarayan-Dakshinayan duology. In the descending arc of the sun's southward journey, these stories explore the full depth and diversity of human experience through the twelve zodiac signs."
+    },
+    "links": {}
+  },
+  {
     "id": "cinema-through-rasa",
+    "canonical_id": "cinema-through-rasa",
     "year": 2021,
-    "genre": { "hi": "सिनेमा सिद्धान्त (अंग्रेज़ी)", "en": "Cinema Theory (English)" },
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०२१", "en": "1st edition, 2021" },
+    "genre": { "key": "english-nonfiction", "hi": "English Non-Fiction", "en": "English Non-Fiction" },
     "title": { "hi": "Cinema Through Rasa", "en": "Cinema Through Rasa" },
     "subtitle": {
       "hi": "A Tryst with Masterpieces in the Light of Rasa Siddhānta",
       "en": "A Tryst with Masterpieces in the Light of Rasa Siddhānta"
     },
-    "publisher": "D.K. Printworld",
-    "isbn": "9788124610985",
-    "cover": "assets/images/covers/cinema-through-rasa.jpg",
+    "publisher": "D.K. Printworld, New Delhi",
+    "isbn": "978-8124610985",
+    "cover": "assets/images/covers/cinema-through-rasa.png",
     "description": {
-      "hi": "अभिनव सिनेमा का अंग्रेज़ी अनुवाद। पौरस्त्य सौन्दर्यशास्त्र के निकष पर विश्व सिनेमा का अंग्रेज़ी में मूल्यांकन।",
-      "en": "The English translation of Abhinav Cinema. An assessment of world cinema masterpieces through the prism of Eastern aesthetics, making India's classical Rasa theory accessible to an international audience."
+      "hi": "अभिनव सिनेमा का अंग्रेज़ी अनुवाद। पौरस्त्य सौन्दर्यशास्त्र के निकष पर विश्व सिनेमा की श्रेष्ठ कृतियों का अंग्रेज़ी में मूल्यांकन — भारत की शास्त्रीय रस-परम्परा को अन्तर्राष्ट्रीय पाठकों तक पहुँचाने का प्रयास।",
+      "en": "The English translation of Abhinav Cinema. An assessment of world cinema masterpieces through the prism of Eastern aesthetics, making India's classical Rasa theory accessible to international readers. Reviewed in The Telegraph India, The Daily Pioneer and Outlook India."
     },
     "links": {
-      "amazon_in": "https://www.amazon.in/dp/8124610983"
+      "amazon_in": "https://www.amazon.in/dp/8124610983/",
+      "dkprintworld": "https://dkprintworld.com/product/cinema-through-rasa/"
     }
   },
   {
     "id": "kal-ki-baat-shadj",
+    "canonical_id": "kal-ki-baat-shadj",
     "year": 2021,
-    "genre": { "hi": "कहानी संग्रह", "en": "Short Stories" },
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०२१", "en": "1st edition, 2021" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
     "title": { "hi": "कल की बात : षड्ज", "en": "Kal Ki Baat : Shadj" },
     "subtitle": { "hi": "", "en": "" },
-    "publisher": "Vani Prakashan",
-    "cover": "assets/images/covers/kal-ki-baat-shadj.jpg",
+    "publisher": "Setu Prakashan, Noida",
+    "isbn": "978-9391277628",
+    "cover": "assets/images/covers/kal-ki-baat-shadj.png",
     "description": {
-      "hi": "संगीत के सात स्वरों की तर्ज़ पर रची गई कहानियों की श्रृंखला 'कल की बात' का पहला भाग। षड्ज — वह स्वर जो सभी रागों की नींव है।",
-      "en": "The first volume of a story cycle inspired by the seven musical notes of Indian classical music. Shadj — the foundational note from which all ragas emerge."
+      "hi": "लघुकथा संग्रह 'कल की बात' का पहला भाग — षड्ज स्वर पर आधारित। षड्ज वह स्वर है जो सभी रागों की नींव है, और ये लघुकथाएँ उसी मूलभूत मानवीय अनुभव को स्वर देती हैं।",
+      "en": "The first volume of the Kal Ki Baat micro-story series, structured around the note Shadj — the foundational note from which all ragas emerge, giving voice to the most elemental human experiences."
     },
     "links": {
-      "amazon_in": "https://www.amazon.in/s?k=kal+ki+baat+shadj+prachand+praveer"
+      "amazon_in": "https://www.amazon.in/dp/9391277624"
     }
   },
   {
     "id": "kal-ki-baat-rishabh",
+    "canonical_id": "kal-ki-baat-rishabh",
     "year": 2021,
-    "genre": { "hi": "कहानी संग्रह", "en": "Short Stories" },
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०२१", "en": "1st edition, 2021" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
     "title": { "hi": "कल की बात : ऋषभ", "en": "Kal Ki Baat : Rishabh" },
     "subtitle": { "hi": "", "en": "" },
-    "publisher": "Vani Prakashan",
-    "cover": "assets/images/covers/kal-ki-baat-rishabh.jpg",
+    "publisher": "Setu Prakashan, Noida",
+    "isbn": "978-9391277543",
+    "cover": "assets/images/covers/kal-ki-baat-rishabh.png",
     "description": {
-      "hi": "'कल की बात' श्रृंखला का दूसरा भाग — ऋषभ स्वर पर आधारित। आधुनिक जीवन की जटिलताओं को शास्त्रीय स्वरों की लय में पिरोती कहानियाँ।",
-      "en": "The second volume of the Kal Ki Baat series, structured around the note Rishabh. Stories that weave the complexities of modern life into the rhythm of classical Indian music."
+      "hi": "'कल की बात' श्रृंखला का दूसरा भाग — ऋषभ स्वर पर आधारित। आधुनिक जीवन की जटिलताओं को शास्त्रीय स्वरों की लय में पिरोती लघुकथाएँ।",
+      "en": "The second volume of the Kal Ki Baat series, structured around the note Rishabh. Micro-stories weaving the complexities of modern life into the rhythm of classical Indian music."
     },
     "links": {
-      "amazon_in": "https://www.amazon.in/s?k=kal+ki+baat+rishabh+prachand+praveer"
+      "amazon_in": "https://www.amazon.in/dp/9391277543/"
     }
   },
   {
     "id": "kal-ki-baat-gandhar",
+    "canonical_id": "kal-ki-baat-gandhar",
     "year": 2021,
-    "genre": { "hi": "कहानी संग्रह", "en": "Short Stories" },
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०२१", "en": "1st edition, 2021" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
     "title": { "hi": "कल की बात : गान्धार", "en": "Kal Ki Baat : Gandhar" },
     "subtitle": { "hi": "", "en": "" },
-    "publisher": "Vani Prakashan",
-    "cover": "assets/images/covers/kal-ki-baat-gandhar.jpg",
+    "publisher": "Setu Prakashan, Noida",
+    "isbn": "978-9391277390",
+    "cover": "assets/images/covers/kal-ki-baat-gandhar.png",
     "description": {
-      "hi": "'कल की बात' श्रृंखला का तीसरा भाग — गान्धार स्वर पर केन्द्रित। भारतीय शास्त्रीय परम्परा और समकालीन जीवन का संगम।",
-      "en": "The third volume of the Kal Ki Baat series, centred on the note Gandhar. A confluence of Indian classical tradition and contemporary life."
+      "hi": "'कल की बात' श्रृंखला का तीसरा भाग — गान्धार स्वर पर केन्द्रित। भारतीय शास्त्रीय परम्परा और समकालीन जीवन के संगम की लघुकथाएँ।",
+      "en": "The third volume of the Kal Ki Baat series, centred on the note Gandhar. Micro-stories at the confluence of Indian classical tradition and contemporary life."
     },
     "links": {
-      "amazon_in": "https://www.amazon.in/s?k=kal+ki+baat+gandhar+prachand+praveer"
-    }
-  },
-  {
-    "id": "uttarayan",
-    "year": 2019,
-    "genre": { "hi": "कहानी संग्रह", "en": "Short Stories" },
-    "title": { "hi": "उत्तरायण", "en": "Uttarayan" },
-    "subtitle": { "hi": "", "en": "" },
-    "publisher": "Vani Prakashan",
-    "cover": "assets/images/covers/uttarayan.jpg",
-    "description": {
-      "hi": "उत्तरायण-दक्षिणायन द्विभाग श्रृंखला का पहला भाग। सूर्य की उत्तरायण यात्रा की भाँति इन कहानियों में एक आरोही चेतना का संचार है।",
-      "en": "Book one of the Uttarayan-Dakshinayan duology. Like the sun's northward journey, these stories carry an ascending consciousness — a search for light amid the ordinary."
-    },
-    "links": {
-      "amazon_in": "https://www.amazon.in/s?k=uttarayan+prachand+praveer"
-    }
-  },
-  {
-    "id": "dakshinayan",
-    "year": 2019,
-    "genre": { "hi": "कहानी संग्रह", "en": "Short Stories" },
-    "title": { "hi": "दक्षिणायन", "en": "Dakshinayan" },
-    "subtitle": { "hi": "", "en": "" },
-    "publisher": "Vani Prakashan",
-    "cover": "assets/images/covers/dakshinayan.jpg",
-    "description": {
-      "hi": "उत्तरायण-दक्षिणायन श्रृंखला का दूसरा भाग। दक्षिणायन की अवरोही छाया में मानवीय अनुभवों की विविधता और गहराई।",
-      "en": "Book two of the Uttarayan-Dakshinayan duology. In the descending arc of the sun's southward journey, these stories explore the full depth and diversity of human experience."
-    },
-    "links": {
-      "amazon_in": "https://www.amazon.in/s?k=dakshinayan+prachand+praveer"
+      "amazon_in": "https://www.amazon.in/dp/939127739X"
     }
   },
   {
     "id": "mitne-ka-adhikar",
+    "canonical_id": "mitne-ka-adhikar",
     "year": 2024,
-    "genre": { "hi": "उपन्यास", "en": "Novel" },
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०२४", "en": "1st edition, 2024" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
     "title": { "hi": "मिटने का अधिकार", "en": "Mitne Ka Adhikar" },
     "subtitle": { "hi": "Right to Perish", "en": "Right to Perish" },
-    "publisher": "Vani Prakashan",
-    "cover": "assets/images/covers/mitne-ka-adhikar.jpg",
+    "publisher": "Setu Prakashan, Noida",
+    "isbn": "978-8119899401",
+    "cover": "assets/images/covers/mitne-ka-adhikar.png",
     "description": {
-      "hi": "एक ऐसे समय में जब सब कुछ दर्ज़ होता है, डिजिटल होता है और स्थायी होता है — क्या किसी को मिटने का अधिकार है? यह उपन्यास उस अधिकार की खोज करता है।",
-      "en": "In an age when everything is recorded, digitised and made permanent — does anyone retain the right to perish, to be forgotten? This novel searches for that right."
+      "hi": "एक ऐसे युग में जब सब कुछ दर्ज़ होता है, डिजिटल होता है और स्थायी होता है — क्या किसी को मिटने का अधिकार है? प्रचण्ड प्रवीर का पहला पूर्ण उपन्यास।",
+      "en": "In an age when everything is recorded, digitised and made permanent — does anyone retain the right to perish, to be forgotten? Prachand Praveer's first full-length novel."
     },
     "links": {
-      "amazon_in": "https://www.amazon.in/s?k=mitne+ka+adhikar+prachand+praveer"
+      "amazon_in": "https://www.amazon.in/dp/8119899407/"
     }
   },
   {
-    "id": "bhootnath-meets-bhairavi",
-    "year": 2017,
-    "genre": { "hi": "उपन्यास", "en": "Novel" },
-    "title": { "hi": "Bhootnath Meets Bhairavi", "en": "Bhootnath Meets Bhairavi" },
+    "id": "uttarayan-2",
+    "canonical_id": "uttarayan",
+    "year": 2025,
+    "edition": 2,
+    "edition_label": { "hi": "द्वितीय संस्करण, २०२५", "en": "2nd edition, 2025" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
+    "title": { "hi": "उत्तरायण", "en": "Uttarayan" },
     "subtitle": { "hi": "", "en": "" },
-    "publisher": "Harper Collins India",
-    "cover": "assets/images/covers/bhootnath-meets-bhairavi.jpg",
+    "publisher": "Vera Prakashan, Jaipur",
+    "isbn": "978-9348290809",
+    "cover": "assets/images/covers/uttarayan-2.png",
     "description": {
-      "hi": "भूतनाथ और भैरवी की असाधारण मुलाकात पर केन्द्रित यह उपन्यास हास्य, करुणा और आध्यात्मिक जिज्ञासा का अद्भुत संगम है।",
-      "en": "A novel centred on the extraordinary meeting of Bhootnath and Bhairavi — a remarkable confluence of humour, pathos and spiritual inquiry."
+      "hi": "उत्तरायण का द्वितीय संस्करण — वेरा प्रकाशन द्वारा। बारह राशियों पर आधारित इस कहानी संग्रह का नया रूप, नये पाठकों के लिए।",
+      "en": "The second edition of Uttarayan, republished by Vera Prakashan. The zodiac-inspired story cycle now available for a new generation of readers."
     },
     "links": {
-      "amazon_in": "https://www.amazon.in/s?k=bhootnath+meets+bhairavi+prachand+praveer"
+      "amazon_in": "https://www.amazon.in/dp/9348290800/"
     }
   },
   {
-    "id": "jaana-nahi-dil-se-door",
-    "year": 2015,
-    "genre": { "hi": "कहानी संग्रह", "en": "Short Stories" },
-    "title": { "hi": "जाना नहीं दिल से दूर", "en": "Jaana Nahi Dil Se Door" },
+    "id": "dakshinayan-2",
+    "canonical_id": "dakshinayan",
+    "year": 2025,
+    "edition": 2,
+    "edition_label": { "hi": "द्वितीय संस्करण, २०२५", "en": "2nd edition, 2025" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
+    "title": { "hi": "दक्षिणायन", "en": "Dakshinayan" },
     "subtitle": { "hi": "", "en": "" },
-    "publisher": "Harper Collins India",
-    "isbn": "9789351777816",
-    "cover": "assets/images/covers/jaana-nahi.jpg",
+    "publisher": "Vera Prakashan, Jaipur",
+    "isbn": "978-9348290830",
+    "cover": "assets/images/covers/dakshinayan-2.png",
     "description": {
-      "hi": "प्यार, जवानी, मौत और बुढ़ापे जैसे विषयों पर लिखी कहानियाँ — एक भागा हुआ छात्र, एक हथेली-पढ़ने वाला जो अनजाने में सबका स्वीकारोक्ति-पात्र बन जाता है। सामान्य जीवन के दुःख और हास्य का अनूठा साक्ष्य।",
-      "en": "Stories on love, youth, death and old age — a runaway student in Kolkata, a boy who befriends a prostitute's son, a palmist who becomes an accidental confessor. Testimony to the pathos and humour hidden in all things ordinary."
+      "hi": "दक्षिणायन का द्वितीय संस्करण — वेरा प्रकाशन द्वारा। उत्तरायण-दक्षिणायन श्रृंखला के दोनों भाग अब एक साथ नये रूप में उपलब्ध।",
+      "en": "The second edition of Dakshinayan, republished by Vera Prakashan alongside the new edition of Uttarayan. Both volumes of the duology now available together."
     },
     "links": {
-      "amazon_in": "http://www.amazon.in/Jaana-Nahi-Dil-Se-Door/dp/9351777812/",
-      "flipkart": "http://www.flipkart.com/jaana-nahi-dil-se-door/p/itmegnvxbtfgn3rn"
+      "amazon_in": "https://www.amazon.in/dp/9348290835"
     }
   },
   {
-    "id": "alpahari-grihtyagi",
-    "year": 2010,
-    "genre": { "hi": "उपन्यास", "en": "Novel" },
+    "id": "rishyashring-kharab-kavitayein",
+    "canonical_id": "rishyashring-kharab-kavitayein",
+    "year": 2025,
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०२५", "en": "1st edition, 2025" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
+    "title": { "hi": "ऋष्यशृङ्ग की खराब कविताएँ", "en": "Rishyashring Ki Kharab Kavitayein" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "New World Publication, Delhi",
+    "isbn": "978-9364071758",
+    "cover": "assets/images/covers/rishyashring-kharab-kavitayein.png",
+    "description": {
+      "hi": "ऋष्यशृङ्ग की 'खराब' कविताएँ — एक काव्य-संग्रह जो कविता की परम्परागत अपेक्षाओं को चुनौती देते हुए एक पौराणिक पात्र की दृष्टि से आधुनिक जीवन को देखता है।",
+      "en": "The 'bad' poems of Rishyashring — a poetry collection that challenges conventional poetic expectations, viewing modern life through the eyes of a mythological figure in a tone that is irreverent, humorous and deeply felt."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/dp/9364071751"
+    }
+  },
+  {
+    "id": "varnochchar-vidhan",
+    "canonical_id": "varnochchar-vidhan",
+    "year": 2026,
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०२६", "en": "1st edition, 2026" },
+    "genre": { "key": "hindi-nonfiction", "hi": "हिन्दी कथेतर गद्य", "en": "Hindi Non-Fiction" },
+    "title": { "hi": "वर्णोच्चार विधान", "en": "Varnochchar Vidhan" },
+    "subtitle": {
+      "hi": "भारतीय ध्वनितत्त्वशास्त्र में वर्णविलास",
+      "en": "Bhartiya Dhvani Tattvashastra mein Varna Vilas"
+    },
+    "publisher": "Kitabwale, New Delhi",
+    "isbn": "978-9347555183",
+    "cover": "assets/images/covers/varnochchar-vidhan.png",
+    "description": {
+      "hi": "भारतीय शास्त्रीय ध्वनिविज्ञान का एक परिचयात्मक ग्रन्थ। संस्कृत के वर्णों का उच्चारण-विधान, उनकी ध्वन्यात्मक संरचना और भाषाशास्त्रीय महत्त्व पर गहन विवेचन। आचार्य राधावल्लभ त्रिपाठी द्वारा समीक्षित।",
+      "en": "An introductory text on Indian classical phonology — a profound discussion of Sanskrit phoneme articulation, their acoustic structure and linguistic significance, bridging ancient phonological science with modern understanding. Reviewed by Acharya Radhavallabh Tripathi."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/dp/9347555185/"
+    }
+  },
+  {
+    "id": "komal-rishabh",
+    "canonical_id": "komal-rishabh",
+    "year": 2026,
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०२६", "en": "1st edition, 2026" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
+    "title": { "hi": "कोमल ऋषभ", "en": "Komal Rishabh" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "New World Publication, Delhi",
+    "isbn": "978-9364073103",
+    "cover": "assets/images/covers/komal-rishabh.png",
+    "description": {
+      "hi": "कोमल ऋषभ — संगीत के कोमल स्वर की भाँति कोमल और मार्मिक लघुकथाएँ। 'कल की बात' श्रृंखला की भावना को आगे बढ़ाती नई कृति।",
+      "en": "Komal Rishabh — short stories as tender and poignant as the flattened note in Indian classical music. A new work continuing the spirit and sensibility of the Kal Ki Baat series."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/dp/936407310X/"
+    }
+  },
+  {
+    "id": "komal-gandhar",
+    "canonical_id": "komal-gandhar",
+    "year": 2026,
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०२६", "en": "1st edition, 2026" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
+    "title": { "hi": "कोमल गान्धार", "en": "Komal Gandhaar" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "New World Publication, Delhi",
+    "isbn": "978-9364075015",
+    "cover": "assets/images/covers/komal-gandhar.png",
+    "description": {
+      "hi": "कोमल गान्धार — व्यंग्य संकलन। समकालीन समाज की विसंगतियों और विडम्बनाओं पर तीखी और हास्यपूर्ण दृष्टि।",
+      "en": "Komal Gandhaar — a satire collection. A sharp and humorous gaze on the absurdities and ironies of contemporary society, in the tradition of the great Hindi satirists."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/dp/9364075013/"
+    }
+  },
+  {
+    "id": "kal-ki-baat-madhyam",
+    "canonical_id": "kal-ki-baat-madhyam",
+    "year": 2026,
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०२६", "en": "1st edition, 2026" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
+    "title": { "hi": "कल की बात : मध्यम", "en": "Kal Ki Baat : Madhyam" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "New World Publication, Delhi",
+    "isbn": "978-9364077484",
+    "cover": "assets/images/covers/kal-ki-baat-madhyam.png",
+    "description": {
+      "hi": "'कल की बात' श्रृंखला का चौथा भाग — मध्यम स्वर पर आधारित। मध्यम वह स्वर है जो ऊँचाई और गहराई के बीच सन्तुलन साधता है।",
+      "en": "The fourth volume of the Kal Ki Baat series, structured around the note Madhyam — the note that holds the balance between height and depth, tension and resolution."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/dp/9364077482/"
+    }
+  },
+  {
+    "id": "ritambhara",
+    "canonical_id": "ritambhara",
+    "year": 2026,
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, २०२६", "en": "1st edition, 2026" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
+    "title": { "hi": "ऋतम्भरा", "en": "Ritambhara" },
+    "subtitle": {
+      "hi": "उपनिषद् आख्यायिका मञ्जरी",
+      "en": "Upanishad Akhyayika Manjari"
+    },
+    "publisher": "New World Publication, Delhi",
+    "isbn": "978-9364077682",
+    "cover": "assets/images/covers/ritambhara.png",
+    "description": {
+      "hi": "उपनिषदों की आख्यायिकाओं का एक मञ्जरी — भारतीय ज्ञान-परम्परा की महागाथाओं को कथा-रूप में प्रस्तुत करने का साहसी प्रयास। आचार्य राधावल्लभ त्रिपाठी द्वारा समीक्षित।",
+      "en": "A garland of Upanishadic narratives — a bold retelling of the great stories from India's knowledge tradition in contemporary short story form, drawing on the author's deep engagement with the Upanishads. Reviewed by Acharya Radhavallabh Tripathi."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/dp/9364070887"
+    }
+  },
+  {
+    "id": "abhinav-cinema-3",
+    "canonical_id": "abhinav-cinema",
+    "year": 2026,
+    "edition": 3,
+    "new_edition": true,
+    "edition_label": { "hi": "तृतीय संस्करण, २०२६", "en": "3rd edition, 2026" },
+    "genre": { "key": "hindi-nonfiction", "hi": "हिन्दी कथेतर गद्य", "en": "Hindi Non-Fiction" },
+    "title": { "hi": "अभिनव सिनेमा", "en": "Abhinav Cinema" },
+    "subtitle": {
+      "hi": "रस सिद्धान्त के आलोक में विश्व सिनेमा का परिचय",
+      "en": "Introduction to World Cinema in Light of Rasa Theory"
+    },
+    "publisher": "New World Publication, New Delhi",
+    "isbn": "978-9364079488",
+    "cover": "assets/images/covers/abhinav-cinema-3.png",
+    "description": {
+      "hi": "भरतमुनि के नाट्यशास्त्र और अभिनवगुप्त की अभिनवभारती के परिप्रेक्ष्य में विश्व सिनेमा की प्रमुख कृतियों का विवेचन। कुछ वर्षों से अनुपलब्ध यह बहुचर्चित पुस्तक अब तृतीय संस्करण में उपलब्ध है।",
+      "en": "The third edition of the landmark work on world cinema through Rasa theory — back in print after being unavailable for several years. Lauded by Dr. Navjivan Rastogi, Dr. Bharat Gupt, Acharya Radhavallabh Tripathi and Dr. Ambikadatt Sharma."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/dp/9364079485/"
+    }
+  },
+  {
+    "id": "alpahari-grihtyagi-3",
+    "canonical_id": "alpahari-grihtyagi",
+    "year": 2026,
+    "edition": 3,
+    "new_edition": true,
+    "edition_label": { "hi": "तृतीय संस्करण, २०२६", "en": "3rd edition, 2026" },
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
     "title": { "hi": "अल्पाहारी गृहत्यागी", "en": "Alpahari Grihtyagi" },
     "subtitle": { "hi": "आई.आई.टी. से पहले", "en": "IIT se Pehle" },
-    "publisher": "Harper Collins India",
-    "isbn": "9788172239275",
-    "cover": "assets/images/covers/alpahari-grihtyagi.jpg",
+    "publisher": "New World Publication, New Delhi",
+    "isbn": "978-9364070454",
+    "cover": "assets/images/covers/alpahari-grihtyagi-3.png",
     "description": {
-      "hi": "घर से दूर, हज़ारों युवा आई.आई.टी. प्रवेश परीक्षा की तैयारी के लिए आते हैं। गुल फ़ैक्ट्री बॉयज़ हॉस्टल में सव्यसाची, सत्य, तरंग और परमहंस अपनी-अपनी दुनिया में खोए हुए हैं। एक बेहद चर्चित और प्रेरक पहला उपन्यास।",
-      "en": "Miles from home, thousands gather to prepare for the IIT entrance examination. At the Gul Factory boys' hostel, Savyasachi, Satya, Tarang and Paramhans are each lost in their own quixotic quest. A landmark debut that inspired a generation of young Hindi writers."
+      "hi": "घर से दूर, हज़ारों युवा आई.आई.टी. प्रवेश परीक्षा की तैयारी के लिए आते हैं। गुल फ़ैक्ट्री बॉयज़ हॉस्टल में सव्यसाची, सत्य, तरंग और परमहंस अपनी-अपनी दुनिया में खोए हुए हैं। तृतीय संस्करण — नयी पीढ़ी के लिए।",
+      "en": "Third edition of the beloved debut novella that inspired a generation. Miles from home, thousands gather to prepare for the IIT entrance examination — a story as relevant today as when first published in 2010."
     },
     "links": {
-      "amazon_in": "http://www.amazon.in/Alpahari-Grehtyag-IIT-Se-Pehle/dp/8172239270/",
-      "flipkart": "http://www.flipkart.com/alphari-grihtyagi-iit-se-pehele/p/itmdyu4cfqtn3zgw"
+      "amazon_in": "https://www.amazon.in/dp/9364070453/"
     }
   }
 ]
