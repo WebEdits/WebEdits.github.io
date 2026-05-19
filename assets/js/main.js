@@ -238,6 +238,11 @@
   }
 
   // ── Book detail modal ─────────────────────────────────────
+  // currentModalList tracks the filtered+sorted list the user is browsing,
+  // so prev/next buttons know what order to navigate.
+  let currentModalList = [];
+  let currentModalIdx  = 0;
+
   function initBookDetailModal() {
     if (qs('#book-detail-modal')) return;
     const modal = document.createElement('div');
@@ -247,22 +252,54 @@
     modal.innerHTML = `
       <div class="book-detail__backdrop"></div>
       <div class="book-detail__panel">
-        <button class="book-detail__close" aria-label="Close">&#x2715;</button>
+        <button class="book-detail__close"  aria-label="Close">&#x2715;</button>
+        <button class="book-detail__nav book-detail__nav--prev" aria-label="Previous book">&#x2039;</button>
+        <button class="book-detail__nav book-detail__nav--next" aria-label="Next book">&#x203A;</button>
         <div class="book-detail__cover-wrap"></div>
         <div class="book-detail__content"></div>
       </div>`;
     document.body.appendChild(modal);
+
     const close = () => { modal.classList.remove('open'); document.body.style.overflow = ''; };
     qs('.book-detail__backdrop', modal).addEventListener('click', close);
-    qs('.book-detail__close', modal).addEventListener('click', close);
+    qs('.book-detail__close',    modal).addEventListener('click', close);
+
+    qs('.book-detail__nav--prev', modal).addEventListener('click', () => {
+      if (currentModalList.length < 2) return;
+      currentModalIdx = (currentModalIdx - 1 + currentModalList.length) % currentModalList.length;
+      openBookDetail(currentModalList[currentModalIdx], false);
+    });
+    qs('.book-detail__nav--next', modal).addEventListener('click', () => {
+      if (currentModalList.length < 2) return;
+      currentModalIdx = (currentModalIdx + 1) % currentModalList.length;
+      openBookDetail(currentModalList[currentModalIdx], false);
+    });
+
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && modal.classList.contains('open')) close();
+      if (!modal.classList.contains('open')) return;
+      if (e.key === 'Escape')     close();
+      if (e.key === 'ArrowLeft')  qs('.book-detail__nav--prev', modal).click();
+      if (e.key === 'ArrowRight') qs('.book-detail__nav--next', modal).click();
     });
   }
 
-  function openBookDetail(book) {
+  function openBookDetail(book, updateList = true) {
     const modal = qs('#book-detail-modal');
     if (!modal) return;
+
+    // Update navigation list only when opening fresh from carousel
+    if (updateList) {
+      const grid = qs('#books-grid');
+      currentModalList = qsa('.book-card', grid)
+        .map(c => allBooks.find(b => b.id === c.dataset.id))
+        .filter(Boolean);
+      currentModalIdx = currentModalList.findIndex(b => b.id === book.id);
+    }
+
+    // Update nav button visibility
+    const hasSiblings = currentModalList.length > 1;
+    qs('.book-detail__nav--prev', modal).style.display = hasSiblings ? '' : 'none';
+    qs('.book-detail__nav--next', modal).style.display = hasSiblings ? '' : 'none';
 
     const badge = book.new_edition
       ? `<span class="book-detail__badge">${lang === 'hi' ? 'नया संस्करण' : 'New Edition'}</span>` : '';
@@ -276,35 +313,25 @@
         return `<a href="${url}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">${label}</a>`;
       }).join('');
 
-    // Testimonials: match on canonical_id
+    // Instead of inline testimonials, show a "See Reviews" button that
+    // closes modal, scrolls to #testimonials, and highlights that book's cards.
     const canonId = book.canonical_id || book.id;
-    const testimonials = (allTestimonials.author || [])
-      .filter(item => (item.canonical_id || item.book_id) === canonId);
+    const hasTestimonials = (allTestimonials.author || [])
+      .some(item => (item.canonical_id || item.book_id) === canonId);
 
-    const testimonialHTML = testimonials.length
-      ? `<div class="book-detail__testimonials">
-          <p class="book-detail__testimonials-label">
-            ${lang === 'hi' ? 'समीक्षा एवं प्रशंसापत्र' : 'Reviews &amp; Endorsements'}
-          </p>
-          ${testimonials.map(item => `
-            <div class="book-detail__testimonial">
-              <p class="book-detail__testimonial-quote">${t(item.quote)}</p>
-              <p class="book-detail__testimonial-attr">
-                — ${t(item.attribution)}<span>, ${t(item.role)}</span>
-              </p>
-            </div>`).join('')}
-        </div>` : '';
+    const reviewsBtn = hasTestimonials
+      ? `<button class="btn btn-outline btn-sm book-detail__reviews-btn" data-canon="${canonId}">
+          ${lang === 'hi' ? 'समीक्षाएँ देखें ↓' : 'See Reviews ↓'}
+        </button>` : '';
 
-    // Other editions of the same work
+    // Other editions
     const otherEditions = allBooks
       .filter(b => (b.canonical_id || b.id) === canonId && b.id !== book.id)
       .sort((a, b) => a.year - b.year);
 
     const editionHTML = otherEditions.length
       ? `<div class="book-detail__editions">
-          <p class="book-detail__editions-label">
-            ${lang === 'hi' ? 'अन्य संस्करण' : 'Other Editions'}
-          </p>
+          <p class="book-detail__editions-label">${lang === 'hi' ? 'अन्य संस्करण' : 'Other Editions'}</p>
           <div class="book-detail__editions-list">
             ${otherEditions.map(ed => `
               <button class="book-detail__edition-btn" data-id="${ed.id}">
@@ -323,14 +350,43 @@
       <p class="book-detail__publisher">${book.publisher || ''}</p>
       <p class="book-detail__desc">${t(book.description)}</p>
       ${buyLinks ? `<div class="book-detail__links">${buyLinks}</div>` : ''}
-      ${editionHTML}
-      ${testimonialHTML}`;
+      ${reviewsBtn}
+      ${editionHTML}`;
 
+    // Wire edition switcher
     qsa('.book-detail__edition-btn', modal).forEach(btn =>
       btn.addEventListener('click', () => {
         const ed = allBooks.find(b => b.id === btn.dataset.id);
-        if (ed) openBookDetail(ed);
+        if (ed) openBookDetail(ed, false);
       }));
+
+    // Wire "See Reviews" — close modal, scroll to section, highlight by canonical
+    const rvBtn = qs('.book-detail__reviews-btn', modal);
+    if (rvBtn) {
+      rvBtn.addEventListener('click', () => {
+        const targetCanon = rvBtn.dataset.canon;
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+        const section = qs('#testimonials');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Briefly highlight matching cards
+          setTimeout(() => {
+            qsa('.testimonial-card', section).forEach(card => {
+              const bookEl = card.querySelector('.testimonial-card__book');
+              if (!bookEl) return;
+              // Find canonical match via book title
+              const matchingBooks = allBooks.filter(b => (b.canonical_id || b.id) === targetCanon);
+              const titles = matchingBooks.map(b => t(b.title));
+              if (titles.some(title => bookEl.textContent.includes(title))) {
+                card.classList.add('testimonial-card--highlight');
+                setTimeout(() => card.classList.remove('testimonial-card--highlight'), 2500);
+              }
+            });
+          }, 600);
+        }
+      });
+    }
 
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
