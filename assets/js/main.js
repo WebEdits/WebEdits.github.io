@@ -342,19 +342,27 @@
     if (!grid) return;
     grid.innerHTML = (allTestimonials.author || []).map(item => {
       const canonId = item.canonical_id || item.book_id;
-      // Find the most recent edition of this canonical book to show a clean title
-      const book = allBooks
-        .filter(b => (b.canonical_id || b.id) === canonId)
-        .sort((a, b) => b.year - b.year)[0];
+      const book = allBooks.find(b => (b.canonical_id || b.id) === canonId && b.edition === Math.max(...allBooks.filter(x => (x.canonical_id||x.id)===canonId).map(x=>x.edition||1)));
       const bookLabel = book ? t(book.title) : '';
+
+      // Photo or initial placeholder
+      const initial = (t(item.attribution)[0] || '?');
+      const photoHTML = item.photo
+        ? `<img class="testimonial-card__photo" src="${item.photo}" alt="${t(item.attribution)}" loading="lazy"
+             onerror="this.outerHTML='<div class=testimonial-card__photo-placeholder>${initial}</div>'">`
+        : `<div class="testimonial-card__photo-placeholder">${initial}</div>`;
+
       return `
         <div class="testimonial-card fade-up">
-          ${bookLabel ? `<p class="testimonial-card__book">${bookLabel}</p>` : ''}
-          <blockquote class="testimonial-card__quote">${t(item.quote)}</blockquote>
-          <div class="testimonial-card__attr">
-            <p class="testimonial-card__name">${t(item.attribution)}</p>
-            <p class="testimonial-card__role">${t(item.role)}</p>
+          <div class="testimonial-card__header">
+            ${photoHTML}
+            <div class="testimonial-card__attr">
+              <p class="testimonial-card__name">${t(item.attribution)}</p>
+              <p class="testimonial-card__role">${t(item.role)}</p>
+              ${bookLabel ? `<p class="testimonial-card__book">${bookLabel}</p>` : ''}
+            </div>
           </div>
+          <blockquote class="testimonial-card__quote">${t(item.quote)}</blockquote>
         </div>`;
     }).join('');
     initScrollAnim();
