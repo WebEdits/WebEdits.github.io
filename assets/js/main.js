@@ -44,6 +44,13 @@
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
 
+    // Close book detail modal if open
+    const modal = qs('#book-detail-modal');
+    if (modal?.classList.contains('open')) {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
     // Re-render everything
     if (allBooks.length) {
       renderFilterButtons();
@@ -137,11 +144,7 @@
           return genre.includes(activeFilter);
         });
 
-    const totalPages = Math.ceil(filtered.length / 2);
-    if (currentPage >= totalPages) currentPage = 0;
-    const pageBooks = filtered.slice(currentPage * 2, currentPage * 2 + 2);
-
-    grid.innerHTML = pageBooks.map(book => {
+    grid.innerHTML = filtered.map(book => {
       const hasCover = book.cover;
       const coverHTML = hasCover
         ? `<img src="${book.cover}" alt="${t(book.title)}" loading="lazy"
@@ -162,46 +165,62 @@
           return `<a href="${url}" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">${label}</a>`;
         }).join('');
 
-      const subtitle = t(book.subtitle)
-        ? `<p class="book-card__subtitle">${t(book.subtitle)}</p>` : '';
-
       return `
-        <div class="book-card" data-genre="${book.genre?.en?.toLowerCase() || ''}">
+        <div class="book-card" data-id="${book.id}" data-genre="${book.genre?.en?.toLowerCase() || ''}" tabindex="0">
           <div class="book-card__cover">${coverHTML}</div>
-          <div class="book-card__body">
+          <div class="book-card__overlay">
             <p class="book-card__meta">${t(book.genre)} · ${book.latest_edition || book.year}</p>
             <h3 class="book-card__title">${t(book.title)}${badge}</h3>
-            ${subtitle}
             <p class="book-card__desc">${t(book.description)}</p>
             <div class="book-card__links">${links}</div>
           </div>
         </div>`;
     }).join('');
 
-    // Pagination controls
-    let pager = qs('#books-pagination');
-    if (!pager) {
-      pager = document.createElement('div');
-      pager.id = 'books-pagination';
-      pager.className = 'books-pagination';
-      grid.after(pager);
-    }
-    if (totalPages > 1) {
-      pager.innerHTML = `
-        <button data-dir="-1" aria-label="${lang === 'hi' ? 'पिछला' : 'Previous'}" ${currentPage === 0 ? 'disabled' : ''}>&#x2039;</button>
-        <span>${currentPage + 1} / ${totalPages}</span>
-        <button data-dir="1" aria-label="${lang === 'hi' ? 'अगला' : 'Next'}" ${currentPage >= totalPages - 1 ? 'disabled' : ''}>&#x203A;</button>`;
-      pager.querySelector('[data-dir="-1"]').addEventListener('click', () => { currentPage--; renderBooks(); });
-      pager.querySelector('[data-dir="1"]').addEventListener('click', () => { currentPage++; renderBooks(); });
-    } else {
-      pager.innerHTML = '';
-    }
+    // Remove old pagination if present
+    const pager = qs('#books-pagination');
+    if (pager) pager.innerHTML = '';
 
-    // Re-observe new elements
-    qsa('.book-card', grid).forEach(el => {
-      el.classList.add('fade-up');
+    // Click to open detail modal
+    qsa('.book-card', grid).forEach(card => {
+      card.addEventListener('click', () => {
+        const book = allBooks.find(b => b.id === card.dataset.id);
+        if (book) openBookDetail(book);
+      });
     });
-    initScrollAnim();
+
+    // Inject carousel wrapper + arrow buttons (once)
+    if (!qs('#books-carousel-wrap')) {
+      const wrap = document.createElement('div');
+      wrap.id = 'books-carousel-wrap';
+      wrap.className = 'books-carousel-wrap';
+      grid.parentElement.insertBefore(wrap, grid);
+      wrap.appendChild(grid);
+
+      ['prev', 'next'].forEach(dir => {
+        const btn = document.createElement('button');
+        btn.className = `books-carousel__btn books-carousel__btn--${dir}`;
+        btn.setAttribute('aria-label', dir === 'prev' ? 'Previous' : 'Next');
+        btn.innerHTML = dir === 'prev' ? '&#x2039;' : '&#x203A;';
+        btn.addEventListener('click', () => {
+          const step = 236;
+          if (dir === 'prev') {
+            if (grid.scrollLeft < step / 2) {
+              grid.scrollLeft = grid.scrollWidth;
+            } else {
+              grid.scrollBy({ left: -step, behavior: 'smooth' });
+            }
+          } else {
+            if (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - step / 2) {
+              grid.scrollLeft = 0;
+            } else {
+              grid.scrollBy({ left: step, behavior: 'smooth' });
+            }
+          }
+        });
+        wrap.appendChild(btn);
+      });
+    }
   }
 
   function placeholderHTML(book) {
@@ -280,6 +299,78 @@
           <p class="press-item__attr">— ${t(item.attribution)}</p>
         </div>
       </a>`).join('');
+  }
+
+  // ── Book detail modal ─────────────────────────────────────
+  function initBookDetailModal() {
+    if (qs('#book-detail-modal')) return;
+    const modal = document.createElement('div');
+    modal.id = 'book-detail-modal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.innerHTML = `
+      <div class="book-detail__backdrop"></div>
+      <div class="book-detail__panel">
+        <button class="book-detail__close" aria-label="Close">&#x2715;</button>
+        <div class="book-detail__cover-wrap"></div>
+        <div class="book-detail__content"></div>
+      </div>`;
+    document.body.appendChild(modal);
+
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    modal.querySelector('.book-detail__backdrop').addEventListener('click', closeModal);
+    modal.querySelector('.book-detail__close').addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+  }
+
+  function openBookDetail(book) {
+    const modal = qs('#book-detail-modal');
+    if (!modal) return;
+
+    const badge = book.new_edition
+      ? `<span class="book-detail__badge">${lang === 'hi' ? 'नया संस्करण' : 'New Edition'}</span>`
+      : '';
+
+    const subtitle = t(book.subtitle)
+      ? `<p class="book-detail__subtitle">${t(book.subtitle)}</p>`
+      : '';
+
+    const links = Object.entries(book.links || {})
+      .map(([key, url]) => {
+        const label = { amazon_in: 'Amazon IN', flipkart: 'Flipkart', amazon_com: 'Amazon US' }[key] || key;
+        return `<a href="${url}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">${label}</a>`;
+      }).join('');
+
+    const testimonials = (allTestimonials.author || []).filter(item => item.book_id === book.id);
+    const testimonialHTML = testimonials.length
+      ? `<div class="book-detail__testimonials">
+          <p class="book-detail__testimonials-label">${lang === 'hi' ? 'समीक्षा' : 'Reviews &amp; Endorsements'}</p>
+          ${testimonials.map(item => `
+            <div class="book-detail__testimonial">
+              <p class="book-detail__testimonial-quote">${t(item.quote)}</p>
+              <p class="book-detail__testimonial-attr">— ${t(item.attribution)}<span>, ${t(item.role)}</span></p>
+            </div>`).join('')}
+        </div>`
+      : '';
+
+    modal.querySelector('.book-detail__cover-wrap').innerHTML =
+      book.cover ? `<img src="${book.cover}" alt="${t(book.title)}">` : '';
+
+    modal.querySelector('.book-detail__content').innerHTML = `
+      <p class="book-detail__meta">${t(book.genre)} · ${book.publisher || ''} · ${book.latest_edition || book.year}</p>
+      <h2 class="book-detail__title">${t(book.title)}${badge}</h2>
+      ${subtitle}
+      <p class="book-detail__desc">${t(book.description)}</p>
+      <div class="book-detail__links">${links}</div>
+      ${testimonialHTML}`;
+
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
   }
 
   // ── Render: Static translated text ───────────────────────
@@ -416,6 +507,7 @@
     renderStaticText();
     initScrollAnim();
     initContactForm();
+    initBookDetailModal();
     initGalleryCarousel();
   }
 
