@@ -48,6 +48,21 @@
     ]
   },
   {
+    "id": "natyashastra-2025",
+    "date": "2025-07",
+    "title": {
+      "hi": "लिपिका भूषण के साथ द इंडिक पेन",
+      "en": "TheIndicPen with Lipika Bhushan"
+    },
+    "description": {
+      "hi": "प्रचंड प्रवीर के साथ भरत मुनि के नाट्यशास्त्र और रस सिद्धांत का कश्मीर और उसका कालातीत ज्ञान।",
+      "en": "Kashmir & Its Timeless Wisdom of Bharat Muni's Natyashastra and Rasa Theory with Prachand Praveer"
+    },
+    "videos": [
+      { "youtube_id": "ZjQuyWp0bsI", "label": { "hi": "साक्षात्कार", "en": "Interview" } }
+    ]
+  },
+  {
     "id": "aahopurushika-2025",
     "date": "2025-07",
     "title": {
@@ -66,7 +81,7 @@
     "id": "kashmir-shaivism-2024",
     "date": "2024-11",
     "title": {
-      "hi": "कश्मीर शैववाद — डॉ॰ नवजीवन रस्तोगी के साथ संवाद",
+      "hi": "कश्मीर शिवाद्वयवाद — डॉ॰ नवजीवन रस्तोगी के साथ संवाद",
       "en": "Kashmir Shaivism — Interview with Dr. Navjivan Rastogi"
     },
     "description": {
@@ -112,6 +127,21 @@
     },
     "videos": [
       { "youtube_id": "w9tMv1-dDlE", "label": { "hi": "वक्तव्य", "en": "Talk" } }
+    ]
+  },
+  {
+    "id": "kkb-with-lipika-2022",
+    "date": "2022-06",
+    "title": {
+      "hi": "कल की बात: आपकी, मेरी , हम सबकी  बात",
+      "en": "Kal Ki Baat: Aapki, Meri, Hum Sabki Baat"
+    },
+    "description": {
+      "hi": "'कल की बात' श्रृंखला पर लिपिका भूषण, कृष्ण कल्पित, विनोद पदराज, और अरुण देव के साथ परिचर्चा।",
+      "en": "A discussion on the Kal Ki Baat short story series — with Krishna Kalpit, Vinod Padraj, and Arun Dev, moderated by Lipika Bhushan."
+    },
+    "videos": [
+      { "youtube_id": "IsGwWpiiJFo", "label": { "hi": "परिचर्चा", "en": "Discussion" } }
     ]
   },
   {
