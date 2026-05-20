@@ -2,6 +2,7 @@
   "author": [
     {
       "id": "rastogi",
+      "date": "2026-03",
       "canonical_id": "abhinav-cinema",
       "photo": "assets/images/reviewers/navjivan-rastogi.jpg",
       "quote": {
@@ -9,10 +10,12 @@
         "en": "There are two bitter realities of India's so-called intellectual discourse — one is the moulding of our intellectual structures into the conceptual categories of the West; the other is the mindless chanting of the sky-high extremism of Indian knowledge traditions. Against this, I believe that for both the revival and re-establishment of the vigorous brilliance of Indian thought, an autonomous sense of the identity of 'history' and 'criteria' and the evaluation of global creative enterprise relative to it, is an indispensable condition for any meaningful discourse. Prachand Praveer fulfils this condition without hesitation, reinventing tradition — showing how it enters into dialogue with modern challenges."
       },
       "attribution": { "hi": "डॉ॰ नवजीवन रस्तोगी", "en": "Dr. Navjivan Rastogi" },
-      "role": { "hi": "पद्म श्री; आचार्य, संस्कृत तथा प्राकृत भाषा विभाग, लखनऊ विश्वविद्यालय", "en": "Padma Shri; Professor of Sanskrit & Prakrit, Lucknow University" }
+      "role": { "hi": "पद्म श्री; आचार्य, संस्कृत तथा प्राकृत भाषा विभाग, लखनऊ विश्वविद्यालय", "en": "Padma Shri; Professor of Sanskrit & Prakrit, Lucknow University" },
+      "url":""
     },
     {
       "id": "gupt",
+      "date": "2026-03",
       "canonical_id": "abhinav-cinema",
       "photo": "assets/images/reviewers/bharat-gupt.jpg",
       "quote": {
@@ -20,10 +23,12 @@
         "en": "Prachand Praveer has written a path-breaking book that points in a genuinely new direction. He has studied the classical texts — Bharatmuni's Natyashastra and its celebrated commentary Abhinavabharati — and connected ancient dramatic thought to the modern medium of cinema. My sincere wish is that experts from various disciplines seriously examine the arguments the author presents, free from the contemporary literary prejudices that have kept distance from serious classical thought."
       },
       "attribution": { "hi": "डॉ॰ भरत गुप्त", "en": "Dr. Bharat Gupt" },
-      "role": { "hi": "प्राध्यापक, दिल्ली विश्वविद्यालय", "en": "Professor, University of Delhi" }
+      "role": { "hi": "प्राध्यापक, दिल्ली विश्वविद्यालय", "en": "Professor, University of Delhi" },
+      "url":""
     },
     {
       "id": "tripathi",
+      "date": "2026-03",
       "canonical_id": "abhinav-cinema",
       "photo": "assets/images/reviewers/radhavallabh-tripathi.jpg",
       "quote": {
@@ -31,10 +36,12 @@
         "en": "In assessing world cinema through the Indian standards of art — especially Rasa theory — Prachand Praveer has made an excellent beginning. There is no doubt that no one other than Prachand could have done this work. This work will certainly build a bridge of dialogue between East and West, and expand the horizons of thought on both sides."
       },
       "attribution": { "hi": "आचार्य राधावल्लभ त्रिपाठी", "en": "Acharya Radhavallabh Tripathi" },
-      "role": { "hi": "संस्कृत काव्यशास्त्र के समादृत आचार्य", "en": "Sanskrit Scholar and Litterateur" }
+      "role": { "hi": "संस्कृत काव्यशास्त्र के समादृत आचार्य", "en": "Sanskrit Scholar and Litterateur" },
+      "url":""
     },
     {
       "id": "sharma",
+      "date": "2026-03",
       "canonical_id": "abhinav-cinema",
       "photo": "assets/images/reviewers/ambikadatt-sharma.jpg",
       "quote": {
@@ -42,10 +49,12 @@
         "en": "Abhinav Cinema is an important work that conducts a profound discussion of Indian dramatic theory and establishes it commendably in the contemporary moment. This book fulfils the demand for innovation in thinking about art and drama, extending tradition horizontally into the present."
       },
       "attribution": { "hi": "डॉ॰ अम्बिकादत्त शर्मा", "en": "Dr. Ambikadatt Sharma" },
-      "role": { "hi": "साहित्यकार एवं समालोचक", "en": "Scholar and Critic" }
+      "role": { "hi": "साहित्यकार एवं समालोचक", "en": "Scholar and Critic" },
+      "url":""
     },
     {
       "id": "kalpit-abhinav",
+      "date": "2026-03",
       "canonical_id": "abhinav-cinema",
       "photo": "assets/images/reviewers/krishna-kalpit.jpg",
       "quote": {
@@ -53,10 +62,12 @@
         "en": "Abhinav Cinema is unprecedented not only in India but among all books on cinema written anywhere in the world."
       },
       "attribution": { "hi": "कृष्ण कल्पित", "en": "Krishna Kalpit" },
-      "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" }
+      "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
+      "url":""
     },
     {
       "id": "trivedi-abhinav",
+      "date": "2026-03",
       "canonical_id": "abhinav-cinema",
       "photo": "assets/images/reviewers/harish-trivedi.jpg",
       "quote": {
@@ -64,10 +75,12 @@
         "en": "Prachand Praveer has earned a reputation for writing whatever he writes with originality and uniqueness. His interpretation of world cinema's greatest works through the lens of Indian aesthetics has carved out a distinctive place in our cultural world."
       },
       "attribution": { "hi": "डॉ॰ हरीश त्रिवेदी", "en": "Dr. Harish Trivedi" },
-      "role": { "hi": "अँग्रेज़ी, भारतीय एवं तुलनात्मक साहित्य के विद्वान", "en": "Scholar of English, Indian & Comparative Literature" }
+      "role": { "hi": "अँग्रेज़ी, भारतीय एवं तुलनात्मक साहित्य के विद्वान", "en": "Scholar of English, Indian & Comparative Literature" },
+      "url":""
     },
     {
       "id": "vishnu-khare",
+      "date": "2026-03",
       "canonical_id": "abhinav-cinema",
       "photo": "assets/images/reviewers/vishnu-khare.jpg",
       "quote": {
@@ -75,7 +88,8 @@
         "en": "Despite any disagreements, this book in the truest sense offers and opens a completely new vision in its field, forging new paths and moving forward. It is such a unique work that I strongly recommend it be purchased — individually and institutionally — and given an obligatory place of honour in curricula on cinema and Hindi."
       },
       "attribution": { "hi": "विष्णु खरे", "en": "Vishnu Khare" },
-      "role": { "hi": "वरिष्ठ कवि एवं आलोचक", "en": "Senior Poet and Critic" }
+      "role": { "hi": "वरिष्ठ कवि एवं आलोचक", "en": "Senior Poet and Critic" },
+      "url":""
     },
     {
       "id": "shivmurti",
@@ -86,10 +100,12 @@
         "en": "An encyclopaedia of world cinema. Subtle and in-depth knowledge of world cinema based on different Rasas, analysing everything from the Indian Natyashastra tradition and Sanskrit drama to a global vision. A coherent and essential Must Read."
       },
       "attribution": { "hi": "शिवमूर्ति", "en": "Shivmurti" },
-      "role": { "hi": "प्रसिद्ध हिन्दी कथाकार", "en": "Renowned Hindi Fiction Writer" }
+      "role": { "hi": "प्रसिद्ध हिन्दी कथाकार", "en": "Renowned Hindi Fiction Writer" },
+      "url":""
     },
     {
       "id": "vinod-bhardwaj",
+      "date": "2026-03",
       "canonical_id": "abhinav-cinema",
       "photo": "assets/images/reviewers/vinod-bhardwaj.jpg",
       "quote": {
@@ -97,10 +113,12 @@
         "en": "In this book Prachand Praveer has examined Rasa theory in the context of world cinema with great research and effort. Since films can be viewed and understood in many ways, Praveer's initiative deserves a warm welcome."
       },
       "attribution": { "hi": "विनोद भारद्वाज", "en": "Vinod Bhardwaj" },
-      "role": { "hi": "कवि, कथाकार एवं सिने-आलोचक", "en": "Poet, Fiction Writer and Film Critic" }
+      "role": { "hi": "कवि, कथाकार एवं सिने-आलोचक", "en": "Poet, Fiction Writer and Film Critic" },
+      "url":""
     },
     {
       "id": "gyan-ranjan",
+      "date": "2026-03",
       "canonical_id": "abhinav-cinema",
       "photo": "assets/images/reviewers/gyan-ranjan.jpg",
       "quote": {
@@ -108,10 +126,51 @@
         "en": "Prachand Praveer has recently published an extraordinary reference work on Abhinav Cinema — a major guide to world cinema. He has enriched the Hindi library in a new way entirely."
       },
       "attribution": { "hi": "ज्ञान रञ्जन", "en": "Gyan Ranjan" },
-      "role": { "hi": "प्रसिद्ध हिन्दी कथाकार एवं सम्पादक, पहल", "en": "Renowned Hindi Writer and Editor, Pahal" }
+      "role": { "hi": "प्रसिद्ध हिन्दी कथाकार एवं सम्पादक, पहल", "en": "Renowned Hindi Writer and Editor, Pahal" },
+      "url":""
+    },
+    {
+      "id": "kumar-ambuj",
+      "date": "2026-03",
+      "canonical_id": "abhinav-cinema",
+      "photo": "assets/images/reviewers/kumar-ambuj.jpg",
+      "quote": {
+        "hi": "प्रचण्‍ड प्रवीर ने ‘अभिनव सिनेमा’ में मेंडलीफ की तालिका की तरह, संसार की प्रमुख फ़‍िल्‍मों को रस सिद्धांत के आधार पर वर्गीकृत कर दिया है। और अपनी सैद्धांतिकी तय करते हुए, प्रत्येक अध्याय में उसका औचित्‍य सहित प्रतिपादन किया है। यह एक नया विवेक है। अपूर्व विश्‍लेषण। एक नया आयाम।  सिने प्रेमियों के लिए यह एक प्राथमिक, ज़रूरी और रुचिकर किताब है। ",
+        "en": ""
+      },
+      "attribution": { "hi": "कुमार अम्बुज", "en": "Kumar Ambuj" },
+      "role": { "hi": "", "en": "" },
+      "url":""
+    },
+    {
+      "id": "ambuj-pandey",
+      "date": "2026-03",
+      "canonical_id": "abhinav-cinema",
+      "photo": "assets/images/reviewers/ambuj-pandey.jpg",
+      "quote": {
+        "hi": "रसाग्रही और सिनेप्रेमियों को यह पुस्तक ज़रूर पढ़नी चाहिए, क्यूंकि लेखक का प्रयास और उसकी चिंता एक गंभीर विमर्श को एक लोकप्रिय व सार्वजनीन विधा में एकाकार कराने का सार्थक हठ है। करुण, बीभत्स, भयानक, शृंगार, अद्भुत रसों के प्रकाश में विश्वसिनेमा की अभिनव व्याख्या पुस्तक की निधि है। पुस्तक रसमीमांसकों के उद्धरण, रस की चर्वणा और सिनेमा की टेकनिक का समवेत दर्शन कराती है।",
+        "en": ""
+      },
+      "attribution": { "hi": "अम्बुज कुमार पाण्डेय", "en": "Ambuj Kumar Pandey" },
+      "role": { "hi": "", "en": "" },
+      "url":""
+    },
+    {
+      "id": "vinod-anupam",
+      "date": "2026-03",
+      "canonical_id": "abhinav-cinema",
+      "photo": "assets/images/reviewers/vinod-anupam.jpg",
+      "quote": {
+        "hi": "हिंदी में सिनेमा पर किताब अब अजूबा नहीं रहीं, लेकिन कुछ किताबों को हाथ में लेकर अभी भी अजूबा लगता है। लगता है वाकई हिंदी में सिनेमा पर काम करने के लिए कितना कुछ शेष है। प्रचण्ड प्रवीर की ‘अभिनव सिनेमा’ को पढ़ते-देखते तो लगता है अभी तो भारतीय सौन्दर्य शास्त्र की दृष्टि से सिनेमा को समझने की हमने शुरुआत भी नहीं की है। पुस्तक में विस्तार से भरत मुनि के नाट्यशास्त्र,अभिनव भारती, वेदों और सांख्य दर्शन सहित विभिन्न भारतीय चिन्तन परंपरा के संदर्भ में कुछ भारतीय और अधिकांश विदेशी कालजयी फ़िल्मों को विश्लेषित किया गया है।जिस श्रम और समर्पण से यह पुस्तक लिखी गई है,उसी श्रम और समर्पण से यह अपने पाठ की भी मांग रखती है। यदि सिनेमा आपके लिए महज इंटरटेनमेंट नहीं है, तो यह पुस्तक आपके लिए है।",
+        "en": ""
+      },
+      "attribution": { "hi": "विनोद अनुपम", "en": "Vinod Anupam" },
+      "role": { "hi": "प्रसिद्ध हिन्दी कथाकार एवं सम्पादक", "en": "Renowned Hindi Writer and Editor" },
+      "url":""
     },
     {
       "id": "trivedi-alpahari",
+      "date": "2026-03",
       "canonical_id": "alpahari-grihtyagi",
       "photo": "assets/images/reviewers/harish-trivedi.jpg",
       "quote": {
@@ -119,10 +178,12 @@
         "en": "In Alpahari Grihtyagi there is an entertaining satirical harmony between the conversational Bihari Hindi and the deliberately adopted pure Sanskrit-derived Hindi of the narrative. The line from Prasad, 'Those days — how beautiful they were,' appears twice and is as if the refrain of the entire novel."
       },
       "attribution": { "hi": "डॉ॰ हरीश त्रिवेदी", "en": "Dr. Harish Trivedi" },
-      "role": { "hi": "अँग्रेज़ी, भारतीय एवं तुलनात्मक साहित्य के विद्वान", "en": "Scholar of English, Indian & Comparative Literature" }
+      "role": { "hi": "अँग्रेज़ी, भारतीय एवं तुलनात्मक साहित्य के विद्वान", "en": "Scholar of English, Indian & Comparative Literature" },
+      "url":""
     },
     {
       "id": "kranti-alpahari",
+      "date": "2026-03",
       "canonical_id": "alpahari-grihtyagi",
       "photo": "assets/images/reviewers/r-chetan-kranti.jpg",
       "quote": {
@@ -130,10 +191,12 @@
         "en": "This was a work that blossomed in the style of genuine youthful writing. Alpahari Grihtyagi asserts its distinctiveness decisively — not only rooted in its own soil and earthly concerns, but by the end arriving at an entirely new destination."
       },
       "attribution": { "hi": "आर. चेतन क्रांति", "en": "R. Chetan Kranti" },
-      "role": { "hi": "भारतभूषण अग्रवाल पुरस्कार से सम्मानित कवि", "en": "Poet, Bharatbhushan Agarwal Award recipient" }
+      "role": { "hi": "भारतभूषण अग्रवाल पुरस्कार से सम्मानित कवि", "en": "Poet, Bharatbhushan Agarwal Award recipient" },
+      "url":""
     },
     {
       "id": "kalpit-alpahari",
+      "date": "2026-03",
       "canonical_id": "alpahari-grihtyagi",
       "photo": "assets/images/reviewers/krishna-kalpit.jpg",
       "quote": {
@@ -141,10 +204,54 @@
         "en": "Reading Alpahari Grihtyagi I kept thinking of Sharat Chandra — effortless, simple Indian prose. This book contains not magical realism but the magic of reality itself."
       },
       "attribution": { "hi": "कृष्ण कल्पित", "en": "Krishna Kalpit" },
-      "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" }
+      "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
+      "url":""
+    },
+    {
+      "id": "wagish-samalochan-jaana-nahin",
+      "source": "Samalochan",
+      "date": "2017-06-28",
+      "canonical_id": "jaana-nahi-dil-se-door",
+      "photo":"",
+      "quote": {
+        "hi": "प्रचण्ड प्रवीर इन्हीं भारतीय आधुनिकों में से हैं। इनका भारत एक निजी गमले में रोपा गया बोनसाई पौधा नहीं अपितु एक छतनार बरगद है जिसकी ताजी पत्तियाँ अपनी नसों में बोनसाई कला के पीछे का भी पुराकाल टाँके हुए हैं।",
+        "en": "Prachand Praveer is one of these modern Indian figures. His India is not a bonsai plant potted in a private container, but rather a sprawling banyan tree whose fresh leaves, within their very veins, carry etched the ancient past that lies even behind the art of bonsai."
+      },
+      "attribution": { "hi": "वागीश शुक्ल", "en": "Wagish Shukla" },
+      "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
+      "url": "https://samalochan.blogspot.com/2017/06/blog-post_28.html"
+    },
+    {
+      "id": "wagish-jankipul-ritambhara",
+      "source": "Janki Pul",
+      "date": "2026-01-06",
+      "canonical_id": "jaana-nahi-dil-se-door",
+      "photo":"",
+      "quote": {
+        "hi": "यद्यपि हिन्दी कथा-शिल्प का आकल्पन अभी भी मुमकिना वारदातों के खूँटे से बँधा हुआ है और विचरण की वह स्वतन्त्रता अपनाने से डरता है जो ‘रोमान्स-लेखकों’ को हासिल थी, प्रचण्ड प्रवीर का कथाशिल्प इस आकल्पन को स्वायत्त करने की दिशा में महत्त्वपूर्ण बढ़त ले चुका है।",
+        "en": "Although the narrative craft of Hindi fiction remains tethered to the moorings of plausible events—hesitant to embrace the freedom of exploration once enjoyed by ‘romance writers’—Prachand Praveer’s narrative technique has already made significant strides toward rendering this craft autonomous."
+      },
+      "attribution": { "hi": "वागीश शुक्ल", "en": "Wagish Shukla" },
+      "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
+      "url": "https://jankipul.com/wagish_shukla-on-ritambhara.html"
+    },
+    {
+      "id": "wagish-samalochan-uttarayan",
+      "source": "Samalochan",
+      "date": "2019-11-13",
+      "canonical_id": "uttarayan",
+      "photo":"",
+      "quote": {
+        "hi": "यद्यपि हिन्दी कथा-शिल्प का आकल्पन अभी भी मुमकिना वारदातों के खूँटे से बँधा हुआ है और विचरण की वह स्वतन्त्रता अपनाने से डरता है जो ‘रोमान्स-लेखकों’ को हासिल थी, प्रचण्ड प्रवीर का कथाशिल्प इस आकल्पन को स्वायत्त करने की दिशा में महत्त्वपूर्ण बढ़त ले चुका है।",
+        "en": "Although the narrative craft of Hindi fiction remains tethered to the moorings of plausible events—hesitant to embrace the freedom of exploration once enjoyed by ‘romance writers’—Prachand Praveer’s narrative technique has already made significant strides toward rendering this craft autonomous."
+      },
+      "attribution": { "hi": "वागीश शुक्ल", "en": "Wagish Shukla" },
+      "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
+      "url": "https://samalochan.com/%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%B0%E0%A4%BE%E0%A4%AF%E0%A4%A3-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%9A%E0%A4%A3%E0%A5%8D%E0%A4%A1-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%80%E0%A4%B0/"
     },
     {
       "id": "tripathi-ritambhara",
+      "date": "2026-03",
       "canonical_id": "ritambhara",
       "photo": "assets/images/reviewers/radhavallabh-tripathi.jpg",
       "quote": {
@@ -152,96 +259,113 @@
         "en": "Ritambhara is an unprecedented book. If included in the tradition of Hindi short fiction, one will not find such a face of Hindi storytelling anywhere else. Prachand Praveer has shown how an entirely unique and new world of stories can be created on the basis of the Upanishads."
       },
       "attribution": { "hi": "डॉ॰ राधावल्लभ त्रिपाठी", "en": "Dr. Radhavallabh Tripathi" },
-      "role": { "hi": "संस्कृत काव्यशास्त्र के समादृत आचार्य", "en": "Sanskrit Scholar and Litterateur" }
+      "role": { "hi": "संस्कृत काव्यशास्त्र के समादृत आचार्य", "en": "Sanskrit Scholar and Litterateur" },
+      "url":""
     }
   ],
   "press": [
     {
       "id": "lallantop",
       "source": "The Lallantop",
+      "date": "2016-03-04",
       "canonical_id": "alpahari-grihtyagi",
       "quote": {
         "hi": "नई खेप में सबसे अच्छा राइटर तो प्रचंड प्रवीर है। उसे उस तरह की पब्लिसिटी नहीं मिली। उनकी कमाल किताब है, अल्पाहारी गृहत्यागी।",
         "en": "The best writer of the new generation is Prachand Praveer. He hasn't received the publicity he deserves. His book Alpahari Grihtyagi is remarkable."
       },
       "attribution": { "hi": "प्रभात रंजन", "en": "Prabhat Ranjan" },
-      "url": "http://www.thelallantop.com/bherant/exclusive-interview-with-kothagoi-author-and-blogger-prabhat-ranjan/"
+      "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
+      "url":"https://web.archive.org/web/20160306200650/http://www.thelallantop.com/bherant/exclusive-interview-with-kothagoi-author-and-blogger-prabhat-ranjan/"
     },
     {
       "id": "nbt-khare",
       "source": "Navbharat Times",
+      "date": "2016-01-03",
       "canonical_id": "abhinav-cinema",
       "quote": {
         "hi": "मुंगेर, बिहार के एक युवा उपन्यासकार प्रचण्ड प्रवीर ने हिंदी फिल्म सैद्धांतिकी के 'वर्जिन' मुक्ताकाश में एक क्वांटम उड़ान भरी है और संस्कृत के रस-सिद्धांत को विश्व-सिनेमा पर लागू करने की कोशिश की है।",
         "en": "A young novelist from Munger, Bihar, Prachand Praveer has made a quantum leap into the virgin sky of Hindi film theory, attempting to apply Sanskrit's Rasa theory to world cinema."
       },
       "attribution": { "hi": "विष्णु खरे", "en": "Vishnu Khare" },
+      "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
       "url": "http://blogs.navbharattimes.indiatimes.com/vishnukhare/prachand-praveers-book/"
     },
     {
       "id": "telegraph",
       "source": "The Telegraph India",
+      "date": "2021-10-08",
       "canonical_id": "cinema-through-rasa",
       "quote": {
         "hi": "Cinema through a new lens — सिनेमा को एक नई दृष्टि से देखने का साहसी प्रयास।",
         "en": "A courageous attempt to view cinema through an entirely new perspective, bringing the ancient Rasa framework to bear on the masterpieces of world cinema."
       },
       "attribution": { "hi": "द टेलीग्राफ इंडिया", "en": "The Telegraph India" },
+      "role": { "hi": "", "en": "" },
       "url": "https://www.telegraphindia.com/culture/books/review-cinema-through-rasa-a-tryst-with-masterpieces-in-the-light-of-rasa-siddhanta-by-prachand-praveer/cid/1833863"
     },
     {
       "id": "outlook-india",
       "source": "Outlook India",
+      "date": "2026-03",
       "canonical_id": "cinema-through-rasa",
       "quote": {
         "hi": "नई पुस्तक सौन्दर्यशास्त्र के माध्यम से सिनेमा का अन्वेषण करती है।",
         "en": "New book explores cinema through aesthetics — a significant contribution to film studies applying the classical Indian framework of Rasa to masterpieces of world cinema."
       },
       "attribution": { "hi": "आउटलुक इंडिया", "en": "Outlook India" },
+      "role": { "hi": "", "en": "" },
       "url": "https://www.outlookindia.com/newsscroll/new-book-explores-cinema-through-aesthetics/2056979"
     },
     {
       "id": "outlook-hindi",
       "source": "Outlook Hindi",
+      "date": "2015-08-28",
       "canonical_id": "alpahari-grihtyagi",
       "quote": {
         "hi": "प्रचंड प्रवीर ने अल्पाहारी गृहत्यागी लिख कर आईआईटी जाने की बाधाओं पर रोशनी डाली। उसके बाद तो आईआईटियनों और इंजीनियरों की लाइन लग गई।",
         "en": "With Alpahari Grihtyagi, Prachand Praveer shed light on the obstacles of the IIT journey. After this, a whole generation of IITians and engineers followed into Hindi literature."
       },
       "attribution": { "hi": "आउटलुक हिंदी", "en": "Outlook Hindi" },
+      "role": { "hi": "", "en": "" },
       "url": "http://www.outlookhindi.com/art-and-culture/diary/engineering-students-in-hindi-literature-3908"
     },
     {
       "id": "hindustan-times",
       "source": "Hindustan Times",
+      "date": "2012-02-23",
       "canonical_id": "alpahari-grihtyagi",
       "quote": {
         "hi": "हिन्दी साहित्य का कायाकल्प करने वाले युवा तुर्क — प्रचण्ड प्रवीर और उनके साथी।",
         "en": "Young Turks re-inventing Hindi literature — Prachand Praveer among a new generation bringing fresh voices and contemporary sensibility to Hindi fiction."
       },
       "attribution": { "hi": "हिन्दुस्तान टाइम्स", "en": "Hindustan Times" },
-      "url": "http://www.hindustantimes.com/lifestyle/books/young-turks-re-inventing-hindi-literature/article1-1187284.aspx"
+      "role": { "hi": "", "en": "" },
+      "url": "https://web.archive.org/web/20140223215023/http://www.hindustantimes.com/lifestyle/books/young-turks-re-inventing-hindi-literature/article1-1187284.aspx"
     },
     {
       "id": "open-magazine",
       "source": "Open Magazine",
+      "date": "2014-10-15",
       "canonical_id": "alpahari-grihtyagi",
       "quote": {
         "hi": "प्रचण्ड प्रवीर अपनी कहानियों में एक उल्लेखनीय मेटा-काल्पनिक प्रस्ताव प्रस्तुत करते हैं।",
         "en": "Praveer presents his stories with a remarkable meta-fictional proposition, weaving Don Quixote into the heart of Bihar's literary imagination — a writer of genuine originality."
       },
       "attribution": { "hi": "ओपन मैगज़ीन", "en": "Open Magazine" },
+      "role": { "hi": "", "en": "" },
       "url": "http://www.openthemagazine.com/article/books/the-new-heroes-of-mba-lit"
     },
     {
       "id": "the-week",
       "source": "The Week",
+      "date": "2021-12-04",
       "canonical_id": "kal-ki-baat-shadj",
       "quote": {
         "hi": "प्रचण्ड प्रवीर ने तीन-खण्डों में हिन्दी कहानी संग्रह लिखा।",
         "en": "Prachand Praveer pens 3-volume Hindi story collection — an ambitious project bringing the classical musical note system to bear on contemporary short fiction."
       },
       "attribution": { "hi": "द वीक", "en": "The Week" },
+      "role": { "hi": "", "en": "" },
       "url": "https://www.theweek.in/wire-updates/national/2021/12/04/lst1-book-prachand.html"
     }
   ],
