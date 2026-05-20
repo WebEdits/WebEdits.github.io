@@ -20,9 +20,10 @@
 
   <ul class="nav__links" aria-label="Desktop nav">
     <li><a href="#books"         data-hi="पुस्तकें"   data-en="Books">पुस्तकें</a></li>
-    <li><a href="#testimonials"  data-hi="समीक्षाएँ"  data-en="Reviews">समीक्षाएँ</a></li>
+    <li><a href="#reviews"       data-hi="समीक्षाएँ"  data-en="Reviews">समीक्षाएँ</a></li>
     <li><a href="#press"         data-hi="सन्दर्भ"    data-en="Press">सन्दर्भ</a></li>
     <li><a href="#talks"         data-hi="चर्चाएँ"    data-en="Talks">चर्चाएँ</a></li>
+    <li><a href="posts.html"     data-hi="लेखन" data-en="Writing">लेखन</a></li>
     <li><a href="#gallery"       data-hi="दीर्घा"     data-en="Gallery">दीर्घा</a></li>
     <li><a href="#contact"       data-hi="सम्पर्क"    data-en="Contact">सम्पर्क</a></li>
   </ul>
@@ -41,7 +42,7 @@
 <!-- Mobile drawer -->
 <nav id="nav-drawer" class="nav__drawer" aria-label="Mobile navigation">
   <li><a href="#books"        data-hi="पुस्तकें"  data-en="Books">पुस्तकें</a></li>
-  <li><a href="#testimonials" data-hi="समीक्षाएँ" data-en="Reviews">समीक्षाएँ</a></li>
+  <li><a href="#reviews" data-hi="समीक्षाएँ" data-en="Reviews">समीक्षाएँ</a></li>
   <li><a href="#press"        data-hi="सन्दर्भ"   data-en="Press">सन्दर्भ</a></li>
   <li><a href="#talks"        data-hi="चर्चाएँ"   data-en="Talks">चर्चाएँ</a></li>
   <li><a href="#gallery"      data-hi="दीर्घा"    data-en="Gallery">दीर्घा</a></li>
@@ -133,8 +134,8 @@
         data-hi="समीक्षाएँ एवं प्रशंसापत्र" data-en="Reviews & Endorsements">
       समीक्षाएँ एवं प्रशंसापत्र
     </h2>
-    <!-- Populated by JS from data/testimonials.json → author[] -->
-    <div class="testimonials-grid" id="testimonials-grid"></div>
+    <!-- Populated by JS from data/reviews.json → author[] -->
+    <div class="reviews-accordion" id="reviews-accordion"></div>
   </div>
 </section>
 
@@ -205,6 +206,20 @@
         अन्य वक्तव्य एवं गोष्ठियाँ
       </p>
       <ul class="talks-text-list" id="talks-text-list"></ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════ POSTS -->
+<section class="section section--posts" id="posts">
+  <div class="container">
+    <p class="label fade-up" data-hi="लेखन" data-en="Writing">लेखन</p>
+    <h2 class="fade-up" data-hi="हालिया लेख" data-en="Recent Writing">हालिया लेख</h2>
+    <div class="posts-snippet" id="posts-snippet"></div>
+    <div class="posts-see-all" id="posts-see-all" style="display:none">
+      <a href="posts.html" class="btn btn-outline" data-hi="सभी लेख →" data-en="All posts →">सभी लेख →</a>
     </div>
   </div>
 </section>

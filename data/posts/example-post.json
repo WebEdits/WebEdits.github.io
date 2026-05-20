@@ -1,0 +1,48 @@
+{
+  "id": "example-post",
+  "date": "2026-05-19",
+  "tags": ["cinema", "philosophy"],
+  "title": {
+    "hi": "उदाहरण लेख — इसे हटाएँ और अपना पहला लेख जोड़ें",
+    "en": "Example Post — Delete this and add your first post"
+  },
+  "image": "",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": {
+        "hi": "यह पहला अनुच्छेद है। यहाँ अपना लेख लिखें।",
+        "en": "This is the first paragraph. Write your post here."
+      }
+    },
+    {
+      "type": "image",
+      "src": "assets/images/posts/jaana-nahi.jpg",
+      "caption": {
+        "hi": "चित्र का शीर्षक",
+        "en": "Image caption"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "hi": "यह दूसरा अनुच्छेद है।",
+        "en": "This is the second paragraph."
+      }
+    },
+    {
+      "type": "heading",
+      "text": {
+        "hi": "एक उप-शीर्षक",
+        "en": "A sub-heading"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "hi": "उप-शीर्षक के बाद का अनुच्छेद।",
+        "en": "Paragraph after the sub-heading."
+      }
+    }
+  ]
+}

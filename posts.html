@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="प्रचण्ड प्रवीर — लेखन एवं विचार">
+  <meta name="base-path" content="">
+  <title>लेखन — प्रचण्ड प्रवीर</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a class="nav__brand" href="index.html">प्रचण्ड <span>प्रवीर</span></a>
+  <ul class="nav__links">
+    <li><a href="index.html#books"   data-hi="पुस्तकें"  data-en="Books">पुस्तकें</a></li>
+    <li><a href="index.html#reviews" data-hi="समीक्षाएँ" data-en="Reviews">समीक्षाएँ</a></li>
+    <li><a href="index.html#press"   data-hi="सन्दर्भ"   data-en="Press">सन्दर्भ</a></li>
+    <li><a href="index.html#talks"   data-hi="चर्चाएँ"   data-en="Talks">चर्चाएँ</a></li>
+    <li><a href="posts.html"         data-hi="लेखन"      data-en="Writing" class="active">लेखन</a></li>
+    <li><a href="index.html#gallery" data-hi="दीर्घा"     data-en="Gallery">दीर्घा</a></li>
+    <li><a href="index.html#contact" data-hi="सम्पर्क"   data-en="Contact">सम्पर्क</a></li>
+  </ul>
+  <div class="nav__right">
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button data-lang="hi" class="active">हि</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <button class="nav__ham" id="nav-ham" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<nav id="nav-drawer" class="nav__drawer">
+  <li><a href="index.html#books"   data-hi="पुस्तकें"  data-en="Books">पुस्तकें</a></li>
+  <li><a href="index.html#reviews" data-hi="समीक्षाएँ" data-en="Reviews">समीक्षाएँ</a></li>
+  <li><a href="index.html#press"   data-hi="सन्दर्भ"   data-en="Press">सन्दर्भ</a></li>
+  <li><a href="index.html#talks"   data-hi="चर्चाएँ"   data-en="Talks">चर्चाएँ</a></li>
+  <li><a href="posts.html"         data-hi="लेखन"      data-en="Writing">लेखन</a></li>
+  <li><a href="index.html#gallery" data-hi="दीर्घा"     data-en="Gallery">दीर्घा</a></li>
+  <li><a href="index.html#contact" data-hi="सम्पर्क"   data-en="Contact">सम्पर्क</a></li>
+  <div class="lang-toggle" role="group">
+    <button data-lang="hi" class="active">हि</button>
+    <button data-lang="en">EN</button>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="posts-page" id="posts-page">
+  <header class="posts-page__header">
+    <p class="posts-page__label" data-hi="लेखन एवं विचार" data-en="Writing & Thought">लेखन एवं विचार</p>
+    <h1 class="posts-page__title" data-hi="प्रचण्ड प्रवीर का लेखन" data-en="Writings by Prachand Praveer">
+      प्रचण्ड प्रवीर का लेखन
+    </h1>
+  </header>
+  <div id="posts-list">
+    <p class="posts-loading" data-hi="लेख लोड हो रहे हैं…" data-en="Loading posts…">
+      लेख लोड हो रहे हैं…
+    </p>
+  </div>
+</main>
+
+<footer class="footer">
+  <p>
+    &copy; <span id="year"></span> प्रचण्ड प्रवीर &nbsp;·&nbsp;
+    <a href="index.html" data-hi="मुख्य पृष्ठ" data-en="Home">मुख्य पृष्ठ</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.facebook.com/profile.php?id=100006989387771" target="_blank" rel="noopener">Facebook</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.goodreads.com/author/show/4144083.Prachand_Praveer" target="_blank" rel="noopener">Goodreads</a>
+  </p>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  let lang = localStorage.getItem('pp-lang') || document.documentElement.lang || 'hi';
+  document.documentElement.lang = lang;
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const t = (obj) => (obj && obj[lang]) || obj?.hi || obj?.en || '';
+  const qs  = (sel, ctx=document) => ctx.querySelector(sel);
+  const qsa = (sel, ctx=document) => [...ctx.querySelectorAll(sel)];
+
+  // Language toggle
+  qsa('.lang-toggle button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+    btn.addEventListener('click', () => { lang = btn.dataset.lang; setLang(lang); });
+  });
+
+  function setLang(l) {
+    lang = l;
+    document.documentElement.lang = l;
+    localStorage.setItem('pp-lang', l);
+    qsa('.lang-toggle button').forEach(b => b.classList.toggle('active', b.dataset.lang===l));
+    renderStaticText();
+    // Re-render all loaded posts
+    qsa('.post-full').forEach(el => {
+      const id = el.dataset.postId;
+      const post = window._postCache?.[id];
+      if (post) renderPostBody(el, post);
+    });
+    qsa('[data-hi]').forEach(el => {
+      el.textContent = l==='hi' ? el.dataset.hi : (el.dataset.en||el.dataset.hi);
+    });
+  }
+
+  function renderStaticText() {
+    qsa('[data-hi]').forEach(el => {
+      el.textContent = lang==='hi' ? el.dataset.hi : (el.dataset.en||el.dataset.hi);
+    });
+  }
+
+  // Hamburger
+  const ham = qs('#nav-ham');
+  const drawer = qs('#nav-drawer');
+  if (ham && drawer) {
+    ham.addEventListener('click', () => drawer.classList.toggle('open'));
+    qsa('a', drawer).forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+  }
+
+  // Fetch helpers
+  const base = qs('meta[name="base-path"]')?.content || '';
+  async function fetchJSON(path) {
+    const r = await fetch(base + path);
+    if (!r.ok) throw new Error(`Failed to load ${path}`);
+    return r.json();
+  }
+
+  // Post body cache
+  window._postCache = {};
+
+  // Render one post's body into its container
+  function renderPostBody(container, post) {
+    const bodyHTML = (post.body || []).map(block => {
+      if (block.type === 'paragraph') {
+        return `<p>${t(block.text)}</p>`;
+      }
+      if (block.type === 'heading') {
+        return `<h3>${t(block.text)}</h3>`;
+      }
+      if (block.type === 'image') {
+        return `<figure>
+          <img src="${block.src}" alt="${t(block.caption)||''}" loading="lazy">
+          ${block.caption ? `<figcaption>${t(block.caption)}</figcaption>` : ''}
+        </figure>`;
+      }
+      return '';
+    }).join('');
+    const bodyEl = qs('.post-full__body', container);
+    if (bodyEl) bodyEl.innerHTML = bodyHTML;
+    // Update title too (for lang switch)
+    const titleEl = qs('.post-full__title', container);
+    if (titleEl) titleEl.textContent = t(post.title);
+  }
+
+  // Render post list from index
+  async function renderPosts(posts) {
+    const list = qs('#posts-list');
+    if (!list) return;
+
+    const sorted = [...posts].sort((a,b) => b.date.localeCompare(a.date));
+    list.innerHTML = sorted.map(post => {
+      const dateStr = post.date
+        ? new Date(post.date).toLocaleDateString(lang==='hi'?'hi-IN':'en-IN',
+            {year:'numeric',month:'long',day:'numeric'})
+        : '';
+      const tags = (post.tags||[]).map(tag=>
+        `<span class="post-full__tag">${tag}</span>`).join('');
+      return `
+        <article class="post-full" id="${post.id}" data-post-id="${post.id}">
+          <p class="post-full__date">${dateStr}</p>
+          <h2 class="post-full__title">${t(post.title)}</h2>
+          ${post.image ? `<img class="post-full__cover" src="${post.image}" alt="${t(post.title)}" loading="lazy">` : ''}
+          <div class="post-full__body">
+            <p style="color:var(--muted);font-style:italic">${t(post.excerpt)}</p>
+          </div>
+          ${tags ? `<div class="post-full__tags">${tags}</div>` : ''}
+        </article>`;
+    }).join('');
+
+    // Lazy-load each post body when it enters the viewport
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(async entry => {
+        if (!entry.isIntersecting) return;
+        const article = entry.target;
+        const id = article.dataset.postId;
+        if (window._postCache[id]) { renderPostBody(article, window._postCache[id]); return; }
+        try {
+          const post = await fetchJSON(`data/posts/${id}.json`);
+          window._postCache[id] = post;
+          renderPostBody(article, post);
+        } catch {
+          // Body file not found — excerpt already shown, that's fine
+        }
+        io.unobserve(article);
+      });
+    }, { rootMargin: '200px' });
+
+    qsa('.post-full', list).forEach(el => io.observe(el));
+
+    // If URL has a hash, scroll to it after a tick
+    if (window.location.hash) {
+      setTimeout(() => {
+        const target = qs(window.location.hash);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }
+
+  // Boot
+  fetchJSON('data/posts.json')
+    .then(posts => renderPosts(posts))
+    .catch(() => {
+      const list = qs('#posts-list');
+      if (list) list.innerHTML = `<p class="posts-loading">
+        ${lang==='hi'?'लेख उपलब्ध नहीं।':'No posts available yet.'}</p>`;
+    });
+
+  renderStaticText();
+})();
+</script>
+</body>
+</html>
