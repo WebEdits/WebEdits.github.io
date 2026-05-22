@@ -142,7 +142,7 @@
     const keys = ['all', ...new Set(allBooks.map(b => b.genre?.key).filter(Boolean))];
     const labels = {
       'all':                 { hi: 'सभी',               en: 'All' },
-      'hindi-fiction':       { hi: 'हिन्दी काव्य',        en: 'Hindi Fiction' },
+      'hindi-fiction':       { hi: 'हिन्दी काव्य',        en: 'Hindi Poetics' },
       'english-fiction':     { hi: 'English Fiction',    en: 'English Fiction' },
       'hindi-nonfiction':    { hi: 'हिन्दी कथेतर गद्य', en: 'Hindi Non-Fiction' },
       'english-nonfiction':  { hi: 'English Non-Fiction', en: 'English Non-Fiction' }
