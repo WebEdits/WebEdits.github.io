@@ -121,7 +121,7 @@ In the `"press"` array, add:
 {
   "id": "unique-id",
   "source": "Publication Name",
-  "book_id": "alpahari-grihtyagi",
+  "book_id": "alpahari-grihatyagi",
   "quote": {
     "hi": "हिन्दी उद्धरण...",
     "en": "English..."

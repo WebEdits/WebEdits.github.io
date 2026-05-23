@@ -1,16 +1,16 @@
 [
   {
-    "id": "alpahari-grihtyagi-1",
-    "canonical_id": "alpahari-grihtyagi",
+    "id": "alpahari-grihatyagi-1",
+    "canonical_id": "alpahari-grihatyagi",
     "year": 2010,
     "edition": 1,
     "edition_label": { "hi": "प्रथम संस्करण, २०१०", "en": "1st edition, 2010" },
     "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
-    "title": { "hi": "अल्पाहारी गृहत्यागी", "en": "Alpahari Grihtyagi" },
+    "title": { "hi": "अल्पाहारी गृहत्यागी", "en": "Alpahari Grihatyagi" },
     "subtitle": { "hi": "आई.आई.टी. से पहले", "en": "IIT se Pehle" },
     "publisher": "Harper Hindi, Noida",
     "isbn": "978-8172239275",
-    "cover": "assets/images/covers/alpahari-grihtyagi-1.png",
+    "cover": "assets/images/covers/alpahari-grihatyagi-1.png",
     "description": {
       "hi": "घर से दूर, हज़ारों युवा आई.आई.टी. प्रवेश परीक्षा की तैयारी के लिए आते हैं। गुल फ़ैक्ट्री बॉयज़ हॉस्टल में सव्यसाची, सत्य, तरंग और परमहंस अपनी-अपनी दुनिया में खोए हुए हैं। एक पीढ़ी के युवा लेखकों को प्रेरणा देने वाला पहला उपन्यास।",
       "en": "Miles from home, thousands gather to prepare for the IIT entrance examination. At the Gul Factory boys' hostel, Savyasachi, Satya, Tarang and Paramhans are each lost in their own quixotic quest. A landmark debut that inspired a generation of young Hindi writers."
@@ -100,17 +100,17 @@
     "links": {}
   },
   {
-    "id": "alpahari-grihtyagi-2",
-    "canonical_id": "alpahari-grihtyagi",
+    "id": "alpahari-grihatyagi-2",
+    "canonical_id": "alpahari-grihatyagi",
     "year": 2019,
     "edition": 2,
     "edition_label": { "hi": "द्वितीय संस्करण, २०१९", "en": "2nd edition, 2019" },
     "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
-    "title": { "hi": "अल्पाहारी गृहत्यागी", "en": "Alpahari Grihtyagi" },
+    "title": { "hi": "अल्पाहारी गृहत्यागी", "en": "Alpahari Grihatyagi" },
     "subtitle": { "hi": "आई.आई.टी. से पहले", "en": "IIT se Pehle" },
     "publisher": "Nitya Prakashan, Jaipur",
     "isbn": "978-8193427132",
-    "cover": "assets/images/covers/alpahari-grihtyagi-2.png",
+    "cover": "assets/images/covers/alpahari-grihatyagi-2.png",
     "description": {
       "hi": "अल्पाहारी गृहत्यागी का द्वितीय संस्करण — नित्य प्रकाशन द्वारा। नयी पीढ़ी के पाठकों के लिए यह प्रिय उपन्यासिका नये रूप में।",
       "en": "The second edition of the beloved debut novella, republished by Nitya Prakashan for a new generation of readers."
@@ -448,18 +448,18 @@
     }
   },
   {
-    "id": "alpahari-grihtyagi-3",
-    "canonical_id": "alpahari-grihtyagi",
+    "id": "alpahari-grihatyagi-3",
+    "canonical_id": "alpahari-grihatyagi",
     "year": 2026,
     "edition": 3,
     "new_edition": true,
     "edition_label": { "hi": "तृतीय संस्करण, २०२६", "en": "3rd edition, 2026" },
     "genre": { "key": "hindi-fiction", "hi": "हिन्दी गद्य", "en": "Hindi Fiction" },
-    "title": { "hi": "अल्पाहारी गृहत्यागी", "en": "Alpahari Grihtyagi" },
+    "title": { "hi": "अल्पाहारी गृहत्यागी", "en": "Alpahari Grihatyagi" },
     "subtitle": { "hi": "आई.आई.टी. से पहले", "en": "IIT se Pehle" },
     "publisher": "New World Publication, New Delhi",
     "isbn": "978-9364070454",
-    "cover": "assets/images/covers/alpahari-grihtyagi-3.png",
+    "cover": "assets/images/covers/alpahari-grihatyagi-3.png",
     "description": {
       "hi": "घर से दूर, हज़ारों युवा आई.आई.टी. प्रवेश परीक्षा की तैयारी के लिए आते हैं। गुल फ़ैक्ट्री बॉयज़ हॉस्टल में सव्यसाची, सत्य, तरंग और परमहंस अपनी-अपनी दुनिया में खोए हुए हैं। तृतीय संस्करण — नयी पीढ़ी के लिए।",
       "en": "Third edition of the beloved debut novella that inspired a generation. Miles from home, thousands gather to prepare for the IIT entrance examination — a story as relevant today as when first published in 2010."

@@ -196,12 +196,12 @@
   },
   {
     "id": "trivedi-alpahari",
-    "canonical_id": "alpahari-grihtyagi",
+    "canonical_id": "alpahari-grihatyagi",
     "date": "2010-01",
     "photo": "assets/images/reviewers/harish-trivedi.jpg",
     "quote": {
       "hi": "'अल्पाहारी गृहत्यागी' में वार्तालाप की बिहारी हिंदी और आख्यान की जान-बूझ कर अपनाई गई शुद्ध तत्सम हिंदी का मनोरंजक व्यंग-विनोद-पूर्ण सामंजस्य है। प्रसाद की पंक्ति 'वे कुछ दिन कितने सुन्दर थे' दो बार आती है और जैसे इस उपन्यास की टेक है।",
-      "en": "In Alpahari Grihtyagi there is an entertaining satirical harmony between the conversational Bihari Hindi and the deliberately adopted pure Sanskrit-derived Hindi of the narrative. The line from Prasad, 'Those days — how beautiful they were,' appears twice and is as if the refrain of the entire novel."
+      "en": "In Alpahari Grihatyagi there is an entertaining satirical harmony between the conversational Bihari Hindi and the deliberately adopted pure Sanskrit-derived Hindi of the narrative. The line from Prasad, 'Those days — how beautiful they were,' appears twice and is as if the refrain of the entire novel."
     },
     "attribution": { "hi": "डॉ॰ हरीश त्रिवेदी", "en": "Dr. Harish Trivedi" },
     "role": { "hi": "अँग्रेज़ी, भारतीय एवं तुलनात्मक साहित्य के विद्वान", "en": "Scholar of English, Indian & Comparative Literature" },
@@ -211,12 +211,12 @@
   },
   {
     "id": "kranti-alpahari",
-    "canonical_id": "alpahari-grihtyagi",
+    "canonical_id": "alpahari-grihatyagi",
     "date": "2010-01",
     "photo": "assets/images/reviewers/r-chetan-kranti.jpg",
     "quote": {
       "hi": "यह युवा लेखनी की अपनी तर्ज पर खिली हुई कृति थी। 'अल्पाहारी गृहत्यागी' अपनी पहचान को निर्णायक ढंग से अलग करती जाती है। वह न सिर्फ अपनी जमीन और जमीनी सरोकारों से जुड़ता है, बल्कि अंत तक आते-आते एक नयी ही मंजिल पर पहुँच जाता है।",
-      "en": "This was a work that blossomed in the style of genuine youthful writing. Alpahari Grihtyagi asserts its distinctiveness decisively — not only rooted in its own soil and earthly concerns, but by the end arriving at an entirely new destination."
+      "en": "This was a work that blossomed in the style of genuine youthful writing. Alpahari Grihatyagi asserts its distinctiveness decisively — not only rooted in its own soil and earthly concerns, but by the end arriving at an entirely new destination."
     },
     "attribution": { "hi": "आर. चेतन क्रांति", "en": "R. Chetan Kranti" },
     "role": { "hi": "भारतभूषण अग्रवाल पुरस्कार से सम्मानित कवि", "en": "Poet, Bharatbhushan Agarwal Award recipient" },
@@ -226,12 +226,12 @@
   },
   {
     "id": "kalpit-alpahari",
-    "canonical_id": "alpahari-grihtyagi",
+    "canonical_id": "alpahari-grihatyagi",
     "date": "2010-01",
     "photo": "assets/images/reviewers/krishna-kalpit.jpg",
     "quote": {
       "hi": "'अल्पाहारी गृहत्यागी' पढ़ते हुए मुझे शरतचन्द्र की याद आती रही। सहज सरल भारतीय गद्य। इस पुस्तक में जादुई यथार्थ नहीं, यथार्थ का जादू है।",
-      "en": "Reading Alpahari Grihtyagi I kept thinking of Sharat Chandra — effortless, simple Indian prose. This book contains not magical realism but the magic of reality itself."
+      "en": "Reading Alpahari Grihatyagi I kept thinking of Sharat Chandra — effortless, simple Indian prose. This book contains not magical realism but the magic of reality itself."
     },
     "attribution": { "hi": "कृष्ण कल्पित", "en": "Krishna Kalpit" },
     "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
@@ -295,7 +295,7 @@
     },
     "attribution": { "hi": "वागीश शुक्ल", "en": "Wagish Shukla" },
     "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
-    "source": { "hi": "जानकी पुल", "en": "Janki Pul" },
+    "source": { "hi": "जानकीपुल", "en": "Jankipul" },
     "url": "https://jankipul.com/wagish_shukla-on-ritambhara.html",
     "archive_url": ""
   },
