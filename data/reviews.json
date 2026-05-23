@@ -270,6 +270,21 @@
     "archive_url": ""
   },
   {
+    "id": "wagish-dakshinayan",
+    "canonical_id": "dakshinayan",
+    "date": "2019-12-17",
+    "photo": "assets/images/reviewers/wagish-shukla.jpeg",
+    "quote": {
+      "hi": "मुझे पूरा भरोसा है कि इन कहानियों की बन्दिश का नयापन हिन्दी की वर्तमान सर्जना पर एक बढ़त के रूप में देखा जायगा और इसे न केवल वह मक़ाम हासिल होगा जिसकी वह हक़दार है बल्कि इसकी रहरवी को वह मक़बूलियत भी मिलेगी जिससे हमारी क़िस्सागोई और भी सुर्ख़रू तथा हमाहंग हो सके.",
+      "en": "I am fully confident that the novelty of the structural composition of these stories will be viewed as a distinct advantage within the landscape of contemporary Hindi literature; furthermore, it will not only attain the stature it rightfully deserves but also garner the widespread acclaim that will enable our tradition of storytelling to become even more distinguished and harmonious."
+    },
+    "attribution": { "hi": "वागीश शुक्ल", "en": "Wagish Shukla" },
+    "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
+    "source": { "hi": "समालोचन", "en": "Samalochan" },
+    "url": "https://samalochan.com/vagish-shukla-2/",
+    "archive_url": ""
+  },
+  {
     "id": "wagish-ritambhara",
     "canonical_id": "ritambhara",
     "date": "2026-01-06",
