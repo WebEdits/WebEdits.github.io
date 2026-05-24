@@ -198,6 +198,8 @@
             <p class="book-card__desc">${t(book.description)}</p>
             <div class="book-card__links">${buyLinks}</div>
           </div>
+          <div class="book-card__tap-prev" aria-hidden="true"></div>
+          <div class="book-card__tap-next" aria-hidden="true"></div>
         </div>`;
     }).join('');
 
@@ -206,6 +208,18 @@
         const book = allBooks.find(b => b.id === card.dataset.id);
         if (book) openBookDetail(book);
       };
+      // Tap zones: left 33% = scroll prev, right 33% = scroll next
+      // Centre 34% (or overlay links) = open detail modal
+      const prevZone = card.querySelector('.book-card__tap-prev');
+      const nextZone = card.querySelector('.book-card__tap-next');
+      if (prevZone) prevZone.addEventListener('click', e => {
+        e.stopPropagation();
+        grid.scrollBy({ left: -316, behavior: 'smooth' });
+      });
+      if (nextZone) nextZone.addEventListener('click', e => {
+        e.stopPropagation();
+        grid.scrollBy({ left: 316, behavior: 'smooth' });
+      });
       card.addEventListener('click', open);
       card.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' '){e.preventDefault();open();} });
     });
@@ -333,14 +347,33 @@
         const targetCanon = rvBtn.dataset.canon;
         modal.classList.remove('open');
         document.body.style.overflow='';
-        // Find and open the matching review group accordion
+
+        // After scroll completes, open the matching accordion group.
+        // Use 'scrollend' where supported; fall back to a generous timeout.
+        const openGroup = () => {
+          const accordion = qs('#reviews-accordion');
+          if (!accordion) return;
+          // Close all groups first, then open the target one
+          qsa('.review-group__btn', accordion).forEach(b => {
+            b.setAttribute('aria-expanded','false');
+            const body = qs(`#${b.getAttribute('aria-controls')}`);
+            if (body) body.hidden = true;
+          });
+          const groupBtn = qs(`.review-group__btn[data-canon="${targetCanon}"]`, accordion);
+          if (groupBtn) {
+            groupBtn.setAttribute('aria-expanded','true');
+            const body = qs(`#${groupBtn.getAttribute('aria-controls')}`);
+            if (body) body.hidden = false;
+          }
+        };
+
         const section = qs('#reviews');
-        if (section) {
-          section.scrollIntoView({behavior:'smooth',block:'start'});
-          setTimeout(()=>{
-            const groupBtn = qs(`.review-group__btn[data-canon="${targetCanon}"]`,section);
-            if (groupBtn && groupBtn.getAttribute('aria-expanded')==='false') groupBtn.click();
-          },500);
+        if (!section) return;
+        section.scrollIntoView({behavior:'smooth',block:'start'});
+        if ('onscrollend' in window) {
+          window.addEventListener('scrollend', openGroup, {once: true});
+        } else {
+          setTimeout(openGroup, 700);
         }
       });
     }
@@ -350,76 +383,121 @@
   }
 
   // ── Reviews — book-grouped accordion with show-more ───────
-  // Groups reviews by canonical_id, renders one accordion per book.
-  // Shows first 4 reviews, hides the rest behind "Show more" button.
+  // Each review has type: "review" (has source URL, clickable card)
+  //                    or "testimonial" (personal reaction, flip card with bio on back)
+  // Shows first 4 per group; "Show more" reveals the rest.
   const REVIEWS_INITIAL = 4;
+
+  function buildReviewCard(r, ri) {
+    const isTestimonial = r.type === 'testimonial';
+    const initial = (t(r.attribution)[0] || '?');
+    const photoHTML = r.photo
+      ? `<img class="review-card__photo" src="${r.photo}" alt="${t(r.attribution)}" loading="lazy"
+             onerror="this.outerHTML='<div class=review-card__photo-placeholder>${initial}</div>'">`
+      : `<div class="review-card__photo-placeholder">${initial}</div>`;
+
+    const liveUrl = r.url;
+    const archUrl = r.archive_url;
+    const hidden = ri >= REVIEWS_INITIAL ? ' review-card--hidden' : '';
+
+    if (isTestimonial) {
+      // Flip card: front = photo + name + quote, back = bio
+      const bioText = t(r.bio) || t(r.role) || '';
+      return `
+        <div class="review-card review-card--flip${hidden}" tabindex="0" role="button"
+             aria-label="${t(r.attribution)} — ${lang==='hi'?'पलटें':'flip'}">
+          <div class="review-card__inner">
+            <div class="review-card__front">
+              <div class="review-card__header">
+                ${photoHTML}
+                <div class="review-card__attr">
+                  <p class="review-card__name">${t(r.attribution)}</p>
+                  <p class="review-card__role">${t(r.role)}</p>
+                </div>
+              </div>
+              <blockquote class="review-card__quote">${t(r.quote)}</blockquote>
+              <p class="review-card__flip-hint">${lang==='hi'?'← पलटें →':'← flip →'}</p>
+            </div>
+            <div class="review-card__back">
+              <div class="review-card__back-photo">${photoHTML}</div>
+              <p class="review-card__back-name">${t(r.attribution)}</p>
+              <p class="review-card__back-bio">${bioText}</p>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    // Regular review card with optional source link
+    const sourceLinks = (liveUrl || archUrl)
+      ? `<div class="review-card__links">
+          ${liveUrl ? `<a href="${liveUrl}" target="_blank" rel="noopener" class="review-card__link">
+            ${t(r.source) || (lang==='hi' ? 'स्रोत' : 'Source')} ↗
+          </a>` : ''}
+          ${archUrl ? `<a href="${archUrl}" target="_blank" rel="noopener" class="review-card__link review-card__link--archive">
+            📦 ${lang==='hi'?'संग्रहीत':'Archived'}
+          </a>` : ''}
+        </div>` : '';
+
+    return `
+      <div class="review-card${hidden}">
+        <div class="review-card__header">
+          ${photoHTML}
+          <div class="review-card__attr">
+            <p class="review-card__name">${t(r.attribution)}</p>
+            <p class="review-card__role">${t(r.role)}</p>
+            ${r.date ? `<p class="review-card__date">${fmtDate(r.date)}</p>` : ''}
+          </div>
+        </div>
+        <blockquote class="review-card__quote">${t(r.quote)}</blockquote>
+        ${sourceLinks}
+      </div>`;
+  }
 
   function renderReviews() {
     const container = qs('#reviews-accordion');
     if (!container) return;
 
-    // Build a map: canonical_id → [reviews]
+    // Separate into reviews and testimonials per book
     const groups = {};
     allReviews.forEach(r => {
       const cid = r.canonical_id || 'other';
-      if (!groups[cid]) groups[cid] = [];
-      groups[cid].push(r);
+      if (!groups[cid]) groups[cid] = { reviews: [], testimonials: [] };
+      if (r.type === 'testimonial') groups[cid].testimonials.push(r);
+      else groups[cid].reviews.push(r);
     });
 
-    // Order groups by the year of the canonical book (most recent first)
+    // Order groups by most recent book year
     const ordered = Object.entries(groups).sort(([a], [b]) => {
-      const ya = Math.max(...allBooks.filter(bk=>(bk.canonical_id||bk.id)===a).map(bk=>bk.year||0));
-      const yb = Math.max(...allBooks.filter(bk=>(bk.canonical_id||bk.id)===b).map(bk=>bk.year||0));
-      return yb - ya;
+      const yr = (cid) => Math.max(0, ...allBooks.filter(bk=>(bk.canonical_id||bk.id)===cid).map(bk=>bk.year||0));
+      return yr(b) - yr(a);
     });
 
-    container.innerHTML = ordered.map(([canonId, reviews], gi) => {
-      // Use the title of the most recent edition of this canonical book
+    container.innerHTML = ordered.map(([canonId, {reviews, testimonials}], gi) => {
       const bookEditions = allBooks.filter(b=>(b.canonical_id||b.id)===canonId);
       const latestBook = bookEditions.sort((a,b)=>b.year-a.year)[0];
       const bookTitle = latestBook ? t(latestBook.title) : canonId;
-      const count = reviews.length;
-      const countLabel = lang==='hi' ? `${count} समीक्षाएँ` : `${count} review${count!==1?'s':''}`;
+      const total = reviews.length + testimonials.length;
+      const countLabel = lang==='hi' ? `${total} प्रतिक्रियाएँ` : `${total} response${total!==1?'s':''}`;
 
-      const reviewCards = reviews.map((r, ri) => {
-        const initial = (t(r.attribution)[0] || '?');
-        const photoHTML = r.photo
-          ? `<img class="review-card__photo" src="${r.photo}" alt="${t(r.attribution)}" loading="lazy"
-               onerror="this.outerHTML='<div class=review-card__photo-placeholder>${initial}</div>'">`
-          : `<div class="review-card__photo-placeholder">${initial}</div>`;
+      // Reviews section (clickable)
+      const reviewSection = reviews.length ? `
+        <div class="review-group__section-label">${lang==='hi'?'समीक्षाएँ':'Reviews'}</div>
+        <div class="review-group__cards">${reviews.map((r,i)=>buildReviewCard(r,i)).join('')}</div>
+      ` : '';
 
-        // Link logic: prefer url, fall back to archive_url
-        const liveUrl = r.url;
-        const archUrl = r.archive_url;
-        const sourceLinks = (liveUrl||archUrl)
-          ? `<div class="review-card__links">
-              ${liveUrl ? `<a href="${liveUrl}" target="_blank" rel="noopener" class="review-card__link">
-                ${t(r.source)||'स्रोत'} ↗
-              </a>` : ''}
-              ${archUrl ? `<a href="${archUrl}" target="_blank" rel="noopener" class="review-card__link review-card__link--archive">
-                📦 ${lang==='hi'?'संग्रहीत':'Archived'}
-              </a>` : ''}
-            </div>` : '';
+      // Testimonials section (flip cards) — always shown, not counted in "show more"
+      const testimonialSection = testimonials.length ? `
+        <div class="review-group__section-label review-group__section-label--testimonials">
+          ${lang==='hi'?'पाठकों की प्रतिक्रियाएँ':'Reader Responses'}
+        </div>
+        <div class="review-group__cards review-group__cards--testimonials">
+          ${testimonials.map((r,i)=>buildReviewCard(r,i)).join('')}
+        </div>
+      ` : '';
 
-        const hidden = ri >= REVIEWS_INITIAL ? ' review-card--hidden' : '';
-        return `
-          <div class="review-card${hidden}">
-            <div class="review-card__header">
-              ${photoHTML}
-              <div class="review-card__attr">
-                <p class="review-card__name">${t(r.attribution)}</p>
-                <p class="review-card__role">${t(r.role)}</p>
-                ${r.date ? `<p class="review-card__date">${fmtDate(r.date)}</p>` : ''}
-              </div>
-            </div>
-            <blockquote class="review-card__quote">${t(r.quote)}</blockquote>
-            ${sourceLinks}
-          </div>`;
-      }).join('');
-
-      const showMoreBtn = count > REVIEWS_INITIAL
+      const showMoreBtn = reviews.length > REVIEWS_INITIAL
         ? `<button class="review-group__more-btn" data-group="${gi}" aria-expanded="false">
-            ${lang==='hi' ? `${count-REVIEWS_INITIAL} और देखें` : `Show ${count-REVIEWS_INITIAL} more`}
+            ${lang==='hi' ? `${reviews.length-REVIEWS_INITIAL} और देखें` : `Show ${reviews.length-REVIEWS_INITIAL} more`}
           </button>` : '';
 
       return `
@@ -432,8 +510,9 @@
             <span class="accordion-icon" aria-hidden="true"></span>
           </button>
           <div class="review-group__body" id="rgroup-${gi}" ${gi===0?'':'hidden'}>
-            <div class="review-group__cards">${reviewCards}</div>
+            ${reviewSection}
             ${showMoreBtn}
+            ${testimonialSection}
           </div>
         </div>`;
     }).join('');
@@ -443,7 +522,6 @@
       btn.addEventListener('click', () => {
         const body = qs(`#${btn.getAttribute('aria-controls')}`);
         const isOpen = btn.getAttribute('aria-expanded')==='true';
-        // Close all
         qsa('.review-group__btn', container).forEach(b => {
           b.setAttribute('aria-expanded','false');
           qs(`#${b.getAttribute('aria-controls')}`).hidden = true;
@@ -452,28 +530,37 @@
       });
     });
 
-    // Wire show-more buttons
+    // Wire show-more buttons (only on reviews, not testimonials)
     qsa('.review-group__more-btn', container).forEach(btn => {
       btn.addEventListener('click', () => {
         const gi = btn.dataset.group;
         const body = qs(`#rgroup-${gi}`);
         if (!body) return;
         const isExpanded = btn.getAttribute('aria-expanded')==='true';
+        // Only target non-testimonial review cards
+        const reviewCards = qsa('.review-group__cards:not(.review-group__cards--testimonials) .review-card', body);
         if (!isExpanded) {
-          qsa('.review-card--hidden', body).forEach(c => c.classList.remove('review-card--hidden'));
+          reviewCards.forEach(c => c.classList.remove('review-card--hidden'));
           btn.setAttribute('aria-expanded','true');
           btn.textContent = lang==='hi' ? 'कम करें ↑' : 'Show less ↑';
         } else {
-          // Re-hide beyond initial
-          qsa('.review-card', body).forEach((c,i) => {
+          reviewCards.forEach((c,i) => {
             if (i >= REVIEWS_INITIAL) c.classList.add('review-card--hidden');
           });
           btn.setAttribute('aria-expanded','false');
-          const total = qsa('.review-card', body).length;
           btn.textContent = lang==='hi'
-            ? `${total-REVIEWS_INITIAL} और देखें`
-            : `Show ${total-REVIEWS_INITIAL} more`;
+            ? `${reviewCards.length-REVIEWS_INITIAL} और देखें`
+            : `Show ${reviewCards.length-REVIEWS_INITIAL} more`;
         }
+      });
+    });
+
+    // Wire flip cards
+    qsa('.review-card--flip', container).forEach(card => {
+      const toggle = () => card.classList.toggle('flipped');
+      card.addEventListener('click', toggle);
+      card.addEventListener('keydown', e => {
+        if (e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}
       });
     });
 
@@ -592,6 +679,15 @@
   }
 
   // ── Posts snippet (main page — 3 latest) ─────────────────
+  // posts.json now contains the full body[] — no separate per-post files.
+  // Excerpt is derived automatically from the first paragraph block.
+  function getExcerpt(post) {
+    if (post.excerpt && t(post.excerpt)) return t(post.excerpt);
+    const firstPara = (post.body || []).find(b => b.type === 'paragraph');
+    const text = firstPara ? t(firstPara.text) : '';
+    return text.length > 160 ? text.slice(0, 157) + '…' : text;
+  }
+
   function renderPostsSnippet() {
     const grid = qs('#posts-snippet');
     if (!grid || !allPosts.length) return;
@@ -612,7 +708,7 @@
           <div class="post-card__body">
             <p class="post-card__date">${dateStr}</p>
             <h3 class="post-card__title">${t(post.title)}</h3>
-            <p class="post-card__excerpt">${t(post.excerpt)}</p>
+            <p class="post-card__excerpt">${getExcerpt(post)}</p>
           </div>
         </a>`;
     }).join('');
@@ -672,9 +768,9 @@
     lb.innerHTML=`
       <div class="lightbox__backdrop"></div>
       <button class="lightbox__close" aria-label="Close">&#x2715;</button>
-      <button class="lightbox__prev" aria-label="Previous">&#x2039;</button>
-      <button class="lightbox__next" aria-label="Next">&#x203A;</button>
       <div class="lightbox__content">
+        <div class="lightbox__tap-prev" aria-label="Previous" role="button" tabindex="0"></div>
+        <div class="lightbox__tap-next" aria-label="Next"     role="button" tabindex="0"></div>
         <img class="lightbox__img" src="" alt="">
         <p class="lightbox__caption"></p>
       </div>`;
@@ -695,8 +791,10 @@
     });
     qs('.lightbox__backdrop',lb).addEventListener('click',close);
     qs('.lightbox__close',lb).addEventListener('click',close);
-    qs('.lightbox__prev',lb).addEventListener('click',()=>show(cur-1));
-    qs('.lightbox__next',lb).addEventListener('click',()=>show(cur+1));
+    qs('.lightbox__tap-prev',lb).addEventListener('click', e => { e.stopPropagation(); show(cur-1); });
+    qs('.lightbox__tap-next',lb).addEventListener('click', e => { e.stopPropagation(); show(cur+1); });
+    qs('.lightbox__tap-prev',lb).addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') show(cur-1); });
+    qs('.lightbox__tap-next',lb).addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') show(cur+1); });
     document.addEventListener('keydown',e=>{
       if (!lb.classList.contains('open')) return;
       if (e.key==='Escape') close();

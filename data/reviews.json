@@ -1,27 +1,31 @@
 [
   {
     "id": "rastogi",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
     "photo": "assets/images/reviewers/navjivan-rastogi.jpg",
+    "bio": { "hi": "पद्म श्री; आचार्य, संस्कृत तथा प्राकृत भाषा विभाग, लखनऊ विश्वविद्यालय", "en": "Padma Shri; Acharya of Sanskrit & Prakrit, Lucknow University. One of India's foremost scholars of Kashmir Shaivism and Abhinavagupta." },
     "quote": {
-      "hi": "भारत के तथाकथित बौद्धिक विमर्श के दो कटु यथार्थ हैं – एक है, अपनी बौद्धिक संरचनाओं को पश्चिम की वैचारिक कोटियों में ढालना या उनके ठप्पे, अनुमोदन से अपनी प्रामाणिकता का प्रत्यभिज्ञान और दूसरा है, भारतीय ज्ञान-सम्प्रदायों की গগনचुम्बी चरमता का प्रतिबोधहीन निनाद। इसके पलट मेरा मानना है कि भारतीय चिन्तना की प्रखर ओजस्विता के पुनरुत्थान और पुनरुत्थापन दोनों के लिए 'इतिहास' और 'निकषों' की अस्मिता का स्वायत्तता-बोध और उसके सापेक्ष वैश्विक सर्जनाव्यापार का मूल्याङ्कन किसी भी सार्थक, उर्वर और प्रासंगिक विमर्श की अनिवार्य शर्त है। प्रचण्ड प्रवीर इस शर्त को बेझिझक पूरा करते हैं। इसको संभव बनाने के लिए वह परम्परा का आविष्कार भी करते हैं कि कैसे परम्परा आधुनिक चुनौतियों से संवाद करती है।",
-      "en": "There are two bitter realities of India's so-called intellectual discourse — one is the moulding of our intellectual structures into the conceptual categories of the West; the other is the mindless chanting of the sky-high extremism of Indian knowledge traditions. Against this, I believe that for both the revival and re-establishment of the vigorous brilliance of Indian thought, an autonomous sense of the identity of 'history' and 'criteria' and the evaluation of global creative enterprise relative to it, is an indispensable condition for any meaningful discourse. Prachand Praveer fulfils this condition without hesitation, reinventing tradition — showing how it enters into dialogue with modern challenges."
+      "hi": "भारत के तथाकथित बौद्धिक विमर्श के दो कटु यथार्थ हैं – एक है, अपनी बौद्धिक संरचनाओं को पश्चिम की वैचारिक कोटियों में ढालना और दूसरा है, भारतीय ज्ञान-सम्प्रदायों की गगनचुम्बी चरमता का प्रतिबोधहीन निनाद। प्रचण्ड प्रवीर इस शर्त को बेझिझक पूरा करते हैं — परम्परा का आविष्कार करते हुए दिखाते हैं कि कैसे वह आधुनिक चुनौतियों से संवाद करती है।",
+      "en": "There are two bitter realities of India's intellectual discourse — moulding our structures into Western categories, and the mindless chanting of Indian knowledge traditions. Prachand Praveer fulfils this condition without hesitation, reinventing tradition — showing how it enters into dialogue with modern challenges."
     },
     "attribution": { "hi": "डॉ॰ नवजीवन रस्तोगी", "en": "Dr. Navjivan Rastogi" },
-    "role": { "hi": "पद्म श्री; आचार्य, संस्कृत तथा प्राकृत भाषा विभाग, लखनऊ विश्वविद्यालय", "en": "Padma Shri; Professor of Sanskrit & Prakrit, Lucknow University" },
+    "role": { "hi": "पद्म श्री; संस्कृत आचार्य, लखनऊ विश्वविद्यालय", "en": "Padma Shri; Professor of Sanskrit, Lucknow University" },
     "source": { "hi": "अभिनव सिनेमा (तृतीय संस्करण) प्रस्तावना", "en": "Foreword, Abhinav Cinema (3rd edition)" },
     "url": "",
     "archive_url": ""
   },
   {
     "id": "gupt",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
     "photo": "assets/images/reviewers/bharat-gupt.jpg",
+    "bio": { "hi": "प्राध्यापक, दिल्ली विश्वविद्यालय। भारतीय नाट्यशास्त्र और सौन्दर्यशास्त्र के अग्रणी विद्वान।", "en": "Professor, University of Delhi. Leading scholar of Indian dramaturgy and aesthetics, author of Dramatic Concepts Greek & Indian (1994)." },
     "quote": {
-      "hi": "प्रचण्ड प्रवीर ने एक मौलिक और नई दिशा देने वाली पुस्तक लिखी है। उसने शास्त्रों का अध्ययन कर, जैसे कि भरतमुनि का नाट्यशास्त्र और उस पर प्रसिद्ध टीका, अभिनवभारती के परिप्रेक्ष्य में नाट्य सम्बन्धी प्राचीन विचारों को सिनेमा जैसे आधुनिक माध्यम से जोड़ा है। मेरी हार्दिक इच्छा है कि इस पुस्तक का मूल्यांकन करते समय विभिन्न विषयों के विशेषज्ञ लेखक के द्वारा दिए गए तर्कों का गम्भीर परीक्षण करें।",
-      "en": "Prachand Praveer has written a path-breaking book that points in a genuinely new direction. He has studied the classical texts — Bharatmuni's Natyashastra and its celebrated commentary Abhinavabharati — and connected ancient dramatic thought to the modern medium of cinema. My sincere wish is that experts from various disciplines seriously examine the arguments the author presents, free from the contemporary literary prejudices that have kept distance from serious classical thought."
+      "hi": "प्रचण्ड प्रवीर ने एक मौलिक और नई दिशा देने वाली पुस्तक लिखी है। उसने भरतमुनि के नाट्यशास्त्र और अभिनवभारती के परिप्रेक्ष्य में नाट्य सम्बन्धी प्राचीन विचारों को सिनेमा जैसे आधुनिक माध्यम से जोड़ा है।",
+      "en": "Prachand Praveer has written a path-breaking book pointing in a genuinely new direction. He has connected ancient dramatic thought from Bharatmuni's Natyashastra and Abhinavabharati to the modern medium of cinema."
     },
     "attribution": { "hi": "डॉ॰ भरत गुप्त", "en": "Dr. Bharat Gupt" },
     "role": { "hi": "प्राध्यापक, दिल्ली विश्वविद्यालय", "en": "Professor, University of Delhi" },
@@ -31,12 +35,14 @@
   },
   {
     "id": "tripathi",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
     "photo": "assets/images/reviewers/radhavallabh-tripathi.jpg",
+    "bio": { "hi": "संस्कृत काव्यशास्त्र के समादृत आचार्य। भारत के शीर्षस्थ संस्कृत साहित्यकारों में से एक।", "en": "Revered scholar of Sanskrit poetics. One of India's foremost Sanskrit litterateurs and critics." },
     "quote": {
-      "hi": "पश्चिम अपनी अहम्मन्यता और वर्चस्ववादी दृष्टि के कारण कला और संस्कृति के पौरस्त्य प्रतिमानों को अनदेखा करता आया है। कला के भारतीय मानदण्डों — विशेषतः रससिद्धान्त के आधार पर विश्व सिनेमा का आकलन करते हुए प्रचण्ड प्रवीर ने इस दिशा में बहुत अच्छी पहल की है। इसमें कोई सन्देह नहीं कि प्रचण्ड के अलावा और कोई यह कार्य नहीं कर सकता था। निश्चित ही यह उनका कार्य पूर्व और पश्चिम के बीच संवाद के सेतु रचेगा, और दोनों ओर की चिन्तनपरिधियों को विस्तारित भी करेगा।",
-      "en": "The West, due to its arrogance and supremacist vision, has ignored the Eastern paradigms of art and culture. In assessing world cinema through the Indian standards of art — especially Rasa theory — Prachand Praveer has made an excellent beginning. There is no doubt that no one other than Prachand could have done this work. This work will certainly build a bridge of dialogue between East and West, and expand the horizons of thought on both sides."
+      "hi": "कला के भारतीय मानदण्डों — विशेषतः रससिद्धान्त के आधार पर विश्व सिनेमा का आकलन करते हुए प्रचण्ड प्रवीर ने बहुत अच्छी पहल की है। इसमें कोई सन्देह नहीं कि प्रचण्ड के अलावा और कोई यह कार्य नहीं कर सकता था।",
+      "en": "In assessing world cinema through Indian standards of art — especially Rasa theory — Prachand Praveer has made an excellent beginning. There is no doubt that no one other than Prachand could have done this work."
     },
     "attribution": { "hi": "आचार्य राधावल्लभ त्रिपाठी", "en": "Acharya Radhavallabh Tripathi" },
     "role": { "hi": "संस्कृत काव्यशास्त्र के समादृत आचार्य", "en": "Sanskrit Scholar and Litterateur" },
@@ -46,12 +52,14 @@
   },
   {
     "id": "sharma",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
     "photo": "assets/images/reviewers/ambikadatt-sharma.jpg",
+    "bio": { "hi": "साहित्यकार एवं समालोचक।", "en": "Scholar and critic." },
     "quote": {
-      "hi": "'अभिनव सिनेमा' नाट्य की भारतीय सैद्धान्तिकी का गहन विमर्श करते हुए उसे समकाल में श्लाघनीय रूप से प्रतिष्ठित करने वाली एक महत्त्वपूर्ण कृति है। यह पुस्तक उस नवोन्मेष की सम्पूर्ति करते हुए परम्परा का क्षैतिज विस्तार करती है।",
-      "en": "Abhinav Cinema is an important work that conducts a profound discussion of Indian dramatic theory and establishes it commendably in the contemporary moment. This book fulfils the demand for innovation in thinking about art and drama, extending tradition horizontally into the present."
+      "hi": "'अभिनव सिनेमा' नाट्य की भारतीय सैद्धान्तिकी का गहन विमर्श करते हुए उसे समकाल में श्लाघनीय रूप से प्रतिष्ठित करने वाली एक महत्त्वपूर्ण कृति है।",
+      "en": "Abhinav Cinema conducts a profound discussion of Indian dramatic theory and establishes it commendably in the contemporary moment."
     },
     "attribution": { "hi": "डॉ॰ अम्बिकादत्त शर्मा", "en": "Dr. Ambikadatt Sharma" },
     "role": { "hi": "साहित्यकार एवं समालोचक", "en": "Scholar and Critic" },
@@ -61,9 +69,11 @@
   },
   {
     "id": "kalpit-abhinav",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
     "photo": "assets/images/reviewers/krishna-kalpit.jpg",
+    "bio": { "hi": "हिन्दी के प्रमुख कवि व गद्यकार। राजस्थान साहित्य अकादमी पुरस्कार से सम्मानित।", "en": "Prominent Hindi poet and prose writer. Recipient of the Rajasthan Sahitya Akademi Award." },
     "quote": {
       "hi": "अभिनव सिनेमा न केवल भारत बल्कि अब तक दुनियाभर में सिनेमा पर लिखी गयी किताबों में अपूर्व है।",
       "en": "Abhinav Cinema is unprecedented not only in India but among all books on cinema written anywhere in the world."
@@ -76,12 +86,14 @@
   },
   {
     "id": "trivedi-abhinav",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
     "photo": "assets/images/reviewers/harish-trivedi.jpg",
+    "bio": { "hi": "अँग्रेज़ी, भारतीय एवं तुलनात्मक साहित्य के प्रतिष्ठित विद्वान। दिल्ली विश्वविद्यालय में प्राध्यापक रहे।", "en": "Distinguished scholar of English, Indian & Comparative Literature. Former Professor at University of Delhi." },
     "quote": {
-      "hi": "प्रचण्ड प्रवीर की अर्जित प्रतिष्ठा है कि वे जो भी लिखते हैं मौलिक और अनूठा लिखते हैं। विश्व सिनेमा की महानतम कृतियों की उनके द्वारा भारतीय सौंदर्य-शास्त्र के परिप्रेक्ष्य में की गयी व्याख्या ने हमारे सांस्कृतिक जगत में अपना अलग ही स्थान बनाया है।",
-      "en": "Prachand Praveer has earned a reputation for writing whatever he writes with originality and uniqueness. His interpretation of world cinema's greatest works through the lens of Indian aesthetics has carved out a distinctive place in our cultural world."
+      "hi": "प्रचण्ड प्रवीर की अर्जित प्रतिष्ठा है कि वे जो भी लिखते हैं मौलिक और अनूठा लिखते हैं। विश्व सिनेमा की महानतम कृतियों की भारतीय सौंदर्य-शास्त्र के परिप्रेक्ष्य में की गयी व्याख्या ने हमारे सांस्कृतिक जगत में अपना अलग ही स्थान बनाया है।",
+      "en": "Prachand Praveer has earned a reputation for originality and uniqueness. His interpretation of world cinema's greatest works through Indian aesthetics has carved out a distinctive place in our cultural world."
     },
     "attribution": { "hi": "डॉ॰ हरीश त्रिवेदी", "en": "Dr. Harish Trivedi" },
     "role": { "hi": "अँग्रेज़ी, भारतीय एवं तुलनात्मक साहित्य के विद्वान", "en": "Scholar of English, Indian & Comparative Literature" },
@@ -91,12 +103,14 @@
   },
   {
     "id": "vishnu-khare",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2016-01",
     "photo": "",
+    "bio": { "hi": "वरिष्ठ हिन्दी कवि एवं आलोचक। साहित्य अकादमी पुरस्कार से सम्मानित।", "en": "Senior Hindi poet and critic. Recipient of the Sahitya Akademi Award." },
     "quote": {
-      "hi": "मतभेदों के बावजूद यह पुस्तक सही अर्थों में अपने क्षेत्र में एकदम नयी दृष्टि रखती और देती है, नूतन मार्ग बनाती है और अग्रगामी है। यह ऐसी अद्वितीय पुस्तक है कि मैं सख़्त सिफ़ारिश करता हूँ कि इसे व्यक्तिगत और सार्वजनिक रूप से ख़रीदा जाये और सिनेमा तथा हिन्दी के पाठ्यक्रम में अनिवार्यतः सम्मानजनक जगह दी जाए।",
-      "en": "Despite any disagreements, this book in the truest sense offers and opens a completely new vision in its field, forging new paths and moving forward. It is such a unique work that I strongly recommend it be purchased — individually and institutionally — and given an obligatory place of honour in curricula on cinema and Hindi."
+      "hi": "यह पुस्तक सही अर्थों में अपने क्षेत्र में एकदम नयी दृष्टि रखती और देती है, नूतन मार्ग बनाती है और अग्रगामी है। यह ऐसी अद्वितीय पुस्तक है कि मैं सख़्त सिफ़ारिश करता हूँ कि इसे सिनेमा तथा हिन्दी के पाठ्यक्रम में अनिवार्यतः सम्मानजनक जगह दी जाए।",
+      "en": "This book offers a completely new vision in its field, forging new paths and moving forward. I strongly recommend it be given an obligatory place of honour in curricula on cinema and Hindi."
     },
     "attribution": { "hi": "विष्णु खरे", "en": "Vishnu Khare" },
     "role": { "hi": "वरिष्ठ कवि एवं आलोचक", "en": "Senior Poet and Critic" },
@@ -106,12 +120,14 @@
   },
   {
     "id": "shivmurti",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
     "photo": "assets/images/reviewers/shivmurti.jpg",
+    "bio": { "hi": "प्रसिद्ध हिन्दी कथाकार। 'तिरिया चरित्तर', 'सिरी उपमा जोग', 'कसाईबाड़ा' जैसी चर्चित कहानियों के लेखक।", "en": "Renowned Hindi fiction writer, known for celebrated stories like 'Tiriya Charittar' and 'Kasaibaada'." },
     "quote": {
-      "hi": "सिने जगत का इन्साइक्लोपीडिया। विभिन्न रसों के आधार पर विश्व सिनेमा की सूक्ष्म और गहन जानकारी जिसमें भारतीय नाट्यशास्त्र की परम्परा और संस्कृत नाटकों से लेकर विश्व दृष्टि तक को विश्लेषित किया गया है। सुसम्बद्ध और पठनीय (Must Read) पुस्तक।",
-      "en": "An encyclopaedia of world cinema. Subtle and in-depth knowledge of world cinema based on different Rasas, analysing everything from the Indian Natyashastra tradition and Sanskrit drama to a global vision. A coherent and essential Must Read."
+      "hi": "सिने जगत का इन्साइक्लोपीडिया। विभिन्न रसों के आधार पर विश्व सिनेमा की सूक्ष्म और गहन जानकारी जिसमें भारतीय नाट्यशास्त्र की परम्परा से लेकर विश्व दृष्टि तक को विश्लेषित किया गया है। सुसम्बद्ध और पठनीय (Must Read) पुस्तक।",
+      "en": "An encyclopaedia of world cinema. Subtle and in-depth knowledge of world cinema based on different Rasas, from the Indian Natyashastra tradition to a global vision. A coherent and essential Must Read."
     },
     "attribution": { "hi": "शिवमूर्ति", "en": "Shivmurti" },
     "role": { "hi": "प्रसिद्ध हिन्दी कथाकार", "en": "Renowned Hindi Fiction Writer" },
@@ -121,12 +137,14 @@
   },
   {
     "id": "vinod-bhardwaj",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
     "photo": "assets/images/reviewers/vinod-bhardwaj.jpg",
+    "bio": { "hi": "कवि, कथाकार एवं सिने-आलोचक। हिन्दी में सिनेमा-लेखन के अग्रणी नामों में से एक।", "en": "Poet, fiction writer and film critic. One of the foremost names in Hindi cinema writing." },
     "quote": {
       "hi": "प्रचण्ड प्रवीर की इस किताब में रस-सिद्धान्त को विश्व-सिनेमा के परिप्रेक्ष्य में बहुत शोध और मेहनत से देखा गया है। फ़िल्म को कई तरह से देखा और समझा जा सकता है इसलिए प्रवीर की इस पहल का स्वागत है।",
-      "en": "In this book Prachand Praveer has examined Rasa theory in the context of world cinema with great research and effort. Since films can be viewed and understood in many ways, Praveer's initiative deserves a warm welcome."
+      "en": "Prachand Praveer has examined Rasa theory in world cinema with great research and effort. Since films can be viewed in many ways, Praveer's initiative deserves a warm welcome."
     },
     "attribution": { "hi": "विनोद भारद्वाज", "en": "Vinod Bhardwaj" },
     "role": { "hi": "कवि, कथाकार एवं सिने-आलोचक", "en": "Poet, Fiction Writer and Film Critic" },
@@ -136,12 +154,14 @@
   },
   {
     "id": "gyan-ranjan",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
     "photo": "assets/images/reviewers/gyan-ranjan.jpg",
+    "bio": { "hi": "प्रसिद्ध हिन्दी कथाकार एवं सम्पादक। 'पहल' पत्रिका के संस्थापक-सम्पादक।", "en": "Renowned Hindi writer and founder-editor of Pahal, one of Hindi's most influential literary magazines." },
     "quote": {
       "hi": "प्रचण्ड प्रवीर ने इधर अभिनव सिनेमा पर एक असाधारण सन्दर्भ ग्रंथ प्रकाशित किया है, जो विश्व सिनेमा पर बड़ा दिग्दर्शन है। हिन्दी ग्रंथालय को उन्होंने नये तरह से समृद्ध किया है।",
-      "en": "Prachand Praveer has recently published an extraordinary reference work on Abhinav Cinema — a major guide to world cinema. He has enriched the Hindi library in a new way entirely."
+      "en": "Prachand Praveer has published an extraordinary reference work on world cinema — a major guide. He has enriched the Hindi library in an entirely new way."
     },
     "attribution": { "hi": "ज्ञान रञ्जन", "en": "Gyan Ranjan" },
     "role": { "hi": "प्रसिद्ध हिन्दी कथाकार एवं सम्पादक, पहल", "en": "Renowned Hindi Writer and Editor, Pahal" },
@@ -151,12 +171,14 @@
   },
   {
     "id": "kumar-ambuj",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
     "photo": "assets/images/reviewers/kumar-ambuj.jpg",
+    "bio": { "hi": "हिन्दी के प्रतिष्ठित कवि। भारत भूषण अग्रवाल पुरस्कार एवं केदार सम्मान से सम्मानित।", "en": "Acclaimed Hindi poet, recipient of the Bharat Bhushan Aggarwal Award and Kedar Samman." },
     "quote": {
-      "hi": "प्रचण्‍ड प्रवीर ने 'अभिनव सिनेमा' में मेंडलीफ की तालिका की तरह, संसार की प्रमुख फ़‍िल्‍मों को रस सिद्धांत के आधार पर वर्गीकृत कर दिया है। और अपनी सैद्धांतिकी तय करते हुए, प्रत्येक अध्याय में उसका औचित्‍य सहित प्रतिपादन किया है। यह एक नया विवेक है। अपूर्व विश्‍लेषण। एक नया आयाम। सिने प्रेमियों के लिए यह एक प्राथमिक, ज़रूरी और रुचिकर किताब है।",
-      "en": "In Abhinav Cinema, Prachand Praveer has classified the world's major films according to Rasa theory — like Mendeleev's periodic table. Establishing his theoretical framework, he presents its justification in each chapter. This is a new discernment. An unprecedented analysis. A new dimension. For cinema lovers, this is a primary, essential and engaging book."
+      "hi": "प्रचण्ड प्रवीर ने 'अभिनव सिनेमा' में मेंडलीफ की तालिका की तरह, संसार की प्रमुख फ़िल्मों को रस सिद्धांत के आधार पर वर्गीकृत कर दिया है। यह एक नया विवेक है। अपूर्व विश्लेषण। एक नया आयाम। सिने प्रेमियों के लिए यह एक प्राथमिक, ज़रूरी और रुचिकर किताब है।",
+      "en": "In Abhinav Cinema, Prachand Praveer has classified the world's major films according to Rasa theory — like Mendeleev's periodic table. This is a new discernment. An unprecedented analysis. A new dimension. For cinema lovers, this is a primary, essential and engaging book."
     },
     "attribution": { "hi": "कुमार अम्बुज", "en": "Kumar Ambuj" },
     "role": { "hi": "हिन्दी कवि", "en": "Hindi Poet" },
@@ -166,27 +188,31 @@
   },
   {
     "id": "ambuj-pandey",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
     "photo": "assets/images/reviewers/ambuj-pandey.jpg",
+    "bio": { "hi": "हिन्दी आलोचक।", "en": "Hindi critic." },
     "quote": {
-      "hi": "रसाग्रही और सिनेप्रेमियों को यह पुस्तक ज़रूर पढ़नी चाहिए, क्यूंकि लेखक का प्रयास और उसकी चिंता एक गंभीर विमर्श को एक लोकप्रिय व सार्वजनीन विधा में एकाकार कराने का सार्थक हठ है। करुण, बीभत्स, भयानक, शृंगार, अद्भुत रसों के प्रकाश में विश्वसिनेमा की अभिनव व्याख्या पुस्तक की निधि है।",
-      "en": "Lovers of Rasa and cinema must read this book, because the author's effort and concern is a meaningful insistence on integrating serious discourse into a popular and universal form. The novel interpretation of world cinema in the light of the Karuna, Bibhatsa, Bhayanaka, Shringara and Adbhuta Rasas is the treasure of this book."
+      "hi": "रसाग्रही और सिनेप्रेमियों को यह पुस्तक ज़रूर पढ़नी चाहिए। करुण, बीभत्स, भयानक, शृंगार, अद्भुत रसों के प्रकाश में विश्वसिनेमा की अभिनव व्याख्या पुस्तक की निधि है।",
+      "en": "Lovers of Rasa and cinema must read this book. The novel interpretation of world cinema in the light of Karuna, Bibhatsa, Bhayanaka, Shringara and Adbhuta Rasas is the treasure of this book."
     },
     "attribution": { "hi": "अम्बुज कुमार पाण्डेय", "en": "Ambuj Kumar Pandey" },
-    "role": { "hi": "", "en": "" },
+    "role": { "hi": "हिन्दी आलोचक", "en": "Hindi Critic" },
     "source": { "hi": "अभिनव सिनेमा (तृतीय संस्करण) प्रस्तावना", "en": "Foreword, Abhinav Cinema (3rd edition)" },
     "url": "",
     "archive_url": ""
   },
   {
     "id": "vinod-anupam",
+    "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
     "photo": "assets/images/reviewers/vinod-anupam.jpg",
+    "bio": { "hi": "प्रसिद्ध हिन्दी लेखक एवं सम्पादक।", "en": "Renowned Hindi writer and editor." },
     "quote": {
-      "hi": "हिंदी में सिनेमा पर किताब अब अजूबा नहीं रहीं, लेकिन कुछ किताबों को हाथ में लेकर अभी भी अजूबा लगता है। प्रचण्ड प्रवीर की 'अभिनव सिनेमा' को पढ़ते-देखते तो लगता है अभी तो भारतीय सौन्दर्य शास्त्र की दृष्टि से सिनेमा को समझने की हमने शुरुआत भी नहीं की है। जिस श्रम और समर्पण से यह पुस्तक लिखी गई है, उसी श्रम और समर्पण से यह अपने पाठ की भी मांग रखती है। यदि सिनेमा आपके लिए महज इंटरटेनमेंट नहीं है, तो यह पुस्तक आपके लिए है।",
-      "en": "Books on cinema in Hindi are no longer a novelty, but some books still feel like a wonder when held. Reading Prachand Praveer's Abhinav Cinema, one feels we have not yet even begun to understand cinema from the perspective of Indian aesthetics. The book demands the same labour and dedication in its reading as went into its writing. If cinema is not mere entertainment for you, this book is for you."
+      "hi": "प्रचण्ड प्रवीर की 'अभिनव सिनेमा' को पढ़ते-देखते तो लगता है अभी तो भारतीय सौन्दर्य शास्त्र की दृष्टि से सिनेमा को समझने की हमने शुरुआत भी नहीं की है। यदि सिनेमा आपके लिए महज इंटरटेनमेंट नहीं है, तो यह पुस्तक आपके लिए है।",
+      "en": "Reading Abhinav Cinema, one feels we have not yet even begun to understand cinema from the perspective of Indian aesthetics. If cinema is not mere entertainment for you, this book is for you."
     },
     "attribution": { "hi": "विनोद अनुपम", "en": "Vinod Anupam" },
     "role": { "hi": "प्रसिद्ध हिन्दी लेखक एवं सम्पादक", "en": "Renowned Hindi Writer and Editor" },
@@ -195,13 +221,49 @@
     "archive_url": ""
   },
   {
+    "id": "vinod-padraj",
+    "type": "testimonial",
+    "canonical_id": "abhinav-cinema",
+    "date": "2026-03",
+    "photo": "",
+    "bio": { "hi": "वरिष्ठ हिन्दी कवि।", "en": "Senior Hindi poet." },
+    "quote": {
+      "hi": "यह पुस्तक संस्कृत वाङ्मय और सिनेमा दोनों के प्रति जिज्ञासा जगाती है और उत्कृष्ट की ओर प्रवृत्त करती है। शुभाकांक्षा है कि ऐसी अद्वितीय पुस्तक व्यापक पाठक समुदाय तक पहुँचे।",
+      "en": "This book awakens curiosity towards both Sanskrit literature and cinema, inclining one towards the excellent. May this unique book reach a wide community of readers."
+    },
+    "attribution": { "hi": "विनोद पदरज", "en": "Vinod Padraj" },
+    "role": { "hi": "वरिष्ठ हिन्दी कवि", "en": "Senior Hindi Poet" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "priyanvad",
+    "type": "testimonial",
+    "canonical_id": "abhinav-cinema",
+    "date": "2026-03",
+    "photo": "",
+    "bio": { "hi": "हिन्दी के वरिष्ठ कथाकार।", "en": "Senior Hindi fiction writer." },
+    "quote": {
+      "hi": "प्रचण्ड प्रवीर की पुस्तक 'अभिनव सिनेमा' संसार के सच्चे सिनेमा को समझने-समझाने में हमारी गहरी मदद करती है। सिनेमा देखने के लिए जरूरी जिस दृष्टि की तलाश, बिना किसी पर्सनल लेखकीय सिग्नेचर के संभव ही नहीं।",
+      "en": "Prachand Praveer's Abhinav Cinema deeply helps us understand and explain world cinema. The search for a vision necessary to view cinema is impossible without a personal authorial signature."
+    },
+    "attribution": { "hi": "प्रियंवद", "en": "Priyanvad" },
+    "role": { "hi": "वरिष्ठ हिन्दी कथाकार", "en": "Senior Hindi Fiction Writer" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
     "id": "trivedi-alpahari",
+    "type": "review",
     "canonical_id": "alpahari-grihatyagi",
     "date": "2010-01",
     "photo": "assets/images/reviewers/harish-trivedi.jpg",
+    "bio": { "hi": "अँग्रेज़ी, भारतीय एवं तुलनात्मक साहित्य के प्रतिष्ठित विद्वान।", "en": "Distinguished scholar of English, Indian & Comparative Literature." },
     "quote": {
       "hi": "'अल्पाहारी गृहत्यागी' में वार्तालाप की बिहारी हिंदी और आख्यान की जान-बूझ कर अपनाई गई शुद्ध तत्सम हिंदी का मनोरंजक व्यंग-विनोद-पूर्ण सामंजस्य है। प्रसाद की पंक्ति 'वे कुछ दिन कितने सुन्दर थे' दो बार आती है और जैसे इस उपन्यास की टेक है।",
-      "en": "In Alpahari Grihatyagi there is an entertaining satirical harmony between the conversational Bihari Hindi and the deliberately adopted pure Sanskrit-derived Hindi of the narrative. The line from Prasad, 'Those days — how beautiful they were,' appears twice and is as if the refrain of the entire novel."
+      "en": "In Alpahari Grihatyagi there is an entertaining satirical harmony between the conversational Bihari Hindi and the deliberately adopted pure Sanskrit-derived Hindi. The line from Prasad, 'Those days — how beautiful they were,' appears twice and is as if the refrain of the entire novel."
     },
     "attribution": { "hi": "डॉ॰ हरीश त्रिवेदी", "en": "Dr. Harish Trivedi" },
     "role": { "hi": "अँग्रेज़ी, भारतीय एवं तुलनात्मक साहित्य के विद्वान", "en": "Scholar of English, Indian & Comparative Literature" },
@@ -211,12 +273,14 @@
   },
   {
     "id": "kranti-alpahari",
+    "type": "testimonial",
     "canonical_id": "alpahari-grihatyagi",
     "date": "2010-01",
     "photo": "assets/images/reviewers/r-chetan-kranti.jpg",
+    "bio": { "hi": "भारतभूषण अग्रवाल पुरस्कार से सम्मानित हिन्दी कवि।", "en": "Hindi poet, recipient of the Bharatbhushan Agarwal Award." },
     "quote": {
-      "hi": "यह युवा लेखनी की अपनी तर्ज पर खिली हुई कृति थी। 'अल्पाहारी गृहत्यागी' अपनी पहचान को निर्णायक ढंग से अलग करती जाती है। वह न सिर्फ अपनी जमीन और जमीनी सरोकारों से जुड़ता है, बल्कि अंत तक आते-आते एक नयी ही मंजिल पर पहुँच जाता है।",
-      "en": "This was a work that blossomed in the style of genuine youthful writing. Alpahari Grihatyagi asserts its distinctiveness decisively — not only rooted in its own soil and earthly concerns, but by the end arriving at an entirely new destination."
+      "hi": "यह युवा लेखनी की अपनी तर्ज पर खिली हुई कृति थी। 'अल्पाहारी गृहत्यागी' अपनी पहचान को निर्णायक ढंग से अलग करती जाती है — अंत तक आते-आते एक नयी ही मंजिल पर पहुँच जाता है।",
+      "en": "This was a work that blossomed in the style of genuine youthful writing. Alpahari Grihatyagi asserts its distinctiveness decisively, arriving at an entirely new destination by the end."
     },
     "attribution": { "hi": "आर. चेतन क्रांति", "en": "R. Chetan Kranti" },
     "role": { "hi": "भारतभूषण अग्रवाल पुरस्कार से सम्मानित कवि", "en": "Poet, Bharatbhushan Agarwal Award recipient" },
@@ -226,9 +290,11 @@
   },
   {
     "id": "kalpit-alpahari",
+    "type": "testimonial",
     "canonical_id": "alpahari-grihatyagi",
     "date": "2010-01",
     "photo": "assets/images/reviewers/krishna-kalpit.jpg",
+    "bio": { "hi": "हिन्दी के प्रमुख कवि व गद्यकार। राजस्थान साहित्य अकादमी पुरस्कार से सम्मानित।", "en": "Prominent Hindi poet and prose writer. Recipient of the Rajasthan Sahitya Akademi Award." },
     "quote": {
       "hi": "'अल्पाहारी गृहत्यागी' पढ़ते हुए मुझे शरतचन्द्र की याद आती रही। सहज सरल भारतीय गद्य। इस पुस्तक में जादुई यथार्थ नहीं, यथार्थ का जादू है।",
       "en": "Reading Alpahari Grihatyagi I kept thinking of Sharat Chandra — effortless, simple Indian prose. This book contains not magical realism but the magic of reality itself."
@@ -241,12 +307,14 @@
   },
   {
     "id": "wagish-jaana-nahi",
+    "type": "review",
     "canonical_id": "jaana-nahi-dil-se-door",
     "date": "2017-06-28",
     "photo": "assets/images/reviewers/wagish-shukla.jpeg",
+    "bio": { "hi": "वरिष्ठ हिन्दी कवि व गद्यकार। हिन्दी की शास्त्रीय परम्परा के गहरे अध्येता।", "en": "Senior Hindi poet and prose writer, deep scholar of the classical Hindi tradition." },
     "quote": {
       "hi": "प्रचण्ड प्रवीर इन्हीं भारतीय आधुनिकों में से हैं। इनका भारत एक निजी गमले में रोपा गया बोनसाई पौधा नहीं अपितु एक छतनार बरगद है जिसकी ताजी पत्तियाँ अपनी नसों में बोनसाई कला के पीछे का भी पुराकाल टाँके हुए हैं।",
-      "en": "Prachand Praveer is one of these modern Indian figures. His India is not a bonsai plant potted in a private container, but rather a sprawling banyan tree whose fresh leaves, within their very veins, carry etched the ancient past that lies even behind the art of bonsai."
+      "en": "Prachand Praveer is one of these modern Indian figures. His India is not a bonsai plant potted in a private container, but a sprawling banyan tree whose fresh leaves carry etched within their veins the ancient past behind the art of bonsai."
     },
     "attribution": { "hi": "वागीश शुक्ल", "en": "Wagish Shukla" },
     "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
@@ -255,13 +323,134 @@
     "archive_url": ""
   },
   {
+    "id": "avinash-jaana-nahi",
+    "type": "testimonial",
+    "canonical_id": "jaana-nahi-dil-se-door",
+    "date": "2016-01",
+    "photo": "assets/images/reviewers/avinash-mishr.jpg",
+    "bio": { "hi": "हिन्दी में सक्रिय श्रेष्ठ युवतम प्रतिभाओं में से एक। कवि-आलोचक।", "en": "One of the finest young talents active in Hindi today. Poet and critic." },
+    "quote": {
+      "hi": "जाना नहीं दिल से दूर की ये चौदह कहानियाँ उन कथा-सूत्रों की वापसी की तरह पढ़ी जा सकती हैं जिनका केंद्रीय वैभव अपनी कहन को स्पष्टता से संप्रेषित और संवेदित करने में निहित होता था।",
+      "en": "These fourteen stories can be read as a return to those narrative threads whose central brilliance lay in clearly conveying and evoking their message."
+    },
+    "attribution": { "hi": "अविनाश मिश्र", "en": "Avinash Mishr" },
+    "role": { "hi": "कवि-आलोचक", "en": "Poet & Critic" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "pratyaksha-jaana-nahi",
+    "type": "testimonial",
+    "canonical_id": "jaana-nahi-dil-se-door",
+    "date": "2016-01",
+    "photo": "assets/images/reviewers/pratyaksha.jpg",
+    "bio": { "hi": "हिन्दी और अंग्रेजी में समान तीक्ष्णता रखने वाली लेखिका होने के साथ-साथ कुशल फोटोग्राफर व चित्रकार भी हैं। प्रमुख कृतियाँ: 'जंगल का जादू तिल तिल' (२००७), 'पहर-दोपहरी ठुमरी' (२०११)।", "en": "Writer of equal acuity in Hindi and English, also a skilled photographer and painter. Major works include 'Jungle ka Jaadoo' (2007) and 'Pahar-Dopahari Thumri' (2011)." },
+    "quote": {
+      "hi": "जाना नहीं दिल से दूर की कहानियाँ एक खास शैली और डीटचमेंट में पाठक तक आती हैं। आम हिंदी कहानी कहन की विधा से अलग हटी ये कहानियाँ पाठक को सुखद अचरज से भरती हैं।",
+      "en": "The stories in Jaana Nahin Dil Se Door reach the reader through a distinctive style characterised by detachment. Diverging from conventional Hindi storytelling, these stories fill the reader with a sense of delightful wonder."
+    },
+    "attribution": { "hi": "प्रत्यक्षा", "en": "Pratyaksha" },
+    "role": { "hi": "लेखिका", "en": "Writer" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "anu-singh-jaana-nahi",
+    "type": "testimonial",
+    "canonical_id": "jaana-nahi-dil-se-door",
+    "date": "2016-01",
+    "photo": "assets/images/reviewers/anu-singh-chaudhury.jpg",
+    "bio": { "hi": "कुशल संपादिका, अनुवादिका, पत्रकार और वृत्तचित्र निर्मात्री। रामनाथ गोयनका सम्मान से सम्मानित। प्रमुख कृतियाँ: 'नीला स्कार्फ' (२०१४), 'मम्मा की डायरी' (२०१५)।", "en": "Editor, translator, journalist and documentary filmmaker. Ramnath Goenka Award recipient. Major works: 'Neela Scarf' (2014), 'Mamma Ki Diary' (2015)." },
+    "quote": {
+      "hi": "ये कहानियाँ जादू हैं जादू … क़िस्सागोई के अंदाज़ का कमाल ही कहिए कि मन की वो गहरी परतें खुलती हैं, जिन्हें न हमने पहले देखा होगा न जिनके बारे में सोचा होगा कभी।",
+      "en": "These stories are pure magic... Such is the brilliance of the storytelling style that it peels back the deepest layers of the human psyche — layers we have neither seen nor ever contemplated before."
+    },
+    "attribution": { "hi": "अनु सिंह चौधरी", "en": "Anu Singh Chaudhury" },
+    "role": { "hi": "लेखिका-पत्रकार", "en": "Writer and Journalist" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "meenakshi-jaana-nahi",
+    "type": "testimonial",
+    "canonical_id": "jaana-nahi-dil-se-door",
+    "date": "2016-01",
+    "photo": "assets/images/reviewers/meenakshi-thakur.jpg",
+    "bio": { "hi": "यूनाइटेड किंगडम में जन्मीं मीनाक्षी ठाकुर पटना में पली बढ़ी हैं। ख़याल और ध्रुपद गायकी में सोलह साल का प्रशिक्षण। हार्पर कॉलिंस इंडिया में वरिष्ठ संपादिका।", "en": "Born in the United Kingdom, raised in Patna. Sixteen years of training in Khayal and Dhrupad. Senior Editor at HarperCollins India." },
+    "quote": {
+      "hi": "ये ऐसी कहानियाँ हैं जिनको पढ़ कर लगता है कि हिन्दी कहानी के आज और भविष्य उज्जवल हैं। यह शांत और सिद्ध कहानियाँ हैं, नाटकीयता से परे, अपनी सादगी और गहन चेतनाओं से भरपूर।",
+      "en": "These are stories that instill conviction that the present and future of Hindi short fiction are bright. They are quiet and accomplished stories — devoid of theatrics, brimming with simplicity and profound consciousness."
+    },
+    "attribution": { "hi": "मीनाक्षी ठाकुर", "en": "Meenakshi Thakur" },
+    "role": { "hi": "संपादक, हार्पर कॉलिंस इंडिया", "en": "Senior Editor, HarperCollins India" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "prayag-shukla-jaana-nahi",
+    "type": "testimonial",
+    "canonical_id": "jaana-nahi-dil-se-door",
+    "date": "2016-01",
+    "photo": "assets/images/reviewers/prayag-shukla.jpg",
+    "bio": { "hi": "कवि, कहानीकार, संपादक, अनुवादक एवं कला समीक्षक। साहित्य अकादमी अनुवाद पुरस्कार, शरद जोशी सम्मान से सम्मानित। 'कल्पना', 'दिनमान' और 'नवभारत टाइम्स' के संपादकीय विभाग में रहे।", "en": "Poet, fiction writer, editor, translator and art critic. Recipient of the Sahitya Akademi Translation Award and Sharad Joshi Samman. Worked in editorial at Kalpana, Dinman and Navbharat Times." },
+    "quote": {
+      "hi": "'कसक', 'झूलन' और 'जाना नहीं दिल से दूर' जैसी कहानियाँ समकालीन कथा साहित्य की उपलब्धि हैं। ये 'कथा रस' और 'प्रेम रस' का एक विचित्र और अनूठा संयोजन करती हैं — बिल्कुल आज के संदर्भ में।",
+      "en": "Stories like 'Kasak', 'Jhulan' and 'Jaana Nahin Dil Se Door' are achievements of contemporary fiction. They weave together a curious and unique blend of narrative and romantic essence — situated squarely in the context of the present day."
+    },
+    "attribution": { "hi": "प्रयाग शुक्ल", "en": "Prayag Shukla" },
+    "role": { "hi": "वरिष्ठ कवि-संपादक", "en": "Poet & Editor" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "vandana-raag-jaana-nahi",
+    "type": "testimonial",
+    "canonical_id": "jaana-nahi-dil-se-door",
+    "date": "2016-01",
+    "photo": "assets/images/reviewers/vandana-raag.jpg",
+    "bio": { "hi": "इक्कीसवीं सदी के हिन्दी साहित्य की प्रमुख लेखिकाओं में से एक। कृष्ण प्रताप स्मृति पुरस्कार से सम्मानित। प्रमुख कृतियाँ: 'यूटोपिया' (२०१०), 'हिजरत से पहले' (२०१५)।", "en": "One of the foremost writers of Hindi literature in the 21st century. Krishna Pratap Smriti Award recipient. Major works: 'Utopia' (2010), 'Hijrat Se Pehle' (2015)." },
+    "quote": {
+      "hi": "लेखक अपनी मौज के कथाकार हैं। ये प्रचलित मुहावरों से अलग जाकर, मिथकों की ज़मीन से उत्तर आधुनिक कहानियों का शिल्प खड़ा करते हैं। सर्वथा नए तेवर की कहानियाँ प्रभावित करती हैं।",
+      "en": "The author is a storyteller who writes on his own terms. Breaking away from conventional idioms, he constructs the craft of postmodern storytelling upon the bedrock of myths. These stories of an entirely fresh sensibility leave a lasting impression."
+    },
+    "attribution": { "hi": "वंदना राग", "en": "Vandana Raag" },
+    "role": { "hi": "लेखिका", "en": "Writer" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "sadaf-naaz-jaana-nahi",
+    "type": "testimonial",
+    "canonical_id": "jaana-nahi-dil-se-door",
+    "date": "2016-01",
+    "photo": "assets/images/reviewers/sadaf-naaz.jpg",
+    "bio": { "hi": "हिन्दी लेखिका।", "en": "Hindi writer." },
+    "quote": {
+      "hi": "इस लिखावट में क्लासिक टच है। क़िस्सागोई का अंदाज़ बेहद आकर्षित करता है। भाषा में बिलकुल पानी जैसा बहाव है — पढ़ने वाला भाषा और क़िस्सागोई के बहाव में बहता चला जाता है।",
+      "en": "This writing possesses a truly classic touch. The storytelling style is utterly captivating. The language has a fluidity as smooth as flowing water — the reader is effortlessly swept along by the flow of language and storytelling."
+    },
+    "attribution": { "hi": "सदफ़ नाज़", "en": "Sadaf Naaz" },
+    "role": { "hi": "लेखिका", "en": "Writer" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
     "id": "wagish-uttarayan",
+    "type": "review",
     "canonical_id": "uttarayan",
     "date": "2019-11-13",
     "photo": "assets/images/reviewers/wagish-shukla.jpeg",
+    "bio": { "hi": "वरिष्ठ हिन्दी कवि व गद्यकार।", "en": "Senior Hindi poet and prose writer." },
     "quote": {
-      "hi": "यद्यपि हिन्दी कथा-शिल्प का आकल्पन अभी भी मुमकिना वारदातों के खूँटे से बँधा हुआ है और विचरण की वह स्वतन्त्रता अपनाने से डरता है जो 'रोमान्स-लेखकों' को हासिल थी, प्रचण्ड प्रवीर का कथाशिल्प इस आकल्पन को स्वायत्त करने की दिशा में महत्त्वपूर्ण बढ़त ले चुका है।",
-      "en": "Although the narrative craft of Hindi fiction remains tethered to the moorings of plausible events — hesitant to embrace the freedom of exploration once enjoyed by 'romance writers' — Prachand Praveer's narrative technique has already made significant strides toward rendering this craft autonomous."
+      "hi": "यद्यपि हिन्दी कथा-शिल्प का आकल्पन अभी भी मुमकिना वारदातों के खूँटे से बँधा हुआ है, प्रचण्ड प्रवीर का कथाशिल्प इस आकल्पन को स्वायत्त करने की दिशा में महत्त्वपूर्ण बढ़त ले चुका है।",
+      "en": "Although the narrative craft of Hindi fiction remains tethered to the moorings of plausible events, Prachand Praveer's narrative technique has already made significant strides toward rendering this craft autonomous."
     },
     "attribution": { "hi": "वागीश शुक्ल", "en": "Wagish Shukla" },
     "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
@@ -271,12 +460,14 @@
   },
   {
     "id": "wagish-dakshinayan",
+    "type": "review",
     "canonical_id": "dakshinayan",
     "date": "2019-12-17",
     "photo": "assets/images/reviewers/wagish-shukla.jpeg",
+    "bio": { "hi": "वरिष्ठ हिन्दी कवि व गद्यकार।", "en": "Senior Hindi poet and prose writer." },
     "quote": {
-      "hi": "मुझे पूरा भरोसा है कि इन कहानियों की बन्दिश का नयापन हिन्दी की वर्तमान सर्जना पर एक बढ़त के रूप में देखा जायगा और इसे न केवल वह मक़ाम हासिल होगा जिसकी वह हक़दार है बल्कि इसकी रहरवी को वह मक़बूलियत भी मिलेगी जिससे हमारी क़िस्सागोई और भी सुर्ख़रू तथा हमाहंग हो सके.",
-      "en": "I am fully confident that the novelty of the structural composition of these stories will be viewed as a distinct advantage within the landscape of contemporary Hindi literature; furthermore, it will not only attain the stature it rightfully deserves but also garner the widespread acclaim that will enable our tradition of storytelling to become even more distinguished and harmonious."
+      "hi": "मुझे पूरा भरोसा है कि इन कहानियों की बन्दिश का नयापन हिन्दी की वर्तमान सर्जना पर एक बढ़त के रूप में देखा जायगा — इसकी रहरवी को वह मक़बूलियत भी मिलेगी जिससे हमारी क़िस्सागोई और भी सुर्ख़रू तथा हमाहंग हो सके।",
+      "en": "I am fully confident that the novelty of the structural composition of these stories will be viewed as a distinct advantage in contemporary Hindi literature, garnering the widespread acclaim that will enable our tradition of storytelling to become even more distinguished and harmonious."
     },
     "attribution": { "hi": "वागीश शुक्ल", "en": "Wagish Shukla" },
     "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
@@ -286,12 +477,14 @@
   },
   {
     "id": "wagish-ritambhara",
+    "type": "review",
     "canonical_id": "ritambhara",
     "date": "2026-01-06",
     "photo": "assets/images/reviewers/wagish-shukla.jpeg",
+    "bio": { "hi": "वरिष्ठ हिन्दी कवि व गद्यकार।", "en": "Senior Hindi poet and prose writer." },
     "quote": {
-      "hi": "यद्यपि हिन्दी कथा-शिल्प का आकल्पन अभी भी मुमकिना वारदातों के खूँटे से बँधा हुआ है और विचरण की वह स्वतन्त्रता अपनाने से डरता है जो 'रोमान्स-लेखकों' को हासिल थी, प्रचण्ड प्रवीर का कथाशिल्प इस आकल्पन को स्वायत्त करने की दिशा में महत्त्वपूर्ण बढ़त ले चुका है।",
-      "en": "Although the narrative craft of Hindi fiction remains tethered to the moorings of plausible events — hesitant to embrace the freedom of exploration once enjoyed by 'romance writers' — Prachand Praveer's narrative technique has already made significant strides toward rendering this craft autonomous."
+      "hi": "यद्यपि हिन्दी कथा-शिल्प का आकल्पन अभी भी मुमकिना वारदातों के खूँटे से बँधा हुआ है, प्रचण्ड प्रवीर का कथाशिल्प इस आकल्पन को स्वायत्त करने की दिशा में महत्त्वपूर्ण बढ़त ले चुका है।",
+      "en": "Although the narrative craft of Hindi fiction remains tethered to the moorings of plausible events, Prachand Praveer's narrative technique has already made significant strides toward rendering this craft autonomous."
     },
     "attribution": { "hi": "वागीश शुक्ल", "en": "Wagish Shukla" },
     "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
@@ -301,120 +494,153 @@
   },
   {
     "id": "tripathi-ritambhara",
+    "type": "review",
     "canonical_id": "ritambhara",
     "date": "2026-03",
     "photo": "assets/images/reviewers/radhavallabh-tripathi.jpg",
+    "bio": { "hi": "संस्कृत काव्यशास्त्र के समादृत आचार्य।", "en": "Revered scholar of Sanskrit poetics." },
     "quote": {
       "hi": "ऋतम्भरा एक अभूतपूर्व पुस्तक है। हिन्दी कहानी की परंपरा में इससे सम्मिलित किया जाए तो हिंदी कहानी का ऐसा चेहरा अन्यत्र कहीं देखने को नहीं मिलेगा। प्रचण्ड प्रवीर ने दिखा दिया कि उपनिषदों के आधार पर कैसा कथा-संसार एक सर्वथा अनूठा और नया रचा जा सकता है।",
-      "en": "Ritambhara is an unprecedented book. If included in the tradition of Hindi short fiction, one will not find such a face of Hindi storytelling anywhere else. Prachand Praveer has shown how an entirely unique and new world of stories can be created on the basis of the Upanishads."
+      "en": "Ritambhara is an unprecedented book. Prachand Praveer has shown how an entirely unique and new world of stories can be created on the basis of the Upanishads."
     },
     "attribution": { "hi": "आचार्य राधावल्लभ त्रिपाठी", "en": "Acharya Radhavallabh Tripathi" },
     "role": { "hi": "संस्कृत काव्यशास्त्र के समादृत आचार्य", "en": "Sanskrit Scholar and Litterateur" },
-    "source": { "hi": "आचार्य राधावल्लभ त्रिपाठी, YouTube समीक्षा", "en": "Acharya Radhavallabh Tripathi, YouTube review" },
+    "source": { "hi": "YouTube समीक्षा", "en": "YouTube review" },
     "url": "https://www.youtube.com/watch?v=1WFZe48S3QY",
     "archive_url": ""
   },
   {
-    "id": "avinash-jaana-nahin",
-    "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2026-03",
-    "photo": "assets/images/reviewers/avinash-mishr.jpg",
+    "id": "rohini-mitne",
+    "type": "testimonial",
+    "canonical_id": "mitne-ka-adhikar",
+    "date": "2024-01",
+    "photo": "",
+    "bio": { "hi": "हिन्दी की प्रतिष्ठित आलोचक। महात्मा गाँधी अन्तर्राष्ट्रीय हिन्दी विश्वविद्यालय में प्राध्यापक।", "en": "Distinguished Hindi critic. Professor at Mahatma Gandhi International Hindi University." },
     "quote": {
-      "hi": "जाना नहीं दिल से दूर की ये चौदह कहानियाँ उन कथा-सूत्रों की वापसी की तरह पढ़ी जा सकती हैं जिनका केंद्रीय वैभव अपनी कहन को स्पष्टता से संप्रेषित और संवेदित करने में निहित होता था।",
-      "en": "These fourteen stories in *Jaana Nahin Dil Se Door* can be read as a return to those narrative threads whose central brilliance lay in clearly conveying and evoking their message."
+      "hi": "यह उपन्यास अज्ञात को एक्सप्लोर करने की गहन, संश्लिष्ट, अराजक यात्रा है जो मुक्ति की दिशाओं को चिन्हित कर अपने लिए कतरा भर आलोक पा लेना चाहती है। यह अपनी क्षुद्रताओं को गला कर स्व में स्थित ब्रह्म के साक्षात्कार की उदात्त रचना है।",
+      "en": "This novel is a profound, complex, anarchic journey into the unknown, seeking to identify the directions of liberation and find a sliver of light. It is a sublime work of self-purification, seeking encounter with the Brahman residing within the self."
     },
-    "attribution": { "hi": "अविनाश मिश्र", "en": "Avinash Mishr" },
-    "role": { "hi": "कवि-आलोचक", "en": "Poet & crtic" },
-    "source": { "hi": "Avinash Mishr", "en": "Avinash Mishr" },
-    "url": "",
-    "archive_url": ""
-  },
-  {
-    "id": "anu-singh-jaana-nahin",
-    "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2026-03",
-    "photo": "assets/images/reviewers/anu-singh-chaudhury.jpg",
-    "quote": {
-      "hi": "ये कहानियाँ जादू हैं जादू … कभी गंगा किनारे लिए जाती हैं तो कभी बालिका वर्ष की महत्ता नन्हें की रुलाई के ज़रिए बताती हैं। शहर वही, किरदार वही - अपने आस-पास के, जाने-पहचाने से। लेकिन क़िस्सागोई के अंदाज़ का कमाल ही कहिए कि मन की वो गहरी परतें खुलती हैं, जिन्हें न हमने पहले देखा होगा न जिनके बारे में सोचा होगा कभी। हर कथानक का यही नयापन 'जाना नहीं दिल से दूर' की हर कहानी को बेहद पठनीय, बेहद ख़ास बनाता है।",
-      "en": "These stories are pure magic... At times, they transport you to the banks of the Ganges; at others, they convey the significance of the 'Year of the Girl Child' through the cries of a little one. The setting remains the same, as do the characters—people from our own surroundings, familiar and recognizable. Yet, such is the brilliance of the storytelling style that it peels back the deepest layers of the human psyche—layers we have neither seen nor ever contemplated before. It is this very novelty in every narrative that makes each story in *Jaana Nahin Dil Se Door* immensely readable and truly special."
-    },
-    "attribution": { "hi": "अनु सिंह चौधरी", "en": "Anu Singh Chaudhury" },
-    "role": { "hi": "", "en": "" },
+    "attribution": { "hi": "रोहिणी अग्रवाल", "en": "Rohini Aggarwal" },
+    "role": { "hi": "हिन्दी आलोचक", "en": "Hindi Critic" },
     "source": { "hi": "", "en": "" },
     "url": "",
     "archive_url": ""
   },
   {
-    "id": "meenakshi-jaana-nahin",
-    "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2026-03",
-    "photo": "assets/images/reviewers/meenakshi-thakur.jpg",
+    "id": "garima-mitne",
+    "type": "testimonial",
+    "canonical_id": "mitne-ka-adhikar",
+    "date": "2024-01",
+    "photo": "",
+    "bio": { "hi": "हिन्दी विभाग, दिल्ली विश्वविद्यालय में प्राध्यापक। सुविख्यात आलोचक और लेखिका।", "en": "Professor, Hindi Department, University of Delhi. Celebrated critic and writer." },
     "quote": {
-      "hi": "ये ऐसी कहानियाँ हैं जिनको पढ़ कर लगता है कि हिन्दी कहानी के आज और भविष्य उज्जवल हैं। हिन्दी कहानी को नया मोड़ देते हुए, यह बेहद संवेदनशील और सूक्ष्म कहानियाँ अपने बेमिसाल होने का दावा नहीं करती। यह शांत और सिद्ध कहानियाँ हैं, नाटकीयता से परे, अपनी सादगी और गहन चेतनाओं से भरपूर। इसके पात्र हमारे आपके जैसे लोग हैं, या फिर वे लोग जिनसे हम कहीं-कभी ज़रूर मिले होंगे । जाना नहीं दिल से दूर हमको उन्हीं लोगों, उनकी ज़िन्दगियों और भावनाओं के ओर वापिस लिए जाती है ।",
-      "en": "These are stories that, upon reading, instill the conviction that the present and future of Hindi short fiction are bright. Giving a new turn to the genre, these deeply sensitive and nuanced tales make no claim to being unparalleled masterpieces. Rather, they are quiet and accomplished stories—devoid of theatrics, yet brimming with simplicity and profound consciousness. Their characters are people just like you and me—or perhaps individuals we have undoubtedly crossed paths with at some point. *Jaana Nahin Dil Se Door* leads us back to those very people—to their lives and their emotions."
+      "hi": "प्रचण्ड प्रवीर हमारे समकाल में भाषा का संस्कार सिखाने वाले, अपनी जड़ों से गहरे जुड़े रचनाकार हैं। उनका ताज़ा उपन्यास 'मिटने का अधिकार' — अंग्रेज़ी, हिन्दी, संस्कृत पर समानाधिकार रखने वाले प्रचण्ड की परिपक्वता का प्रमाण है।",
+      "en": "Prachand Praveer is a creator deeply rooted in their origins, teaching the refinement of language in our contemporary times. His novel Mitne Ka Adhikar is testament to the maturity of an author who commands equal mastery over English, Hindi and Sanskrit."
     },
-    "attribution": { "hi": "मीनाक्षी ठाकुर", "en": "Meenakshi Thakur" },
-    "role": { "hi": "संपादक ", "en": "Editor" },
+    "attribution": { "hi": "प्रोफेसर गरिमा श्रीवास्तव", "en": "Prof. Garima Srivastava" },
+    "role": { "hi": "प्राध्यापक, हिन्दी विभाग, दिल्ली विश्वविद्यालय", "en": "Professor, Hindi Department, University of Delhi" },
     "source": { "hi": "", "en": "" },
     "url": "",
     "archive_url": ""
   },
   {
-    "id": "pratkyaksha-jaana-nahin",
-    "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2026-03",
-    "photo": "assets/images/reviewers/pratyaksha.jpg",
+    "id": "kalpit-kharab",
+    "type": "testimonial",
+    "canonical_id": "rishyashring-kharab-kavitayein",
+    "date": "2025-01",
+    "photo": "assets/images/reviewers/krishna-kalpit.jpg",
+    "bio": { "hi": "हिन्दी के प्रमुख कवि व गद्यकार। राजस्थान साहित्य अकादमी पुरस्कार से सम्मानित।", "en": "Prominent Hindi poet and prose writer. Recipient of the Rajasthan Sahitya Akademi Award." },
     "quote": {
-      "hi": "जाना नहीं दिल से दूर की कहानियाँ एक खास शैली और डीटचमेंट में पाठक तक आती हैं । इन कहानियों में किस्सागोई के साथ-साथ एक हैरानी भरा मोड़ ऐसी आसानी और सहजता से आता है कि पाठक उसमें बँध जाता है । आम हिंदी कहानी कहन की विधा से अलग हटी ये कहानियाँ पाठक को सुखद अचरज से भरती हैं । मेरी असीम शुभकामनाएँ ...",
-      "en": "The stories in *Jaana Nahin Dil Se Door* reach the reader through a distinctive style characterized by a certain detachment. Within these narratives, the art of storytelling is interwoven with surprising twists that emerge with such ease and naturalness that the reader becomes completely captivated. Diverging from the conventional modes of Hindi storytelling, these stories fill the reader with a sense of delightful wonder. My warmest wishes..."
+      "hi": "नक़ली और ख़राब कविताओं के इस बेहद ख़राब दौर में सच्ची ख़राब कविताओं का एक अद्भुत कविता-संग्रह प्रकाशित हुआ है। किताब की भूमिका समकालीन हिन्दी कविता की एक निर्मम शल्य-क्रिया है। बहुत दिनों पर हिंदी भाषा में कोई कल्पनाशील, प्रयोगशील, साहसयुक्त, वक्रोक्ति और वेदना से भरी हुई कविता की किताब आई है।",
+      "en": "In this terrible era of fake and bad poetry, an extraordinary collection of genuinely bad poems has been published. The foreword is a ruthless surgery on contemporary Hindi poetry. After a long time, a book of imaginative, experimental, courageous poetry filled with irony and anguish has appeared in Hindi."
     },
-    "attribution": { "hi": "प्रत्यक्षा", "en": "Pratyaksha" },
-    "role": { "hi": "लेखिका ", "en": "Writer" },
+    "attribution": { "hi": "कृष्ण कल्पित", "en": "Krishna Kalpit" },
+    "role": { "hi": "वरिष्ठ कवि", "en": "Senior Poet" },
     "source": { "hi": "", "en": "" },
     "url": "",
     "archive_url": ""
   },
   {
-    "id": "prayag-shukla-jaana-nahin",
-    "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2026-03",
-    "photo": "assets/images/reviewers/prayag-shukla.jpg",
+    "id": "rustam-kharab",
+    "type": "testimonial",
+    "canonical_id": "rishyashring-kharab-kavitayein",
+    "date": "2025-01",
+    "photo": "",
+    "bio": { "hi": "वरिष्ठ हिन्दी कवि।", "en": "Senior Hindi poet." },
     "quote": {
-      "hi": "‘कसक’, ‘झूलन’ और ‘जाना नहीं दिल से दूर’ जैसी कहानियाँ समकालीन कथा साहित्य की उपलब्धि हैं। ये ‘कथा रस’ और ‘प्रेम रस’ का एक विचित्र और अनूठा संयोजन करती हैं—बिल्कुल आज के संदर्भ में । अनूठी भाषा में । जीवन की कई छुई-अनछुई परतें उघारती हुई ।",
-      "en": "Stories such as ‘Kasak’, ‘Jhulan’, and ‘Jaana Nahin Dil Se Door’ stand as achievements of contemporary fiction. They weave together a curious and unique blend of ‘narrative essence’ and ‘romantic sentiment’—situated squarely within the context of the present day. Crafted in a distinctive idiom, they unveil the many layers of life—both touched upon and hitherto unexplored."
+      "hi": "ये कविताएँ तंज़, व्यंग्य, कटाक्ष और विद्रूप से भरी हुई हैं और ऐसी कविताएँ मैंने हिन्दी में पहले नहीं पढ़ीं।",
+      "en": "These poems are filled with sarcasm, satire, critique and mockery — I have not read such poems in Hindi before."
     },
-    "attribution": { "hi": "प्रयाग शुक्ल", "en": "Prayag Shukla" },
-    "role": { "hi": "वरिष्ट कवि - संपादक ", "en": "Poet & Editor" },
+    "attribution": { "hi": "रुस्तम सिंह", "en": "Rustam Singh" },
+    "role": { "hi": "वरिष्ठ कवि", "en": "Senior Poet" },
     "source": { "hi": "", "en": "" },
     "url": "",
     "archive_url": ""
   },
   {
-    "id": "sadaf-naaz-jaana-nahin",
-    "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2026-03",
-    "photo": "assets/images/reviewers/sadaf-naaz.jpg",
+    "id": "shireesh-kharab",
+    "type": "testimonial",
+    "canonical_id": "rishyashring-kharab-kavitayein",
+    "date": "2025-01",
+    "photo": "",
+    "bio": { "hi": "कवि-आलोचक। 'अनुनाद' के प्रमुख सम्पादक।", "en": "Poet-critic and principal editor of the literary journal Anunad." },
     "quote": {
-      "hi": "आदाब, मुझे जाना नहीं दिल से दूर की कहानियाँ पढ़ कर वैसा ही महसूस हुआ, जैसा अक्सर हिंदी की क्लासिक कहानियों को पढ़ कर होता है । शैली और लिखावट बेहद ख़ूबसूरत । पात्रों से लेकर घटना डिटेलिंग बेहद ख़ूबसूरती से उकेरी गईं हैं । सच कहूँ तो इस लिखावट में क्लासिक टच है । क़िस्सागोई का अंदाज़ बेहद आकर्षित करता है । सब से बढ़ कर भाषा में बिलकुल पानी जैसा बहाव है । पढ़ने वाला भाषा और क़िस्सागोई के बहाव में बहता चला जाता है । कहानियाँ पूरे वक़्त बांधे रखती हैं और अंत तक जिज्ञासा बनाए रखती हैं । नए लेखक़ों की लेखन शैली में यह शैली अलग हट कर है । पुस्तक की सफलता के लिए ढ़ेर सारी शुभकामनाएं ।",
-      "en": "Greetings, Reading *Mujhe Jaana Nahin Dil Se Door* evoked the very same feeling I often experience when reading classic Hindi stories. The style and writing are exquisitely beautiful. From the characters to the intricate details of the events, everything has been crafted with immense artistry. To be honest, this writing possesses a truly classic touch. The storytelling style is utterly captivating. Above all, the language possesses a fluidity as smooth as flowing water. The reader is effortlessly swept along by the flow of both the language and the storytelling. The stories remain captivating throughout and sustain a sense of curiosity right up to the very end. Among the writing styles of new authors, this particular style truly stands out. Heartfelt best wishes for the success of the book."
+      "hi": "ख़राब कविताएँ समकालीन हिंदी कविता का प्रथम सूचना प्रतिवेदन है, जैसा कि क़ानून के अंतर्गत किसी संज्ञेय अपराध के बाद प्रथम दृष्ट्या बनाया जाता है। यह एक सुदीर्घ आरोप-पत्र भी है। इन आरोपों पर बहस अभी बाक़ी है।",
+      "en": "The Kharab Kavitayein is a First Information Report on contemporary Hindi poetry, as one is filed after a cognizable offence. It is also a lengthy charge-sheet. The debate on these charges is yet to happen."
     },
-    "attribution": { "hi": "सदफ़ नाज़", "en": "Sadaf Naaz" },
-    "role": { "hi": "लेखिका", "en": "Writer" },
+    "attribution": { "hi": "शिरीष कुमार मौर्य", "en": "Shireesh Kumar Maurya" },
+    "role": { "hi": "कवि-आलोचक, सम्पादक अनुनाद", "en": "Poet-Critic, Editor of Anunad" },
     "source": { "hi": "", "en": "" },
     "url": "",
     "archive_url": ""
   },
   {
-    "id": "vandana-raag-jaana-nahin",
-    "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2026-03",
-    "photo": "assets/images/reviewers/vandana-raag.jpg",
+    "id": "mahesh-verma-kharab",
+    "type": "testimonial",
+    "canonical_id": "rishyashring-kharab-kavitayein",
+    "date": "2025-01",
+    "photo": "",
+    "bio": { "hi": "हिन्दी कवि।", "en": "Hindi poet." },
     "quote": {
-      "hi": "लेखक अपनी मौज के कथाकार हैं। ये प्रचलित मुहावरों से अलग जाकर, मिथकों की ज़मीन से उत्तर आधुनिक कहानियों का शिल्प खड़ा करते हैं। चुस्त और दिलचस्प किस्सागोई के साथ वे अपने कथा संसार को रचते हैं और सहजता से  उसका निर्वाह करते हैं। जाना नहीं दिल से दूर दरअसल मानव मन के विभिन्न परतों को खोलती कहानियाँ है और अपने खिलंदड़े अंदाज़ में वे अपने समय और परिवेश की पड़ताल भी करती हैं। लेखक के पास प्रेम भी एक खूबसूरत नॉस्टॅल्जिक रंग में उभरता है, लेकिन कथ्य की गंभीरता कभी सिरा नहीं छोड़ती। सर्वथा नए तेवर की कहानियाँ प्रभावित करती हैं। लेखक को अशेष शुभकामनाएं।",
-      "en": "The author is a storyteller who writes on his own terms. Breaking away from conventional idioms, he constructs the craft of postmodern storytelling upon the bedrock of myths. With crisp and engaging storytelling, he weaves his fictional universe and sustains it with effortless grace. *Jaana Nahin Dil Se Door* consists, in essence, of stories that peel back the various layers of the human psyche; in their playful style, they also serve to explore the times and milieu in which they are set. In the author's hands, even love emerges with a beautiful, nostalgic hue; yet, the gravity of the narrative never loses its hold. These stories, characterized by an entirely fresh sensibility, leave a lasting impression. My warmest wishes to the author."
+      "hi": "यहाँ सुंदरता, परंपरा और समकालीनता की लगभग रूढ़ अवधारणाओं को अपनी सामर्थ्य भर झकझोरने और नया कुछ सामने रखने की दिलचस्प कोशिशें हैं।",
+      "en": "Here are interesting attempts to shake up the near-orthodox conceptions of beauty, tradition and contemporaneity, and to put something new before us."
     },
-    "attribution": { "hi": "वंदना राग", "en": "Vandana Raag" },
-    "role": { "hi": "लेखिका ", "en": "Wrtier" },
+    "attribution": { "hi": "महेश वर्मा", "en": "Mahesh Verma" },
+    "role": { "hi": "हिन्दी कवि", "en": "Hindi Poet" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "ambuj-pandey-kharab",
+    "type": "testimonial",
+    "canonical_id": "rishyashring-kharab-kavitayein",
+    "date": "2025-01",
+    "photo": "assets/images/reviewers/ambuj-pandey.jpg",
+    "bio": { "hi": "हिन्दी आलोचक।", "en": "Hindi critic." },
+    "quote": {
+      "hi": "ऋष्यशृङ्ग की ख़राब कविताएँ अपने प्रयोग और प्रयोजन में सफल हैं। ख़राब को ख़राब कहने का माद्दा जरूर रखता है यह कवि(?)।",
+      "en": "The Kharab Kavitayein succeeds in its experiment and purpose. This poet(?) certainly has the gumption to call bad things bad."
+    },
+    "attribution": { "hi": "अम्बुज पाण्डेय", "en": "Ambuj Pandey" },
+    "role": { "hi": "हिन्दी आलोचक", "en": "Hindi Critic" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "santosh-kharab",
+    "type": "testimonial",
+    "canonical_id": "rishyashring-kharab-kavitayein",
+    "date": "2025-01",
+    "photo": "",
+    "bio": { "hi": "कवि व सम्पादक, 'पहली बार'।", "en": "Poet and editor of 'Pehli Baar'." },
+    "quote": {
+      "hi": "खराब कविता इस समय के उस दस्तावेज की तरह है जो वर्तमान परिदृश्य को बेहतर तरीके से रूपायित करने का कार्य करती है।",
+      "en": "The Kharab Kavita is like a document of these times that works to better embody the contemporary landscape."
+    },
+    "attribution": { "hi": "संतोष चतुर्वेदी", "en": "Santosh Chaturvedi" },
+    "role": { "hi": "कवि व सम्पादक, पहली बार", "en": "Poet and Editor, Pehli Baar" },
     "source": { "hi": "", "en": "" },
     "url": "",
     "archive_url": ""

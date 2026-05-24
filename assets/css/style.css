@@ -774,3 +774,153 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 @media (max-width: 768px) {
   .posts-page { padding: 5rem 1.25rem 3rem; }
 }
+
+/* ── BOOK CARD TINDER ZONES ─────────────────────────── */
+/* Invisible left/right tap areas on each book card.
+   Left 33% scrolls carousel backward, right 33% scrolls forward.
+   The centre 34% opens the book detail modal.
+   Zones sit above the cover but below the overlay text. */
+.book-card__tap-prev,
+.book-card__tap-next {
+  position: absolute; top: 0; bottom: 0; width: 33%; z-index: 3;
+  cursor: w-resize;
+}
+.book-card__tap-next { right: 0; cursor: e-resize; }
+.book-card__tap-prev { left: 0; }
+
+/* Show subtle arrow hint on hover — left zone */
+.book-card__tap-prev::after,
+.book-card__tap-next::after {
+  content: '';
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 0; height: 0;
+  opacity: 0; transition: opacity 0.2s;
+  pointer-events: none;
+}
+.book-card:hover .book-card__tap-prev::after {
+  opacity: 0.5;
+  left: 0.5rem;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 10px solid rgba(200,160,104,0.8);
+}
+.book-card:hover .book-card__tap-next::after {
+  opacity: 0.5;
+  right: 0.5rem;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 10px solid rgba(200,160,104,0.8);
+}
+
+/* ── LIGHTBOX TINDER ZONES ──────────────────────────── */
+/* Replace the old fixed prev/next buttons with half-width
+   tap zones inside the lightbox content area. */
+.lightbox__tap-prev,
+.lightbox__tap-next {
+  position: absolute; top: 0; bottom: 0; width: 50%; z-index: 2;
+  cursor: pointer; outline: none;
+}
+.lightbox__tap-prev { left: 0;  cursor: w-resize; }
+.lightbox__tap-next { right: 0; cursor: e-resize; }
+
+/* Subtle arrow hints on hover */
+.lightbox__tap-prev::after,
+.lightbox__tap-next::after {
+  content: '';
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 0; height: 0;
+  opacity: 0; transition: opacity 0.2s;
+}
+.lightbox__tap-prev:hover::after {
+  opacity: 0.6; left: 1.5rem;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 16px solid rgba(250,247,242,0.8);
+}
+.lightbox__tap-next:hover::after {
+  opacity: 0.6; right: 1.5rem;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 16px solid rgba(250,247,242,0.8);
+}
+
+/* Fix: lightbox content must allow pointer events for tap zones to work */
+.lightbox__content { pointer-events: auto; }
+/* The image itself still blocks pointer events so clicks on it fall through
+   to the tap zones underneath it — image is above zones in DOM so we need
+   the image to be pointer-events: none and zones to be auto */
+.lightbox__img { pointer-events: none; }
+
+/* ── REVIEW GROUP SECTION LABELS ────────────────────── */
+.review-group__section-label {
+  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--saffron);
+  margin: 1.25rem 0 0.75rem; padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--saffron-pale);
+}
+.review-group__section-label--testimonials {
+  color: var(--muted); border-bottom-color: var(--border);
+  margin-top: 2rem;
+}
+
+/* ── FLIP CARDS (testimonials) ──────────────────────── */
+.review-card--flip {
+  cursor: pointer;
+  perspective: 1000px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  min-height: 220px;
+}
+.review-card__inner {
+  position: relative; width: 100%; height: 100%;
+  min-height: 220px;
+  transition: transform 0.55s cubic-bezier(0.4,0.2,0.2,1);
+  transform-style: preserve-3d;
+}
+.review-card--flip.flipped .review-card__inner {
+  transform: rotateY(180deg);
+}
+.review-card__front,
+.review-card__back {
+  position: absolute; inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 1.5rem;
+  display: flex; flex-direction: column; gap: 0.9rem;
+}
+.review-card__back {
+  transform: rotateY(180deg);
+  background: var(--paper-2);
+  align-items: center; justify-content: center;
+  text-align: center; gap: 0.75rem;
+}
+.review-card__back-photo { flex-shrink: 0; }
+.review-card__back-photo .review-card__photo,
+.review-card__back-photo .review-card__photo-placeholder {
+  width: 56px; height: 56px; font-size: 1.2rem;
+}
+.review-card__back-name {
+  font-family: var(--serif); font-size: 1rem;
+  font-weight: 600; color: var(--ink);
+}
+.review-card__back-bio {
+  font-size: 0.82rem; color: var(--muted); line-height: 1.65;
+}
+.review-card__flip-hint {
+  font-size: 0.68rem; color: var(--muted); letter-spacing: 0.08em;
+  text-align: center; margin-top: auto; padding-top: 0.5rem;
+  text-transform: uppercase;
+}
+.review-card--flip:hover .review-card__front {
+  border-color: var(--saffron-pale);
+  box-shadow: 0 4px 16px rgba(200,102,10,0.08);
+}
+.review-card--flip:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
