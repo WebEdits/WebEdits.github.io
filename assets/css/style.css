@@ -613,8 +613,8 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   .books-filter button { font-size: 0.72rem; padding: 0.35rem 0.75rem; }
   .accordion-source { display: none; }
 }
+
 /* ── REVIEWS SECTION ────────────────────────────────── */
-/* Replaces the old .section--testimonials              */
 .section--reviews { background: var(--paper-2); }
 
 /* Book-grouped accordion */
@@ -637,22 +637,64 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em;
   text-transform: uppercase; color: var(--muted); white-space: nowrap;
 }
-
 .review-group__body { padding: 1rem 0 1.5rem; }
 
+/* ── REVIEW CARD GRID ───────────────────────────────── */
+/* Change --review-cols to 3 or 4 to adjust desktop grid */
+:root { --review-cols: 3; }
+
 .review-group__cards {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(var(--review-cols), 1fr);
+  gap: 1.25rem;
 }
 
-/* Individual review card */
+/* ── UNIFIED FLIP CARD ──────────────────────────────── */
+/* Every card flips on click.
+   Front: existing layout (circle photo, name, role, quote, source link).
+   Back:  full-bleed photo + dark overlay, name, bio, source link, ← return. */
+
 .review-card {
-  background: var(--paper); border: 1px solid var(--border);
-  border-radius: 3px; padding: 1.5rem;
-  display: flex; flex-direction: column; gap: 0.9rem;
-  transition: border-color 0.2s;
+  /* Height determined by content on front, back matches */
+  min-height: 400px;
 }
 .review-card--hidden { display: none; }
 
+/* Flip wrapper */
+.review-card--flip {
+  cursor: pointer;
+  perspective: 1000px;
+  /* Remove flat-card styling — inner divs carry it */
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.review-card--flip:focus-visible {
+  outline: 2px solid var(--saffron); outline-offset: 2px; border-radius: 3px;
+}
+
+.review-card__inner {
+  position: relative; width: 100%; height: 100%; min-height: 260px;
+  transition: transform 0.55s cubic-bezier(0.4,0.2,0.2,1);
+  transform-style: preserve-3d;
+}
+.review-card--flip.flipped .review-card__inner { transform: rotateY(180deg); }
+
+/* FRONT */
+.review-card__front {
+  position: absolute; inset: 0;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  background: var(--paper); border: 1px solid var(--border); border-radius: 3px;
+  padding: 1.5rem;
+  display: flex; flex-direction: column; gap: 0.9rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.review-card--flip:hover .review-card__front {
+  border-color: rgba(200,102,10,0.25);
+  box-shadow: 0 4px 20px rgba(200,102,10,0.07);
+}
+
+/* Front: photo circle */
 .review-card__header { display: flex; align-items: center; gap: 0.9rem; }
 .review-card__photo {
   width: 72px; height: 72px; flex-shrink: 0;
@@ -665,7 +707,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   display: flex; align-items: center; justify-content: center;
   font-family: var(--serif); font-size: 1.6rem; color: var(--muted);
 }
-.review-card__attr { flex: 1; }
+.review-card__attr { flex: 1; min-width: 0; }
 .review-card__name { font-weight: 500; font-size: 0.95rem; color: var(--ink); }
 .review-card__role { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
 .review-card__date { font-size: 0.7rem; color: var(--muted); margin-top: 0.2rem; }
@@ -673,15 +715,79 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 .review-card__quote {
   font-family: var(--serif); font-size: 1rem; line-height: 1.75; color: var(--ink);
   padding-left: 1rem; border-left: 2px solid var(--saffron-pale);
+  flex: 1;
 }
 
-.review-card__links { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.25rem; }
+.review-card__links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 .review-card__link {
   font-size: 0.78rem; color: var(--saffron); text-decoration: underline;
   text-underline-offset: 3px; font-family: var(--serif); font-style: italic;
 }
 .review-card__link--archive { color: var(--muted); }
 .review-card__link:hover { color: var(--saffron-d); }
+
+/* BACK */
+.review-card__back {
+  position: absolute; inset: 0;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border-radius: 3px; overflow: hidden;
+  /* fallback if no photo */
+  background: var(--ink);
+}
+
+/* Full-bleed background photo */
+.review-card__back-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  display: block;
+}
+
+/* Dark overlay for text legibility */
+.review-card__back-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10,7,3,0.96) 0%,
+    rgba(10,7,3,0.75) 55%,
+    rgba(10,7,3,0.45) 100%
+  );
+}
+
+/* ← Return button — top-left */
+.review-card__back-close {
+  position: absolute; top: 0.75rem; left: 0.75rem; z-index: 2;
+  background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.85); cursor: pointer;
+  font-size: 1rem; line-height: 1;
+  padding: 0.3rem 0.6rem; border-radius: 2px;
+  transition: background 0.2s;
+}
+.review-card__back-close:hover { background: rgba(255,255,255,0.15); }
+
+/* Content area — sits above overlay */
+.review-card__back-content {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 1;
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.review-card__back-name {
+  font-family: var(--serif); font-size: 1.1rem;
+  font-weight: 600; color: #fff; line-height: 1.2;
+}
+.review-card__back-bio {
+  font-size: 0.82rem; color: rgba(250,247,242,0.8); line-height: 1.6;
+}
+.review-card__back-link {
+  display: inline-block; margin-top: 0.35rem;
+  font-size: 0.78rem; font-family: var(--serif); font-style: italic;
+  color: #c8a068; text-decoration: underline; text-underline-offset: 3px;
+}
+.review-card__back-link:hover { color: #e0b87a; }
+.review-card__back-source {
+  font-size: 0.78rem; color: rgba(200,160,104,0.75); font-style: italic;
+}
 
 /* Show more button */
 .review-group__more-btn {
@@ -694,12 +800,24 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 }
 .review-group__more-btn:hover { border-color: var(--saffron); color: var(--saffron); }
 
-/* Responsive reviews */
-@media (max-width: 768px) {
-  .review-group__cards { grid-template-columns: 1fr; }
+/* Responsive */
+@media (max-width: 900px) {
+  :root { --review-cols: 2; }
+}
+@media (max-width: 600px) {
+  :root { --review-cols: 1; }
 }
 
-/* ── PRESS item additions ────────────────────────────── */
+/* ── PRESS ITEMS — fixed source column ──────────────── */
+/* Source column: fixed 120px, truncates long names cleanly.
+   Quote column: takes remaining space. */
+.press-item__source {
+  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--saffron);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  width: 120px; flex: 0 0 120px;   /* fixed — never shrinks or grows */
+  padding-top: 3px;
+}
 .press-item__archive-badge { font-size: 0.8em; margin-left: 0.3rem; }
 .press-item__date { font-size: 0.72rem; color: var(--muted); margin-left: 0.5rem; }
 .press-item__archive-link {
@@ -709,10 +827,22 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 }
 .press-item__archive-link:hover { color: var(--saffron); }
 
-/* ── INTERVIEW accordion additions ──────────────────── */
-.accordion-link--archive {
-  margin-left: 1rem; color: var(--muted);
+/* ── INTERVIEW ACCORDION — fixed source column ──────── */
+/* Source column: fixed 120px, matching press.
+   Title column: flex: 1.
+   Date column: fixed right, hidden on mobile (already in base CSS). */
+.accordion-btn {
+  align-items: center !important;  /* override baseline — prevents height shifts */
 }
+.accordion-source {
+  width: 120px; flex: 0 0 120px;   /* fixed — matches press source column */
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--saffron);
+}
+
+/* ── INTERVIEW accordion additions ──────────────────── */
+.accordion-link--archive { margin-left: 1rem; color: var(--muted); }
 
 /* ── POSTS SNIPPET (main page) ──────────────────────── */
 .section--posts { background: var(--paper-3); }
@@ -738,7 +868,6 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3;
   -webkit-box-orient: vertical; overflow: hidden;
 }
-
 .posts-see-all { margin-top: 2rem; text-align: center; }
 
 @media (max-width: 900px) { .posts-snippet { grid-template-columns: 1fr 1fr; } }
@@ -761,25 +890,16 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 .post-full__body figure { margin: 2rem 0; }
 .post-full__body figure img { width: 100%; border-radius: 3px; }
 .post-full__body figcaption { font-size: 0.82rem; color: var(--muted); text-align: center; margin-top: 0.5rem; font-style: italic; }
-
 .post-full__tags { margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
 .post-full__tag {
   font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
-  padding: 0.25rem 0.75rem; border: 1px solid var(--border);
-  border-radius: 2rem; color: var(--muted);
+  padding: 0.25rem 0.75rem; border: 1px solid var(--border); border-radius: 2rem; color: var(--muted);
 }
-
 .posts-loading { text-align: center; padding: 4rem; color: var(--muted); font-family: var(--serif); font-style: italic; }
 
-@media (max-width: 768px) {
-  .posts-page { padding: 5rem 1.25rem 3rem; }
-}
+@media (max-width: 768px) { .posts-page { padding: 5rem 1.25rem 3rem; } }
 
 /* ── BOOK CARD TINDER ZONES ─────────────────────────── */
-/* Invisible left/right tap areas on each book card.
-   Left 33% scrolls carousel backward, right 33% scrolls forward.
-   The centre 34% opens the book detail modal.
-   Zones sit above the cover but below the overlay text. */
 .book-card__tap-prev,
 .book-card__tap-next {
   position: absolute; top: 0; bottom: 0; width: 33%; z-index: 3;
@@ -787,140 +907,44 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 }
 .book-card__tap-next { right: 0; cursor: e-resize; }
 .book-card__tap-prev { left: 0; }
-
-/* Show subtle arrow hint on hover — left zone */
 .book-card__tap-prev::after,
 .book-card__tap-next::after {
-  content: '';
-  position: absolute; top: 50%; transform: translateY(-50%);
-  width: 0; height: 0;
-  opacity: 0; transition: opacity 0.2s;
-  pointer-events: none;
+  content: ''; position: absolute; top: 50%; transform: translateY(-50%);
+  width: 0; height: 0; opacity: 0; transition: opacity 0.2s; pointer-events: none;
 }
 .book-card:hover .book-card__tap-prev::after {
-  opacity: 0.5;
-  left: 0.5rem;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
+  opacity: 0.5; left: 0.5rem;
+  border-top: 8px solid transparent; border-bottom: 8px solid transparent;
   border-right: 10px solid rgba(200,160,104,0.8);
 }
 .book-card:hover .book-card__tap-next::after {
-  opacity: 0.5;
-  right: 0.5rem;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
+  opacity: 0.5; right: 0.5rem;
+  border-top: 8px solid transparent; border-bottom: 8px solid transparent;
   border-left: 10px solid rgba(200,160,104,0.8);
 }
 
 /* ── LIGHTBOX TINDER ZONES ──────────────────────────── */
-/* Replace the old fixed prev/next buttons with half-width
-   tap zones inside the lightbox content area. */
 .lightbox__tap-prev,
 .lightbox__tap-next {
   position: absolute; top: 0; bottom: 0; width: 50%; z-index: 2;
   cursor: pointer; outline: none;
 }
-.lightbox__tap-prev { left: 0;  cursor: w-resize; }
+.lightbox__tap-prev { left: 0; cursor: w-resize; }
 .lightbox__tap-next { right: 0; cursor: e-resize; }
-
-/* Subtle arrow hints on hover */
 .lightbox__tap-prev::after,
 .lightbox__tap-next::after {
-  content: '';
-  position: absolute; top: 50%; transform: translateY(-50%);
-  width: 0; height: 0;
-  opacity: 0; transition: opacity 0.2s;
+  content: ''; position: absolute; top: 50%; transform: translateY(-50%);
+  width: 0; height: 0; opacity: 0; transition: opacity 0.2s;
 }
 .lightbox__tap-prev:hover::after {
   opacity: 0.6; left: 1.5rem;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
+  border-top: 12px solid transparent; border-bottom: 12px solid transparent;
   border-right: 16px solid rgba(250,247,242,0.8);
 }
 .lightbox__tap-next:hover::after {
   opacity: 0.6; right: 1.5rem;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
+  border-top: 12px solid transparent; border-bottom: 12px solid transparent;
   border-left: 16px solid rgba(250,247,242,0.8);
 }
-
-/* Fix: lightbox content must allow pointer events for tap zones to work */
 .lightbox__content { pointer-events: auto; }
-/* The image itself still blocks pointer events so clicks on it fall through
-   to the tap zones underneath it — image is above zones in DOM so we need
-   the image to be pointer-events: none and zones to be auto */
 .lightbox__img { pointer-events: none; }
-
-/* ── REVIEW GROUP SECTION LABELS ────────────────────── */
-.review-group__section-label {
-  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--saffron);
-  margin: 1.25rem 0 0.75rem; padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--saffron-pale);
-}
-.review-group__section-label--testimonials {
-  color: var(--muted); border-bottom-color: var(--border);
-  margin-top: 2rem;
-}
-
-/* ── FLIP CARDS (testimonials) ──────────────────────── */
-.review-card--flip {
-  cursor: pointer;
-  perspective: 1000px;
-  background: transparent;
-  border: none;
-  padding: 0;
-  min-height: 220px;
-}
-.review-card__inner {
-  position: relative; width: 100%; height: 100%;
-  min-height: 220px;
-  transition: transform 0.55s cubic-bezier(0.4,0.2,0.2,1);
-  transform-style: preserve-3d;
-}
-.review-card--flip.flipped .review-card__inner {
-  transform: rotateY(180deg);
-}
-.review-card__front,
-.review-card__back {
-  position: absolute; inset: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  padding: 1.5rem;
-  display: flex; flex-direction: column; gap: 0.9rem;
-}
-.review-card__back {
-  transform: rotateY(180deg);
-  background: var(--paper-2);
-  align-items: center; justify-content: center;
-  text-align: center; gap: 0.75rem;
-}
-.review-card__back-photo { flex-shrink: 0; }
-.review-card__back-photo .review-card__photo,
-.review-card__back-photo .review-card__photo-placeholder {
-  width: 56px; height: 56px; font-size: 1.2rem;
-}
-.review-card__back-name {
-  font-family: var(--serif); font-size: 1rem;
-  font-weight: 600; color: var(--ink);
-}
-.review-card__back-bio {
-  font-size: 0.82rem; color: var(--muted); line-height: 1.65;
-}
-.review-card__flip-hint {
-  font-size: 0.68rem; color: var(--muted); letter-spacing: 0.08em;
-  text-align: center; margin-top: auto; padding-top: 0.5rem;
-  text-transform: uppercase;
-}
-.review-card--flip:hover .review-card__front {
-  border-color: var(--saffron-pale);
-  box-shadow: 0 4px 16px rgba(200,102,10,0.08);
-}
-.review-card--flip:focus-visible {
-  outline: 2px solid var(--saffron);
-  outline-offset: 2px;
-  border-radius: 3px;
-}

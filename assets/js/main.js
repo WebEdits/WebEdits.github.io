@@ -142,7 +142,7 @@
     const keys = ['all', ...new Set(allBooks.map(b => b.genre?.key).filter(Boolean))];
     const labels = {
       'all':                 { hi: 'सभी',               en: 'All' },
-      'hindi-fiction':       { hi: 'हिन्दी काव्य',        en: 'Hindi Poetics' },
+      'hindi-fiction':       { hi: 'हिन्दी गद्य',        en: 'Hindi Fiction' },
       'english-fiction':     { hi: 'English Fiction',    en: 'English Fiction' },
       'hindi-nonfiction':    { hi: 'हिन्दी कथेतर गद्य', en: 'Hindi Non-Fiction' },
       'english-nonfiction':  { hi: 'English Non-Fiction', en: 'English Non-Fiction' }
@@ -386,70 +386,76 @@
   // Each review has type: "review" (has source URL, clickable card)
   //                    or "testimonial" (personal reaction, flip card with bio on back)
   // Shows first 4 per group; "Show more" reveals the rest.
-  const REVIEWS_INITIAL = 4;
+  const REVIEWS_INITIAL = 6;
 
   function buildReviewCard(r, ri) {
-    const isTestimonial = r.type === 'testimonial';
     const initial = (t(r.attribution)[0] || '?');
-    const photoHTML = r.photo
+    const hidden = ri >= REVIEWS_INITIAL ? ' review-card--hidden' : '';
+
+    // Front: existing layout (photo circle, name, role, quote, source link)
+    const photoFront = r.photo
       ? `<img class="review-card__photo" src="${r.photo}" alt="${t(r.attribution)}" loading="lazy"
              onerror="this.outerHTML='<div class=review-card__photo-placeholder>${initial}</div>'">`
       : `<div class="review-card__photo-placeholder">${initial}</div>`;
 
     const liveUrl = r.url;
     const archUrl = r.archive_url;
-    const hidden = ri >= REVIEWS_INITIAL ? ' review-card--hidden' : '';
-
-    if (isTestimonial) {
-      // Flip card: front = photo + name + quote, back = bio
-      const bioText = t(r.bio) || t(r.role) || '';
-      return `
-        <div class="review-card review-card--flip${hidden}" tabindex="0" role="button"
-             aria-label="${t(r.attribution)} — ${lang==='hi'?'पलटें':'flip'}">
-          <div class="review-card__inner">
-            <div class="review-card__front">
-              <div class="review-card__header">
-                ${photoHTML}
-                <div class="review-card__attr">
-                  <p class="review-card__name">${t(r.attribution)}</p>
-                  <p class="review-card__role">${t(r.role)}</p>
-                </div>
-              </div>
-              <blockquote class="review-card__quote">${t(r.quote)}</blockquote>
-              <p class="review-card__flip-hint">${lang==='hi'?'← पलटें →':'← flip →'}</p>
-            </div>
-            <div class="review-card__back">
-              <div class="review-card__back-photo">${photoHTML}</div>
-              <p class="review-card__back-name">${t(r.attribution)}</p>
-              <p class="review-card__back-bio">${bioText}</p>
-            </div>
-          </div>
-        </div>`;
-    }
-
-    // Regular review card with optional source link
     const sourceLinks = (liveUrl || archUrl)
       ? `<div class="review-card__links">
-          ${liveUrl ? `<a href="${liveUrl}" target="_blank" rel="noopener" class="review-card__link">
-            ${t(r.source) || (lang==='hi' ? 'स्रोत' : 'Source')} ↗
-          </a>` : ''}
-          ${archUrl ? `<a href="${archUrl}" target="_blank" rel="noopener" class="review-card__link review-card__link--archive">
-            📦 ${lang==='hi'?'संग्रहीत':'Archived'}
-          </a>` : ''}
+          ${liveUrl ? `<a href="${liveUrl}" target="_blank" rel="noopener" class="review-card__link"
+              onclick="event.stopPropagation()">
+              ${t(r.source) || (lang==='hi' ? 'स्रोत' : 'Source')} ↗
+            </a>` : ''}
+          ${archUrl ? `<a href="${archUrl}" target="_blank" rel="noopener"
+              class="review-card__link review-card__link--archive"
+              onclick="event.stopPropagation()">
+              📦 ${lang==='hi'?'संग्रहीत':'Archived'}
+            </a>` : ''}
         </div>` : '';
 
+    // Back: full-bleed photo + dark overlay, name, bio, source + date link
+    const photoBack = r.photo
+      ? `<img class="review-card__back-img" src="${r.photo}" alt="" aria-hidden="true">`
+      : '';
+    const bioText = t(r.bio) || '';
+    const sourceLabel = t(r.source) || '';
+    const dateLabel = r.date ? fmtDate(r.date) : '';
+    const sourceLine = [sourceLabel, dateLabel].filter(Boolean).join(' · ');
+    const backLink = (liveUrl || archUrl)
+      ? `<a href="${liveUrl || archUrl}" target="_blank" rel="noopener"
+            class="review-card__back-link" onclick="event.stopPropagation()">
+          ${sourceLine || (lang==='hi' ? 'स्रोत देखें' : 'Read source')} ↗
+        </a>`
+      : (sourceLine ? `<span class="review-card__back-source">${sourceLine}</span>` : '');
+
     return `
-      <div class="review-card${hidden}">
-        <div class="review-card__header">
-          ${photoHTML}
-          <div class="review-card__attr">
-            <p class="review-card__name">${t(r.attribution)}</p>
-            <p class="review-card__role">${t(r.role)}</p>
-            ${r.date ? `<p class="review-card__date">${fmtDate(r.date)}</p>` : ''}
+      <div class="review-card review-card--flip${hidden}" tabindex="0"
+           role="button" aria-label="${t(r.attribution)}">
+        <div class="review-card__inner">
+          <div class="review-card__front">
+            <div class="review-card__header">
+              ${photoFront}
+              <div class="review-card__attr">
+                <p class="review-card__name">${t(r.attribution)}</p>
+                <p class="review-card__role">${t(r.role)}</p>
+                ${r.date ? `<p class="review-card__date">${fmtDate(r.date)}</p>` : ''}
+              </div>
+            </div>
+            <blockquote class="review-card__quote">${t(r.quote)}</blockquote>
+            ${sourceLinks}
+          </div>
+          <div class="review-card__back">
+            ${photoBack}
+            <div class="review-card__back-overlay"></div>
+            <button class="review-card__back-close" aria-label="${lang==='hi'?'वापस':'Back'}"
+                    onclick="event.stopPropagation();this.closest('.review-card--flip').classList.remove('flipped')">&#x2190;</button>
+            <div class="review-card__back-content">
+              <p class="review-card__back-name">${t(r.attribution)}</p>
+              ${bioText ? `<p class="review-card__back-bio">${bioText}</p>` : ''}
+              ${backLink}
+            </div>
           </div>
         </div>
-        <blockquote class="review-card__quote">${t(r.quote)}</blockquote>
-        ${sourceLinks}
       </div>`;
   }
 
@@ -457,47 +463,32 @@
     const container = qs('#reviews-accordion');
     if (!container) return;
 
-    // Separate into reviews and testimonials per book
+    // Group all reviews by canonical_id — no type split
     const groups = {};
     allReviews.forEach(r => {
       const cid = r.canonical_id || 'other';
-      if (!groups[cid]) groups[cid] = { reviews: [], testimonials: [] };
-      if (r.type === 'testimonial') groups[cid].testimonials.push(r);
-      else groups[cid].reviews.push(r);
+      if (!groups[cid]) groups[cid] = [];
+      groups[cid].push(r);
     });
 
-    // Order groups by most recent book year
+    // Order by most recent book year
     const ordered = Object.entries(groups).sort(([a], [b]) => {
-      const yr = (cid) => Math.max(0, ...allBooks.filter(bk=>(bk.canonical_id||bk.id)===cid).map(bk=>bk.year||0));
+      const yr = cid => Math.max(0, ...allBooks.filter(bk=>(bk.canonical_id||bk.id)===cid).map(bk=>bk.year||0));
       return yr(b) - yr(a);
     });
 
-    container.innerHTML = ordered.map(([canonId, {reviews, testimonials}], gi) => {
+    container.innerHTML = ordered.map(([canonId, reviews], gi) => {
       const bookEditions = allBooks.filter(b=>(b.canonical_id||b.id)===canonId);
       const latestBook = bookEditions.sort((a,b)=>b.year-a.year)[0];
       const bookTitle = latestBook ? t(latestBook.title) : canonId;
-      const total = reviews.length + testimonials.length;
-      const countLabel = lang==='hi' ? `${total} प्रतिक्रियाएँ` : `${total} response${total!==1?'s':''}`;
+      const count = reviews.length;
+      const countLabel = lang==='hi' ? `${count} प्रतिक्रियाएँ` : `${count} response${count!==1?'s':''}`;
 
-      // Reviews section (clickable)
-      const reviewSection = reviews.length ? `
-        <div class="review-group__section-label">${lang==='hi'?'समीक्षाएँ':'Reviews'}</div>
-        <div class="review-group__cards">${reviews.map((r,i)=>buildReviewCard(r,i)).join('')}</div>
-      ` : '';
+      const cards = reviews.map((r,i) => buildReviewCard(r,i)).join('');
 
-      // Testimonials section (flip cards) — always shown, not counted in "show more"
-      const testimonialSection = testimonials.length ? `
-        <div class="review-group__section-label review-group__section-label--testimonials">
-          ${lang==='hi'?'पाठकों की प्रतिक्रियाएँ':'Reader Responses'}
-        </div>
-        <div class="review-group__cards review-group__cards--testimonials">
-          ${testimonials.map((r,i)=>buildReviewCard(r,i)).join('')}
-        </div>
-      ` : '';
-
-      const showMoreBtn = reviews.length > REVIEWS_INITIAL
+      const showMoreBtn = count > REVIEWS_INITIAL
         ? `<button class="review-group__more-btn" data-group="${gi}" aria-expanded="false">
-            ${lang==='hi' ? `${reviews.length-REVIEWS_INITIAL} और देखें` : `Show ${reviews.length-REVIEWS_INITIAL} more`}
+            ${lang==='hi' ? `${count-REVIEWS_INITIAL} और देखें` : `Show ${count-REVIEWS_INITIAL} more`}
           </button>` : '';
 
       return `
@@ -510,14 +501,13 @@
             <span class="accordion-icon" aria-hidden="true"></span>
           </button>
           <div class="review-group__body" id="rgroup-${gi}" ${gi===0?'':'hidden'}>
-            ${reviewSection}
+            <div class="review-group__cards">${cards}</div>
             ${showMoreBtn}
-            ${testimonialSection}
           </div>
         </div>`;
     }).join('');
 
-    // Wire accordion toggle
+    // Accordion toggle
     qsa('.review-group__btn', container).forEach(btn => {
       btn.addEventListener('click', () => {
         const body = qs(`#${btn.getAttribute('aria-controls')}`);
@@ -530,37 +520,33 @@
       });
     });
 
-    // Wire show-more buttons (only on reviews, not testimonials)
+    // Show-more
     qsa('.review-group__more-btn', container).forEach(btn => {
       btn.addEventListener('click', () => {
         const gi = btn.dataset.group;
         const body = qs(`#rgroup-${gi}`);
         if (!body) return;
         const isExpanded = btn.getAttribute('aria-expanded')==='true';
-        // Only target non-testimonial review cards
-        const reviewCards = qsa('.review-group__cards:not(.review-group__cards--testimonials) .review-card', body);
+        const cards = qsa('.review-card', body);
         if (!isExpanded) {
-          reviewCards.forEach(c => c.classList.remove('review-card--hidden'));
+          cards.forEach(c => c.classList.remove('review-card--hidden'));
           btn.setAttribute('aria-expanded','true');
           btn.textContent = lang==='hi' ? 'कम करें ↑' : 'Show less ↑';
         } else {
-          reviewCards.forEach((c,i) => {
-            if (i >= REVIEWS_INITIAL) c.classList.add('review-card--hidden');
-          });
+          cards.forEach((c,i) => { if (i >= REVIEWS_INITIAL) c.classList.add('review-card--hidden'); });
           btn.setAttribute('aria-expanded','false');
           btn.textContent = lang==='hi'
-            ? `${reviewCards.length-REVIEWS_INITIAL} और देखें`
-            : `Show ${reviewCards.length-REVIEWS_INITIAL} more`;
+            ? `${cards.length-REVIEWS_INITIAL} और देखें`
+            : `Show ${cards.length-REVIEWS_INITIAL} more`;
         }
       });
     });
 
-    // Wire flip cards
+    // Flip cards — click card body to flip, ← button handled inline via onclick
     qsa('.review-card--flip', container).forEach(card => {
-      const toggle = () => card.classList.toggle('flipped');
-      card.addEventListener('click', toggle);
+      card.addEventListener('click', () => card.classList.toggle('flipped'));
       card.addEventListener('keydown', e => {
-        if (e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}
+        if (e.key==='Enter'||e.key===' ') { e.preventDefault(); card.classList.toggle('flipped'); }
       });
     });
 
