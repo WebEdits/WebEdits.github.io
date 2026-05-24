@@ -106,7 +106,7 @@
     "type": "review",
     "canonical_id": "abhinav-cinema",
     "date": "2016-01",
-    "photo": "",
+    "photo": "assets/images/reviewers/vishnu-khare.jpg",
     "bio": { "hi": "वरिष्ठ हिन्दी कवि एवं आलोचक। साहित्य अकादमी पुरस्कार से सम्मानित।", "en": "Senior Hindi poet and critic. Recipient of the Sahitya Akademi Award." },
     "quote": {
       "hi": "यह पुस्तक सही अर्थों में अपने क्षेत्र में एकदम नयी दृष्टि रखती और देती है, नूतन मार्ग बनाती है और अग्रगामी है। यह ऐसी अद्वितीय पुस्तक है कि मैं सख़्त सिफ़ारिश करता हूँ कि इसे सिनेमा तथा हिन्दी के पाठ्यक्रम में अनिवार्यतः सम्मानजनक जगह दी जाए।",
@@ -514,7 +514,7 @@
     "type": "testimonial",
     "canonical_id": "mitne-ka-adhikar",
     "date": "2024-01",
-    "photo": "",
+    "photo": "assets/images/reviewers/rohini-aggrawal.jpg",
     "bio": { "hi": "हिन्दी की प्रतिष्ठित आलोचक। महात्मा गाँधी अन्तर्राष्ट्रीय हिन्दी विश्वविद्यालय में प्राध्यापक।", "en": "Distinguished Hindi critic. Professor at Mahatma Gandhi International Hindi University." },
     "quote": {
       "hi": "यह उपन्यास अज्ञात को एक्सप्लोर करने की गहन, संश्लिष्ट, अराजक यात्रा है जो मुक्ति की दिशाओं को चिन्हित कर अपने लिए कतरा भर आलोक पा लेना चाहती है। यह अपनी क्षुद्रताओं को गला कर स्व में स्थित ब्रह्म के साक्षात्कार की उदात्त रचना है।",
@@ -531,7 +531,7 @@
     "type": "testimonial",
     "canonical_id": "mitne-ka-adhikar",
     "date": "2024-01",
-    "photo": "",
+    "photo": "assets/images/reviewers/garima-shrivastava.jpg",
     "bio": { "hi": "हिन्दी विभाग, दिल्ली विश्वविद्यालय में प्राध्यापक। सुविख्यात आलोचक और लेखिका।", "en": "Professor, Hindi Department, University of Delhi. Celebrated critic and writer." },
     "quote": {
       "hi": "प्रचण्ड प्रवीर हमारे समकाल में भाषा का संस्कार सिखाने वाले, अपनी जड़ों से गहरे जुड़े रचनाकार हैं। उनका ताज़ा उपन्यास 'मिटने का अधिकार' — अंग्रेज़ी, हिन्दी, संस्कृत पर समानाधिकार रखने वाले प्रचण्ड की परिपक्वता का प्रमाण है।",
@@ -565,7 +565,7 @@
     "type": "testimonial",
     "canonical_id": "rishyashring-kharab-kavitayein",
     "date": "2025-01",
-    "photo": "",
+    "photo": "assets/images/reviewers/rustam-singh.jpg",
     "bio": { "hi": "वरिष्ठ हिन्दी कवि।", "en": "Senior Hindi poet." },
     "quote": {
       "hi": "ये कविताएँ तंज़, व्यंग्य, कटाक्ष और विद्रूप से भरी हुई हैं और ऐसी कविताएँ मैंने हिन्दी में पहले नहीं पढ़ीं।",
@@ -582,7 +582,7 @@
     "type": "testimonial",
     "canonical_id": "rishyashring-kharab-kavitayein",
     "date": "2025-01",
-    "photo": "",
+    "photo": "assets/images/reviewers/shirish-kumar-maurya.jpg",
     "bio": { "hi": "कवि-आलोचक। 'अनुनाद' के प्रमुख सम्पादक।", "en": "Poet-critic and principal editor of the literary journal Anunad." },
     "quote": {
       "hi": "ख़राब कविताएँ समकालीन हिंदी कविता का प्रथम सूचना प्रतिवेदन है, जैसा कि क़ानून के अंतर्गत किसी संज्ञेय अपराध के बाद प्रथम दृष्ट्या बनाया जाता है। यह एक सुदीर्घ आरोप-पत्र भी है। इन आरोपों पर बहस अभी बाक़ी है।",
@@ -599,7 +599,7 @@
     "type": "testimonial",
     "canonical_id": "rishyashring-kharab-kavitayein",
     "date": "2025-01",
-    "photo": "",
+    "photo": "assets/images/reviewers/mahesh-verma.jpg",
     "bio": { "hi": "हिन्दी कवि।", "en": "Hindi poet." },
     "quote": {
       "hi": "यहाँ सुंदरता, परंपरा और समकालीनता की लगभग रूढ़ अवधारणाओं को अपनी सामर्थ्य भर झकझोरने और नया कुछ सामने रखने की दिलचस्प कोशिशें हैं।",
@@ -633,7 +633,7 @@
     "type": "testimonial",
     "canonical_id": "rishyashring-kharab-kavitayein",
     "date": "2025-01",
-    "photo": "",
+    "photo": "assets/images/reviewers/santosh-chaturvedi.jpg",
     "bio": { "hi": "कवि व सम्पादक, 'पहली बार'।", "en": "Poet and editor of 'Pehli Baar'." },
     "quote": {
       "hi": "खराब कविता इस समय के उस दस्तावेज की तरह है जो वर्तमान परिदृश्य को बेहतर तरीके से रूपायित करने का कार्य करती है।",
