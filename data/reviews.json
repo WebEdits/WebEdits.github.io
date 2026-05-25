@@ -28,9 +28,26 @@
       "en": "Prachand Praveer has written a path-breaking book pointing in a genuinely new direction. He has connected ancient dramatic thought from Bharatmuni's Natyashastra and Abhinavabharati to the modern medium of cinema."
     },
     "attribution": { "hi": "डॉ॰ भरत गुप्त", "en": "Dr. Bharat Gupt" },
-    "role": { "hi": "प्राध्यापक, दिल्ली विश्वविद्यालय", "en": "Professor, University of Delhi" },
+    "role": { "hi": "पद्म श्री, प्रसिद्ध भारतविद तथा सेवानिवृत अँग्रेजी प्राध्यापक, दिल्ली विश्वविद्यालय", "en": "Padma Shri; Professor, University of Delhi" },
     "source": { "hi": "अभिनव सिनेमा (तृतीय संस्करण) प्रस्तावना", "en": "Foreword, Abhinav Cinema (3rd edition)" },
     "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "gupt-varnochchar",
+    "type": "review",
+    "canonical_id": "varnochchar-vidhan",
+    "date": "2026-03",
+    "photo": "assets/images/reviewers/bharat-gupt-2.jpg",
+    "bio": { "hi": "पद्म श्री, प्राध्यापक, दिल्ली विश्वविद्यालय। भारतीय नाट्यशास्त्र और सौन्दर्यशास्त्र के अग्रणी विद्वान।", "en": "Padma Shri; Professor, University of Delhi. Leading scholar of Indian dramaturgy and aesthetics, author of Dramatic Concepts Greek & Indian (1994)." },
+    "quote": {
+      "hi": "मैं कहूँगा कि ये अत्यंत उपयोगी ही नहीं अद्भुत पुस्तक है। इसका कुछ भारतीय भाषाओं में विभिन्न भाषाओं में अनुवाद होना चाहिए।",
+      "en": "I would say that this is not merely an extremely useful book, but a truly remarkable one. It should be translated into various Indian languages."
+    },
+    "attribution": { "hi": "डॉ॰ भरत गुप्त", "en": "Dr. Bharat Gupt" },
+    "role": { "hi": "पद्म श्री, प्रसिद्ध भारतविद तथा सेवानिवृत अँग्रेजी प्राध्यापक", "en": "Padma Shri; Professor, University of Delhi" },
+    "source": { "hi": "", "en": "" },
+    "url": "https://www.youtube.com/watch?v=QGzZZrNrmRM",
     "archive_url": ""
   },
   {
@@ -225,7 +242,7 @@
     "type": "testimonial",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
-    "photo": "",
+    "photo": "assets/images/reviewers/vinod-padraj.jpg",
     "bio": { "hi": "वरिष्ठ हिन्दी कवि।", "en": "Senior Hindi poet." },
     "quote": {
       "hi": "यह पुस्तक संस्कृत वाङ्मय और सिनेमा दोनों के प्रति जिज्ञासा जगाती है और उत्कृष्ट की ओर प्रवृत्त करती है। शुभाकांक्षा है कि ऐसी अद्वितीय पुस्तक व्यापक पाठक समुदाय तक पहुँचे।",
@@ -242,14 +259,14 @@
     "type": "testimonial",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
-    "photo": "",
-    "bio": { "hi": "हिन्दी के वरिष्ठ कथाकार।", "en": "Senior Hindi fiction writer." },
+    "photo": "assets/images/reviewers/jaishankar.jpg",
+    "bio": { "hi": "प्रसिद्ध कथाकार तथा आलोचक", "en": "Famous writer and critic." },
     "quote": {
       "hi": "प्रचण्ड प्रवीर की पुस्तक 'अभिनव सिनेमा' संसार के सच्चे सिनेमा को समझने-समझाने में हमारी गहरी मदद करती है। सिनेमा देखने के लिए जरूरी जिस दृष्टि की तलाश, बिना किसी पर्सनल लेखकीय सिग्नेचर के संभव ही नहीं।",
       "en": "Prachand Praveer's Abhinav Cinema deeply helps us understand and explain world cinema. The search for a vision necessary to view cinema is impossible without a personal authorial signature."
     },
     "attribution": { "hi": "जयशंकर", "en": "Jaishankar" },
-    "role": { "hi": "वरिष्ठ हिन्दी कथाकार", "en": "Senior Hindi Fiction Writer" },
+    "role": { "hi": "प्रसिद्ध कथाकार तथा आलोचक", "en": "Famous writer and critic" },
     "source": { "hi": "", "en": "" },
     "url": "",
     "archive_url": ""
@@ -310,7 +327,7 @@
     "type": "review",
     "canonical_id": "jaana-nahi-dil-se-door",
     "date": "2017-06-28",
-    "photo": "assets/images/reviewers/wagish-shukla.jpeg",
+    "photo": "assets/images/reviewers/wagish-shukla.jpg",
     "bio": { "hi": "वरिष्ठ हिन्दी कवि व गद्यकार। हिन्दी की शास्त्रीय परम्परा के गहरे अध्येता।", "en": "Senior Hindi poet and prose writer, deep scholar of the classical Hindi tradition." },
     "quote": {
       "hi": "प्रचण्ड प्रवीर इन्हीं भारतीय आधुनिकों में से हैं। इनका भारत एक निजी गमले में रोपा गया बोनसाई पौधा नहीं अपितु एक छतनार बरगद है जिसकी ताजी पत्तियाँ अपनी नसों में बोनसाई कला के पीछे का भी पुराकाल टाँके हुए हैं।",
@@ -446,7 +463,7 @@
     "type": "review",
     "canonical_id": "uttarayan",
     "date": "2019-11-13",
-    "photo": "assets/images/reviewers/wagish-shukla.jpeg",
+    "photo": "assets/images/reviewers/wagish-shukla.jpg",
     "bio": { "hi": "वरिष्ठ हिन्दी कवि व गद्यकार।", "en": "Senior Hindi poet and prose writer." },
     "quote": {
       "hi": "यद्यपि हिन्दी कथा-शिल्प का आकल्पन अभी भी मुमकिना वारदातों के खूँटे से बँधा हुआ है, प्रचण्ड प्रवीर का कथाशिल्प इस आकल्पन को स्वायत्त करने की दिशा में महत्त्वपूर्ण बढ़त ले चुका है।",
@@ -463,7 +480,7 @@
     "type": "review",
     "canonical_id": "dakshinayan",
     "date": "2019-12-17",
-    "photo": "assets/images/reviewers/wagish-shukla.jpeg",
+    "photo": "assets/images/reviewers/wagish-shukla.jpg",
     "bio": { "hi": "वरिष्ठ हिन्दी कवि व गद्यकार।", "en": "Senior Hindi poet and prose writer." },
     "quote": {
       "hi": "मुझे पूरा भरोसा है कि इन कहानियों की बन्दिश का नयापन हिन्दी की वर्तमान सर्जना पर एक बढ़त के रूप में देखा जायगा — इसकी रहरवी को वह मक़बूलियत भी मिलेगी जिससे हमारी क़िस्सागोई और भी सुर्ख़रू तथा हमाहंग हो सके।",
@@ -497,7 +514,7 @@
     "type": "review",
     "canonical_id": "ritambhara",
     "date": "2026-01-06",
-    "photo": "assets/images/reviewers/wagish-shukla.jpeg",
+    "photo": "assets/images/reviewers/wagish-shukla.jpg",
     "bio": { "hi": "वरिष्ठ हिन्दी कवि व गद्यकार।", "en": "Senior Hindi poet and prose writer." },
     "quote": {
       "hi": "यद्यपि हिन्दी कथा-शिल्प का आकल्पन अभी भी मुमकिना वारदातों के खूँटे से बँधा हुआ है, प्रचण्ड प्रवीर का कथाशिल्प इस आकल्पन को स्वायत्त करने की दिशा में महत्त्वपूर्ण बढ़त ले चुका है।",
