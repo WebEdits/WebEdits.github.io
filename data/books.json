@@ -179,7 +179,7 @@
   },
   {
     "id": "kal-ki-baat-shadj",
-    "canonical_id": "kal-ki-baat-shadj",
+    "canonical_id": "kal-ki-baat",
     "year": 2021,
     "edition": 1,
     "edition_label": { "hi": "प्रथम संस्करण, २०२१", "en": "1st edition, 2021" },
@@ -199,7 +199,7 @@
   },
   {
     "id": "kal-ki-baat-rishabh",
-    "canonical_id": "kal-ki-baat-rishabh",
+    "canonical_id": "kal-ki-baat",
     "year": 2021,
     "edition": 1,
     "edition_label": { "hi": "प्रथम संस्करण, २०२१", "en": "1st edition, 2021" },
@@ -219,7 +219,7 @@
   },
   {
     "id": "kal-ki-baat-gandhar",
-    "canonical_id": "kal-ki-baat-gandhar",
+    "canonical_id": "kal-ki-baat",
     "year": 2021,
     "edition": 1,
     "edition_label": { "hi": "प्रथम संस्करण, २०२१", "en": "1st edition, 2021" },
@@ -342,7 +342,7 @@
   },
   {
     "id": "komal-rishabh",
-    "canonical_id": "komal-rishabh",
+    "canonical_id": "kal-ki-baat",
     "year": 2026,
     "edition": 1,
     "edition_label": { "hi": "प्रथम संस्करण, २०२६", "en": "1st edition, 2026" },
@@ -362,7 +362,7 @@
   },
   {
     "id": "komal-gandhar",
-    "canonical_id": "komal-gandhar",
+    "canonical_id": "kal-ki-baat",
     "year": 2026,
     "edition": 1,
     "edition_label": { "hi": "प्रथम संस्करण, २०२६", "en": "1st edition, 2026" },
@@ -382,7 +382,7 @@
   },
   {
     "id": "kal-ki-baat-madhyam",
-    "canonical_id": "kal-ki-baat-madhyam",
+    "canonical_id": "kal-ki-baat",
     "year": 2026,
     "edition": 1,
     "edition_label": { "hi": "प्रथम संस्करण, २०२६", "en": "1st edition, 2026" },

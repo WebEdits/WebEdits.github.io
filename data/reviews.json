@@ -476,6 +476,23 @@
     "archive_url": ""
   },
   {
+    "id": "ambuj-pandey-kal-ki-baat",
+    "type": "testimonial",
+    "canonical_id": "kal-ki-baat",
+    "date": "2025-01-14",
+    "photo": "assets/images/reviewers/ambuj-pandey.jpg",
+    "bio": { "hi": "हिन्दी आलोचक।", "en": "Hindi critic." },
+    "quote": {
+      "hi": "गीतों पर तैरती कहानियाँ",
+      "en": "Stories swimming atop songs"
+    },
+    "attribution": { "hi": "अम्बुज पाण्डेय", "en": "Ambuj Pandey" },
+    "role": { "hi": "हिन्दी आलोचक", "en": "Hindi Critic" },
+    "source": { "hi": "PDF", "en": "PDF" },
+    "url": "assets/pdfs/review-kal-ki-baat.pdf",
+    "archive_url": ""
+  },
+  {
     "id": "wagish-ritambhara",
     "type": "review",
     "canonical_id": "ritambhara",
