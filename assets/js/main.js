@@ -386,7 +386,7 @@
   // Each review has type: "review" (has source URL, clickable card)
   //                    or "testimonial" (personal reaction, flip card with bio on back)
   // Shows first 4 per group; "Show more" reveals the rest.
-  const REVIEWS_INITIAL = 6;
+  const REVIEWS_INITIAL = 3;
 
   function buildReviewCard(r, ri) {
     const initial = (t(r.attribution)[0] || '?');

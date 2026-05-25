@@ -238,7 +238,7 @@
     "archive_url": ""
   },
   {
-    "id": "priyanvad",
+    "id": "Jaishankar",
     "type": "testimonial",
     "canonical_id": "abhinav-cinema",
     "date": "2026-03",
@@ -248,7 +248,7 @@
       "hi": "प्रचण्ड प्रवीर की पुस्तक 'अभिनव सिनेमा' संसार के सच्चे सिनेमा को समझने-समझाने में हमारी गहरी मदद करती है। सिनेमा देखने के लिए जरूरी जिस दृष्टि की तलाश, बिना किसी पर्सनल लेखकीय सिग्नेचर के संभव ही नहीं।",
       "en": "Prachand Praveer's Abhinav Cinema deeply helps us understand and explain world cinema. The search for a vision necessary to view cinema is impossible without a personal authorial signature."
     },
-    "attribution": { "hi": "प्रियंवद", "en": "Priyanvad" },
+    "attribution": { "hi": "जयशंकर", "en": "Jaishankar" },
     "role": { "hi": "वरिष्ठ हिन्दी कथाकार", "en": "Senior Hindi Fiction Writer" },
     "source": { "hi": "", "en": "" },
     "url": "",
@@ -538,7 +538,7 @@
       "en": "Prachand Praveer is a creator deeply rooted in their origins, teaching the refinement of language in our contemporary times. His novel Mitne Ka Adhikar is testament to the maturity of an author who commands equal mastery over English, Hindi and Sanskrit."
     },
     "attribution": { "hi": "प्रोफेसर गरिमा श्रीवास्तव", "en": "Prof. Garima Srivastava" },
-    "role": { "hi": "प्राध्यापक, हिन्दी विभाग, दिल्ली विश्वविद्यालय", "en": "Professor, Hindi Department, University of Delhi" },
+    "role": { "hi": "प्राध्यापक, हिन्दी विभाग, जेएनयू", "en": "Professor, Hindi Department, JNU" },
     "source": { "hi": "", "en": "" },
     "url": "",
     "archive_url": ""
@@ -558,6 +558,23 @@
     "role": { "hi": "वरिष्ठ कवि", "en": "Senior Poet" },
     "source": { "hi": "", "en": "" },
     "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "ambuj-pandey-kharab",
+    "type": "testimonial",
+    "canonical_id": "rishyashring-kharab-kavitayein",
+    "date": "2025-01-14",
+    "photo": "assets/images/reviewers/ambuj-pandey.jpg",
+    "bio": { "hi": "हिन्दी आलोचक।", "en": "Hindi critic." },
+    "quote": {
+      "hi": "ऋष्यशृङ्ग की ख़राब कविताएँ अपने प्रयोग और प्रयोजन में सफल हैं। ख़राब को ख़राब कहने का माद्दा जरूर रखता है यह कवि(?)।",
+      "en": "The Kharab Kavitayein succeeds in its experiment and purpose. This poet(?) certainly has the gumption to call bad things bad."
+    },
+    "attribution": { "hi": "अम्बुज पाण्डेय", "en": "Ambuj Pandey" },
+    "role": { "hi": "हिन्दी आलोचक", "en": "Hindi Critic" },
+    "source": { "hi": "अनुनाद", "en": "Anunad" },
+    "url": "https://anunad.com/2025/01/%E0%A4%8B%E0%A4%B7%E0%A5%8D%E0%A4%AF%E0%A4%B6%E0%A5%83%E0%A4%99%E0%A5%8D%E0%A4%97-%E0%A4%95%E0%A5%80-%E0%A4%96%E0%A4%BC%E0%A4%B0%E0%A4%BE%E0%A4%AC-%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE.html",
     "archive_url": ""
   },
   {
@@ -612,23 +629,6 @@
     "archive_url": ""
   },
   {
-    "id": "ambuj-pandey-kharab",
-    "type": "testimonial",
-    "canonical_id": "rishyashring-kharab-kavitayein",
-    "date": "2025-01",
-    "photo": "assets/images/reviewers/ambuj-pandey.jpg",
-    "bio": { "hi": "हिन्दी आलोचक।", "en": "Hindi critic." },
-    "quote": {
-      "hi": "ऋष्यशृङ्ग की ख़राब कविताएँ अपने प्रयोग और प्रयोजन में सफल हैं। ख़राब को ख़राब कहने का माद्दा जरूर रखता है यह कवि(?)।",
-      "en": "The Kharab Kavitayein succeeds in its experiment and purpose. This poet(?) certainly has the gumption to call bad things bad."
-    },
-    "attribution": { "hi": "अम्बुज पाण्डेय", "en": "Ambuj Pandey" },
-    "role": { "hi": "हिन्दी आलोचक", "en": "Hindi Critic" },
-    "source": { "hi": "", "en": "" },
-    "url": "",
-    "archive_url": ""
-  },
-  {
     "id": "santosh-kharab",
     "type": "testimonial",
     "canonical_id": "rishyashring-kharab-kavitayein",
@@ -641,6 +641,57 @@
     },
     "attribution": { "hi": "संतोष चतुर्वेदी", "en": "Santosh Chaturvedi" },
     "role": { "hi": "कवि व सम्पादक, पहली बार", "en": "Poet and Editor, Pehli Baar" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "kamal-kharab",
+    "type": "testimonial",
+    "canonical_id": "rishyashring-kharab-kavitayein",
+    "date": "2025-01",
+    "photo": "assets/images/reviewers/kamal-nayan.jpg",
+    "bio": { "hi": "इतिहासविद", "en": "Historian" },
+    "quote": {
+      "hi": "ऋष्यशृंग की 'खराब' कविताओं की भावभूमि एक ऐसा असंतोष है जो कवि की उसके परिवेश में व्याप्त अनाचार, पाखंड, खोखलेपन, बौद्धिक दिवालियेपन के प्रति खिन्नता से उपजा है। ऐसी खराबियों के प्रति असंतोष की विदग्ध अभिव्यक्ति हैं ये 'खराब' कविताएं।",
+      "en": "The emotional landscape of Rishyashring’s kharab kavitayein is rooted in a dissatisfaction stemming from the poet’s deep disquiet regarding the immorality, hypocrisy, hollowness, and intellectual bankruptcy pervading his milieu. These kharab kavitayein serve as a searing expression of this discontent against such ills."
+    },
+    "attribution": { "hi": "कमल नयन", "en": "Kamal Nayan" },
+    "role": { "hi": "इतिहासविद", "en": "Historian" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "aditi-kharab",
+    "type": "testimonial",
+    "canonical_id": "rishyashring-kharab-kavitayein",
+    "date": "2025-01",
+    "photo": "assets/images/reviewers/aditi-bhardwaj.jpg",
+    "bio": { "hi": "आलोचिका", "en": "Critic" },
+    "quote": {
+      "hi": "ख़राब कविताएँ व्यक्ति और उसके परिवेश के साथ होने वाले सतत संवाद का परिणाम हैं। यहाँ निजी संवेदनाओं के साथ-साथ अपने समय की संस्कृति, राजनीति, क्षद्म बौद्धिकता, अराजकता इन सबको मिलाकर एक सघन-संशलिष्ट कोलाज निर्मित किया गया है। अंत: और बाह्य के कोलाहल को समेटती कुछ बेहद सार्थक कविताओं का सुंदर संकलन हैं यह ख़राब कविताएँ।",
+      "en": "*Kharab Kavitaen* is the outcome of a ceaseless dialogue between the individual and their environment. Here, a dense and intricate collage has been crafted by interweaving personal sensibilities with the culture, politics, pseudo-intellectualism, and anarchy of the contemporary era. Encompassing the tumult of both the inner and outer worlds, *Kharab Kavitaen* stands as a beautiful collection of profoundly meaningful poems."
+    },
+    "attribution": { "hi": "अदिति भारद्वाज", "en": "Aditi Bhardwaj" },
+    "role": { "hi": "आलोचिका", "en": "Critic" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "babli-kharab",
+    "type": "testimonial",
+    "canonical_id": "rishyashring-kharab-kavitayein",
+    "date": "2025-01",
+    "photo": "assets/images/reviewers/babli-gujjar.jpg",
+    "bio": { "hi": "कवियत्री", "en": "Poetess" },
+    "quote": {
+      "hi": "ऋष्यशृंग की खराब कविताएं - ऐसे अक्खड़ कवि की कविताएं है, जिनमें आज की सच्चाई व्यंग्य में लपेट कर परोसी गई है। जी हुजूरी से कोसों दूर, अलहदा , अचूक बाण सी कविताएं....जो ऐसा ज़हर आत्मा तक उतारें कि आदमी अपने पापों का प्रायश्चित न सही पर अपनी गलतियों का अहसास कर सके। ",
+      "en": "Rishyashring’s 'Kharab Kavitayein' are the verses of an unyielding poet—one in which the realities of the present day are served up, wrapped in the garb of satire. Miles removed from sycophancy—distinctive and piercing as unerring arrows—these poems instill a poison so deep within the soul that, even if one cannot atone for one's sins, one is at least compelled to confront the realization of one's own errors."
+    },
+    "attribution": { "hi": "बबली गुज्जर", "en": "Babli Gujjar" },
+    "role": { "hi": "कवियत्री", "en": "Poetess" },
     "source": { "hi": "", "en": "" },
     "url": "",
     "archive_url": ""
