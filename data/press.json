@@ -39,16 +39,16 @@
     "archive_url": ""
   },
   {
-    "id": "outlook-india",
-    "source": "Outlook India",
-    "date": "2021-09-01",
+    "id": "indian-express",
+    "source": "The Indian Express",
+    "date": "2021-04-01",
     "canonical_id": "cinema-through-rasa",
     "quote": {
       "hi": "नई पुस्तक सौन्दर्यशास्त्र के माध्यम से सिनेमा का अन्वेषण करती है।",
       "en": "New book explores cinema through aesthetics — a significant contribution to film studies applying the classical Indian Rasa framework to masterpieces of world cinema."
     },
-    "attribution": { "hi": "आउटलुक इंडिया", "en": "Outlook India" },
-    "url": "https://www.outlookindia.com/newsscroll/new-book-explores-cinema-through-aesthetics/2056979",
+    "attribution": { "hi": "इंडियन एक्स्प्रेस", "en": "The Indian Express" },
+    "url": "https://indianexpress.com/article/books-and-literature/new-book-explores-cinema-through-aesthetics-7254199/",
     "archive_url": ""
   },
   {
