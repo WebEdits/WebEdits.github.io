@@ -28,19 +28,26 @@ edit files, commit, push, and changes are live within ~60 seconds.
 ```
 /
 ├── index.html              ← Main page (Hindi primary, English toggle)
+├── posts.html              ← Full blog post pages (reads data/posts.json)
+├── README.md               ← This file
 ├── assets/
 │   ├── css/style.css       ← All styles — edit colours/fonts here
-│   ├── js/main.js          ← All JS — renders books, testimonials, news
+│   ├── js/main.js          ← All JS — renders books, reviews, news, posts
 │   └── images/
 │       ├── covers/         ← Book cover images (one per book)
+│       ├── reviewers/      ← Reviewer photos (used by reviews.json)
 │       └── [existing gallery images]
 ├── data/
 │   ├── books.json          ← All book data (both languages) ← EDIT HERE
-│   ├── testimonials.json   ← Press quotes + scholarly endorsements ← EDIT HERE
+│   ├── reviews.json        ← Scholarly endorsements, grouped by book ← EDIT HERE
+│   ├── press.json          ← Press/media quotes ← EDIT HERE
+│   ├── interviews.json     ← Interview links accordion ← EDIT HERE
+│   ├── talks.json          ← YouTube talks / video appearances ← EDIT HERE
+│   ├── posts.json          ← Blog posts (index + full body) ← EDIT HERE
 │   └── news.json           ← New releases, announcements ← EDIT HERE
+├── tests/                  ← Playwright test suite — see "Development" below
 ├── docs/
-│   ├── README.md           ← This file
-│   ├── EDITING_GUIDE.md    ← How to add books, testimonials, news
+│   ├── EDITING_GUIDE.md    ← How to add books, reviews, news, etc.
 │   └── CLAUDE.md           ← Context for AI-assisted editing
 └── CNAME                   ← Custom domain (do not edit)
 ```
@@ -48,17 +55,41 @@ edit files, commit, push, and changes are live within ~60 seconds.
 ## Quick reference
 
 - **Add a new book** → edit `data/books.json` (see EDITING_GUIDE.md)
-- **Add a testimonial** → edit `data/testimonials.json`
+- **Add a review/endorsement** → edit `data/reviews.json`
+- **Add a press mention** → edit `data/press.json`
 - **Announce a new edition** → edit `data/news.json`
 - **Change site colours** → edit CSS custom properties at top of `assets/css/style.css`
 - **Update bio text** → edit the `data-hi` / `data-en` attributes in `index.html`
 - **Add a gallery photo** → place image in `assets/images/`, add `<div class="gallery-item">` in `index.html`
+
+## Development & testing
+
+The site has a Playwright test suite (`tests/`) that loads real pages in a
+browser and checks rendering, filters, language toggle, and modals. Run it
+after any content or code change, before pushing:
+
+```bash
+npm install                                # first time only
+npx playwright install --with-deps chromium # first time only
+npm test
+```
+
+`npm test` spins up `npx serve` on `http://localhost:4000` automatically and
+tears it down afterwards. To keep a server running so you can look at the
+page yourself, run `npx serve -l 4000` directly — if you're working over a
+VS Code remote tunnel with no local browser access to the machine, open the
+**Ports** panel in VS Code (next to the Terminal tab), forward port `4000`,
+and VS Code gives you an `https://` URL to open locally.
+
+Full details, including all `npm run test:*` variants, are in
+[docs/EDITING_GUIDE.md](docs/EDITING_GUIDE.md#how-to-test-your-changes-before-committing).
 
 ## Deployment
 
 This site deploys automatically on every push to `master`:
 
 ```bash
+npm test                                   # verify nothing broke
 git add data/books.json
 git commit -m "Add new book: [title]"
 git push origin master

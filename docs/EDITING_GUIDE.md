@@ -24,7 +24,7 @@ Open `data/books.json`. It contains a JSON array (`[...]`).
 {
   "id": "unique-book-id",
   "year": 2025,
-  "genre": { "hi": "हिन्दी काव्य", "en": "Hindi Fiction" },
+  "genre": { "key": "hindi-fiction", "hi": "हिन्दी काव्य", "en": "Hindi Fiction" },
   "title": { "hi": "हिन्दी शीर्षक", "en": "English Title" },
   "subtitle": { "hi": "", "en": "" },
   "publisher": "Publisher Name",
@@ -47,7 +47,8 @@ Open `data/books.json`. It contains a JSON array (`[...]`).
 | `year` | Yes | Publication year as a number (no quotes) |
 | `latest_edition` | No | e.g. `"3rd edition, 2026"` — shown instead of year |
 | `new_edition` | No | Set to `true` to show an orange "New Edition" badge |
-| `genre.hi` / `genre.en` | Yes | Used for the filter buttons. Options: `उपन्यास`/`Novel`, `कहानी संग्रह`/`Short Stories`, `सिनेमा सिद्धान्त`/`Cinema Theory` |
+| `genre.key` | Yes | Language-independent genre id. **This is what drives the filter buttons** — see table below. If you omit it, the book still displays under "All" but disappears when any specific genre filter is clicked. |
+| `genre.hi` / `genre.en` | Yes | Display text for the genre, shown on the book card. Must be paired with the matching `genre.key` below. |
 | `title.hi` / `title.en` | Yes | Book title in both languages |
 | `subtitle.hi` / `subtitle.en` | No | Leave `""` if none |
 | `publisher` | Yes | Publisher name |
@@ -58,12 +59,19 @@ Open `data/books.json`. It contains a JSON array (`[...]`).
 | `links.flipkart` | No | Flipkart URL |
 | `links.amazon_com` | No | Amazon US URL |
 
-### Genre values (copy exactly)
+### Genre values (copy exactly — all four fields must match a row)
 
-```
-Hindi: हिन्दी काव्य / हिन्दी कथेतर गद्य / English Fiction / English Non-Fiction
-English: Hindi Fiction / Hindi Non-Fiction / English Fiction / English Non-Fiction
-```
+| `genre.key` | `genre.hi` | `genre.en` |
+|-------------|------------|------------|
+| `hindi-fiction` | हिन्दी काव्य | Hindi Fiction |
+| `hindi-nonfiction` | हिन्दी कथेतर गद्य | Hindi Non-Fiction |
+| `english-fiction` | English Fiction | English Fiction |
+| `english-nonfiction` | English Non-Fiction | English Non-Fiction |
+
+The filter buttons on the site are generated automatically from whatever
+`genre.key` values appear in `books.json` — you don't need to edit any
+other file to add a book to an existing genre. Using a `key` not in this
+table just creates a new filter button labelled with the raw key text.
 
 ### Don't forget the comma
 
@@ -88,48 +96,69 @@ If no image is uploaded, the site shows a text placeholder — that's fine.
 
 ## How to add a testimonial or scholarly endorsement
 
-Open `data/testimonials.json`. It has two sections:
+### Add a scholarly endorsement / review
 
-- `"author"` — scholarly endorsements (displayed in the main Reviews section)
-- `"press"` — press and media quotes (displayed in the Press section)
-
-### Add a scholarly endorsement
-
-In the `"author"` array, add a new object:
+Open `data/reviews.json` (a flat array) and add a new object:
 
 ```json
 {
   "id": "unique-id",
-  "book_id": "abhinav-cinema",
-  "quote": {
-    "hi": "हिन्दी उद्धरण...",
-    "en": "English translation of the quote..."
-  },
+  "type": "review",
+  "canonical_id": "abhinav-cinema",
+  "date": "2026-03",
+  "photo": "assets/images/reviewers/reviewer-name.jpg",
+  "bio": { "hi": "परिचय...", "en": "Short bio..." },
+  "quote": { "hi": "हिन्दी उद्धरण...", "en": "English translation of the quote..." },
   "attribution": { "hi": "डॉ॰ नाम", "en": "Dr. Name" },
-  "role": { "hi": "पद / संस्था", "en": "Role / Institution" }
+  "role": { "hi": "पद / संस्था", "en": "Role / Institution" },
+  "source": { "hi": "स्रोत", "en": "Where the quote is from" },
+  "url": "",
+  "archive_url": ""
 }
 ```
 
-`book_id` must match the `id` field of a book in `books.json`.
-It's used to label which book the endorsement is for.
+`canonical_id` must match a book's `canonical_id` (or `id`, if it has no
+editions) in `books.json` — reviews are grouped by book on the page.
+`photo`, `bio`, `url`, and `archive_url` are all optional; leave them `""`
+if not applicable.
 
 ### Add a press mention
 
-In the `"press"` array, add:
+Open `data/press.json` (a flat array) and add:
 
 ```json
 {
   "id": "unique-id",
   "source": "Publication Name",
-  "book_id": "alpahari-grihatyagi",
-  "quote": {
-    "hi": "हिन्दी उद्धरण...",
-    "en": "English..."
-  },
+  "date": "2026-05-06",
+  "canonical_id": "alpahari-grihatyagi",
+  "quote": { "hi": "हिन्दी उद्धरण...", "en": "English..." },
   "attribution": { "hi": "लेखक नाम", "en": "Author Name" },
-  "url": "https://link-to-article.com"
+  "url": "https://link-to-article.com",
+  "archive_url": ""
 }
 ```
+
+### Add an interview link
+
+Open `data/interviews.json` (a flat array) and add:
+
+```json
+{
+  "id": "unique-id",
+  "source": "Publication Name",
+  "date": "2026-05-06",
+  "title": { "hi": "साक्षात्कार का शीर्षक", "en": "Interview title" },
+  "url": "https://link-to-article.com",
+  "archive_url": ""
+}
+```
+
+### Add a talk / video
+
+Open `data/talks.json`. Each entry can either list YouTube `videos` (rendered
+as embedded cards) or be a text-only item with no `videos` array (listed in
+the text section). See existing entries for the exact shape.
 
 ---
 
@@ -229,10 +258,68 @@ committing to catch any syntax errors.
 
 ---
 
+## How to test your changes before committing
+
+This repo has an automated test suite (Playwright) that loads the real
+site in a browser and checks that books, filters, reviews, the
+language toggle, etc. all still render correctly. Run it after any edit
+to `data/` or `index.html`/`main.js` — it catches things a JSON linter
+can't, like a genre filter silently losing a book (see the `genre.key`
+note above).
+
+**First-time setup** (once per machine):
+
+```bash
+npm install
+npx playwright install --with-deps chromium
+```
+
+**Run the full suite:**
+
+```bash
+npm test
+```
+
+This starts a local static server on `http://localhost:4000` automatically
+(via `npx serve`, configured in `playwright.config.js`), runs every spec in
+`tests/`, and shuts the server down again. All green output means nothing
+broke.
+
+**Other useful modes:**
+
+```bash
+npm run test:headed   # same tests, but shows an actual browser window
+npm run test:ui       # interactive Playwright UI — step through tests, inspect the page
+npx playwright test tests/books.spec.js   # run just one spec file
+npx playwright show-report                # view the HTML report of the last run
+```
+
+### Previewing the site visually (not just tests)
+
+If you want to *see* the page yourself rather than only trusting test
+output — for example over a VS Code remote tunnel, where you can't reach
+a "forwarded port" the normal way — run:
+
+```bash
+npx serve -l 4000
+```
+
+and then use VS Code's **Ports** panel (bottom panel, next to Terminal) —
+click **Forward a Port** and enter `4000` if it isn't listed automatically.
+VS Code will give you a `https://...` forwarded URL you can open in your
+local browser. (When Playwright's own `npm test` starts the server for
+you, it shuts it down again after the run, so it's not there long enough
+to forward — start it yourself with the command above if you want to
+click around manually.)
+
+---
+
 ## Git workflow (quick reference)
 
 ```bash
 # Make your edits to data/books.json (or other files)
+
+npm test                     # run the test suite first — see above
 
 git add data/books.json
 git commit -m "Add book: Title of New Book"
