@@ -34,23 +34,6 @@
     "archive_url": ""
   },
   {
-    "id": "gupt-varnochchar",
-    "type": "review",
-    "canonical_id": "varnochchar-vidhan",
-    "date": "2026-03",
-    "photo": "assets/images/reviewers/bharat-gupt-2.jpg",
-    "bio": { "hi": "पद्म श्री, प्राध्यापक, दिल्ली विश्वविद्यालय। भारतीय नाट्यशास्त्र और सौन्दर्यशास्त्र के अग्रणी विद्वान।", "en": "Padma Shri; Professor, University of Delhi. Leading scholar of Indian dramaturgy and aesthetics, author of Dramatic Concepts Greek & Indian (1994)." },
-    "quote": {
-      "hi": "मैं कहूँगा कि ये अत्यंत उपयोगी ही नहीं अद्भुत पुस्तक है। इसका कुछ भारतीय भाषाओं में विभिन्न भाषाओं में अनुवाद होना चाहिए।",
-      "en": "I would say that this is not merely an extremely useful book, but a truly remarkable one. It should be translated into various Indian languages."
-    },
-    "attribution": { "hi": "डॉ॰ भरत गुप्त", "en": "Dr. Bharat Gupt" },
-    "role": { "hi": "पद्म श्री, प्रसिद्ध भारतविद तथा सेवानिवृत अँग्रेजी प्राध्यापक", "en": "Padma Shri; Professor, University of Delhi" },
-    "source": { "hi": "", "en": "" },
-    "url": "https://www.youtube.com/watch?v=QGzZZrNrmRM",
-    "archive_url": ""
-  },
-  {
     "id": "tripathi",
     "type": "review",
     "canonical_id": "abhinav-cinema",
@@ -71,7 +54,7 @@
     "id": "sharma",
     "type": "review",
     "canonical_id": "abhinav-cinema",
-    "date": "2026-03",
+    "date": "2020-06",
     "photo": "assets/images/reviewers/ambikadatt-sharma.jpg",
     "bio": { "hi": "साहित्यकार एवं समालोचक।", "en": "Scholar and critic." },
     "quote": {
@@ -88,7 +71,7 @@
     "id": "kalpit-abhinav",
     "type": "review",
     "canonical_id": "abhinav-cinema",
-    "date": "2026-03",
+    "date": "2020-06",
     "photo": "assets/images/reviewers/krishna-kalpit.jpg",
     "bio": { "hi": "हिन्दी के प्रमुख कवि व गद्यकार। राजस्थान साहित्य अकादमी पुरस्कार से सम्मानित।", "en": "Prominent Hindi poet and prose writer. Recipient of the Rajasthan Sahitya Akademi Award." },
     "quote": {
@@ -105,7 +88,7 @@
     "id": "trivedi-abhinav",
     "type": "review",
     "canonical_id": "abhinav-cinema",
-    "date": "2026-03",
+    "date": "2020-06",
     "photo": "assets/images/reviewers/harish-trivedi.jpg",
     "bio": { "hi": "अँग्रेज़ी, भारतीय एवं तुलनात्मक साहित्य के प्रतिष्ठित विद्वान। दिल्ली विश्वविद्यालय में प्राध्यापक रहे।", "en": "Distinguished scholar of English, Indian & Comparative Literature. Former Professor at University of Delhi." },
     "quote": {
@@ -122,7 +105,7 @@
     "id": "vishnu-khare",
     "type": "review",
     "canonical_id": "abhinav-cinema",
-    "date": "2016-01",
+    "date": "2015-12",
     "photo": "assets/images/reviewers/vishnu-khare.jpg",
     "bio": { "hi": "वरिष्ठ हिन्दी कवि एवं आलोचक। साहित्य अकादमी पुरस्कार से सम्मानित।", "en": "Senior Hindi poet and critic. Recipient of the Sahitya Akademi Award." },
     "quote": {
@@ -139,7 +122,7 @@
     "id": "shivmurti",
     "type": "review",
     "canonical_id": "abhinav-cinema",
-    "date": "2026-03",
+    "date": "2020-06",
     "photo": "assets/images/reviewers/shivmurti.jpg",
     "bio": { "hi": "प्रसिद्ध हिन्दी कथाकार। 'तिरिया चरित्तर', 'सिरी उपमा जोग', 'कसाईबाड़ा' जैसी चर्चित कहानियों के लेखक।", "en": "Renowned Hindi fiction writer, known for celebrated stories like 'Tiriya Charittar' and 'Kasaibaada'." },
     "quote": {
@@ -156,7 +139,7 @@
     "id": "vinod-bhardwaj",
     "type": "review",
     "canonical_id": "abhinav-cinema",
-    "date": "2026-03",
+    "date": "2020-06",
     "photo": "assets/images/reviewers/vinod-bhardwaj.jpg",
     "bio": { "hi": "कवि, कथाकार एवं सिने-आलोचक। हिन्दी में सिनेमा-लेखन के अग्रणी नामों में से एक।", "en": "Poet, fiction writer and film critic. One of the foremost names in Hindi cinema writing." },
     "quote": {
@@ -173,7 +156,7 @@
     "id": "gyan-ranjan",
     "type": "review",
     "canonical_id": "abhinav-cinema",
-    "date": "2026-03",
+    "date": "2020-06",
     "photo": "assets/images/reviewers/gyan-ranjan.jpg",
     "bio": { "hi": "प्रसिद्ध हिन्दी कथाकार एवं सम्पादक। 'पहल' पत्रिका के संस्थापक-सम्पादक।", "en": "Renowned Hindi writer and founder-editor of Pahal, one of Hindi's most influential literary magazines." },
     "quote": {
@@ -190,7 +173,7 @@
     "id": "kumar-ambuj",
     "type": "review",
     "canonical_id": "abhinav-cinema",
-    "date": "2026-03",
+    "date": "2020-06",
     "photo": "assets/images/reviewers/kumar-ambuj.jpg",
     "bio": { "hi": "हिन्दी के प्रतिष्ठित कवि। भारत भूषण अग्रवाल पुरस्कार एवं केदार सम्मान से सम्मानित।", "en": "Acclaimed Hindi poet, recipient of the Bharat Bhushan Aggarwal Award and Kedar Samman." },
     "quote": {
@@ -207,7 +190,7 @@
     "id": "ambuj-pandey",
     "type": "review",
     "canonical_id": "abhinav-cinema",
-    "date": "2026-03",
+    "date": "2020-06",
     "photo": "assets/images/reviewers/ambuj-pandey.jpg",
     "bio": { "hi": "हिन्दी आलोचक।", "en": "Hindi critic." },
     "quote": {
@@ -224,7 +207,7 @@
     "id": "vinod-anupam",
     "type": "review",
     "canonical_id": "abhinav-cinema",
-    "date": "2026-03",
+    "date": "2024-08",
     "photo": "assets/images/reviewers/vinod-anupam.jpg",
     "bio": { "hi": "प्रसिद्ध हिन्दी लेखक एवं सम्पादक।", "en": "Renowned Hindi writer and editor." },
     "quote": {
@@ -241,7 +224,7 @@
     "id": "vinod-padraj",
     "type": "testimonial",
     "canonical_id": "abhinav-cinema",
-    "date": "2026-03",
+    "date": "2020-06",
     "photo": "assets/images/reviewers/vinod-padraj.jpg",
     "bio": { "hi": "वरिष्ठ हिन्दी कवि।", "en": "Senior Hindi poet." },
     "quote": {
@@ -258,7 +241,7 @@
     "id": "Jaishankar",
     "type": "testimonial",
     "canonical_id": "abhinav-cinema",
-    "date": "2026-03",
+    "date": "2020-06",
     "photo": "assets/images/reviewers/jaishankar.jpg",
     "bio": { "hi": "प्रसिद्ध कथाकार तथा आलोचक", "en": "Famous writer and critic." },
     "quote": {
@@ -272,10 +255,27 @@
     "archive_url": ""
   },
   {
+    "id": "gupt-varnochchar",
+    "type": "review",
+    "canonical_id": "varnochchar-vidhan",
+    "date": "2026-03",
+    "photo": "assets/images/reviewers/bharat-gupt-2.jpg",
+    "bio": { "hi": "पद्म श्री, प्राध्यापक, दिल्ली विश्वविद्यालय। भारतीय नाट्यशास्त्र और सौन्दर्यशास्त्र के अग्रणी विद्वान।", "en": "Padma Shri; Professor, University of Delhi. Leading scholar of Indian dramaturgy and aesthetics, author of Dramatic Concepts Greek & Indian (1994)." },
+    "quote": {
+      "hi": "मैं कहूँगा कि ये अत्यंत उपयोगी ही नहीं अद्भुत पुस्तक है। इसका कुछ भारतीय भाषाओं में विभिन्न भाषाओं में अनुवाद होना चाहिए।",
+      "en": "I would say that this is not merely an extremely useful book, but a truly remarkable one. It should be translated into various Indian languages."
+    },
+    "attribution": { "hi": "डॉ॰ भरत गुप्त", "en": "Dr. Bharat Gupt" },
+    "role": { "hi": "पद्म श्री, प्रसिद्ध भारतविद तथा सेवानिवृत अँग्रेजी प्राध्यापक", "en": "Padma Shri; Professor, University of Delhi" },
+    "source": { "hi": "", "en": "" },
+    "url": "https://www.youtube.com/watch?v=QGzZZrNrmRM",
+    "archive_url": ""
+  },
+  {
     "id": "trivedi-alpahari",
     "type": "review",
     "canonical_id": "alpahari-grihatyagi",
-    "date": "2010-01",
+    "date": "2015-06",
     "photo": "assets/images/reviewers/harish-trivedi.jpg",
     "bio": { "hi": "अँग्रेज़ी, भारतीय एवं तुलनात्मक साहित्य के प्रतिष्ठित विद्वान।", "en": "Distinguished scholar of English, Indian & Comparative Literature." },
     "quote": {
@@ -292,7 +292,7 @@
     "id": "kranti-alpahari",
     "type": "testimonial",
     "canonical_id": "alpahari-grihatyagi",
-    "date": "2010-01",
+    "date": "2015-06",
     "photo": "assets/images/reviewers/r-chetan-kranti.jpg",
     "bio": { "hi": "भारतभूषण अग्रवाल पुरस्कार से सम्मानित हिन्दी कवि।", "en": "Hindi poet, recipient of the Bharatbhushan Agarwal Award." },
     "quote": {
@@ -309,7 +309,7 @@
     "id": "kalpit-alpahari",
     "type": "testimonial",
     "canonical_id": "alpahari-grihatyagi",
-    "date": "2010-01",
+    "date": "2015-06",
     "photo": "assets/images/reviewers/krishna-kalpit.jpg",
     "bio": { "hi": "हिन्दी के प्रमुख कवि व गद्यकार। राजस्थान साहित्य अकादमी पुरस्कार से सम्मानित।", "en": "Prominent Hindi poet and prose writer. Recipient of the Rajasthan Sahitya Akademi Award." },
     "quote": {
@@ -343,7 +343,7 @@
     "id": "avinash-jaana-nahi",
     "type": "testimonial",
     "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2016-01",
+    "date": "2016-07",
     "photo": "assets/images/reviewers/avinash-mishr.jpg",
     "bio": { "hi": "हिन्दी में सक्रिय श्रेष्ठ युवतम प्रतिभाओं में से एक। कवि-आलोचक।", "en": "One of the finest young talents active in Hindi today. Poet and critic." },
     "quote": {
@@ -360,7 +360,7 @@
     "id": "pratyaksha-jaana-nahi",
     "type": "testimonial",
     "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2016-01",
+    "date": "2016-07",
     "photo": "assets/images/reviewers/pratyaksha.jpg",
     "bio": { "hi": "हिन्दी और अंग्रेजी में समान तीक्ष्णता रखने वाली लेखिका होने के साथ-साथ कुशल फोटोग्राफर व चित्रकार भी हैं। प्रमुख कृतियाँ: 'जंगल का जादू तिल तिल' (२००७), 'पहर-दोपहरी ठुमरी' (२०११)।", "en": "Writer of equal acuity in Hindi and English, also a skilled photographer and painter. Major works include 'Jungle ka Jaadoo' (2007) and 'Pahar-Dopahari Thumri' (2011)." },
     "quote": {
@@ -377,7 +377,7 @@
     "id": "anu-singh-jaana-nahi",
     "type": "testimonial",
     "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2016-01",
+    "date": "2016-07",
     "photo": "assets/images/reviewers/anu-singh-chaudhury.jpg",
     "bio": { "hi": "कुशल संपादिका, अनुवादिका, पत्रकार और वृत्तचित्र निर्मात्री। रामनाथ गोयनका सम्मान से सम्मानित। प्रमुख कृतियाँ: 'नीला स्कार्फ' (२०१४), 'मम्मा की डायरी' (२०१५)।", "en": "Editor, translator, journalist and documentary filmmaker. Ramnath Goenka Award recipient. Major works: 'Neela Scarf' (2014), 'Mamma Ki Diary' (2015)." },
     "quote": {
@@ -394,7 +394,7 @@
     "id": "meenakshi-jaana-nahi",
     "type": "testimonial",
     "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2016-01",
+    "date": "2016-07",
     "photo": "assets/images/reviewers/meenakshi-thakur.jpg",
     "bio": { "hi": "यूनाइटेड किंगडम में जन्मीं मीनाक्षी ठाकुर पटना में पली बढ़ी हैं। ख़याल और ध्रुपद गायकी में सोलह साल का प्रशिक्षण। हार्पर कॉलिंस इंडिया में वरिष्ठ संपादिका।", "en": "Born in the United Kingdom, raised in Patna. Sixteen years of training in Khayal and Dhrupad. Senior Editor at HarperCollins India." },
     "quote": {
@@ -411,7 +411,7 @@
     "id": "prayag-shukla-jaana-nahi",
     "type": "testimonial",
     "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2016-01",
+    "date": "2016-07",
     "photo": "assets/images/reviewers/prayag-shukla.jpg",
     "bio": { "hi": "कवि, कहानीकार, संपादक, अनुवादक एवं कला समीक्षक। साहित्य अकादमी अनुवाद पुरस्कार, शरद जोशी सम्मान से सम्मानित। 'कल्पना', 'दिनमान' और 'नवभारत टाइम्स' के संपादकीय विभाग में रहे।", "en": "Poet, fiction writer, editor, translator and art critic. Recipient of the Sahitya Akademi Translation Award and Sharad Joshi Samman. Worked in editorial at Kalpana, Dinman and Navbharat Times." },
     "quote": {
@@ -428,7 +428,7 @@
     "id": "vandana-raag-jaana-nahi",
     "type": "testimonial",
     "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2016-01",
+    "date": "2016-07",
     "photo": "assets/images/reviewers/vandana-raag.jpg",
     "bio": { "hi": "इक्कीसवीं सदी के हिन्दी साहित्य की प्रमुख लेखिकाओं में से एक। कृष्ण प्रताप स्मृति पुरस्कार से सम्मानित। प्रमुख कृतियाँ: 'यूटोपिया' (२०१०), 'हिजरत से पहले' (२०१५)।", "en": "One of the foremost writers of Hindi literature in the 21st century. Krishna Pratap Smriti Award recipient. Major works: 'Utopia' (2010), 'Hijrat Se Pehle' (2015)." },
     "quote": {
@@ -445,7 +445,7 @@
     "id": "sadaf-naaz-jaana-nahi",
     "type": "testimonial",
     "canonical_id": "jaana-nahi-dil-se-door",
-    "date": "2016-01",
+    "date": "2016-07",
     "photo": "assets/images/reviewers/sadaf-naaz.jpg",
     "bio": { "hi": "हिन्दी लेखिका।", "en": "Hindi writer." },
     "quote": {
@@ -547,7 +547,7 @@
     "id": "rohini-mitne",
     "type": "testimonial",
     "canonical_id": "mitne-ka-adhikar",
-    "date": "2024-01",
+    "date": "2024-05",
     "photo": "assets/images/reviewers/rohini-aggrawal.jpg",
     "bio": { "hi": "हिन्दी की प्रतिष्ठित आलोचक। महात्मा गाँधी अन्तर्राष्ट्रीय हिन्दी विश्वविद्यालय में प्राध्यापक।", "en": "Distinguished Hindi critic. Professor at Mahatma Gandhi International Hindi University." },
     "quote": {
@@ -564,7 +564,7 @@
     "id": "garima-mitne",
     "type": "testimonial",
     "canonical_id": "mitne-ka-adhikar",
-    "date": "2024-01",
+    "date": "2024-05",
     "photo": "assets/images/reviewers/garima-shrivastava.jpg",
     "bio": { "hi": "हिन्दी विभाग, दिल्ली विश्वविद्यालय में प्राध्यापक। सुविख्यात आलोचक और लेखिका।", "en": "Professor, Hindi Department, University of Delhi. Celebrated critic and writer." },
     "quote": {
