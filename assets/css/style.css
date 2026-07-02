@@ -691,9 +691,9 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   position: absolute; inset: 0;
   background: linear-gradient(
     to top,
-    rgba(10,7,3,0.96) 0%,
-    rgba(10,7,3,0.75) 55%,
-    rgba(10,7,3,0.45) 100%
+    rgba(10,7,3,0.85) 0%,
+    rgba(10,7,3,0.55) 55%,
+    rgba(10,7,3,0.2) 100%
   );
 }
 
