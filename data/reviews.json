@@ -17,6 +17,23 @@
     "archive_url": ""
   },
   {
+    "id": "vishnu-khare",
+    "type": "review",
+    "canonical_id": "abhinav-cinema",
+    "date": "2015-12",
+    "photo": "assets/images/reviewers/vishnu-khare.jpg",
+    "bio": { "hi": "वरिष्ठ हिन्दी कवि एवं आलोचक। साहित्य अकादमी पुरस्कार से सम्मानित।", "en": "Senior Hindi poet and critic. Recipient of the Sahitya Akademi Award." },
+    "quote": {
+      "hi": "यह पुस्तक सही अर्थों में अपने क्षेत्र में एकदम नयी दृष्टि रखती और देती है, नूतन मार्ग बनाती है और अग्रगामी है। यह ऐसी अद्वितीय पुस्तक है कि मैं सख़्त सिफ़ारिश करता हूँ कि इसे सिनेमा तथा हिन्दी के पाठ्यक्रम में अनिवार्यतः सम्मानजनक जगह दी जाए।",
+      "en": "This book offers a completely new vision in its field, forging new paths and moving forward. I strongly recommend it be given an obligatory place of honour in curricula on cinema and Hindi."
+    },
+    "attribution": { "hi": "विष्णु खरे", "en": "Vishnu Khare" },
+    "role": { "hi": "वरिष्ठ कवि एवं आलोचक", "en": "Senior Poet and Critic" },
+    "source": { "hi": "नवभारत टाइम्स", "en": "Navbharat Times" },
+    "url": "http://blogs.navbharattimes.indiatimes.com/vishnukhare/prachand-praveers-book/",
+    "archive_url": ""
+  },
+  {
     "id": "gupt",
     "type": "review",
     "canonical_id": "abhinav-cinema",
@@ -99,23 +116,6 @@
     "role": { "hi": "अँग्रेज़ी, भारतीय एवं तुलनात्मक साहित्य के विद्वान", "en": "Scholar of English, Indian & Comparative Literature" },
     "source": { "hi": "अभिनव सिनेमा (तृतीय संस्करण) प्रस्तावना", "en": "Foreword, Abhinav Cinema (3rd edition)" },
     "url": "",
-    "archive_url": ""
-  },
-  {
-    "id": "vishnu-khare",
-    "type": "review",
-    "canonical_id": "abhinav-cinema",
-    "date": "2015-12",
-    "photo": "assets/images/reviewers/vishnu-khare.jpg",
-    "bio": { "hi": "वरिष्ठ हिन्दी कवि एवं आलोचक। साहित्य अकादमी पुरस्कार से सम्मानित।", "en": "Senior Hindi poet and critic. Recipient of the Sahitya Akademi Award." },
-    "quote": {
-      "hi": "यह पुस्तक सही अर्थों में अपने क्षेत्र में एकदम नयी दृष्टि रखती और देती है, नूतन मार्ग बनाती है और अग्रगामी है। यह ऐसी अद्वितीय पुस्तक है कि मैं सख़्त सिफ़ारिश करता हूँ कि इसे सिनेमा तथा हिन्दी के पाठ्यक्रम में अनिवार्यतः सम्मानजनक जगह दी जाए।",
-      "en": "This book offers a completely new vision in its field, forging new paths and moving forward. I strongly recommend it be given an obligatory place of honour in curricula on cinema and Hindi."
-    },
-    "attribution": { "hi": "विष्णु खरे", "en": "Vishnu Khare" },
-    "role": { "hi": "वरिष्ठ कवि एवं आलोचक", "en": "Senior Poet and Critic" },
-    "source": { "hi": "नवभारत टाइम्स", "en": "Navbharat Times" },
-    "url": "http://blogs.navbharattimes.indiatimes.com/vishnukhare/prachand-praveers-book/",
     "archive_url": ""
   },
   {

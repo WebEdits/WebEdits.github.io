@@ -4,13 +4,32 @@
     "date": "2026-05-19",
     "tags": ["cinema", "philosophy"],
     "title": {
-      "hi": "उदाहरण लेख — इसे हटाएँ और अपना पहला लेख जोड़ें",
-      "en": "Example Post — Delete this and add your first post"
+      "hi": "उदाहरण लेख — इसे हटाएँ और अपना पहला लेख यहीं लिखें",
+      "en": "Example Post — Delete this and write your first post here"
     },
-    "image": "assets/images/bg3.jpg",
-    "excerpt": {
-      "hi": "यह एक उदाहरण लेख है। data/posts/example-post.json में पूरा लेख देखें। इसे हटाकर अपना पहला लेख जोड़ें।",
-      "en": "This is an example post. See the full post in data/posts/example-post.json. Delete this and add your first post."
-    }
+    "image": "",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": {
+          "hi": "यह एक उदाहरण लेख है। इस पूरी प्रविष्टि को data/posts.json से हटाएँ और अपना पहला लेख उसी तरह जोड़ें।",
+          "en": "This is an example post. Delete this entire entry from data/posts.json and add your first post in the same format."
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "hi": "नया लेख कैसे जोड़ें",
+          "en": "How to add a new post"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "hi": "data/posts.json खोलें। इस उदाहरण को हटाएँ। अपना लेख JSON ऑब्जेक्ट के रूप में जोड़ें — title, date, image और body ब्लॉक्स के साथ। body में paragraph, heading और image ब्लॉक हो सकते हैं।",
+          "en": "Open data/posts.json. Delete this example. Add your post as a JSON object with title, date, image, and body blocks. The body can contain paragraph, heading, and image blocks."
+        }
+      }
+    ]
   }
 ]

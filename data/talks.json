@@ -1,86 +1,92 @@
 [
   {
     "id": "sangam-humor-2026",
-    "date": "2026-04",
-    "title": {
-      "hi": "अभिनवगुप्त की हास्य-अवधारणा — संगम टॉक्स",
-      "en": "Abhinavagupta's Conception of Humor — Sangam Talks"
+    "seriesTitle": {
+      "hi": "अभिनवगुप्त की हास्य-अवधारणा",
+      "en": "Abhinavagupta's Conception of Humor"
     },
     "description": {
-      "hi": "डॉ॰ सुन्दर विषुवलिंगम के साथ संवाद में — अभिनवगुप्त की दृष्टि में हास्य रस का विश्लेषण।",
-      "en": "In conversation with Dr. Sunthar Visuvalingam — an analysis of humour through Abhinavagupta's conception of Rasa."
+      "hi": "डॉ॰ सुन्दर विषुवलिंगम के साथ संवाद में — अभिनवगुप्त की दृष्टि में हास्य रस का विश्लेषण — संगम टॉक्स।",
+      "en": "In conversation with Dr. Sunthar Visuvalingam — an analysis of humour through Abhinavagupta's conception of Rasa — Sangam Talks."
     },
     "videos": [
-      { "youtube_id": "ErJZlm_USFE", "label": { "hi": "भाग १", "en": "Part 1" } },
-      { "youtube_id": "5OjjZvxszCc", "label": { "hi": "भाग २", "en": "Part 2" } },
-      { "youtube_id": "T5gduYLvssY", "label": { "hi": "भाग ३", "en": "Part 3" } },
-      { "youtube_id": "STs6oBu5G8c", "label": { "hi": "भाग ४", "en": "Part 4" } }
+      { "youtube_id": "ErJZlm_USFE", "date": "2026-03-27", "title": { "hi": "भाग १", "en": "Part 1" } },
+      { "youtube_id": "5OjjZvxszCc", "date": "2026-04-03", "title": { "hi": "भाग २", "en": "Part 2" } },
+      { "youtube_id": "T5gduYLvssY", "date": "2026-04-10", "title": { "hi": "भाग ३", "en": "Part 3" } },
+      { "youtube_id": "STs6oBu5G8c", "date": "2026-04-21", "title": { "hi": "भाग ४", "en": "Part 4" } }
     ]
   },
   {
     "id": "dhvani-sandarbha-2026",
-    "date": "2026-04",
-    "title": {
-      "hi": "सन्दर्भ गोष्ठी: भारतीय ध्वनि-तत्त्वशास्त्र में वर्णविलास",
-      "en": "Seminar: Varna Vilas in Indian Phonology"
-    },
     "description": {
       "hi": "वर्णोच्चार विधान पर केन्द्रित विद्वत्-संगोष्ठी।",
       "en": "A scholarly seminar centred on Varnochchar Vidhan and Indian classical phonology."
     },
     "videos": [
-      { "youtube_id": "BYskwfUZvYY", "label": { "hi": "संगोष्ठी", "en": "Seminar" } }
+      {
+        "youtube_id": "BYskwfUZvYY",
+        "date": "2026-04-29",
+        "title": {
+          "hi": "सन्दर्भ गोष्ठी: भारतीय ध्वनि-तत्त्वशास्त्र में वर्णविलास",
+          "en": "Seminar: Varna Vilas in Indian Phonology"
+        }
+      }
     ]
   },
   {
     "id": "varnochchar-launch-2026",
-    "date": "2026-01",
-    "title": {
-      "hi": "वर्णोच्चार विधान — पुस्तक लोकार्पण",
-      "en": "Book Launch: Varnochchar Vidhan"
-    },
     "description": {
       "hi": "भारतीय शास्त्रीय ध्वनितत्त्वशास्त्र पर नई पुस्तक का लोकार्पण समारोह।",
       "en": "Launch event for the new book on Indian classical phonology."
     },
     "videos": [
-      { "youtube_id": "_CYIZOBA0QU", "label": { "hi": "लोकार्पण", "en": "Launch" } }
+      {
+        "youtube_id": "_CYIZOBA0QU",
+        "date": "2026-01-12",
+        "title": {
+          "hi": "वर्णोच्चार विधान — पुस्तक लोकार्पण",
+          "en": "Book Launch: Varnochchar Vidhan"
+        }
+      }
     ]
   },
   {
-    "id": "natyashastra-2025",
-    "date": "2025-07",
-    "title": {
-      "hi": "द इंडिक पेन - रस सिद्धान्त और विश्व सिनेेमा",
-      "en": "TheIndicPen - Rasa Theory and World Cinema"
-    },
+    "id": "natyashastra-2024",
     "description": {
       "hi": "प्रचण्ड प्रवीर के साथ भरत मुनि के नाट्यशास्त्र और रस सिद्धांत का कश्मीर और उसका कालातीत ज्ञान।",
       "en": "Kashmir & Its Timeless Wisdom of Bharat Muni's Natyashastra and Rasa Theory with Prachand Praveer"
     },
     "videos": [
-      { "youtube_id": "ZjQuyWp0bsI", "label": { "hi": "साक्षात्कार", "en": "Interview" } }
+      {
+        "youtube_id": "ZjQuyWp0bsI",
+        "date": "2024-10-19",
+        "title": {
+          "hi": "द इंडिक पेन - रस सिद्धान्त और विश्व सिनेेमा",
+          "en": "TheIndicPen - Rasa Theory and World Cinema"
+        }
+      }
     ]
   },
   {
     "id": "aahopurushika-2025",
-    "date": "2025-07",
-    "title": {
-      "hi": "आहोपुरुषिका — संगम टॉक्स",
-      "en": "Aahopurushika — Sangam Talks"
-    },
     "description": {
       "hi": "डॉ॰ वागीश शुक्ल के साथ साक्षात्कार।",
       "en": "Interview with Dr. Wagish Shukla on the concept of Aahopurushika in classical aesthetics."
     },
     "videos": [
-      { "youtube_id": "lBOQRM8OQiQ", "label": { "hi": "साक्षात्कार", "en": "Interview" } }
+      {
+        "youtube_id": "lBOQRM8OQiQ",
+        "date": "2025-07-30",
+        "title": {
+          "hi": "आहोपुरुषिका — संगम टॉक्स",
+          "en": "Aahopurushika — Sangam Talks"
+        }
+      }
     ]
   },
   {
     "id": "kashmir-shaivism-2024",
-    "date": "2024-11",
-    "title": {
+    "seriesTitle": {
       "hi": "कश्मीर शिवाद्वयवाद — डॉ॰ नवजीवन रस्तोगी के साथ संवाद",
       "en": "Kashmir Shaivism — Interview with Dr. Navjivan Rastogi"
     },
@@ -89,16 +95,15 @@
       "en": "An in-depth conversation with Dr. Navjivan Rastogi, senior scholar of Kashmir Shaivism, on the Sangam Talks platform."
     },
     "videos": [
-      { "youtube_id": "d35B1sB4iVo", "label": { "hi": "भाग १", "en": "Part 1" } },
-      { "youtube_id": "Lm0R7J7O6EY", "label": { "hi": "भाग २", "en": "Part 2" } },
-      { "youtube_id": "Qn83yD63giw", "label": { "hi": "भाग ३", "en": "Part 3" } },
-      { "youtube_id": "i9l_ztozq0Q", "label": { "hi": "भाग ४", "en": "Part 4" } }
+      { "youtube_id": "d35B1sB4iVo", "date": "2024-12-01", "title": { "hi": "भाग १", "en": "Part 1" } },
+      { "youtube_id": "Lm0R7J7O6EY", "date": "2024-12-08", "title": { "hi": "भाग २", "en": "Part 2" } },
+      { "youtube_id": "Qn83yD63giw", "date": "2024-12-15", "title": { "hi": "भाग ३", "en": "Part 3" } },
+      { "youtube_id": "i9l_ztozq0Q", "date": "2024-12-22", "title": { "hi": "भाग ४", "en": "Part 4" } }
     ]
   },
   {
     "id": "acharya-tripathi-reviews",
-    "date": "2024-01",
-    "title": {
+    "seriesTitle": {
       "hi": "आचार्य राधावल्लभ त्रिपाठी की पुस्तक समीक्षाएँ",
       "en": "Book Reviews by Acharya Radhavallabh Tripathi"
     },
@@ -107,71 +112,80 @@
       "en": "Lecture-reviews by Acharya Radhavallabh Tripathi on Prachand Praveer's books — Ritambhara, Varnochchar Vidhan, Rishyashring Ki Kharab Kavitayein, Mitne Ka Adhikar, and Uttarayan-Dakshinayan."
     },
     "videos": [
-      { "youtube_id": "1WFZe48S3QY", "label": { "hi": "ऋतम्भरा", "en": "Ritambhara" } },
-      { "youtube_id": "l28P0AXpyLY", "label": { "hi": "वर्णोच्चार विधान", "en": "Varnochchar Vidhan" } },
-      { "youtube_id": "gwyZqIHFvoQ", "label": { "hi": "ऋष्यशृङ्ग की खराब कविताएँ", "en": "Rishyashring Ki Kharab Kavitayein" } },
-      { "youtube_id": "GDFCyjZOOxU", "label": { "hi": "मिटने का अधिकार", "en": "Mitne Ka Adhikar" } },
-      { "youtube_id": "DmO0TxI2ENY", "label": { "hi": "उत्तरायण-दक्षिणायन", "en": "Uttarayan-Dakshinayan" } }
+      { "youtube_id": "pKFjeA0OI7E", "date": "2026-06-25", "title": { "hi": "कोमल ऋषभ तथा कोमल गान्धार", "en": "Komal: Rishabh and Komal: Gandhar" } },
+      { "youtube_id": "1WFZe48S3QY", "date": "2025-05-14", "title": { "hi": "ऋतम्भरा", "en": "Ritambhara" } },
+      { "youtube_id": "l28P0AXpyLY", "date": "2026-03-17", "title": { "hi": "वर्णोच्चार विधान", "en": "Varnochchar Vidhan" } },
+      { "youtube_id": "gwyZqIHFvoQ", "date": "2025-05-10", "title": { "hi": "ऋष्यशृङ्ग की खराब कविताएँ", "en": "Rishyashring Ki Kharab Kavitayein" } },
+      { "youtube_id": "GDFCyjZOOxU", "date": "2024-06-22", "title": { "hi": "मिटने का अधिकार", "en": "Mitne Ka Adhikar" } },
+      { "youtube_id": "DmO0TxI2ENY", "date": "2023-04-07", "title": { "hi": "उत्तरायण-दक्षिणायन", "en": "Uttarayan-Dakshinayan" } }
     ]
   },
   {
     "id": "sahityakar-samaj-2022",
-    "date": "2022-09",
-    "title": {
-      "hi": "साहित्यकार की दृष्टि से समाज की विसंगतियाँ",
-      "en": "Society's Contradictions Through the Eyes of a Writer"
-    },
     "description": {
       "hi": "समकालीन समाज की विसंगतियों और साहित्य की भूमिका पर वक्तव्य।",
       "en": "A talk on the contradictions of contemporary society and the role of literature in addressing them."
     },
     "videos": [
-      { "youtube_id": "w9tMv1-dDlE", "label": { "hi": "वक्तव्य", "en": "Talk" } }
+      {
+        "youtube_id": "w9tMv1-dDlE",
+        "date": "2022-09-19",
+        "title": {
+          "hi": "साहित्यकार की दृष्टि से समाज की विसंगतियाँ",
+          "en": "Society's Contradictions Through the Eyes of a Writer"
+        }
+      }
     ]
   },
   {
     "id": "kkb-with-lipika-2022",
-    "date": "2022-06",
-    "title": {
-      "hi": "कल की बात: आपकी, मेरी , हम सबकी  बात",
-      "en": "Kal Ki Baat: Aapki, Meri, Hum Sabki Baat"
-    },
     "description": {
       "hi": "'कल की बात' श्रृंखला पर लिपिका भूषण, कृष्ण कल्पित, विनोद पदरज, और अरुण देव के साथ परिचर्चा।",
       "en": "A discussion on the Kal Ki Baat short story series — with Krishna Kalpit, Vinod Padraj, and Arun Dev, moderated by Lipika Bhushan."
     },
     "videos": [
-      { "youtube_id": "IsGwWpiiJFo", "label": { "hi": "परिचर्चा", "en": "Discussion" } }
+      {
+        "youtube_id": "IsGwWpiiJFo",
+        "date": "2022-05-21",
+        "title": {
+          "hi": "कल की बात: आपकी, मेरी , हम सबकी  बात",
+          "en": "Kal Ki Baat: Aapki, Meri, Hum Sabki Baat"
+        }
+      }
     ]
   },
   {
     "id": "booknerds-kkb-2022",
-    "date": "2022-02",
-    "title": {
-      "hi": "Booknerds: कल की बात — Facebook Live",
-      "en": "Booknerds: Facebook Live on Kal Ki Baat"
-    },
     "description": {
       "hi": "डॉ॰ अमिताभा बागची के साथ 'कल की बात' श्रृंखला पर फेसबुक लाइव परिचर्चा।",
       "en": "A Facebook Live discussion with Dr Amitabha Bagchi on the Kal Ki Baat short story series — its conception, musical structure and themes."
     },
     "videos": [
-      { "youtube_id": "2LCOVE378c4", "label": { "hi": "परिचर्चा", "en": "Discussion" } }
+      {
+        "youtube_id": "2LCOVE378c4",
+        "date": "2022-02-26",
+        "title": {
+          "hi": "बुकनर्ड्स: कल की बात — फेसबुक लाइव",
+          "en": "Booknerds: Facebook Live on Kal Ki Baat"
+        }
+      }
     ]
   },
   {
     "id": "timeless-cinema-2021",
-    "date": "2021-08",
-    "title": {
-      "hi": "भारतीय कहानियाँ रजत पर्दे पर — Timeless Cinema",
-      "en": "Indian Stories on Silver Screen — Timeless Cinema"
-    },
     "description": {
       "hi": "भारतीय कथा-साहित्य और सिनेमा के सम्बन्ध पर वक्तव्य।",
       "en": "A talk on the relationship between Indian narrative literature and cinema, and the untapped potential of Hindi fiction for the screen."
     },
     "videos": [
-      { "youtube_id": "QCtbqwU5rJs", "label": { "hi": "वक्तव्य", "en": "Talk" } }
+      {
+        "youtube_id": "QCtbqwU5rJs",
+        "date": "2021-08-21",
+        "title": {
+          "hi": "भारतीय कहानियाँ रजत पर्दे पर — कालजयी सिनेमा",
+          "en": "Indian Stories on Silver Screen — Timeless Cinema"
+        }
+      }
     ]
   },
   {
@@ -228,32 +242,36 @@
   },
   {
     "id": "clf-2014",
-    "date": "2014-11",
-    "title": {
-      "hi": "चण्डीगढ़ साहित्य महोत्सव २०१४",
-      "en": "Chandigarh Literature Festival 2014"
-    },
     "description": {
       "hi": "सत्यानन्द निरुपम के साथ संवाद — चण्डीगढ़ साहित्य महोत्सव।",
       "en": "In conversation with Satyanand Nirupam at the Chandigarh Literature Festival 2014."
     },
     "videos": [
-      { "youtube_id": "bMTBu55tajs", "label": { "hi": "संवाद", "en": "Discussion" } }
+      {
+        "youtube_id": "bMTBu55tajs",
+        "date": "2014-11",
+        "title": {
+          "hi": "चण्डीगढ़ साहित्य महोत्सव २०१४",
+          "en": "Chandigarh Literature Festival 2014"
+        }
+      }
     ]
   },
   {
     "id": "world-book-fair-2014",
-    "date": "2014-02",
-    "title": {
-      "hi": "विश्व पुस्तक मेला २०१४ — हिन्दी लोकप्रिय लेखन",
-      "en": "World Book Fair 2014 — Hindi Popular Writing and Bestsellers"
-    },
     "description": {
       "hi": "22वें विश्व पुस्तक मेले, नई दिल्ली में हिन्दी लोकप्रिय लेखन और बेस्टसेलर पर परिचर्चा में पैनलिस्ट — 20 फ़रवरी 2014।",
       "en": "Panellist on Hindi popular writing and bestsellers at the 22nd World Book Fair, New Delhi — February 20, 2014."
     },
     "videos": [
-      { "youtube_id": "FdtHBm0DiWU", "label": { "hi": "परिचर्चा", "en": "Panel Discussion" } }
+      {
+        "youtube_id": "FdtHBm0DiWU",
+        "date": "2014-02-21",
+        "title": {
+          "hi": "विश्व पुस्तक मेला २०१४ — हिन्दी लोकप्रिय लेखन",
+          "en": "World Book Fair 2014 — Hindi Popular Writing and Bestsellers"
+        }
+      }
     ]
   }
 ]

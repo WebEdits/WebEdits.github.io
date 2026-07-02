@@ -637,16 +637,14 @@
       else talk.videos.forEach(v=>videoCards.push({talk,video:v}));
     });
     grid.innerHTML = videoCards.map(({talk,video})=>{
-      const isMulti = talk.videos.length>1;
       return `
         <div class="talk-card fade-up">
-          <iframe src="${youtubeEmbed(video.youtube_id)}" title="${t(talk.title)}" allowfullscreen loading="lazy"></iframe>
+          <iframe src="${youtubeEmbed(video.youtube_id)}" title="${t(video.title)}" allowfullscreen loading="lazy"></iframe>
           <div class="talk-card__body">
             <h3 class="talk-card__title">
-              ${t(talk.title)}
-              ${isMulti?`<span class="talk-card__part">${t(video.label)}</span>`:''}
+              ${talk.seriesTitle?`${t(talk.seriesTitle)} - `:''}${t(video.title)}
             </h3>
-            <p class="talk-card__meta">${fmtDate(talk.date)}</p>
+            <p class="talk-card__meta">${fmtDate(video.date)}</p>
             <p class="talk-card__desc">${t(talk.description)}</p>
           </div>
         </div>`;
