@@ -1,5 +1,39 @@
 [
   {
+    "id": "teevra-madhyam",
+    "year": 2026,
+    "genre": { "key": "hindi-nonfiction", "hi": "हिन्दी कथेतर गद्य", "en": "Hindi Non-Fiction" },
+    "title": { "hi": "तीव्र मध्यम", "en": "Teevra Madhyam" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "Vera Prakashan, Jaipur",
+    "isbn": "978-93-48290-40-3",
+    "cover": "assets/images/covers/teevra-madhyam.png",
+    "description": {
+      "hi": "दर्शन और संस्कृति चिन्तन से जुड़ी यह पुस्तक विज्ञान और तकनीकी में निष्णात एक युवा मन का भारत की ज्ञान-संस्कृति से सम्पर्क साधने की सुकृति है। अपने उत्स में यह नितान्त अपने लिए किया गया एक ऐसा उपक्रम है, जिसमें कोई योजना-बद्धता और चयनधर्मिता नहीं, बल्कि भारतीयता और उसके आस-पास के विचारों की दुनिया में स्वच्छन्द विचरण है। परन्तु, अपने इस स्वच्छन्द विचरण को पुस्तकाकार रूप में साझा कर प्रचण्ड प्रवीर ने अपने ही जैसों को उस वैचारिक दुनिया का साझेदार बनने का अच्छा अवसर प्रदान किया है।",
+      "en": "This book, centered on reflections regarding philosophy and culture, represents the commendable endeavor of a young mind—well-versed in science and technology—to connect with India’s intellectual and cultural heritage. At its core, this was a deeply personal undertaking, free from deliberate planning or selective constraints; instead, it reflects a free-spirited exploration of the realm of Indian thought and related ideas. Yet, by sharing this uninhibited journey in the form of a book, Prachand Praveer has offered a wonderful opportunity for others like him to become participants in that intellectual world."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/dp/9364070690"
+    }
+  },
+  {
+    "id": "swarna-jhanak",
+    "year": 2026,
+    "genre": { "key": "hindi-fiction", "hi": "हिन्दी काव्य", "en": "Hindi Fiction" },
+    "title": { "hi": "स्वर्ण-झनक", "en": "Swarna Jhanak" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "New World Publication, New Delhi",
+    "isbn": "978-93-6407-768-2",
+    "cover": "assets/images/covers/swarna-jhanak.png",
+    "description": {
+      "hi": "'स्वर्ण-झनक' छोटे-बड़े सत्रह आलेखों की एक मँझौली पोथी है। लेखकद्वय की इस साझी रचना में पुस्तकों और रचनाकारों की चर्चा प्रमुख है। यहाँ बिना विपर्यय के उपजीव्य स्वर्ण है, उपजात स्वर्ण-झनक।",
+      "en": "'Swarna-Jhanak' is a medium-sized volume comprising seventeen essays of varying lengths. This collaborative work by the two authors focuses primarily on discussions regarding books and writers. Here, the source material—the 'gold'—remains primary, while 'Swarna-Jhanak' (the resonance of gold) is the derivative creation born from it."
+    },
+    "links": {
+      "amazon_in": "https://www.amazon.in/dp/8169009022"
+    }
+  },
+  {
     "id": "alpahari-grihatyagi-1",
     "canonical_id": "alpahari-grihatyagi",
     "year": 2010,
