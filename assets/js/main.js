@@ -642,7 +642,7 @@
           <iframe src="${youtubeEmbed(video.youtube_id)}" title="${t(video.title)}" allowfullscreen loading="lazy"></iframe>
           <div class="talk-card__body">
             <h3 class="talk-card__title">
-              ${talk.seriesTitle?`${t(talk.seriesTitle)} - `:''}${t(video.title)}
+              ${talk.seriesTitle?`${t(talk.seriesTitle)} — `:''}${t(video.title)}
             </h3>
             <p class="talk-card__meta">${fmtDate(video.date)}</p>
             <p class="talk-card__desc">${t(talk.description)}</p>
