@@ -348,12 +348,10 @@
         modal.classList.remove('open');
         document.body.style.overflow='';
 
-        // After scroll completes, open the matching accordion group.
-        // Use 'scrollend' where supported; fall back to a generous timeout.
-        const openGroup = () => {
-          const accordion = qs('#reviews-accordion');
-          if (!accordion) return;
-          // Close all groups first, then open the target one
+        // Open the matching accordion group first so its size is final
+        // before we scroll to it.
+        const accordion = qs('#reviews-accordion');
+        if (accordion) {
           qsa('.review-group__btn', accordion).forEach(b => {
             b.setAttribute('aria-expanded','false');
             const body = qs(`#${b.getAttribute('aria-controls')}`);
@@ -365,16 +363,10 @@
             const body = qs(`#${groupBtn.getAttribute('aria-controls')}`);
             if (body) body.hidden = false;
           }
-        };
-
-        const section = qs('#reviews');
-        if (!section) return;
-        section.scrollIntoView({behavior:'smooth',block:'start'});
-        if ('onscrollend' in window) {
-          window.addEventListener('scrollend', openGroup, {once: true});
-        } else {
-          setTimeout(openGroup, 700);
         }
+
+        const target = qs(`#review-group-${targetCanon}`) || qs('#reviews');
+        if (target) target.scrollIntoView({behavior:'smooth',block:'start'});
       });
     }
 
@@ -492,7 +484,7 @@
           </button>` : '';
 
       return `
-        <div class="review-group">
+        <div class="review-group" id="review-group-${canonId}">
           <button class="review-group__btn" data-canon="${canonId}"
                   aria-expanded="${gi===0?'true':'false'}"
                   aria-controls="rgroup-${gi}">

@@ -264,7 +264,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3;
   -webkit-box-orient: vertical; overflow: hidden;
 }
-.book-card__links { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.book-card__links { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; position: relative; z-index: 4; }
 
 /* ── Book detail modal ───────────────────────────────── */
 #book-detail-modal {
@@ -612,7 +612,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 .section--reviews { background: var(--paper-2); }
 
 /* Book-grouped accordion */
-.review-group { border-bottom: 1px solid var(--border); }
+.review-group { border-bottom: 1px solid var(--border); scroll-margin-top: 80px; }
 .review-group:first-child { border-top: 1px solid var(--border); }
 
 .review-group__btn {
