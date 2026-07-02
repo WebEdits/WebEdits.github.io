@@ -61,8 +61,16 @@ help maintain this website correctly without asking basic questions.
 ### books.json — array of book objects
 
 Required fields: `id`, `year`, `genre`, `title`, `description`
-Optional: `subtitle`, `publisher`, `isbn`, `cover`, `new_edition`, `latest_edition`, `links`,
-`canonical_id`, `edition`, `edition_label`
+Optional: `date`, `subtitle`, `publisher`, `isbn`, `cover`, `new_edition`, `latest_edition`,
+`links`, `canonical_id`, `edition`, `edition_label`
+
+The book grid (`renderBooks`) sorts by `bookSortKey(b) = b.date || String(b.year)`
+(string-compared, descending), falling back to `edition` as a tiebreaker. `date`
+(`"YYYY-MM"`/`"YYYY-MM-DD"`) is optional but should be added whenever a book would
+otherwise share a bare `year` with other books in a chronologically meaningful way —
+a bare year always sorts before any dated book in the same year (since `"2026"` is a
+string-prefix of `"2026-07"`), so year-only entries can otherwise rank below an older
+book's edition bump that happens to have a higher `edition` number.
 
 `genre` is `{ "key": "...", "hi": "...", "en": "..." }`. **`genre.key` is what the filter
 buttons actually match on** (`renderFilterButtons`/`renderBooks` in `main.js`) — `genre.hi`/

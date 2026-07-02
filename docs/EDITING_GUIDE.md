@@ -45,6 +45,7 @@ Open `data/books.json`. It contains a JSON array (`[...]`).
 |-------|----------|-------|
 | `id` | Yes | Lowercase, hyphens only. Must be unique. Used for the cover image filename. |
 | `year` | Yes | Publication year as a number (no quotes) |
+| `date` | No | `"YYYY-MM"` (or `"YYYY-MM-DD"`). Books are sorted by this when present, falling back to `year` alone otherwise. Add it when a book shares its `year` with other books but was actually published earlier or later within that year — without it, same-year books can sort in a surprising order (e.g. a reprint's edition number outranking a genuinely newer book). |
 | `latest_edition` | No | e.g. `"3rd edition, 2026"` — shown instead of year |
 | `new_edition` | No | Set to `true` to show an orange "New Edition" badge |
 | `genre.key` | Yes | Language-independent genre id. **This is what drives the filter buttons** — see table below. If you omit it, the book still displays under "All" but disappears when any specific genre filter is clicked. |

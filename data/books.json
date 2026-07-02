@@ -2,6 +2,7 @@
   {
     "id": "teevra-madhyam",
     "year": 2026,
+    "date": "2026-07",
     "genre": { "key": "hindi-nonfiction", "hi": "हिन्दी कथेतर गद्य", "en": "Hindi Non-Fiction" },
     "title": { "hi": "तीव्र मध्यम", "en": "Teevra Madhyam" },
     "subtitle": { "hi": "", "en": "" },
@@ -19,6 +20,7 @@
   {
     "id": "swarna-jhanak",
     "year": 2026,
+    "date": "2026-07",
     "genre": { "key": "hindi-fiction", "hi": "हिन्दी काव्य", "en": "Hindi Fiction" },
     "title": { "hi": "स्वर्ण-झनक", "en": "Swarna Jhanak" },
     "subtitle": { "hi": "", "en": "" },

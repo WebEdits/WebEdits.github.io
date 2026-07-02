@@ -37,6 +37,10 @@
 
   // ── Helpers ───────────────────────────────────────────────
   const t   = (obj) => (obj && obj[lang]) || obj?.hi || obj?.en || '';
+  // Optional book.date ("YYYY-MM"/"YYYY-MM-DD") sorts more precisely than
+  // year alone — a bare year always sorts before any dated book in the same
+  // year, since "2026" is a string-prefix of e.g. "2026-07".
+  const bookSortKey = (b) => b.date || String(b.year);
   const qs  = (sel, ctx = document) => ctx.querySelector(sel);
   const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
@@ -171,7 +175,7 @@
     const filtered = (activeFilter === 'all'
       ? [...allBooks]
       : allBooks.filter(b => b.genre?.key === activeFilter)
-    ).sort((a, b) => b.year - a.year || (b.edition || 1) - (a.edition || 1));
+    ).sort((a, b) => bookSortKey(b).localeCompare(bookSortKey(a)) || (b.edition || 1) - (a.edition || 1));
 
     grid.innerHTML = filtered.map(book => {
       const coverHTML = book.cover
