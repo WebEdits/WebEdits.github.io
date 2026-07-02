@@ -24,7 +24,7 @@ Open `data/books.json`. It contains a JSON array (`[...]`).
 {
   "id": "unique-book-id",
   "year": 2025,
-  "genre": { "hi": "उपन्यास", "en": "Novel" },
+  "genre": { "hi": "हिन्दी काव्य", "en": "Hindi Fiction" },
   "title": { "hi": "हिन्दी शीर्षक", "en": "English Title" },
   "subtitle": { "hi": "", "en": "" },
   "publisher": "Publisher Name",
@@ -61,8 +61,8 @@ Open `data/books.json`. It contains a JSON array (`[...]`).
 ### Genre values (copy exactly)
 
 ```
-Hindi: उपन्यास / कहानी संग्रह / सिनेमा सिद्धान्त / सिनेमा सिद्धान्त (अंग्रेज़ी)
-English: Novel / Short Stories / Cinema Theory / Cinema Theory (English)
+Hindi: हिन्दी काव्य / हिन्दी कथेतर गद्य / English Fiction / English Non-Fiction
+English: Hindi Fiction / Hindi Non-Fiction / English Fiction / English Non-Fiction
 ```
 
 ### Don't forget the comma
