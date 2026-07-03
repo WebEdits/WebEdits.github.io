@@ -29,7 +29,7 @@
       <button data-lang="hi" class="active">हि</button>
       <button data-lang="en">EN</button>
     </div>
-    <button class="nav__ham" id="nav-ham" aria-label="Open menu">
+    <button class="nav__ham" id="nav-ham" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -121,8 +121,20 @@
   const ham = qs('#nav-ham');
   const drawer = qs('#nav-drawer');
   if (ham && drawer) {
-    ham.addEventListener('click', () => drawer.classList.toggle('open'));
-    qsa('a', drawer).forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+    const closeDrawer = () => {
+      drawer.classList.remove('open');
+      ham.classList.remove('is-open');
+      ham.setAttribute('aria-expanded', 'false');
+    };
+    ham.addEventListener('click', () => {
+      const isOpen = drawer.classList.toggle('open');
+      ham.classList.toggle('is-open', isOpen);
+      ham.setAttribute('aria-expanded', String(isOpen));
+    });
+    qsa('a', drawer).forEach(a => a.addEventListener('click', closeDrawer));
+    window.matchMedia('(max-width: 768px)').addEventListener('change', e => {
+      if (!e.matches) closeDrawer();
+    });
   }
 
   // Fetch helpers

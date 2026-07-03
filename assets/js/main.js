@@ -101,9 +101,20 @@
     const ham    = qs('#nav-ham');
     const drawer = qs('#nav-drawer');
     if (!ham || !drawer) return;
-    ham.addEventListener('click', () => drawer.classList.toggle('open'));
-    qsa('a', drawer).forEach(a =>
-      a.addEventListener('click', () => drawer.classList.remove('open')));
+    const closeDrawer = () => {
+      drawer.classList.remove('open');
+      ham.classList.remove('is-open');
+      ham.setAttribute('aria-expanded', 'false');
+    };
+    ham.addEventListener('click', () => {
+      const isOpen = drawer.classList.toggle('open');
+      ham.classList.toggle('is-open', isOpen);
+      ham.setAttribute('aria-expanded', String(isOpen));
+    });
+    qsa('a', drawer).forEach(a => a.addEventListener('click', closeDrawer));
+    window.matchMedia('(max-width: 768px)').addEventListener('change', e => {
+      if (!e.matches) closeDrawer();
+    });
     const sections = qsa('section[id]');
     const navLinks = qsa('.nav__links a, .nav__drawer a[href^="#"]');
     window.addEventListener('scroll', () => {
