@@ -440,6 +440,7 @@
            role="button" aria-label="${t(r.attribution)}">
         <div class="review-card__inner">
           <div class="review-card__front">
+            <span class="review-card__flip-hint" aria-hidden="true">&#8635;</span>
             <div class="review-card__header">
               ${photoFront}
               <div class="review-card__attr">

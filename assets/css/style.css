@@ -745,6 +745,27 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   box-shadow: var(--shadow-saffron);
 }
 
+/* Flip affordance — persistent badge (works for touch, not just hover) */
+.review-card__flip-hint {
+  position: absolute; top: 0.75rem; right: 0.75rem;
+  width: 26px; height: 26px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; line-height: 1; color: var(--saffron-d);
+  background: var(--paper-3); border: 1px solid var(--border);
+  animation: review-flip-hint-wiggle 4s ease-in-out infinite;
+  transition: background var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out);
+}
+.review-card--flip:hover .review-card__flip-hint {
+  background: var(--saffron-pale); color: var(--saffron-d);
+  animation-play-state: paused;
+}
+@keyframes review-flip-hint-wiggle {
+  0%, 80%, 100% { transform: rotate(0deg); }
+  85% { transform: rotate(-18deg); }
+  92% { transform: rotate(14deg); }
+  96% { transform: rotate(0deg); }
+}
+
 /* Front: photo circle */
 .review-card__header { display: flex; align-items: center; gap: 0.9rem; }
 .review-card__photo {
