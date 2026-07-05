@@ -24,7 +24,7 @@ Open `data/books.json`. It contains a JSON array (`[...]`).
 {
   "id": "unique-book-id",
   "year": 2025,
-  "genre": { "key": "hindi-fiction", "hi": "हिन्दी काव्य", "en": "Hindi Fiction" },
+  "genre": { "key": "hindi-fiction", "hi": "हिन्दी काव्य", "en": "Hindi Poetics" },
   "title": { "hi": "हिन्दी शीर्षक", "en": "English Title" },
   "subtitle": { "hi": "", "en": "" },
   "publisher": "Publisher Name",
@@ -64,7 +64,7 @@ Open `data/books.json`. It contains a JSON array (`[...]`).
 
 | `genre.key` | `genre.hi` | `genre.en` |
 |-------------|------------|------------|
-| `hindi-fiction` | हिन्दी काव्य | Hindi Fiction |
+| `hindi-fiction` | हिन्दी काव्य | Hindi Poetics |
 | `hindi-nonfiction` | हिन्दी कथेतर गद्य | Hindi Non-Fiction |
 | `english-fiction` | English Fiction | English Fiction |
 | `english-nonfiction` | English Non-Fiction | English Non-Fiction |

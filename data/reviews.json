@@ -124,13 +124,13 @@
     "canonical_id": "abhinav-cinema",
     "date": "2020-06",
     "photo": "assets/images/reviewers/shivmurti.jpg",
-    "bio": { "hi": "प्रसिद्ध हिन्दी कथाकार। 'तिरिया चरित्तर', 'सिरी उपमा जोग', 'कसाईबाड़ा' जैसी चर्चित कहानियों के लेखक।", "en": "Renowned Hindi fiction writer, known for celebrated stories like 'Tiriya Charittar' and 'Kasaibaada'." },
+    "bio": { "hi": "प्रसिद्ध हिन्दी कथाकार। 'तिरिया चरित्तर', 'सिरी उपमा जोग', 'कसाईबाड़ा' जैसी चर्चित कहानियों के लेखक।", "en": "Renowned Hindi Poetics writer, known for celebrated stories like 'Tiriya Charittar' and 'Kasaibaada'." },
     "quote": {
       "hi": "सिने जगत का इन्साइक्लोपीडिया। विभिन्न रसों के आधार पर विश्व सिनेमा की सूक्ष्म और गहन जानकारी जिसमें भारतीय नाट्यशास्त्र की परम्परा से लेकर विश्व दृष्टि तक को विश्लेषित किया गया है। सुसम्बद्ध और पठनीय (Must Read) पुस्तक।",
       "en": "An encyclopaedia of world cinema. Subtle and in-depth knowledge of world cinema based on different Rasas, from the Indian Natyashastra tradition to a global vision. A coherent and essential Must Read."
     },
     "attribution": { "hi": "शिवमूर्ति", "en": "Shivmurti" },
-    "role": { "hi": "प्रसिद्ध हिन्दी कथाकार", "en": "Renowned Hindi Fiction Writer" },
+    "role": { "hi": "प्रसिद्ध हिन्दी कथाकार", "en": "Renowned Hindi Poetics Writer" },
     "source": { "hi": "अभिनव सिनेमा (तृतीय संस्करण) प्रस्तावना", "en": "Foreword, Abhinav Cinema (3rd edition)" },
     "url": "",
     "archive_url": ""
@@ -467,7 +467,7 @@
     "bio": { "hi": "वरिष्ठ हिन्दी कवि व गद्यकार।", "en": "Senior Hindi poet and prose writer." },
     "quote": {
       "hi": "यद्यपि हिन्दी कथा-शिल्प का आकल्पन अभी भी मुमकिना वारदातों के खूँटे से बँधा हुआ है, प्रचण्ड प्रवीर का कथाशिल्प इस आकल्पन को स्वायत्त करने की दिशा में महत्त्वपूर्ण बढ़त ले चुका है।",
-      "en": "Although the narrative craft of Hindi fiction remains tethered to the moorings of plausible events, Prachand Praveer's narrative technique has already made significant strides toward rendering this craft autonomous."
+      "en": "Although the narrative craft of Hindi Poetics remains tethered to the moorings of plausible events, Prachand Praveer's narrative technique has already made significant strides toward rendering this craft autonomous."
     },
     "attribution": { "hi": "वागीश शुक्ल", "en": "Wagish Shukla" },
     "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
@@ -518,7 +518,7 @@
     "bio": { "hi": "वरिष्ठ हिन्दी कवि व गद्यकार।", "en": "Senior Hindi poet and prose writer." },
     "quote": {
       "hi": "यद्यपि हिन्दी कथा-शिल्प का आकल्पन अभी भी मुमकिना वारदातों के खूँटे से बँधा हुआ है, प्रचण्ड प्रवीर का कथाशिल्प इस आकल्पन को स्वायत्त करने की दिशा में महत्त्वपूर्ण बढ़त ले चुका है।",
-      "en": "Although the narrative craft of Hindi fiction remains tethered to the moorings of plausible events, Prachand Praveer's narrative technique has already made significant strides toward rendering this craft autonomous."
+      "en": "Although the narrative craft of Hindi Poetics remains tethered to the moorings of plausible events, Prachand Praveer's narrative technique has already made significant strides toward rendering this craft autonomous."
     },
     "attribution": { "hi": "वागीश शुक्ल", "en": "Wagish Shukla" },
     "role": { "hi": "हिन्दी कवि व गद्यकार", "en": "Hindi Poet and Prose Writer" },
