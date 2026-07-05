@@ -717,6 +717,9 @@
     qsa('[data-hi-html]').forEach(el => {
       el.innerHTML = lang==='hi' ? el.dataset.hiHtml : (el.dataset.enHtml||el.dataset.hiHtml);
     });
+    qsa('[data-hi-placeholder]').forEach(el => {
+      el.placeholder = lang==='hi' ? el.dataset.hiPlaceholder : (el.dataset.enPlaceholder||el.dataset.hiPlaceholder);
+    });
     qsa('.accordion-link:not(.accordion-link--archive)').forEach(a => {
       a.textContent = lang==='hi'?'पूरा साक्षात्कार पढ़ें →':'Read full interview →';
     });
