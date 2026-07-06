@@ -14,6 +14,8 @@
   --saffron-d:    #a8520a;
   --saffron-pale: #f5e6d3;
   --saffron-text: #9a4d08; /* AA-safe (4.5:1+) saffron for small text on --paper */
+  --orange-pale:  #f8e4c9; /* warm peach — deeper/more saturated than --saffron-pale */
+  --gold-pale:    #f9f0cf; /* pale gold — shifted toward yellow */
   --muted:        #6b5e4a;
   --border:       rgba(26,18,8,0.12);
   --border-dark:  rgba(255,255,255,0.12);
@@ -457,7 +459,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 .media-sublabel:first-of-type { margin-top: 1rem; }
 .media-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1rem; margin-top: 0.5rem;
+  gap: 1.5rem; margin-top: 0.5rem;
 }
 .media-card {
   position: relative; background: var(--paper); border: 1px solid var(--border);
@@ -465,6 +467,9 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   padding: 0.9rem; cursor: pointer;
   transition: transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
 }
+/* Alternating tints so adjacent cards stay easy to tell apart at a glance */
+.media-card:nth-child(3n+2) { background: var(--orange-pale); }
+.media-card:nth-child(3n+3) { background: var(--gold-pale); }
 .media-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
 /* Full-cover primary link — kept as a sibling of, not an ancestor of, the
    archive link below, so the two links never nest (invalid HTML, and the

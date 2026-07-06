@@ -15,7 +15,7 @@
     "source": "CSP Indica",
     "date": "2021-03-19",
     "canonical_id": "cinema-through-rasa",
-    "quote": {
+    "title": {
       "hi": "विश्व सिनेमा पर भारतीय सौन्दर्यशास्त्र के ढाँचे में विचार किया जा सकता है।",
       "en": "World Cinema Can be Discussed Within the Framework of Indian Aesthetics — an in-depth interview with Prachand Praveer."
     },
@@ -28,7 +28,7 @@
     "source": "Life and More",
     "date": "2021-01",
     "canonical_id": "cinema-through-rasa",
-    "quote": {
+    "title": {
       "hi": "Cinema Through Rasa — रस के माध्यम से सिनेमा।",
       "en": "Cinema Through Rasa — a detailed discussion of how Indian Rasa theory illuminates world cinema."
     },
@@ -89,17 +89,6 @@
       "en": "Interview with Prachand Praveer, author of 'Kal Ki Baat'"
     },
     "url": "https://www.frontlist.in/interview-with-prachand-praveer-author-of-kal-ki-baat",
-    "archive_url": ""
-  },
-  {
-    "id": "lifeandmore-2021",
-    "source": "Life and More",
-    "date": "2021-02-03",
-    "title": {
-      "hi": "विश्व सिनेमा में कई निर्देशकों को उचित सम्मान नहीं मिला",
-      "en": "Many Directors in world cinema haven't got their due"
-    },
-    "url": "https://lifeandmore.in/authors-books/many-directors-world-cinema-havent-got-due/",
     "archive_url": ""
   },
   {
