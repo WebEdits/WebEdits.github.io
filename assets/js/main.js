@@ -32,6 +32,7 @@
   let allNews      = [];
   let allPosts     = [];
   let activeFilter = 'all';
+  let newsTimer    = null;
 
   // Modal nav state
   let currentModalList = [];
@@ -141,16 +142,41 @@
   }
 
   // ── News banner ───────────────────────────────────────────
-  function renderNews() {
-    const el = qs('#news-banner');
-    if (!el || !allNews.length) return;
-    const item = allNews[0];
-    el.innerHTML = `
+  function newsItemHTML(item) {
+    return `
       <p>${t(item.title)} — ${t(item.body)}</p>
       ${item.link ? `<a href="${item.link}" target="_blank" rel="noopener">
         ${lang === 'hi' ? 'अभी खरीदें →' : 'Buy Now →'}
       </a>` : ''}`;
+  }
+
+  function renderNews() {
+    const el = qs('#news-banner');
+    if (!el || !allNews.length) return;
+    clearInterval(newsTimer);
     el.parentElement.style.display = '';
+    const items = [...allNews].sort(byDateDesc);
+    if (items.length === 1) { el.innerHTML = newsItemHTML(items[0]); return; }
+
+    // Multiple items auto-rotate; suppress the live-region re-announcement
+    // on every tick (role="alert" in the markup) so screen readers aren't
+    // interrupted every 6s — only manual navigation should announce.
+    el.setAttribute('aria-live', 'off');
+    let idx = 0;
+    const show = () => {
+      el.innerHTML = `
+        ${newsItemHTML(items[idx])}
+        <div class="news-banner__dots">
+          ${items.map((_, i) => `<button class="news-banner__dot${i === idx ? ' active' : ''}" data-i="${i}" aria-label="News ${i + 1}"></button>`).join('')}
+        </div>`;
+      qsa('.news-banner__dot', el).forEach(btn => btn.addEventListener('click', () => {
+        idx = +btn.dataset.i; show(); restart();
+      }));
+    };
+    const advance = () => { idx = (idx + 1) % items.length; show(); };
+    const restart = () => { clearInterval(newsTimer); newsTimer = setInterval(advance, 6000); };
+    show();
+    restart();
   }
 
   // ── Filter buttons ────────────────────────────────────────
@@ -201,10 +227,12 @@
            </div>`;
       const badge = book.new_edition
         ? `<span class="book-card__badge">${lang === 'hi' ? 'नया संस्करण' : 'New'}</span>` : '';
+      const ribbon = book.coming_soon
+        ? `<span class="book-card__ribbon">${lang === 'hi' ? 'शीघ्र प्रकाश्य' : 'Coming Soon'}</span>` : '';
       return `
         <div class="book-card" data-id="${book.id}" tabindex="0" role="button"
              aria-label="${t(book.title)}, ${t(book.edition_label)}">
-          <div class="book-card__cover">${coverHTML}${badge}</div>
+          <div class="book-card__cover">${coverHTML}${badge}${ribbon}</div>
           <div class="book-card__caption">
             <h3 class="book-card__title">${t(book.title)}</h3>
             <p class="book-card__meta">${t(book.genre)} · ${t(book.edition_label)}</p>
@@ -273,10 +301,12 @@
     qs('.book-detail__nav--next',modal).style.display = has?'':'none';
 
     const badge = book.new_edition
-      ? `<span class="book-detail__badge">${lang==='hi'?'नया संस्करण':'New Edition'}</span>` : '';
+      ? `<span class="book-detail__badge">${lang==='hi'?'नया संस्करण':'New Edition'}</span>`
+      : book.coming_soon
+      ? `<span class="book-detail__badge book-detail__badge--soon">${lang==='hi'?'शीघ्र प्रकाश्य':'Coming Soon'}</span>` : '';
     const subtitle = t(book.subtitle)
       ? `<p class="book-detail__subtitle">${t(book.subtitle)}</p>` : '';
-    const buyLinks = Object.entries(book.links||{}).filter(([,u])=>u)
+    const buyLinks = book.coming_soon ? '' : Object.entries(book.links||{}).filter(([,u])=>u)
       .map(([key,url])=>{
         const label={amazon_in:'Amazon India',flipkart:'Flipkart',amazon_com:'Amazon US',dkprintworld:'DK Printworld'}[key]||key;
         return `<a href="${url}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">${label}</a>`;

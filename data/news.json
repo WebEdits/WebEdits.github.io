@@ -1,5 +1,33 @@
 [
   {
+    "id": "teevra-madhyam-coming-soon",
+    "date": "2026-07",
+    "type": "coming_soon",
+    "title": {
+      "hi": "तीव्र मध्यम — शीघ्र प्रकाश्य",
+      "en": "Teevra Madhyam — Coming Soon"
+    },
+    "body": {
+      "hi": "दर्शन और संस्कृति चिन्तन पर केन्द्रित नई पुस्तक तीव्र मध्यम शीघ्र ही उपलब्ध होगी।",
+      "en": "A new book on philosophy and cultural reflection, Teevra Madhyam, will be available soon."
+    },
+    "book_id": "teevra-madhyam"
+  },
+  {
+    "id": "swarna-jhanak-coming-soon",
+    "date": "2026-07",
+    "type": "coming_soon",
+    "title": {
+      "hi": "स्वर्ण-झनक — शीघ्र प्रकाश्य",
+      "en": "Swarna-Jhanak — Coming Soon"
+    },
+    "body": {
+      "hi": "पुस्तकों और रचनाकारों पर सत्रह आलेखों का संग्रह स्वर्ण-झनक शीघ्र ही उपलब्ध होगा।",
+      "en": "Swarna-Jhanak, a collection of seventeen essays on books and writers, will be available soon."
+    },
+    "book_id": "swarna-jhanak"
+  },
+  {
     "id": "abhinav-cinema-3rd-edition",
     "date": "2026-01",
     "type": "new_edition",

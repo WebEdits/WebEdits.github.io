@@ -54,7 +54,7 @@ help maintain this website correctly without asking basic questions.
 | `renderEssays()` | Renders `allEssays` (sorted newest-first) into `#essays-grid` |
 | `renderTalks()` | Renders `allTalks` (video cards + text list) into `#talks-grid` |
 | `renderPostsSnippet()` | Renders latest 3 of `allPosts` into `#posts-snippet` |
-| `renderNews()` | Renders first item in `allNews` into `#news-banner` |
+| `renderNews()` | Renders `allNews` (sorted newest-first) into `#news-banner`; auto-rotates with dot nav if more than one item |
 | `renderStaticText()` | Swaps `data-hi`/`data-en` attributes across the DOM |
 | `t(obj)` | Returns `obj[lang]` — the current-language string from a bilingual object |
 
@@ -64,7 +64,12 @@ help maintain this website correctly without asking basic questions.
 
 Required fields: `id`, `year`, `genre`, `title`, `description`
 Optional: `date`, `subtitle`, `publisher`, `isbn`, `cover`, `new_edition`, `latest_edition`,
-`links`, `canonical_id`, `edition`, `edition_label`
+`links`, `canonical_id`, `edition`, `edition_label`, `coming_soon`
+
+`coming_soon: true` marks a book as announced but not yet available: it shows a
+diagonal "Coming Soon" ribbon on its card, a badge in the detail modal instead of
+the `new_edition` badge, and suppresses the modal's buy links regardless of what's
+in `links`.
 
 The book grid (`renderBooks`) sorts by `bookSortKey(b) = b.date || String(b.year)`
 (string-compared, descending), falling back to `edition` as a tiebreaker. `date`
@@ -133,7 +138,8 @@ per-post files despite the older per-post-file comment pattern elsewhere).
 ### news.json — array of announcement objects
 
 Fields: `id`, `date` (YYYY-MM), `type`, `title`, `body`, `book_id` (optional), `link` (optional)
-Only the first item (index 0) is displayed in the banner. Empty array `[]` hides the banner.
+All items are displayed in the banner, sorted newest-first by `date`; with more than
+one item they auto-rotate every 6s with dot navigation. Empty array `[]` hides the banner.
 
 ## CSS custom properties (design tokens)
 
