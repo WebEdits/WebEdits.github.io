@@ -30,7 +30,7 @@
   <ul class="nav__links" aria-label="Desktop nav">
     <li><a href="#books"         data-hi="पुस्तकें"   data-en="Books">पुस्तकें</a></li>
     <li><a href="#reviews"       data-hi="समीक्षाएँ"  data-en="Reviews">समीक्षाएँ</a></li>
-    <li><a href="#press"         data-hi="सन्दर्भ"    data-en="Press">सन्दर्भ</a></li>
+    <li><a href="#media"         data-hi="मीडिया"     data-en="Media">मीडिया</a></li>
     <li><a href="#talks"         data-hi="चर्चाएँ"    data-en="Talks">चर्चाएँ</a></li>
     <li><a href="posts.html"     data-hi="लेखन" data-en="Writing">लेखन</a></li>
     <li><a href="#gallery"       data-hi="दीर्घा"     data-en="Gallery">दीर्घा</a></li>
@@ -52,7 +52,7 @@
 <nav id="nav-drawer" class="nav__drawer" aria-label="Mobile navigation">
   <li><a href="#books"        data-hi="पुस्तकें"  data-en="Books">पुस्तकें</a></li>
   <li><a href="#reviews" data-hi="समीक्षाएँ" data-en="Reviews">समीक्षाएँ</a></li>
-  <li><a href="#press"        data-hi="सन्दर्भ"   data-en="Press">सन्दर्भ</a></li>
+  <li><a href="#media"        data-hi="मीडिया"    data-en="Media">मीडिया</a></li>
   <li><a href="#talks"        data-hi="चर्चाएँ"   data-en="Talks">चर्चाएँ</a></li>
   <li><a href="#gallery"      data-hi="दीर्घा"    data-en="Gallery">दीर्घा</a></li>
   <li><a href="#contact"      data-hi="सम्पर्क"   data-en="Contact">सम्पर्क</a></li>
@@ -150,43 +150,27 @@
 
 <div class="divider"></div>
 
-<!-- ════════════════════════════════════════════════ PRESS -->
-<section class="section section--press" id="press">
+<!-- ════════════════════════════════════════════════ MEDIA -->
+<section class="section section--media" id="media">
   <div class="container">
     <p class="label fade-up"
        data-hi="मीडिया में" data-en="In the Media">मीडिया में</p>
-    <h2 class="fade-up"
-        data-hi="आलोचकों के विचार" data-en="What Critics Say">आलोचकों के विचार</h2>
+    <h2 class="fade-up" data-hi="मीडिया" data-en="Media">मीडिया</h2>
 
-    <!-- Press quotes — populated by JS from data/press.json -->
-    <div class="press-list fade-up" id="press-list"></div>
+    <!-- News & Articles — populated by JS from data/news-articles.json -->
+    <h3 class="media-sublabel fade-up"
+        data-hi="समाचार और लेख" data-en="News & Articles">समाचार और लेख</h3>
+    <div class="media-grid fade-up" id="news-articles-grid"></div>
 
-    <!-- Interviews accordion — populated by JS from data/interviews.json -->
-    <div class="interviews-section fade-up">
-      <p class="interviews-label"
-         data-hi="साक्षात्कार" data-en="Interviews">साक्षात्कार</p>
-      <div id="interviews-accordion"></div>
-    </div>
+    <!-- Interviews — populated by JS from data/interviews.json -->
+    <h3 class="media-sublabel fade-up"
+        data-hi="साक्षात्कार" data-en="Interviews">साक्षात्कार</h3>
+    <div class="media-grid fade-up" id="interviews-grid"></div>
 
-    <!-- Static articles by the author -->
-    <div style="margin-top:3rem" class="fade-up">
-      <p class="label" style="margin-bottom:1rem"
-         data-hi="लेखक के आलेख" data-en="Articles by the Author">लेखक के आलेख</p>
-      <div style="display:flex;flex-wrap:wrap;gap:0.75rem">
-        <a href="http://epaper.navbharattimes.com/details/12209-53018-1.html"
-           target="_blank" rel="noopener" class="btn btn-outline btn-sm">
-          चुनाव में पीछे छूट गया शिष्टाचार
-        </a>
-        <a href="http://m.livehindustan.com/mobile/news/editorial/guestcolumn/article1-story-57-62-401198.html"
-           target="_blank" rel="noopener" class="btn btn-outline btn-sm">
-          किताबों का मेला
-        </a>
-        <a href="https://swarajyamag.com/books/book-excerpt-of-rasa-siddhanta-vibhatsa-rasa-and-world-cinema"
-           target="_blank" rel="noopener" class="btn btn-outline btn-sm">
-          Of Rasa-Siddhanta, Vibhatsa Rasa and World Cinema
-        </a>
-      </div>
-    </div>
+    <!-- Published Essays — populated by JS from data/essays.json -->
+    <h3 class="media-sublabel fade-up"
+        data-hi="प्रकाशित निबंध" data-en="Published Essays">प्रकाशित निबंध</h3>
+    <div class="media-grid fade-up" id="essays-grid"></div>
   </div>
 </section>
 

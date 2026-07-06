@@ -3,11 +3,12 @@
    No jQuery. No frameworks. Pure vanilla JS.
 
    DATA FILES:
-   - data/books.json       — 23 edition cards
-   - data/reviews.json     — scholarly book reviews (grouped by canonical_id)
-   - data/press.json       — media quotes
-   - data/interviews.json  — interview links accordion
-   - data/talks.json       — YouTube talks
+   - data/books.json         — 23 edition cards
+   - data/reviews.json       — scholarly book reviews (grouped by canonical_id)
+   - data/news-articles.json — media quotes (Media → News & Articles)
+   - data/interviews.json    — interview links (Media → Interviews)
+   - data/essays.json        — published essays by the author (Media → Published Essays)
+   - data/talks.json         — YouTube talks
    - data/news.json        — announcement banner
    - data/posts.json       — blog post index (excerpt only)
    - data/posts/{id}.json  — full post body (loaded on demand)
@@ -24,8 +25,9 @@
   let lang         = document.documentElement.lang || 'hi';
   let allBooks     = [];
   let allReviews   = [];
-  let allPress     = [];
+  let allNewsArticles = [];
   let allInterviews = [];
+  let allEssays    = [];
   let allTalks     = [];
   let allNews      = [];
   let allPosts     = [];
@@ -80,8 +82,9 @@
     }
     if (allBooks.length)      { renderFilterButtons(); renderBooks(); }
     if (allReviews.length)    renderReviews();
-    if (allPress.length)      renderPress();
+    if (allNewsArticles.length) renderNewsArticles();
     if (allInterviews.length) renderInterviews();
+    if (allEssays.length)     renderEssays();
     if (allTalks.length)      renderTalks();
     if (allNews.length)       renderNews();
     if (allPosts.length)      renderPostsSnippet();
@@ -561,77 +564,62 @@
     initScrollAnim();
   }
 
-  // ── Press list ────────────────────────────────────────────
-  function renderPress() {
-    const list = qs('#press-list');
-    if (!list) return;
-    list.innerHTML = allPress.map(item => {
-      const href = item.url || item.archive_url || '#';
-      const isArchiveOnly = !item.url && item.archive_url;
-      return `
-        <a class="press-item" href="${href}" target="_blank" rel="noopener">
-          <span class="press-item__source">
+  // ── Media: shared sort (newest first) + card builder ───────
+  const byDateDesc = (a, b) => (b.date || '').localeCompare(a.date || '');
+
+  // `.media-card` is a <div>, not an <a> — a full-cover <a> handles the
+  // primary click, and the archive link (when present) stacks above it via
+  // z-index. Nesting the archive <a> inside a card-wide <a> would make the
+  // browser's HTML parser split the anchors into stray sibling nodes.
+  function mediaCardHTML(item, ariaLabel, bodyHTML) {
+    const href = item.url || item.archive_url || '#';
+    const isArchiveOnly = !item.url && item.archive_url;
+    const hasArchive = item.url && item.archive_url;
+    return `
+      <div class="media-card">
+        <a class="media-card__cover-link" href="${href}" target="_blank" rel="noopener" aria-label="${ariaLabel}"></a>
+        <div class="media-card__head">
+          <span class="media-card__source">
             ${item.source}
-            ${isArchiveOnly ? '<span class="press-item__archive-badge">📦</span>' : ''}
+            ${isArchiveOnly ? '<span class="media-card__archive-badge">📦</span>' : ''}
           </span>
-          <div>
-            <p class="press-item__quote">${t(item.quote)}</p>
-            <p class="press-item__attr">— ${t(item.attribution)}
-              ${item.date ? `<span class="press-item__date">${fmtDate(item.date)}</span>` : ''}
-            </p>
-            ${item.url && item.archive_url
-              ? `<a href="${item.archive_url}" target="_blank" rel="noopener"
-                    class="press-item__archive-link" onclick="event.stopPropagation()">
-                  📦 ${lang==='hi'?'संग्रहीत':'Archived'}
-                </a>` : ''}
-          </div>
-        </a>`;
-    }).join('');
+          ${item.date ? `<span class="media-card__date">${fmtDate(item.date)}</span>` : ''}
+        </div>
+        ${bodyHTML}
+        ${hasArchive
+          ? `<a href="${item.archive_url}" target="_blank" rel="noopener" class="media-card__archive-link">
+              📦 ${lang==='hi'?'संग्रहीत':'Archived'}
+            </a>` : ''}
+      </div>`;
   }
 
-  // ── Interviews accordion ──────────────────────────────────
-  function renderInterviews() {
-    const container = qs('#interviews-accordion');
-    if (!container) return;
-    if (!allInterviews.length) return;
-    container.innerHTML = allInterviews.map((item, i) => {
-      const href = item.url || item.archive_url || '#';
-      const hasArchive = item.archive_url && item.url;
-      return `
-        <div class="accordion-item">
-          <button class="accordion-btn" aria-expanded="false" aria-controls="intv-${i}">
-            <span class="accordion-source">${item.source}</span>
-            <span class="accordion-title">${t(item.title)}</span>
-            <span class="accordion-date">${fmtDate(item.date)}</span>
-            <span class="accordion-icon" aria-hidden="true"></span>
-          </button>
-          <div class="accordion-body" id="intv-${i}" hidden>
-            <a href="${href}" target="_blank" rel="noopener" class="accordion-link">
-              ${lang==='hi'?'पूरा साक्षात्कार पढ़ें →':'Read full interview →'}
-            </a>
-            ${hasArchive
-              ? `<a href="${item.archive_url}" target="_blank" rel="noopener"
-                    class="accordion-link accordion-link--archive">
-                  📦 ${lang==='hi'?'संग्रहीत संस्करण':'Archived version'}
-                </a>` : ''}
-          </div>
-        </div>`;
-    }).join('');
+  // ── News & Articles ────────────────────────────────────────
+  function renderNewsArticles() {
+    const grid = qs('#news-articles-grid');
+    if (!grid) return;
+    grid.innerHTML = [...allNewsArticles].sort(byDateDesc).map(item => mediaCardHTML(item, item.source, `
+      <p class="media-card__text">${t(item.quote)}</p>
+      <p class="media-card__meta">— ${t(item.attribution)}</p>
+    `)).join('');
+  }
 
-    if (!container._accordionInit) {
-      container._accordionInit = true;
-      container.addEventListener('click', (e) => {
-        const btn = e.target.closest('.accordion-btn');
-        if (!btn) return;
-        const body = qs(`#${btn.getAttribute('aria-controls')}`);
-        const isOpen = btn.getAttribute('aria-expanded')==='true';
-        qsa('.accordion-btn', container).forEach(b => {
-          b.setAttribute('aria-expanded','false');
-          qs(`#${b.getAttribute('aria-controls')}`).hidden=true;
-        });
-        if (!isOpen) { btn.setAttribute('aria-expanded','true'); body.hidden=false; }
-      });
-    }
+  // ── Interviews ──────────────────────────────────────────────
+  function renderInterviews() {
+    const grid = qs('#interviews-grid');
+    if (!grid) return;
+    grid.innerHTML = [...allInterviews].sort(byDateDesc).map(item => mediaCardHTML(item, t(item.title), `
+      <p class="media-card__text">${t(item.title)}</p>
+      <p class="media-card__meta">${lang==='hi'?'पूरा साक्षात्कार पढ़ें →':'Read full interview →'}</p>
+    `)).join('');
+  }
+
+  // ── Published Essays ─────────────────────────────────────────
+  function renderEssays() {
+    const grid = qs('#essays-grid');
+    if (!grid) return;
+    grid.innerHTML = [...allEssays].sort(byDateDesc).map(item => mediaCardHTML(item, t(item.title), `
+      <p class="media-card__text">${t(item.title)}</p>
+    `)).join('');
   }
 
   // ── Talks ─────────────────────────────────────────────────
@@ -720,9 +708,6 @@
     qsa('[data-hi-placeholder]').forEach(el => {
       el.placeholder = lang==='hi' ? el.dataset.hiPlaceholder : (el.dataset.enPlaceholder||el.dataset.hiPlaceholder);
     });
-    qsa('.accordion-link:not(.accordion-link--archive)').forEach(a => {
-      a.textContent = lang==='hi'?'पूरा साक्षात्कार पढ़ें →':'Read full interview →';
-    });
   }
 
   // ── Contact form ──────────────────────────────────────────
@@ -803,11 +788,12 @@
     initLangToggle();
     initNav();
     try {
-      [allBooks, allReviews, allPress, allInterviews, allTalks, allNews, allPosts] = await Promise.all([
+      [allBooks, allReviews, allNewsArticles, allInterviews, allEssays, allTalks, allNews, allPosts] = await Promise.all([
         fetchJSON('data/books.json'),
         fetchJSON('data/reviews.json'),
-        fetchJSON('data/press.json'),
+        fetchJSON('data/news-articles.json'),
         fetchJSON('data/interviews.json'),
+        fetchJSON('data/essays.json'),
         fetchJSON('data/talks.json'),
         fetchJSON('data/news.json'),
         fetchJSON('data/posts.json'),
@@ -823,8 +809,9 @@
     renderFilterButtons();
     renderBooks();
     renderReviews();
-    renderPress();
+    renderNewsArticles();
     renderInterviews();
+    renderEssays();
     renderTalks();
     renderPostsSnippet();
     renderStaticText();

@@ -31,48 +31,50 @@ test.describe('Reviews accordion', () => {
   });
 });
 
-test.describe('Press section', () => {
+test.describe('News & Articles section', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
-    await page.waitForSelector('.press-item');
+    await page.waitForSelector('#news-articles-grid .media-card');
   });
 
-  test('press items are rendered', async ({ page }) => {
-    expect(await page.locator('.press-item').count()).toBeGreaterThan(0);
+  test('news & articles cards are rendered', async ({ page }) => {
+    expect(await page.locator('#news-articles-grid .media-card').count()).toBeGreaterThan(0);
   });
 
-  test('press items link to external sources', async ({ page }) => {
-    const href = await page.locator('.press-item').first().getAttribute('href');
+  test('news & articles cards link to external sources', async ({ page }) => {
+    const href = await page.locator('#news-articles-grid .media-card__cover-link').first().getAttribute('href');
     expect(href).toBeTruthy();
   });
 });
 
-test.describe('Interviews accordion', () => {
+test.describe('Interviews section', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
-    await page.waitForSelector('.accordion-item');
+    await page.waitForSelector('#interviews-grid .media-card');
   });
 
-  test('interview items are rendered', async ({ page }) => {
-    expect(await page.locator('.accordion-item').count()).toBeGreaterThan(0);
+  test('interview cards are rendered', async ({ page }) => {
+    expect(await page.locator('#interviews-grid .media-card').count()).toBeGreaterThan(0);
   });
 
-  test('all interview items start collapsed', async ({ page }) => {
-    const expanded = page.locator('.accordion-btn[aria-expanded="true"]');
-    expect(await expanded.count()).toBe(0);
+  test('interview cards link to external sources', async ({ page }) => {
+    const href = await page.locator('#interviews-grid .media-card__cover-link').first().getAttribute('href');
+    expect(href).toBeTruthy();
+  });
+});
+
+test.describe('Published Essays section', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/');
+    await page.waitForSelector('#essays-grid .media-card');
   });
 
-  test('clicking an interview expands it', async ({ page }) => {
-    await page.locator('.accordion-btn').first().click();
-    await expect(page.locator('.accordion-btn').first()).toHaveAttribute('aria-expanded', 'true');
+  test('essay cards are rendered', async ({ page }) => {
+    expect(await page.locator('#essays-grid .media-card').count()).toBeGreaterThan(0);
   });
 
-  test('opening a second interview collapses the first', async ({ page }) => {
-    const btns = page.locator('.accordion-btn');
-    if (await btns.count() < 2) test.skip();
-    await btns.first().click();
-    await btns.nth(1).click();
-    await expect(btns.first()).toHaveAttribute('aria-expanded', 'false');
-    await expect(btns.nth(1)).toHaveAttribute('aria-expanded', 'true');
+  test('essay cards link to external sources', async ({ page }) => {
+    const href = await page.locator('#essays-grid .media-card__cover-link').first().getAttribute('href');
+    expect(href).toBeTruthy();
   });
 });

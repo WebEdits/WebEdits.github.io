@@ -40,8 +40,9 @@ edit files, commit, push, and changes are live within ~60 seconds.
 ├── data/
 │   ├── books.json          ← All book data (both languages) ← EDIT HERE
 │   ├── reviews.json        ← Scholarly endorsements, grouped by book ← EDIT HERE
-│   ├── press.json          ← Press/media quotes ← EDIT HERE
-│   ├── interviews.json     ← Interview links accordion ← EDIT HERE
+│   ├── news-articles.json  ← Media: News & Articles quotes ← EDIT HERE
+│   ├── interviews.json     ← Media: Interviews ← EDIT HERE
+│   ├── essays.json         ← Media: Published Essays ← EDIT HERE
 │   ├── talks.json          ← YouTube talks / video appearances ← EDIT HERE
 │   ├── posts.json          ← Blog posts (index + full body) ← EDIT HERE
 │   └── news.json           ← New releases, announcements ← EDIT HERE
@@ -56,7 +57,9 @@ edit files, commit, push, and changes are live within ~60 seconds.
 
 - **Add a new book** → edit `data/books.json` (see EDITING_GUIDE.md)
 - **Add a review/endorsement** → edit `data/reviews.json`
-- **Add a press mention** → edit `data/press.json`
+- **Add a News & Articles item** → edit `data/news-articles.json`
+- **Add an interview** → edit `data/interviews.json`
+- **Add a published essay** → edit `data/essays.json`
 - **Announce a new edition** → edit `data/news.json`
 - **Change site colours** → edit CSS custom properties at top of `assets/css/style.css`
 - **Update bio text** → edit the `data-hi` / `data-en` attributes in `index.html`

@@ -22,8 +22,9 @@ help maintain this website correctly without asking basic questions.
 - `assets/js/main.js` — all JS logic; fetches JSON, renders content, handles lang switch
 - `data/books.json` — all book data, both languages
 - `data/reviews.json` — scholarly endorsements, flat array grouped by `canonical_id` at render time
-- `data/press.json` — press/media quotes, flat array
-- `data/interviews.json` — interview links, rendered as an accordion
+- `data/news-articles.json` — press/media quotes (Media → News & Articles), flat array
+- `data/interviews.json` — interview links (Media → Interviews), flat array
+- `data/essays.json` — published essays by the author (Media → Published Essays), flat array
 - `data/talks.json` — YouTube talks / video appearances
 - `data/posts.json` — blog posts (index entry + full body, no separate per-post files)
 - `data/news.json` — announcements shown as a banner at top of page
@@ -48,8 +49,9 @@ help maintain this website correctly without asking basic questions.
 | `renderBooks()` | Reads `allBooks`, renders into `#books-grid` |
 | `renderFilterButtons()` | Builds genre filter buttons from book data |
 | `renderReviews()` | Renders `allReviews`, grouped by `canonical_id`, into `#reviews-accordion` |
-| `renderPress()` | Renders `allPress` into `#press-list` |
-| `renderInterviews()` | Renders `allInterviews` into `#interviews-accordion` |
+| `renderNewsArticles()` | Renders `allNewsArticles` (sorted newest-first) into `#news-articles-grid` |
+| `renderInterviews()` | Renders `allInterviews` (sorted newest-first) into `#interviews-grid` |
+| `renderEssays()` | Renders `allEssays` (sorted newest-first) into `#essays-grid` |
 | `renderTalks()` | Renders `allTalks` (video cards + text list) into `#talks-grid` |
 | `renderPostsSnippet()` | Renders latest 3 of `allPosts` into `#posts-snippet` |
 | `renderNews()` | Renders first item in `allNews` into `#news-banner` |
@@ -88,7 +90,7 @@ is descriptive, not enforced by code):
 Multi-edition books share a `canonical_id` (defaults to `id` if absent) across their
 edition entries; `edition` (number) and `edition_label` (bilingual string) distinguish
 the editions in the book-detail modal's "Other Editions" list. `reviews.json` and
-`press.json` link to books via this same `canonical_id`.
+`news-articles.json` link to books via this same `canonical_id`.
 
 ### reviews.json — flat array of scholarly endorsements/reviews
 
@@ -98,13 +100,21 @@ Fields: `id`, `type` (`"review"` or `"testimonial"`), `canonical_id`, `date` (YY
 Grouped by `canonical_id` at render time into an accordion (`renderReviews`), ordered by
 the linked book's year. `canonical_id` must match a book's `canonical_id`/`id`.
 
-### press.json — flat array of press/media quotes
+### news-articles.json — flat array of press/media quotes (Media → News & Articles)
 
 Fields: `id`, `source`, `date`, `canonical_id`, `quote`, `attribution`, `url`, `archive_url`
 
-### interviews.json — flat array, rendered as an accordion
+### interviews.json — flat array (Media → Interviews)
 
 Fields: `id`, `source`, `date`, `title`, `url`, `archive_url`
+
+### essays.json — flat array of published essays by the author (Media → Published Essays)
+
+Fields: `id`, `title`, `source`, `date`, `url`, `archive_url`
+
+All three Media data files render into the same `.media-card` component in a plain
+wrapping grid (`renderNewsArticles`/`renderInterviews`/`renderEssays`), sorted by `date`
+descending — no accordion, no carousel; every card is a single directly-clickable link.
 
 ### talks.json — array of talk/appearance objects
 
@@ -196,7 +206,11 @@ upload cover to `assets/images/covers/{id}.jpg`, then `npm test`
 
 **Add a review/endorsement:** Edit `data/reviews.json`, add to the flat array
 
-**Add a press mention:** Edit `data/press.json`, add to the flat array
+**Add a News & Articles item:** Edit `data/news-articles.json`, add to the flat array
+
+**Add an interview:** Edit `data/interviews.json`, add to the flat array
+
+**Add a published essay:** Edit `data/essays.json`, add to the flat array
 
 **Post an announcement:** Edit `data/news.json`, add object at top of array
 

@@ -447,73 +447,55 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   .book-detail__cover-wrap { max-height: 260px; }
 }
 
-/* ── PRESS ──────────────────────────────────────────── */
-.section--press { background: var(--paper); }
-.press-list {
-  margin-top: var(--space-7); border: 1px solid var(--border); border-radius: var(--radius-md);
-  overflow: hidden; box-shadow: var(--shadow-1);
+/* ── MEDIA (News & Articles / Interviews / Published Essays) ── */
+.section--media { background: var(--paper); }
+.media-sublabel {
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--saffron-text); margin: 2.5rem 0 1rem;
+  font-family: var(--sans);
 }
-.press-item {
-  display: flex; gap: var(--space-5); align-items: flex-start;
-  padding: var(--space-5); border-bottom: 1px solid var(--border);
-  text-decoration: none; color: inherit;
-  transition: background var(--duration-base) var(--ease-out);
+.media-sublabel:first-of-type { margin-top: 1rem; }
+.media-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem; margin-top: 0.5rem;
 }
-.press-item:last-child { border-bottom: none; }
-.press-item:hover { background: var(--saffron-pale); }
-.press-item__source {
+.media-card {
+  position: relative; background: var(--paper); border: 1px solid var(--border);
+  border-radius: var(--radius-md); box-shadow: var(--shadow-1);
+  padding: 0.9rem; cursor: pointer;
+  transition: transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
+}
+.media-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
+/* Full-cover primary link — kept as a sibling of, not an ancestor of, the
+   archive link below, so the two links never nest (invalid HTML, and the
+   browser's parser would split them into stray, unstyled sibling nodes). */
+.media-card__cover-link { position: absolute; inset: 0; z-index: 1; }
+.media-card__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+.media-card__source {
+  min-width: 0; flex: 1 1 auto;
   font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--saffron-text); white-space: nowrap; min-width: 90px; padding-top: 3px;
+  text-transform: uppercase; color: var(--saffron-text);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
-.press-item__quote { font-family: var(--serif); font-size: var(--text-md); line-height: var(--leading-body); color: var(--ink); }
-.press-item__attr { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
-
-/* ── INTERVIEWS ACCORDION ───────────────────────────── */
-.interviews-section { margin-top: 3.5rem; }
-.interviews-label {
-  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--saffron-text); margin-bottom: 1rem;
+.media-card__date { font-size: 0.72rem; color: var(--muted); white-space: nowrap; flex-shrink: 0; }
+.media-card__text {
+  font-family: var(--serif); font-size: 0.92rem; line-height: var(--leading-body); color: var(--ink);
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }
-.accordion-item { border-bottom: 1px solid var(--border); }
-.accordion-item:first-child { border-top: 1px solid var(--border); }
-.accordion-btn {
-  width: 100%; display: flex; align-items: baseline; gap: 0.75rem;
-  padding: 1rem 0.25rem; background: none; border: none; cursor: pointer;
-  text-align: left; transition: background var(--duration-base) var(--ease-out);
+.media-card__meta {
+  font-size: 0.8rem; color: var(--muted); margin-top: 0.35rem;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
-.accordion-btn:hover { background: var(--saffron-pale); padding-left: 0.5rem; border-radius: var(--radius-sm); }
-.accordion-btn[aria-expanded="true"] { background: var(--saffron-pale); padding-left: 0.5rem; border-radius: var(--radius-sm); }
-.accordion-source {
-  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--saffron-text); white-space: nowrap; min-width: 110px; flex-shrink: 0;
+.media-card__archive-badge { font-size: 0.8em; margin-left: 0.3rem; }
+.media-card__archive-link {
+  position: relative; z-index: 2; display: inline-block; margin-top: 0.35rem;
+  font-size: 0.75rem; color: var(--muted); text-decoration: underline;
+  text-underline-offset: 2px;
 }
-.accordion-title {
-  font-family: var(--serif); font-size: 1rem; color: var(--ink);
-  flex: 1; line-height: 1.4;
-}
-.accordion-date {
-  font-size: 0.72rem; color: var(--muted); white-space: nowrap; flex-shrink: 0; margin-left: auto;
-}
-.accordion-icon {
-  flex-shrink: 0; width: 1.1rem; height: 1.1rem; position: relative; margin-left: 0.5rem;
-}
-.accordion-icon::before,
-.accordion-icon::after {
-  content: ''; position: absolute; background: var(--muted);
-  border-radius: 1px; transition: transform 0.25s;
-}
-.accordion-icon::before { width: 10px; height: 1.5px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
-.accordion-icon::after  { width: 1.5px; height: 10px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
-.accordion-btn[aria-expanded="true"] .accordion-icon::after { transform: translate(-50%,-50%) rotate(90deg); opacity: 0; }
-.accordion-body {
-  padding: 0.5rem 0.25rem 1.25rem 0.25rem;
-}
-.accordion-link {
-  display: inline-block; font-size: 0.85rem; color: var(--saffron-text);
-  text-decoration: underline; text-underline-offset: 3px;
-  font-family: var(--serif); font-style: italic;
-}
-.accordion-link:hover { color: var(--saffron-d); }
+.media-card__archive-link:hover { color: var(--saffron); }
 
 /* ── TALKS ──────────────────────────────────────────── */
 .section--talks { background: var(--paper-3); }
@@ -654,18 +636,28 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   .hero__image { display: none; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .talks-grid { grid-template-columns: 1fr; }
-  .accordion-source { min-width: 80px; }
-  .accordion-date { display: none; }
 }
 @media (max-width: 480px) {
   .hero__name { font-size: 2.6rem; }
   .books-filter { gap: 0.4rem; }
   .books-filter button { font-size: 0.72rem; padding: 0.35rem 0.75rem; }
-  .accordion-source { display: none; }
 }
 
 /* ── REVIEWS SECTION ────────────────────────────────── */
 .section--reviews { background: var(--paper-2); }
+
+/* Plus/minus toggle icon for the Reviews accordion (.review-group__btn) */
+.accordion-icon {
+  flex-shrink: 0; width: 1.1rem; height: 1.1rem; position: relative; margin-left: 0.5rem;
+}
+.accordion-icon::before,
+.accordion-icon::after {
+  content: ''; position: absolute; background: var(--muted);
+  border-radius: 1px; transition: transform 0.25s;
+}
+.accordion-icon::before { width: 10px; height: 1.5px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+.accordion-icon::after  { width: 1.5px; height: 10px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+.review-group__btn[aria-expanded="true"] .accordion-icon::after { transform: translate(-50%,-50%) rotate(90deg); opacity: 0; }
 
 /* Book-grouped accordion */
 .review-group { border-bottom: 1px solid var(--border); scroll-margin-top: 80px; }
@@ -879,42 +871,6 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 @media (max-width: 600px) {
   :root { --review-cols: 1; }
 }
-
-/* ── PRESS ITEMS — fixed source column ──────────────── */
-/* Source column: fixed 120px, truncates long names cleanly.
-   Quote column: takes remaining space. */
-.press-item__source {
-  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--saffron-text);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  width: 120px; flex: 0 0 120px;   /* fixed — never shrinks or grows */
-  padding-top: 3px;
-}
-.press-item__archive-badge { font-size: 0.8em; margin-left: 0.3rem; }
-.press-item__date { font-size: 0.72rem; color: var(--muted); margin-left: 0.5rem; }
-.press-item__archive-link {
-  display: inline-block; margin-top: 0.3rem;
-  font-size: 0.75rem; color: var(--muted); text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.press-item__archive-link:hover { color: var(--saffron); }
-
-/* ── INTERVIEW ACCORDION — fixed source column ──────── */
-/* Source column: fixed 120px, matching press.
-   Title column: flex: 1.
-   Date column: fixed right, hidden on mobile (already in base CSS). */
-.accordion-btn {
-  align-items: center !important;  /* override baseline — prevents height shifts */
-}
-.accordion-source {
-  width: 120px; flex: 0 0 120px;   /* fixed — matches press source column */
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--saffron-text);
-}
-
-/* ── INTERVIEW accordion additions ──────────────────── */
-.accordion-link--archive { margin-left: 1rem; color: var(--muted); }
 
 /* ── POSTS SNIPPET (main page) ──────────────────────── */
 .section--posts { background: var(--paper-3); }

@@ -11,6 +11,32 @@
     "archive_url": ""
   },
   {
+    "id": "csp-indica",
+    "source": "CSP Indica",
+    "date": "2021-03-19",
+    "canonical_id": "cinema-through-rasa",
+    "quote": {
+      "hi": "विश्व सिनेमा पर भारतीय सौन्दर्यशास्त्र के ढाँचे में विचार किया जा सकता है।",
+      "en": "World Cinema Can be Discussed Within the Framework of Indian Aesthetics — an in-depth interview with Prachand Praveer."
+    },
+    "attribution": { "hi": "सी॰एस॰पी॰ इंडिका", "en": "CSP Indica" },
+    "url": "https://www.csp.indica.in/world-cinema-can-be-discussed-within-the-framework-of-indian-aesthetics-prachand-praveer/",
+    "archive_url": ""
+  },
+  {
+    "id": "lifeandmore-cinema",
+    "source": "Life and More",
+    "date": "2021-01",
+    "canonical_id": "cinema-through-rasa",
+    "quote": {
+      "hi": "Cinema Through Rasa — रस के माध्यम से सिनेमा।",
+      "en": "Cinema Through Rasa — a detailed discussion of how Indian Rasa theory illuminates world cinema."
+    },
+    "attribution": { "hi": "लाइफ एंड मोर", "en": "Life and More" },
+    "url": "https://lifeandmore.in/books/prachand-praveer-cinema-rasa/",
+    "archive_url": ""
+  },
+  {
     "id": "softpower-2021",
     "source": "Soft Power Magazine",
     "date": "2021-03-19",

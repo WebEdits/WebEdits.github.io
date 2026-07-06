@@ -123,9 +123,9 @@ editions) in `books.json` — reviews are grouped by book on the page.
 `photo`, `bio`, `url`, and `archive_url` are all optional; leave them `""`
 if not applicable.
 
-### Add a press mention
+### Add a News & Articles item
 
-Open `data/press.json` (a flat array) and add:
+Open `data/news-articles.json` (a flat array) and add:
 
 ```json
 {
@@ -154,6 +154,25 @@ Open `data/interviews.json` (a flat array) and add:
   "archive_url": ""
 }
 ```
+
+### Add a published essay
+
+Open `data/essays.json` (a flat array) and add:
+
+```json
+{
+  "id": "unique-id",
+  "source": "Publication Name",
+  "date": "2026-05-06",
+  "title": { "hi": "निबंध का शीर्षक", "en": "Essay title" },
+  "url": "https://link-to-article.com",
+  "archive_url": ""
+}
+```
+
+News & Articles, Interviews, and Published Essays all render as the same
+`.media-card` grid under "Media" (`#media`) in `index.html`, sorted
+newest-first by `date` — every entry needs a `date`.
 
 ### Add a talk / video
 
