@@ -1,5 +1,16 @@
 [
   {
+    "id": "pahleebar-varnochchar",
+    "title": {
+      "hi": "वर्णोच्चार विधान — भारतीय शास्त्रीय ध्वनितत्त्वशास्त्र पर एक परिचयात्मक आलेख।",
+      "en": "Varnochchar Vidhan — an introductory article on Indian classical phonology, presenting Prachand Praveer's new work."
+    },
+    "source": "Pahlee Baar",
+    "date": "2026-02",
+    "url": "https://pahleebar.blogspot.com/2026/02/blog-post_74.html",
+    "archive_url": ""
+  },
+  {
     "id": "swarajya-rasa-siddhanta",
     "title": {
       "hi": "Of Rasa-Siddhanta, Vibhatsa Rasa and World Cinema",
@@ -20,5 +31,16 @@
     "date": "2018-08-17",
     "url": "http://epaper.navbharattimes.com/details/12209-53018-1.html",
     "archive_url": "https://web.archive.org/web/20180817110517/http://epaper.navbharattimes.com/details/12209-53018-1.html"
+  },
+  {
+    "id": "samalochan-fritz-lang",
+    "title": {
+      "hi": "फ्रिट्ज लैंग का सिनेमा — रस सिद्धान्त का परिचयात्मक आलेख। मीमांसा की दृष्टि से विश्व सिनेमा।",
+      "en": "The cinema of Fritz Lang — an introductory article on Rasa theory as applied to world cinema. A landmark essay from Prachand Praveer."
+    },
+    "source": "Samalochan",
+    "date": "2016-01",
+    "url": "https://samalochan.com/%E0%A4%AE%E0%A5%80%E0%A4%AE%E0%A4%BE%E0%A4%82%E0%A4%B8%E0%A4%BE-%E0%A4%AB%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%9F%E0%A5%8D%E0%A4%9C-%E0%A4%B2%E0%A5%88%E0%A4%82%E0%A4%97-%E0%A4%95%E0%A4%BE-%E0%A4%B8/",
+    "archive_url": ""
   }
 ]

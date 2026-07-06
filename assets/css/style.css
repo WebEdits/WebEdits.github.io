@@ -450,7 +450,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 }
 /* Alternating tints so adjacent cards stay easy to tell apart at a glance */
 .media-card:nth-child(3n+2) { background: var(--orange-pale); }
-.media-card:nth-child(3n+3) { background: var(--gold-pale); }
+.media-card:nth-child(3n+3) { background: var(--saffron-pale); }
 .media-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
 /* Full-cover primary link — kept as a sibling of, not an ancestor of, the
    archive link below, so the two links never nest (invalid HTML, and the
