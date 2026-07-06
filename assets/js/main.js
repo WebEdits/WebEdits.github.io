@@ -458,6 +458,11 @@
             ${lang==='hi' ? `${count-REVIEWS_INITIAL} और देखें` : `Show ${count-REVIEWS_INITIAL} more`}
           </button>` : '';
 
+      const backBtn = latestBook
+        ? `<button class="review-group__back-btn" data-canon="${canonId}">
+            ${lang==='hi' ? '← पुस्तक देखें' : '← View book'}
+          </button>` : '';
+
       return `
         <div class="review-group" id="review-group-${canonId}">
           <button class="review-group__btn" data-canon="${canonId}"
@@ -468,6 +473,7 @@
             <span class="accordion-icon" aria-hidden="true"></span>
           </button>
           <div class="review-group__body" id="rgroup-${gi}" ${gi===0?'':'hidden'}>
+            ${backBtn}
             <div class="review-group__cards">${cards}</div>
             ${showMoreBtn}
           </div>
@@ -484,6 +490,16 @@
           qs(`#${b.getAttribute('aria-controls')}`).hidden = true;
         });
         if (!isOpen) { btn.setAttribute('aria-expanded','true'); body.hidden = false; }
+      });
+    });
+
+    // Back to book — reopen the detail modal for the book this review group is about
+    qsa('.review-group__back-btn', container).forEach(btn => {
+      btn.addEventListener('click', () => {
+        const canonId = btn.dataset.canon;
+        const bookEditions = allBooks.filter(b => (b.canonical_id||b.id) === canonId);
+        const book = bookEditions.sort((a,b) => b.year-a.year)[0];
+        if (book) openBookDetail(book);
       });
     });
 

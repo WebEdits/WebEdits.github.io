@@ -667,6 +667,15 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 }
 .review-group__body { padding: 1rem 0 1.5rem; }
 
+.review-group__back-btn {
+  display: inline-block; margin-bottom: 1rem; padding: 0.4rem 1rem;
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+  background: transparent; border: 1px solid var(--border);
+  border-radius: var(--radius-pill); color: var(--muted); cursor: pointer;
+  transition: border-color var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out);
+}
+.review-group__back-btn:hover { border-color: var(--saffron); color: var(--saffron); }
+
 /* ── REVIEW CARD GRID ───────────────────────────────── */
 /* Change --review-cols to 3 or 4 to adjust desktop grid */
 :root { --review-cols: 3; }
