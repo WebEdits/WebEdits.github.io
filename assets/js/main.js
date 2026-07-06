@@ -182,7 +182,7 @@
     }
   }
 
-  // ── Books carousel ────────────────────────────────────────
+  // ── Books bookshelf grid ──────────────────────────────────
   function renderBooks() {
     const grid = qs('#books-grid');
     if (!grid) return;
@@ -201,23 +201,14 @@
            </div>`;
       const badge = book.new_edition
         ? `<span class="book-card__badge">${lang === 'hi' ? 'नया संस्करण' : 'New'}</span>` : '';
-      const buyLinks = Object.entries(book.links || {}).filter(([,u])=>u)
-        .map(([key, url]) => {
-          const label = {amazon_in:'Amazon',flipkart:'Flipkart',amazon_com:'Amazon US',dkprintworld:'DK Printworld'}[key]||key;
-          return `<a href="${url}" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">${label}</a>`;
-        }).join('');
       return `
         <div class="book-card" data-id="${book.id}" tabindex="0" role="button"
              aria-label="${t(book.title)}, ${t(book.edition_label)}">
-          <div class="book-card__cover">${coverHTML}</div>
-          <div class="book-card__overlay">
+          <div class="book-card__cover">${coverHTML}${badge}</div>
+          <div class="book-card__caption">
+            <h3 class="book-card__title">${t(book.title)}</h3>
             <p class="book-card__meta">${t(book.genre)} · ${t(book.edition_label)}</p>
-            <h3 class="book-card__title">${t(book.title)}${badge}</h3>
-            <p class="book-card__desc">${t(book.description)}</p>
-            <div class="book-card__links">${buyLinks}</div>
           </div>
-          <div class="book-card__tap-prev" aria-hidden="true"></div>
-          <div class="book-card__tap-next" aria-hidden="true"></div>
         </div>`;
     }).join('');
 
@@ -226,44 +217,9 @@
         const book = allBooks.find(b => b.id === card.dataset.id);
         if (book) openBookDetail(book);
       };
-      // Tap zones: left 33% = scroll prev, right 33% = scroll next
-      // Centre 34% (or overlay links) = open detail modal
-      const prevZone = card.querySelector('.book-card__tap-prev');
-      const nextZone = card.querySelector('.book-card__tap-next');
-      if (prevZone) prevZone.addEventListener('click', e => {
-        e.stopPropagation();
-        grid.scrollBy({ left: -316, behavior: 'smooth' });
-      });
-      if (nextZone) nextZone.addEventListener('click', e => {
-        e.stopPropagation();
-        grid.scrollBy({ left: 316, behavior: 'smooth' });
-      });
       card.addEventListener('click', open);
       card.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' '){e.preventDefault();open();} });
     });
-
-    if (!qs('#books-carousel-wrap')) {
-      const wrap = document.createElement('div');
-      wrap.id = 'books-carousel-wrap';
-      wrap.className = 'books-carousel-wrap';
-      grid.parentElement.insertBefore(wrap, grid);
-      wrap.appendChild(grid);
-      ['prev','next'].forEach(dir => {
-        const btn = document.createElement('button');
-        btn.className = `books-carousel__btn books-carousel__btn--${dir}`;
-        btn.setAttribute('aria-label', dir==='prev'?'Previous':'Next');
-        btn.innerHTML = dir==='prev'?'&#x2039;':'&#x203A;';
-        btn.addEventListener('click', () => {
-          const step = 316;
-          if (dir==='prev') {
-            grid.scrollLeft < step/2 ? (grid.scrollLeft=grid.scrollWidth) : grid.scrollBy({left:-step,behavior:'smooth'});
-          } else {
-            grid.scrollLeft+grid.clientWidth >= grid.scrollWidth-step/2 ? (grid.scrollLeft=0) : grid.scrollBy({left:step,behavior:'smooth'});
-          }
-        });
-        wrap.appendChild(btn);
-      });
-    }
   }
 
   // ── Book detail modal ─────────────────────────────────────
