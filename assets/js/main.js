@@ -306,7 +306,7 @@
       ? `<span class="book-detail__badge book-detail__badge--soon">${lang==='hi'?'शीघ्र प्रकाश्य':'Coming Soon'}</span>` : '';
     const subtitle = t(book.subtitle)
       ? `<p class="book-detail__subtitle">${t(book.subtitle)}</p>` : '';
-    const buyLinks = book.coming_soon ? '' : Object.entries(book.links||{}).filter(([,u])=>u)
+    const buyLinks = Object.entries(book.links||{}).filter(([,u])=>u)
       .map(([key,url])=>{
         const label={amazon_in:'Amazon India',flipkart:'Flipkart',amazon_com:'Amazon US',dkprintworld:'DK Printworld'}[key]||key;
         return `<a href="${url}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">${label}</a>`;
