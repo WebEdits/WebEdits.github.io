@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { swipe } = require('./helpers');
 
 test.describe('Book detail — press coverage', () => {
   test.beforeEach(async ({ page }) => {
@@ -87,6 +88,53 @@ test.describe('Book detail — press coverage', () => {
     await page.locator('.book-detail__press-thumb').nth(4).click();
     const lastCaption = await page.locator('#press-lightbox .lightbox__caption').textContent();
     expect(lastCaption).not.toBe(firstCaption);
+  });
+
+  test('swipe left advances to a different image', async ({ page }) => {
+    await page.locator('.book-detail__press-thumb').first().click();
+    const firstSrc = await page.locator('#press-lightbox .lightbox__img').getAttribute('src');
+    await swipe(page, '#press-lightbox .lightbox__content', { dx: -100 });
+    const nextSrc = await page.locator('#press-lightbox .lightbox__img').getAttribute('src');
+    expect(nextSrc).not.toBe(firstSrc);
+  });
+
+  test('swipe right goes to a different image', async ({ page }) => {
+    await page.locator('.book-detail__press-thumb').first().click();
+    const firstSrc = await page.locator('#press-lightbox .lightbox__img').getAttribute('src');
+    await swipe(page, '#press-lightbox .lightbox__content', { dx: 100 });
+    const prevSrc = await page.locator('#press-lightbox .lightbox__img').getAttribute('src');
+    expect(prevSrc).not.toBe(firstSrc);
+  });
+
+  test('swipe down dismisses only the press lightbox, not the book detail modal underneath', async ({ page }) => {
+    await page.locator('.book-detail__press-thumb').first().click();
+    await expect(page.locator('#press-lightbox')).toHaveClass(/open/);
+    await swipe(page, '#press-lightbox .lightbox__content', { dy: 150 });
+    await expect(page.locator('#press-lightbox')).not.toHaveClass(/open/);
+    await expect(page.locator('#book-detail-modal')).toHaveClass(/open/);
+  });
+
+  test('back button closes only the press lightbox, not the book detail modal underneath', async ({ page }) => {
+    await page.locator('.book-detail__press-thumb').first().click();
+    await expect(page.locator('#press-lightbox')).toHaveClass(/open/);
+    await page.goBack();
+    await expect(page.locator('#press-lightbox')).not.toHaveClass(/open/);
+    await expect(page.locator('#book-detail-modal')).toHaveClass(/open/);
+  });
+
+  test('a second back press then closes the book detail modal', async ({ page }) => {
+    await page.locator('.book-detail__press-thumb').first().click();
+    await page.goBack(); // closes the press lightbox
+    await page.goBack(); // closes the book detail modal
+    await expect(page.locator('#book-detail-modal')).not.toHaveClass(/open/);
+  });
+
+  test('forward button after closing the press lightbox does not also close the book modal', async ({ page }) => {
+    await page.locator('.book-detail__press-thumb').first().click();
+    await page.goBack(); // closes the press lightbox; book modal stays open
+    await expect(page.locator('#book-detail-modal')).toHaveClass(/open/);
+    await page.goForward();
+    await expect(page.locator('#book-detail-modal')).toHaveClass(/open/);
   });
 });
 

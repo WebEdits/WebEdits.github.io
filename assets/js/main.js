@@ -37,6 +37,7 @@
   // Modal nav state
   let currentModalList = [];
   let currentModalIdx  = 0;
+  let closeBookDetailModal = null; // hide fn, set by initBookDetailModal; used by setLang
 
   // ── Helpers ───────────────────────────────────────────────
   const t   = (obj) => (obj && obj[lang]) || obj?.hi || obj?.en || '';
@@ -50,6 +51,70 @@
   function youtubeEmbed(id) {
     return `https://www.youtube.com/embed/${id}?rel=0`;
   }
+
+  // ── Swipe gestures ────────────────────────────────────────
+  // Shared by the gallery lightbox, press lightbox, and book-detail modal.
+  // A short touch (under THRESHOLD in both axes) is left alone so the
+  // existing tap/click handlers on the same element still fire normally.
+  function attachSwipeNav(el, { onPrev, onNext, onDismissDown } = {}) {
+    if (!el) return;
+    const THRESHOLD = 40;
+    let startX = 0, startY = 0, tracking = false;
+    el.addEventListener('touchstart', e => {
+      // A second finger joining mid-gesture (pinch-to-zoom) cancels tracking
+      // so the stale single-finger start point can't misfire on touchend.
+      if (e.touches.length !== 1) { tracking = false; return; }
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      tracking = true;
+    }, { passive: true });
+    el.addEventListener('touchend', e => {
+      if (!tracking) return;
+      tracking = false;
+      const touch = e.changedTouches[0];
+      const dx = touch.clientX - startX;
+      const dy = touch.clientY - startY;
+      const absDx = Math.abs(dx), absDy = Math.abs(dy);
+      if (absDx < THRESHOLD && absDy < THRESHOLD) return;
+      if (absDx > absDy) {
+        if (dx < 0 && onNext) { onNext(); e.preventDefault(); }
+        else if (dx > 0 && onPrev) { onPrev(); e.preventDefault(); }
+      } else if (dy > 0 && onDismissDown) {
+        onDismissDown(); e.preventDefault();
+      }
+    });
+  }
+
+  // ── Modal history stack ───────────────────────────────────
+  // Lets the mobile back button dismiss an open modal/lightbox instead of
+  // leaving the site. Each open pushes one history entry; explicit close
+  // (X / backdrop / Escape / swipe-down) pops it via history.back() so the
+  // entry doesn't linger, and popstate (an actual back-button press) closes
+  // whichever modal is on top of the stack.
+  const modalHistoryStack = [];
+  let suppressPopstate = false;
+  function pushModalState(hide) {
+    history.pushState({ ppModal: modalHistoryStack.length + 1 }, '');
+    modalHistoryStack.push(hide);
+  }
+  function closeModalState(hide) {
+    const idx = modalHistoryStack.lastIndexOf(hide);
+    hide();
+    if (idx === -1) return;
+    modalHistoryStack.splice(idx, 1);
+    suppressPopstate = true;
+    history.back();
+  }
+  window.addEventListener('popstate', (e) => {
+    if (suppressPopstate) { suppressPopstate = false; return; }
+    // Only treat this as "closed one of our modals" if we actually moved
+    // backward past a pushed depth — a Forward-button press back into a
+    // ppModal state would otherwise pop and hide an unrelated open modal.
+    const depth = e.state?.ppModal || 0;
+    if (depth >= modalHistoryStack.length) return;
+    const hide = modalHistoryStack.pop();
+    if (hide) hide();
+  });
 
   const MONTHS = {
     hi: ['जनवरी','फ़रवरी','मार्च','अप्रैल','मई','जून','जुलाई','अगस्त','सितम्बर','अक्टूबर','नवम्बर','दिसम्बर'],
@@ -89,9 +154,8 @@
     qsa('.lang-toggle button').forEach(btn =>
       btn.classList.toggle('active', btn.dataset.lang === lang));
     const modal = qs('#book-detail-modal');
-    if (modal?.classList.contains('open')) {
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
+    if (modal?.classList.contains('open') && closeBookDetailModal) {
+      closeModalState(closeBookDetailModal);
     }
     if (allBooks.length)      { renderFilterButtons(); renderBooks(); }
     if (allReviews.length)    renderReviews();
@@ -279,19 +343,27 @@
         <div class="book-detail__content"></div>
       </div>`;
     document.body.appendChild(modal);
-    const close = () => { modal.classList.remove('open'); document.body.style.overflow=''; };
-    qs('.book-detail__backdrop',modal).addEventListener('click',close);
-    qs('.book-detail__close',modal).addEventListener('click',close);
-    qs('.book-detail__nav--prev',modal).addEventListener('click',()=>{
+    const hide = () => { modal.classList.remove('open'); document.body.style.overflow=''; };
+    const close = () => closeModalState(hide);
+    closeBookDetailModal = hide;
+    const goPrev = () => {
       if (currentModalList.length<2) return;
       currentModalIdx=(currentModalIdx-1+currentModalList.length)%currentModalList.length;
       openBookDetail(currentModalList[currentModalIdx],false);
-    });
-    qs('.book-detail__nav--next',modal).addEventListener('click',()=>{
+    };
+    const goNext = () => {
       if (currentModalList.length<2) return;
       currentModalIdx=(currentModalIdx+1)%currentModalList.length;
       openBookDetail(currentModalList[currentModalIdx],false);
-    });
+    };
+    qs('.book-detail__backdrop',modal).addEventListener('click',close);
+    qs('.book-detail__close',modal).addEventListener('click',close);
+    qs('.book-detail__nav--prev',modal).addEventListener('click',goPrev);
+    qs('.book-detail__nav--next',modal).addEventListener('click',goNext);
+    // Swipe left/right flips between books, same as the prev/next buttons.
+    // No swipe-down-to-dismiss here — the content pane scrolls vertically
+    // and a dismiss gesture would fight with that scroll.
+    attachSwipeNav(qs('.book-detail__panel',modal), { onPrev: goPrev, onNext: goNext });
     document.addEventListener('keydown',e=>{
       if (!modal.classList.contains('open')) return;
       // The press lightbox renders on top of this modal (higher z-index) and
@@ -300,14 +372,15 @@
       // while its (now stale) press gallery is still showing.
       if (qs('#press-lightbox')?.classList.contains('open')) return;
       if (e.key==='Escape') close();
-      if (e.key==='ArrowLeft')  qs('.book-detail__nav--prev',modal).click();
-      if (e.key==='ArrowRight') qs('.book-detail__nav--next',modal).click();
+      if (e.key==='ArrowLeft')  goPrev();
+      if (e.key==='ArrowRight') goNext();
     });
   }
 
   function openBookDetail(book, updateList=true) {
     const modal = qs('#book-detail-modal');
     if (!modal) return;
+    const wasOpen = modal.classList.contains('open');
     if (updateList) {
       currentModalList = qsa('.book-card',qs('#books-grid'))
         .map(c=>allBooks.find(b=>b.id===c.dataset.id)).filter(Boolean);
@@ -380,8 +453,7 @@
     if (rvBtn) {
       rvBtn.addEventListener('click',()=>{
         const targetCanon = rvBtn.dataset.canon;
-        modal.classList.remove('open');
-        document.body.style.overflow='';
+        closeModalState(closeBookDetailModal);
 
         // Open the matching accordion group first so its size is final
         // before we scroll to it.
@@ -407,6 +479,7 @@
 
     modal.classList.add('open');
     document.body.style.overflow='hidden';
+    if (!wasOpen) pushModalState(closeBookDetailModal);
   }
 
   // ── Reviews — book-grouped accordion with show-more ───────
@@ -789,14 +862,17 @@
       </div>`;
     document.body.appendChild(lb);
     let cur=0;
+    const hide=()=>{ lb.classList.remove('open'); document.body.style.overflow=''; };
+    const close=()=>closeModalState(hide);
     const show=(idx)=>{
+      const wasOpen = lb.classList.contains('open');
       cur=((idx%images.length)+images.length)%images.length;
       qs('.lightbox__img',lb).src=images[cur].src;
       qs('.lightbox__img',lb).alt=images[cur].caption;
       qs('.lightbox__caption',lb).textContent=images[cur].caption;
       lb.classList.add('open'); document.body.style.overflow='hidden';
+      if (!wasOpen) pushModalState(hide);
     };
-    const close=()=>{ lb.classList.remove('open'); document.body.style.overflow=''; };
     items.forEach((item,i)=>{
       item.setAttribute('role','button'); item.setAttribute('tabindex','0');
       item.addEventListener('click',()=>show(i));
@@ -808,6 +884,11 @@
     qs('.lightbox__tap-next',lb).addEventListener('click', e => { e.stopPropagation(); show(cur+1); });
     qs('.lightbox__tap-prev',lb).addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') show(cur-1); });
     qs('.lightbox__tap-next',lb).addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') show(cur+1); });
+    attachSwipeNav(qs('.lightbox__content',lb), {
+      onPrev: () => show(cur-1),
+      onNext: () => show(cur+1),
+      onDismissDown: close
+    });
     document.addEventListener('keydown',e=>{
       if (!lb.classList.contains('open')) return;
       if (e.key==='Escape') close();
@@ -821,8 +902,10 @@
   let pressLightboxEl = null;
   let pressImages = [];
   let pressCur = 0;
+  let pressLightboxHide = null;
   function showPress(idx) {
     const lb = pressLightboxEl;
+    const wasOpen = lb.classList.contains('open');
     pressCur = ((idx % pressImages.length) + pressImages.length) % pressImages.length;
     const item = pressImages[pressCur];
     const caption = [item.source, item.date ? fmtDateFull(item.date) : ''].filter(Boolean).join(' · ');
@@ -830,6 +913,7 @@
     qs('.lightbox__img',lb).alt = item.source || caption;
     qs('.lightbox__caption',lb).textContent = caption;
     lb.classList.add('open'); document.body.style.overflow = 'hidden';
+    if (!wasOpen) pushModalState(pressLightboxHide);
   }
   function openPressLightbox(press, idx) {
     pressImages = press;
@@ -851,14 +935,20 @@
       pressLightboxEl = lb;
       // Only release the shared scroll lock if the book-detail modal
       // underneath isn't also still open and relying on it.
-      const close = () => {
+      pressLightboxHide = () => {
         lb.classList.remove('open');
         if (!qs('#book-detail-modal')?.classList.contains('open')) document.body.style.overflow = '';
       };
+      const close = () => closeModalState(pressLightboxHide);
       qs('.lightbox__backdrop',lb).addEventListener('click',close);
       qs('.lightbox__close',lb).addEventListener('click',close);
       qs('.lightbox__tap-prev',lb).addEventListener('click', e => { e.stopPropagation(); showPress(pressCur-1); });
       qs('.lightbox__tap-next',lb).addEventListener('click', e => { e.stopPropagation(); showPress(pressCur+1); });
+      attachSwipeNav(qs('.lightbox__content',lb), {
+        onPrev: () => showPress(pressCur-1),
+        onNext: () => showPress(pressCur+1),
+        onDismissDown: close
+      });
       document.addEventListener('keydown', e => {
         if (!lb.classList.contains('open')) return;
         if (e.key==='Escape') close();
