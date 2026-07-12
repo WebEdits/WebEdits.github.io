@@ -180,6 +180,28 @@
   function initNav() {
     const ham    = qs('#nav-ham');
     const drawer = qs('#nav-drawer');
+    const nav    = qs('.nav');
+    const brand  = qs('.nav__brand');
+
+    if (brand) {
+      brand.addEventListener('click', (e) => {
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        const path = window.location.pathname;
+        const onHome = path === '/' || path === '' || path.endsWith('/index.html');
+        if (onHome) {
+          e.preventDefault();
+          const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+        }
+      });
+    }
+
+    if (nav) {
+      const toggleShrink = () => nav.classList.toggle('nav--scrolled', window.scrollY > 24);
+      toggleShrink();
+      window.addEventListener('scroll', toggleShrink, { passive: true });
+    }
+
     if (!ham || !drawer) return;
     const closeDrawer = () => {
       drawer.classList.remove('open');

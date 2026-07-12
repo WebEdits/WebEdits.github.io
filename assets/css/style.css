@@ -135,11 +135,17 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
   gap: 1.5rem;
+  transition: padding var(--duration-base) var(--ease-out);
 }
+.nav.nav--scrolled { padding: 0.55rem 2rem; }
 .nav__brand {
-  font-family: var(--serif); font-size: 1.1rem;
+  font-family: var(--serif); font-size: 1.45rem;
   text-decoration: none; color: var(--ink); white-space: nowrap; flex-shrink: 0;
+  transition: font-size var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out);
 }
+.nav__brand:hover { color: var(--saffron); }
+.nav__brand:hover span { color: var(--ink); }
+.nav.nav--scrolled .nav__brand { font-size: 1rem; }
 .nav__brand span { color: var(--saffron); }
 .nav__links { display: flex; gap: 1.75rem; list-style: none; flex-wrap: nowrap; }
 .nav__links a {
@@ -650,6 +656,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   .section { padding: var(--space-8) 0; }
   .divider { margin: var(--space-4) 1.25rem; }
   .nav { padding: 0.9rem 1.25rem; }
+  .nav.nav--scrolled { padding: 0.55rem 1.25rem; }
   .nav__links { display: none; }
   .nav__right .lang-toggle { display: none; }
   .nav__ham { display: flex; }
