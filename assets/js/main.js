@@ -330,6 +330,16 @@
           </div>
         </div>` : '';
 
+    const pressHTML = (book.press||[]).length
+      ? `<div class="book-detail__press">
+          <p class="book-detail__press-label">${lang==='hi'?'प्रेस में':'Press Coverage'}</p>
+          <div class="book-detail__press-grid">
+            ${book.press.map((p,i)=>`<button type="button" class="book-detail__press-thumb" data-idx="${i}">
+                <img src="${p.image}" alt="${p.source||t(book.title)}" loading="lazy">
+              </button>`).join('')}
+          </div>
+        </div>` : '';
+
     qs('.book-detail__cover-wrap',modal).innerHTML = book.cover
       ? `<img src="${book.cover}" alt="${t(book.title)}" loading="lazy">` : '';
     qs('.book-detail__content',modal).innerHTML = `
@@ -340,10 +350,14 @@
       <p class="book-detail__desc">${t(book.description)}</p>
       ${buyLinks?`<div class="book-detail__links">${buyLinks}</div>`:''}
       ${reviewsBtn}
-      ${editionHTML}`;
+      ${editionHTML}
+      ${pressHTML}`;
 
     qsa('.book-detail__edition-btn',modal).forEach(btn=>
       btn.addEventListener('click',()=>{ const ed=allBooks.find(b=>b.id===btn.dataset.id); if(ed) openBookDetail(ed,false); }));
+
+    qsa('.book-detail__press-thumb',modal).forEach(btn=>
+      btn.addEventListener('click',()=>openPressLightbox(book.press,Number(btn.dataset.idx))));
 
     const rvBtn = qs('.book-detail__reviews-btn',modal);
     if (rvBtn) {
@@ -783,6 +797,54 @@
       if (e.key==='ArrowLeft') show(cur-1);
       if (e.key==='ArrowRight') show(cur+1);
     });
+  }
+
+  // ── Book press-coverage lightbox (built lazily; image list swapped
+  //    per book on each open, since press coverage differs per title) ──
+  let pressLightboxEl = null;
+  let pressImages = [];
+  let pressCur = 0;
+  function showPress(idx) {
+    const lb = pressLightboxEl;
+    pressCur = ((idx % pressImages.length) + pressImages.length) % pressImages.length;
+    const item = pressImages[pressCur];
+    const caption = [item.source, item.date ? fmtDate(item.date) : ''].filter(Boolean).join(' · ');
+    qs('.lightbox__img',lb).src = item.image;
+    qs('.lightbox__img',lb).alt = item.source || caption;
+    qs('.lightbox__caption',lb).textContent = caption;
+    lb.classList.add('open'); document.body.style.overflow = 'hidden';
+  }
+  function openPressLightbox(press, idx) {
+    pressImages = press;
+    if (!pressLightboxEl) {
+      const lb = document.createElement('div');
+      lb.id = 'press-lightbox';
+      lb.setAttribute('role','dialog');
+      lb.setAttribute('aria-modal','true');
+      lb.innerHTML = `
+        <div class="lightbox__backdrop"></div>
+        <button class="lightbox__close" aria-label="Close">&#x2715;</button>
+        <div class="lightbox__content">
+          <div class="lightbox__tap-prev" aria-label="Previous" role="button" tabindex="0"></div>
+          <div class="lightbox__tap-next" aria-label="Next"     role="button" tabindex="0"></div>
+          <img class="lightbox__img" src="" alt="">
+          <p class="lightbox__caption"></p>
+        </div>`;
+      document.body.appendChild(lb);
+      pressLightboxEl = lb;
+      const close = () => { lb.classList.remove('open'); document.body.style.overflow=''; };
+      qs('.lightbox__backdrop',lb).addEventListener('click',close);
+      qs('.lightbox__close',lb).addEventListener('click',close);
+      qs('.lightbox__tap-prev',lb).addEventListener('click', e => { e.stopPropagation(); showPress(pressCur-1); });
+      qs('.lightbox__tap-next',lb).addEventListener('click', e => { e.stopPropagation(); showPress(pressCur+1); });
+      document.addEventListener('keydown', e => {
+        if (!lb.classList.contains('open')) return;
+        if (e.key==='Escape') close();
+        if (e.key==='ArrowLeft') showPress(pressCur-1);
+        if (e.key==='ArrowRight') showPress(pressCur+1);
+      });
+    }
+    showPress(idx);
   }
 
   // ── Boot ──────────────────────────────────────────────────

@@ -3,7 +3,7 @@
     "id": "swarna-jhanak",
     "year": 2026,
     "date": "2026-07",
-    "coming_soon": true,
+    "coming_soon": false,
     "edition": 1,
     "edition_label": { "hi": "प्रथम संस्करण, जुलाई २०२६", "en": "1st edition, July 2026" },
     "genre": { "key": "hindi-nonfiction", "hi": "हिन्दी कथेतर गद्य", "en": "Hindi Non-Fiction" },
@@ -18,7 +18,14 @@
     },
     "links": {
       "amazon_in": "https://www.amazon.in/dp/8169009022"
-    }
+    },
+    "press": [
+      { "image": "assets/images/clippings/swarna-jhanak-clipping-1.jpeg", "source": "खबरें दिन भर", "date": "2026-07-10" },
+      { "image": "assets/images/clippings/swarna-jhanak-clipping-2.jpeg", "source": "", "date": "2026-07-10" },
+      { "image": "assets/images/clippings/swarna-jhanak-clipping-3.jpeg", "source": "", "date": "2026-07-10" },
+      { "image": "assets/images/clippings/swarna-jhanak-clipping-4.jpeg", "source": "", "date": "2026-07-10" },
+      { "image": "assets/images/clippings/swarna-jhanak-clipping-5.jpeg", "source": "Jeevan Express", "date": "2026-07-11" }
+    ]
   },
   {
     "id": "teevra-madhyam",

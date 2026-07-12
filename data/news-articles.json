@@ -1,5 +1,31 @@
 [
   {
+    "id": "khabrein-din-bhar-swarna-jhanak",
+    "source": "खबरें दिन भर",
+    "date": "2026-07-10",
+    "canonical_id": "swarna-jhanak",
+    "quote": {
+      "hi": "के.बी.पी.जी. कॉलेज में 'स्वर्ण-झनक' पुस्तक का लोकार्पण, प्राचार्य ने कहा - काशी की केन्द्रीयता पर नई दृष्टि देती है कृति।",
+      "en": "'Swarna-Jhanak' launched at K.B.P.G. College — the Principal said the work offers a new perspective on the centrality of Kashi."
+    },
+    "attribution": { "hi": "प्रो. रवींद्र कुमार द्विवेदी", "en": "Prof. Ravindra Kumar Dwivedi" },
+    "url": "assets/images/clippings/swarna-jhanak-clipping-1.jpeg",
+    "archive_url": ""
+  },
+  {
+    "id": "jeevan-express-swarna-jhanak",
+    "source": "Jeevan Express",
+    "date": "2026-07-11",
+    "canonical_id": "swarna-jhanak",
+    "quote": {
+      "hi": "'स्वर्ण-झनक', आलोचनात्मक अंतर्दृष्टि पर आधारित पुस्तक, प्रकाशित। पुस्तक का लोकार्पण के.बी.पी.जी. कॉलेज के प्राचार्य प्रो. रवींद्र द्विवेदी द्वारा किया गया।",
+      "en": "'Swarn Jhanak', a book based on critical insights, has been released. The book was released by Prof. Ravindra Dwivedi, Principal of K.B. College."
+    },
+    "attribution": { "hi": "जीवन एक्सप्रेस", "en": "Jeevan Express" },
+    "url": "assets/images/clippings/swarna-jhanak-clipping-5.jpeg",
+    "archive_url": ""
+  },
+  {
     "id": "lallantop",
     "source": "The Lallantop",
     "date": "2016-03-06",
