@@ -51,15 +51,27 @@
     return `https://www.youtube.com/embed/${id}?rel=0`;
   }
 
+  const MONTHS = {
+    hi: ['जनवरी','फ़रवरी','मार्च','अप्रैल','मई','जून','जुलाई','अगस्त','सितम्बर','अक्टूबर','नवम्बर','दिसम्बर'],
+    en: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+  };
+
   function fmtDate(str) {
     if (!str) return '';
     const [y, m] = str.split('-');
     if (!m) return y;
-    const months = {
-      hi: ['जनवरी','फ़रवरी','मार्च','अप्रैल','मई','जून','जुलाई','अगस्त','सितम्बर','अक्टूबर','नवम्बर','दिसम्बर'],
-      en: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-    };
-    return `${months[lang][parseInt(m,10)-1]} ${y}`;
+    return `${MONTHS[lang][parseInt(m,10)-1]} ${y}`;
+  }
+
+  // Day-precision variant — used only where two same-month items must stay
+  // distinguishable (e.g. adjacent press clippings). fmtDate() intentionally
+  // stays month-precision everywhere else on the site.
+  function fmtDateFull(str) {
+    if (!str) return '';
+    const [y, m, d] = str.split('-');
+    if (!m) return y;
+    if (!d) return fmtDate(str);
+    return `${parseInt(d,10)} ${MONTHS[lang][parseInt(m,10)-1]} ${y}`;
   }
 
   async function fetchJSON(path) {
@@ -282,6 +294,11 @@
     });
     document.addEventListener('keydown',e=>{
       if (!modal.classList.contains('open')) return;
+      // The press lightbox renders on top of this modal (higher z-index) and
+      // has its own Escape/Arrow handling — defer to it so Escape doesn't
+      // close both at once and Arrow keys don't navigate the book underneath
+      // while its (now stale) press gallery is still showing.
+      if (qs('#press-lightbox')?.classList.contains('open')) return;
       if (e.key==='Escape') close();
       if (e.key==='ArrowLeft')  qs('.book-detail__nav--prev',modal).click();
       if (e.key==='ArrowRight') qs('.book-detail__nav--next',modal).click();
@@ -808,7 +825,7 @@
     const lb = pressLightboxEl;
     pressCur = ((idx % pressImages.length) + pressImages.length) % pressImages.length;
     const item = pressImages[pressCur];
-    const caption = [item.source, item.date ? fmtDate(item.date) : ''].filter(Boolean).join(' · ');
+    const caption = [item.source, item.date ? fmtDateFull(item.date) : ''].filter(Boolean).join(' · ');
     qs('.lightbox__img',lb).src = item.image;
     qs('.lightbox__img',lb).alt = item.source || caption;
     qs('.lightbox__caption',lb).textContent = caption;
@@ -832,7 +849,12 @@
         </div>`;
       document.body.appendChild(lb);
       pressLightboxEl = lb;
-      const close = () => { lb.classList.remove('open'); document.body.style.overflow=''; };
+      // Only release the shared scroll lock if the book-detail modal
+      // underneath isn't also still open and relying on it.
+      const close = () => {
+        lb.classList.remove('open');
+        if (!qs('#book-detail-modal')?.classList.contains('open')) document.body.style.overflow = '';
+      };
       qs('.lightbox__backdrop',lb).addEventListener('click',close);
       qs('.lightbox__close',lb).addEventListener('click',close);
       qs('.lightbox__tap-prev',lb).addEventListener('click', e => { e.stopPropagation(); showPress(pressCur-1); });

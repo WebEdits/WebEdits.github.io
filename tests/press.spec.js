@@ -36,10 +36,31 @@ test.describe('Book detail — press coverage', () => {
     await expect(page.locator('#press-lightbox')).not.toHaveClass(/open/);
   });
 
-  test('Escape key closes the press lightbox', async ({ page }) => {
+  test('Escape key closes only the press lightbox, not the book detail modal underneath', async ({ page }) => {
     await page.locator('.book-detail__press-thumb').first().click();
     await page.keyboard.press('Escape');
     await expect(page.locator('#press-lightbox')).not.toHaveClass(/open/);
+    await expect(page.locator('#book-detail-modal')).toHaveClass(/open/);
+  });
+
+  test('closing the lightbox while the book modal stays open keeps page scroll locked', async ({ page }) => {
+    await page.locator('.book-detail__press-thumb').first().click();
+    await page.locator('#press-lightbox .lightbox__close').click();
+    await expect(page.locator('#book-detail-modal')).toHaveClass(/open/);
+    const overflow = await page.evaluate(() => document.body.style.overflow);
+    expect(overflow).toBe('hidden');
+  });
+
+  test('ArrowRight while the lightbox is open advances the image, not the book underneath', async ({ page }) => {
+    await page.locator('.book-detail__press-thumb').first().click();
+    const bookTitleBefore = await page.locator('.book-detail__title').textContent();
+    const firstSrc = await page.locator('#press-lightbox .lightbox__img').getAttribute('src');
+    await page.keyboard.press('ArrowRight');
+    const nextSrc = await page.locator('#press-lightbox .lightbox__img').getAttribute('src');
+    expect(nextSrc).not.toBe(firstSrc);
+    await expect(page.locator('#press-lightbox')).toHaveClass(/open/);
+    const bookTitleAfter = await page.locator('.book-detail__title').textContent();
+    expect(bookTitleAfter).toBe(bookTitleBefore);
   });
 
   test('next tap zone advances to a different image', async ({ page }) => {
@@ -56,6 +77,16 @@ test.describe('Book detail — press coverage', () => {
     await page.locator('#press-lightbox .lightbox__tap-prev').click();
     const prevSrc = await page.locator('#press-lightbox .lightbox__img').getAttribute('src');
     expect(prevSrc).not.toBe(firstSrc);
+  });
+
+  test('captions for clippings on different days stay distinguishable', async ({ page }) => {
+    // clipping 1 is dated 2026-07-10, clipping 5 is dated 2026-07-11 — same month.
+    await page.locator('.book-detail__press-thumb').nth(0).click();
+    const firstCaption = await page.locator('#press-lightbox .lightbox__caption').textContent();
+    await page.keyboard.press('Escape'); // close lightbox only; thumbnails are behind it while open
+    await page.locator('.book-detail__press-thumb').nth(4).click();
+    const lastCaption = await page.locator('#press-lightbox .lightbox__caption').textContent();
+    expect(lastCaption).not.toBe(firstCaption);
   });
 });
 

@@ -45,6 +45,12 @@ test.describe('News & Articles section', () => {
     const href = await page.locator('#news-articles-grid .media-card__cover-link').first().getAttribute('href');
     expect(href).toBeTruthy();
   });
+
+  test('a scanned clipping with no live URL is marked with the archive badge, not styled as a live link', async ({ page }) => {
+    // The Jeevan Express card only has an archive_url (a local scanned image), no live url.
+    const card = page.locator('#news-articles-grid .media-card', { hasText: 'Jeevan Express' });
+    await expect(card.locator('.media-card__archive-badge')).toBeVisible();
+  });
 });
 
 test.describe('Interviews section', () => {
