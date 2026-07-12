@@ -24,9 +24,10 @@
     },
     "body": {
       "hi": "दर्शन और संस्कृति चिन्तन पर केन्द्रित नई पुस्तक तीव्र मध्यम उपलब्ध।",
-      "en": "A new book on philosophy and cultural reflection, Teevra Madhyam, is available now."
+      "en": "A new book on philosophy and cultural reflection, Teevra Madhyam, is now available."
     },
-    "book_id": "teevra-madhyam"
+    "book_id": "teevra-madhyam",
+    "link": "https://www.amazon.in/dp/9364070690"
   },
   {
     "id": "abhinav-cinema-3rd-edition",
