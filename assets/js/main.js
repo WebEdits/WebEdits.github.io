@@ -323,7 +323,9 @@
              <p class="placeholder-title">${t(book.title)}</p>
              <p class="placeholder-year">${book.year}</p>
            </div>`;
-      const badge = book.new_edition
+      const badge = book.new_title
+        ? `<span class="book-card__badge book-card__badge--title">${lang === 'hi' ? 'नई कृति' : 'New'}</span>`
+        : book.new_edition
         ? `<span class="book-card__badge">${lang === 'hi' ? 'नया संस्करण' : 'New'}</span>` : '';
       const ribbon = book.coming_soon
         ? `<span class="book-card__ribbon">${lang === 'hi' ? 'शीघ्र प्रकाश्य' : 'Coming Soon'}</span>` : '';
@@ -412,7 +414,9 @@
     qs('.book-detail__nav--prev',modal).style.display = has?'':'none';
     qs('.book-detail__nav--next',modal).style.display = has?'':'none';
 
-    const badge = book.new_edition
+    const badge = book.new_title
+      ? `<span class="book-detail__badge book-detail__badge--title">${lang==='hi'?'नई कृति':'New Title'}</span>`
+      : book.new_edition
       ? `<span class="book-detail__badge">${lang==='hi'?'नया संस्करण':'New Edition'}</span>`
       : book.coming_soon
       ? `<span class="book-detail__badge book-detail__badge--soon">${lang==='hi'?'शीघ्र प्रकाश्य':'Coming Soon'}</span>` : '';

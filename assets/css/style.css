@@ -345,6 +345,11 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   padding: 0.15rem 0.5rem; border-radius: var(--radius-pill);
 }
 
+.book-card__badge--title {
+  background: var(--ink); color: var(--saffron-pale);
+  border: 1px solid var(--saffron);
+}
+
 .book-card__ribbon {
   position: absolute; top: 0.85rem; left: -2.3rem; z-index: 2;
   width: 8rem; transform: rotate(-45deg);
@@ -405,6 +410,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   padding: 0.15rem 0.5rem; border-radius: var(--radius-pill); margin-left: 0.4rem; vertical-align: middle;
 }
 .book-detail__badge--soon { background: rgba(200,160,104,0.25); color: #c8a068; }
+.book-detail__badge--title { background: transparent; color: var(--saffron); border: 1px solid var(--saffron); }
 .book-detail__subtitle { font-family: var(--serif); font-style: italic; font-size: 0.98rem; color: #c0a888; }
 .book-detail__publisher { font-size: 0.78rem; color: rgba(200,160,104,0.7); }
 .book-detail__desc { font-size: 0.92rem; color: #c0a888; line-height: 1.8; margin-top: 0.25rem; }
