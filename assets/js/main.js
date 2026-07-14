@@ -53,7 +53,7 @@
   }
 
   // ── Swipe gestures ────────────────────────────────────────
-  // Shared by the gallery lightbox, press lightbox, and book-detail modal.
+  // Shared by the gallery lightbox and book-detail modal.
   // A short touch (under THRESHOLD in both axes) is left alone so the
   // existing tap/click handlers on the same element still fire normally.
   function attachSwipeNav(el, { onPrev, onNext, onDismissDown } = {}) {
@@ -126,17 +126,6 @@
     const [y, m] = str.split('-');
     if (!m) return y;
     return `${MONTHS[lang][parseInt(m,10)-1]} ${y}`;
-  }
-
-  // Day-precision variant — used only where two same-month items must stay
-  // distinguishable (e.g. adjacent press clippings). fmtDate() intentionally
-  // stays month-precision everywhere else on the site.
-  function fmtDateFull(str) {
-    if (!str) return '';
-    const [y, m, d] = str.split('-');
-    if (!m) return y;
-    if (!d) return fmtDate(str);
-    return `${parseInt(d,10)} ${MONTHS[lang][parseInt(m,10)-1]} ${y}`;
   }
 
   async function fetchJSON(path) {
@@ -390,11 +379,6 @@
     attachSwipeNav(qs('.book-detail__panel',modal), { onPrev: goPrev, onNext: goNext });
     document.addEventListener('keydown',e=>{
       if (!modal.classList.contains('open')) return;
-      // The press lightbox renders on top of this modal (higher z-index) and
-      // has its own Escape/Arrow handling — defer to it so Escape doesn't
-      // close both at once and Arrow keys don't navigate the book underneath
-      // while its (now stale) press gallery is still showing.
-      if (qs('#press-lightbox')?.classList.contains('open')) return;
       if (e.key==='Escape') close();
       if (e.key==='ArrowLeft')  goPrev();
       if (e.key==='ArrowRight') goNext();
@@ -446,16 +430,6 @@
           </div>
         </div>` : '';
 
-    const pressHTML = (book.press||[]).length
-      ? `<div class="book-detail__press">
-          <p class="book-detail__press-label">${lang==='hi'?'प्रेस में':'Press Coverage'}</p>
-          <div class="book-detail__press-grid">
-            ${book.press.map((p,i)=>`<button type="button" class="book-detail__press-thumb" data-idx="${i}">
-                <img src="${p.image}" alt="${p.source||t(book.title)}" loading="lazy">
-              </button>`).join('')}
-          </div>
-        </div>` : '';
-
     qs('.book-detail__cover-wrap',modal).innerHTML = book.cover
       ? `<img src="${book.cover}" alt="${t(book.title)}" loading="lazy">` : '';
     qs('.book-detail__content',modal).innerHTML = `
@@ -466,14 +440,10 @@
       <p class="book-detail__desc">${t(book.description)}</p>
       ${buyLinks?`<div class="book-detail__links">${buyLinks}</div>`:''}
       ${reviewsBtn}
-      ${editionHTML}
-      ${pressHTML}`;
+      ${editionHTML}`;
 
     qsa('.book-detail__edition-btn',modal).forEach(btn=>
       btn.addEventListener('click',()=>{ const ed=allBooks.find(b=>b.id===btn.dataset.id); if(ed) openBookDetail(ed,false); }));
-
-    qsa('.book-detail__press-thumb',modal).forEach(btn=>
-      btn.addEventListener('click',()=>openPressLightbox(book.press,Number(btn.dataset.idx))));
 
     const rvBtn = qs('.book-detail__reviews-btn',modal);
     if (rvBtn) {
@@ -704,12 +674,12 @@
   // z-index. Nesting the archive <a> inside a card-wide <a> would make the
   // browser's HTML parser split the anchors into stray sibling nodes.
   function mediaCardHTML(item, ariaLabel, bodyHTML) {
-    const href = item.url || item.archive_url || '#';
+    const href = item.url || item.archive_url;
     const isArchiveOnly = !item.url && item.archive_url;
     const hasArchive = item.url && item.archive_url;
     return `
       <div class="media-card">
-        <a class="media-card__cover-link" href="${href}" target="_blank" rel="noopener" aria-label="${ariaLabel}"></a>
+        ${href ? `<a class="media-card__cover-link" href="${href}" target="_blank" rel="noopener" aria-label="${ariaLabel}"></a>` : ''}
         <div class="media-card__head">
           <span class="media-card__source">
             ${item.source}
@@ -921,68 +891,6 @@
       if (e.key==='ArrowLeft') show(cur-1);
       if (e.key==='ArrowRight') show(cur+1);
     });
-  }
-
-  // ── Book press-coverage lightbox (built lazily; image list swapped
-  //    per book on each open, since press coverage differs per title) ──
-  let pressLightboxEl = null;
-  let pressImages = [];
-  let pressCur = 0;
-  let pressLightboxHide = null;
-  function showPress(idx) {
-    const lb = pressLightboxEl;
-    const wasOpen = lb.classList.contains('open');
-    pressCur = ((idx % pressImages.length) + pressImages.length) % pressImages.length;
-    const item = pressImages[pressCur];
-    const caption = [item.source, item.date ? fmtDateFull(item.date) : ''].filter(Boolean).join(' · ');
-    qs('.lightbox__img',lb).src = item.image;
-    qs('.lightbox__img',lb).alt = item.source || caption;
-    qs('.lightbox__caption',lb).textContent = caption;
-    lb.classList.add('open'); document.body.style.overflow = 'hidden';
-    if (!wasOpen) pushModalState(pressLightboxHide);
-  }
-  function openPressLightbox(press, idx) {
-    pressImages = press;
-    if (!pressLightboxEl) {
-      const lb = document.createElement('div');
-      lb.id = 'press-lightbox';
-      lb.setAttribute('role','dialog');
-      lb.setAttribute('aria-modal','true');
-      lb.innerHTML = `
-        <div class="lightbox__backdrop"></div>
-        <button class="lightbox__close" aria-label="Close">&#x2715;</button>
-        <div class="lightbox__content">
-          <div class="lightbox__tap-prev" aria-label="Previous" role="button" tabindex="0"></div>
-          <div class="lightbox__tap-next" aria-label="Next"     role="button" tabindex="0"></div>
-          <img class="lightbox__img" src="" alt="">
-          <p class="lightbox__caption"></p>
-        </div>`;
-      document.body.appendChild(lb);
-      pressLightboxEl = lb;
-      // Only release the shared scroll lock if the book-detail modal
-      // underneath isn't also still open and relying on it.
-      pressLightboxHide = () => {
-        lb.classList.remove('open');
-        if (!qs('#book-detail-modal')?.classList.contains('open')) document.body.style.overflow = '';
-      };
-      const close = () => closeModalState(pressLightboxHide);
-      qs('.lightbox__backdrop',lb).addEventListener('click',close);
-      qs('.lightbox__close',lb).addEventListener('click',close);
-      qs('.lightbox__tap-prev',lb).addEventListener('click', e => { e.stopPropagation(); showPress(pressCur-1); });
-      qs('.lightbox__tap-next',lb).addEventListener('click', e => { e.stopPropagation(); showPress(pressCur+1); });
-      attachSwipeNav(qs('.lightbox__content',lb), {
-        onPrev: () => showPress(pressCur-1),
-        onNext: () => showPress(pressCur+1),
-        onDismissDown: close
-      });
-      document.addEventListener('keydown', e => {
-        if (!lb.classList.contains('open')) return;
-        if (e.key==='Escape') close();
-        if (e.key==='ArrowLeft') showPress(pressCur-1);
-        if (e.key==='ArrowRight') showPress(pressCur+1);
-      });
-    }
-    showPress(idx);
   }
 
   // ── Boot ──────────────────────────────────────────────────
