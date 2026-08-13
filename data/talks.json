@@ -1,5 +1,22 @@
 [
   {
+    "id": "abhinav-cinema-2026",
+    "description": {
+      "hi": "रस-सिद्धान्त के आलोक में विश्व सिनेमा का परिचय।",
+      "en": "Introduction to the World  Cinema in the  light of Rasa  Siddhant"
+    },
+    "videos": [
+      {
+        "youtube_id": "QotMHYTCLmk",
+        "date": "2026-08-17",
+        "title": {
+          "hi": "अभिनव सिनेमा: रस-सिद्धान्त के आलोक में विश्व सिनेमा का परिचय",
+          "en": "Abhinav Cinema: Introduction to the World  Cinema in the  light of Rasa  Siddhant"
+        }
+      }
+    ]
+  },
+  {
     "id": "sangam-humor-2026",
     "seriesTitle": {
       "hi": "अभिनवगुप्त की हास्य-अवधारणा",
