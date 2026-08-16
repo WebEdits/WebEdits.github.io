@@ -803,6 +803,8 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
   font-family: var(--serif); font-size: 1rem; line-height: 1.75; color: var(--ink);
   padding-left: 1rem; border-left: 2px solid var(--saffron-pale);
   flex: 1;
+  min-height: 0;
+  overflow-y: auto;
 }
 
 .review-card__links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
