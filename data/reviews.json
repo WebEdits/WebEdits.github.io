@@ -729,5 +729,39 @@
     "source": { "hi": "", "en": "" },
     "url": "",
     "archive_url": ""
+  },
+  {
+    "id": "anand-kumar-singh-swarna-jhanak",
+    "type": "review",
+    "canonical_id": "swarna-jhanak",
+    "date": "2026-08",
+    "photo": "assets/images/reviewers/anand-kumar-singh.jpg",
+    "bio": { "hi": "कवि व हिन्दी प्राध्यापक, गाजीपुर", "en": "Poet and Professor of Hindi, Ghazipur" },
+    "quote": {
+      "hi": "पुस्तक का नाम निराला जी की सुप्रसिद्ध शोकगीति ‘सरोज स्मृति’ के उस अंश से प्रेरित है जिसमें वह कहते हैं कि सरोज को नानी के घर से लेकर वह उसी तरह चले जैसे कोई भिक्षुक स्वर्ण के गहने लेकर चलता है। उसमें उन झनकते-खनकते (जो छिपाये न छिपे!) स्वर्णाभूषणों को सुरक्षित रखने का भय और लाचारी -दोनों बातें अनुस्यूत हैं। यह पुस्तक इस ब्याज से कई संकेत करना चाहती है, कुछ अपने बारे में और कुछ हिंदी आलोचना के वैभव और उसकी ध्वन्यात्मकता के बारे में। यह नहीं कहूँगा कि उनकी प्रत्येक स्थापना से मैं सहमत हूँ, किंतु जिन लेखकों और कृतियों के बहाने उन्होंने प्रश्न उठाए हैं, वे आकर्षित करते हैं और सोचने के लिए बाध्य करते हैं।",
+      "en": "The book's title draws inspiration from a passage in Nirala's celebrated elegy 'Saroj Smriti,' where he says that he carried Saroj away from her grandmother's house the way a mendicant carries away gold ornaments. Woven into that image are both the fear and the helplessness of keeping safe those jingling, clinking ornaments that cannot be concealed. Through this device, the book seeks to gesture at many things — partly about itself, and partly about the splendour and resonance of Hindi criticism. I will not say I agree with every one of its positions, but the writers and works through whose pretext it raises its questions are compelling, and they force one to think."
+    },
+    "attribution": { "hi": "आनन्द कुमार सिंह", "en": "Anand Kumar Singh" },
+    "role": { "hi": "कवि व हिन्दी प्राध्यापक, गाजीपुर", "en": "Poet and Professor of Hindi, Ghazipur" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
+  },
+  {
+    "id": "shahanshah-alam-swarna-jhanak",
+    "type": "review",
+    "canonical_id": "swarna-jhanak",
+    "date": "2026-08",
+    "photo": "assets/images/reviewers/shahanshah-alam.jpg",
+    "bio": { "hi": "संपादक - वाचन, पटना", "en": "Editor, Vaachan, Patna" },
+    "quote": {
+      "hi": "इस किताब को हम आलोचना के संसार में एक नई और अनूठी आमद कह सकते हैं। नई और अनूठी इसलिए कि लेखकद्वय ने इस किताब के बहाने जो कुछ भी लिखा है, ईमानदारी से लिखा है। आलोचना की पहली शर्त ईमानदारी ही तो है।",
+      "en": "We can call this book a new and singular arrival in the world of criticism. New and singular because whatever the two authors have written, under the pretext of this book, they have written honestly. After all, honesty is the first condition of criticism."
+    },
+    "attribution": { "hi": "शहंशाह आलम", "en": "Shahanshah Alam" },
+    "role": { "hi": "संपादक - वाचन, पटना", "en": "Editor, Vaachan, Patna" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
   }
 ]
