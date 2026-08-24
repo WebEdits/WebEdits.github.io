@@ -763,5 +763,22 @@
     "source": { "hi": "", "en": "" },
     "url": "",
     "archive_url": ""
+  },
+  {
+    "id": "dheerendra-pratap-singh-uttarayan",
+    "type": "review",
+    "canonical_id": "uttarayan",
+    "date": "2026-08",
+    "photo": "assets/images/reviewers/dheerendra-pratap-singh.jpg",
+    "bio": { "hi": "युवा आलोचक", "en": "Young literary critic" },
+    "quote": {
+      "hi": "'उत्तरायण' कथा-संग्रह में चैतन्य और बेचैन मन की गुत्थियाँ हैं। भाषा के ढहान सहित तमाम आसन्न संकटों की गाथा है। हिन्दी भाषा के साहित्य और व्याकरण की रिक्तताओं और पतन की पीड़ा है। पीकदान के रूप में ढलती जा रही भाषा की उधड़ी परतें हैं तो दूसरी ओर उसी भाषा के धारदार तेवर भी हैं। भाषा और विचार को नियंत्रित करने वाली शक्ति-संरचनाओं और उनकी पहरेदारी की पड़ताल है।",
+      "en": "The story collection 'Uttarayan' holds the knots of a conscious yet restless mind. It is the tale of every looming crisis, including the erosion of language itself. It carries the anguish of the emptiness and decline in Hindi literature and grammar. On one side are the frayed, unravelling layers of a language being reduced to a spittoon; on the other, that same language's sharp, cutting edge. It is an inquiry into the power structures that control language and thought, and the vigilance that guards them."
+    },
+    "attribution": { "hi": "धीरेन्द्र प्रताप सिंह", "en": "Dheerendra Pratap Singh" },
+    "role": { "hi": "युवा आलोचक", "en": "Young literary critic" },
+    "source": { "hi": "", "en": "" },
+    "url": "",
+    "archive_url": ""
   }
 ]
