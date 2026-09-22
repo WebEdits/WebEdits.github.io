@@ -214,6 +214,32 @@
     ]
   },
   {
+    "id": "MMTC-2026",
+    "date": "2026-09",
+    "title": {
+      "hi": "आधुनिक समय में भाषा शिक्षण: डिजिटल युग में कृत्रिम बुद्धिमत्ता की भूमिका और प्रभाव",
+      "en": "Language Teaching in Modern Times: Role and Impact of AI in the digital age"
+    },
+    "description": {
+      "hi": "MMTC, जेएनयू - आधुनिक समय में भाषा शिक्षण: डिजिटल युग में कृत्रिम बुद्धिमत्ता की भूमिका और प्रभाव",
+      "en": "Speaker at MMTC, JNU - Language Teaching in Modern Times: Role and Impact of AI in the digital age"
+    },
+    "videos": []
+  },
+  {
+    "id": "JNU-2026",
+    "date": "2026-04",
+    "title": {
+      "hi": "भारतीय शास्त्रीय ध्वनिविज्ञान, संस्कृत और इंडिक अध्ययन विद्यालय",
+      "en": "Indian Classical Phonology, School of Sanskrit & Indic Studies"
+    },
+    "description": {
+      "hi": "जेएनयू में वक्ता - भारतीय शास्त्रीय ध्वनिविज्ञान, संस्कृत और इंडिक अध्ययन विद्यालय",
+      "en": "Speaker at JNU - Indian Classical Phonology, School of Sanskrit & Indic Studies"
+    },
+    "videos": []
+  },
+  {
     "id": "publicon-2018",
     "date": "2018-12",
     "title": {
