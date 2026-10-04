@@ -1,5 +1,16 @@
 [
   {
+    "id": "scroll-vishnu-khare",
+    "title": {
+      "hi": "विष्णु खरे (1940-2018) ने अपनी लेखनी और अध्यापन के ज़रिए हिंदी साहित्य को बहुत प्रभावित किया।",
+      "en": "Vishnu Khare (1940-2018) influenced Hindi literature hugely with what he wrote and what he taught."
+    },
+    "source": "Scoll.in",
+    "date": "2026-02",
+    "url": "https://scroll.in/article/895300/vishnu-khare-1940-2018-influenced-hindi-literature-hugely-with-what-he-wrote-and-what-he-taught",
+    "archive_url": ""
+  },
+  {
     "id": "pahleebar-varnochchar",
     "title": {
       "hi": "वर्णोच्चार विधान — भारतीय शास्त्रीय ध्वनितत्त्वशास्त्र पर एक परिचयात्मक आलेख।",
@@ -13,7 +24,7 @@
   {
     "id": "swarajya-rasa-siddhanta",
     "title": {
-      "hi": "Of Rasa-Siddhanta, Vibhatsa Rasa and World Cinema",
+      "hi": "रस-सिद्धान्त, वीभत्स रस और विश्व सिनेमा का",
       "en": "Of Rasa-Siddhanta, Vibhatsa Rasa and World Cinema"
     },
     "source": "Swarajya",
@@ -25,7 +36,7 @@
     "id": "nbt-shishtachar",
     "title": {
       "hi": "चुनाव में पीछे छूट गया शिष्टाचार",
-      "en": ""
+      "en": "Civility fell by the wayside in the election."
     },
     "source": "Navbharat Times",
     "date": "2018-08-17",

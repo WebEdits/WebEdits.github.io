@@ -214,6 +214,53 @@
     ]
   },
   {
+    "id": "clf-2014",
+    "description": {
+      "hi": "सत्यानन्द निरुपम के साथ संवाद — चण्डीगढ़ साहित्य महोत्सव।",
+      "en": "In conversation with Satyanand Nirupam at the Chandigarh Literature Festival 2014."
+    },
+    "videos": [
+      {
+        "youtube_id": "bMTBu55tajs",
+        "date": "2014-11",
+        "title": {
+          "hi": "चण्डीगढ़ साहित्य महोत्सव २०१४",
+          "en": "Chandigarh Literature Festival 2014"
+        }
+      }
+    ]
+  },
+  {
+    "id": "world-book-fair-2014",
+    "description": {
+      "hi": "22वें विश्व पुस्तक मेले, नई दिल्ली में हिन्दी लोकप्रिय लेखन और बेस्टसेलर पर परिचर्चा में पैनलिस्ट — 20 फ़रवरी 2014।",
+      "en": "Panellist on Hindi popular writing and bestsellers at the 22nd World Book Fair, New Delhi — February 20, 2014."
+    },
+    "videos": [
+      {
+        "youtube_id": "FdtHBm0DiWU",
+        "date": "2014-02-21",
+        "title": {
+          "hi": "विश्व पुस्तक मेला २०१४ — हिन्दी लोकप्रिय लेखन",
+          "en": "World Book Fair 2014 — Hindi Popular Writing and Bestsellers"
+        }
+      }
+    ]
+  },
+  {
+    "id": "MMTC-Bhagalpur-2026",
+    "date": "2026-10",
+    "title": {
+      "hi": "आधुनिक समय में भाषा शिक्षण: डिजिटल युग में कृत्रिम बुद्धिमत्ता की भूमिका और प्रभाव, मालवीय मिशन टीचर ट्रेनिङ् सेन्टर, बी॰ एन॰ कॉलेज, भागलपुर",
+      "en": "Language Teaching in Modern Times: Role and Impact of AI in the digital age, MMTTC, B N College, Bhagalpur"
+    },
+    "description": {
+      "hi": "आधुनिक समय में भाषा शिक्षण: डिजिटल युग में कृत्रिम बुद्धिमत्ता की भूमिका और प्रभाव, मालवीय मिशन टीचर ट्रेनिङ् सेन्टर, बी॰ एन॰ कॉलेज, भागलपुर।",
+      "en": "Language Teaching in Modern Times: Role and Impact of AI in the digital age, MMTTC, B N College, Bhagalpur."
+    },
+    "videos": []
+  },
+  {
     "id": "MMTC-2026",
     "date": "2026-09",
     "title": {
@@ -292,37 +339,16 @@
     "videos": []
   },
   {
-    "id": "clf-2014",
-    "description": {
-      "hi": "सत्यानन्द निरुपम के साथ संवाद — चण्डीगढ़ साहित्य महोत्सव।",
-      "en": "In conversation with Satyanand Nirupam at the Chandigarh Literature Festival 2014."
+    "id": "clf-literati-2014",
+    "date": "2014-11",
+    "title": {
+      "hi": "चण्डीगढ़ साहित्य समारोह, चण्डीगढ",
+      "en": "Chandigarh Literature Festival, Chandigarh"
     },
-    "videos": [
-      {
-        "youtube_id": "bMTBu55tajs",
-        "date": "2014-11",
-        "title": {
-          "hi": "चण्डीगढ़ साहित्य महोत्सव २०१४",
-          "en": "Chandigarh Literature Festival 2014"
-        }
-      }
-    ]
-  },
-  {
-    "id": "world-book-fair-2014",
     "description": {
-      "hi": "22वें विश्व पुस्तक मेले, नई दिल्ली में हिन्दी लोकप्रिय लेखन और बेस्टसेलर पर परिचर्चा में पैनलिस्ट — 20 फ़रवरी 2014।",
-      "en": "Panellist on Hindi popular writing and bestsellers at the 22nd World Book Fair, New Delhi — February 20, 2014."
+      "hi": "चण्डीगढ़ साहित्य समारोह, चण्डीगढ।",
+      "en": "Chandigarh Literature Festival, Chandigarh."
     },
-    "videos": [
-      {
-        "youtube_id": "FdtHBm0DiWU",
-        "date": "2014-02-21",
-        "title": {
-          "hi": "विश्व पुस्तक मेला २०१४ — हिन्दी लोकप्रिय लेखन",
-          "en": "World Book Fair 2014 — Hindi Popular Writing and Bestsellers"
-        }
-      }
-    ]
+    "videos": []
   }
 ]
