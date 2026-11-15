@@ -832,6 +832,7 @@
       const txt = fillCounts(lang==='hi' ? el.dataset.hi : (el.dataset.en||el.dataset.hi));
       if (txt !== null) el.textContent = txt;
     });
+    qsa('[data-rss]').forEach(a => a.setAttribute('href', lang==='hi' ? 'feed.xml' : 'feed-en.xml'));
     qsa('[data-hi-html]').forEach(el => {
       el.innerHTML = lang==='hi' ? el.dataset.hiHtml : (el.dataset.enHtml||el.dataset.hiHtml);
     });

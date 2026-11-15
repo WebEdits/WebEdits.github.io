@@ -63,6 +63,7 @@ edit files, commit, push, and changes are live within ~60 seconds.
 - **Announce a new edition** → edit `data/news.json`
 - **Change site colours** → edit CSS custom properties at top of `assets/css/style.css`
 - **Update bio text** → edit the `data-hi` / `data-en` attributes in `index.html`
+- **RSS feeds** → `feed.xml` (Hindi) and `feed-en.xml` (English) are generated from `data/*.json` by `npm run build:feed`; a GitHub Action rebuilds them automatically (see Deployment)
 - **Add a gallery photo** → place image in `assets/images/`, add `<div class="gallery-item">` in `index.html`
 
 ## Development & testing
@@ -99,6 +100,15 @@ git push origin master
 ```
 
 GitHub Pages serves the updated site within ~60 seconds.
+
+### RSS feeds
+
+`feed.xml` / `feed-en.xml` are generated, not hand-edited. The
+`.github/workflows/feed.yml` Action rebuilds them on every push that changes
+`data/` (and once a day, so items dated in the future appear on their date)
+and commits the result as `github-actions[bot]`. **Run `git pull` before
+starting new work** so you have its latest feed commit. To preview locally:
+`npm run build:feed`.
 
 ## Domain
 

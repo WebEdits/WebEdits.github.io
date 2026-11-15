@@ -18,6 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="प्रचण्ड प्रवीर (हिन्दी)" href="feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Prachand Praveer (English)" href="feed-en.xml">
 </head>
 <body>
 
@@ -82,6 +84,8 @@
     <a href="https://www.facebook.com/profile.php?id=100006989387771" target="_blank" rel="noopener">Facebook</a>
     &nbsp;·&nbsp;
     <a href="https://www.goodreads.com/author/show/4144083.Prachand_Praveer" target="_blank" rel="noopener">Goodreads</a>
+    &nbsp;·&nbsp;
+    <a href="feed.xml" data-hi="RSS" data-en="RSS" data-rss>RSS</a>
   </p>
 </footer>
 
@@ -124,6 +128,7 @@
     qsa('[data-hi]').forEach(el => {
       el.textContent = lang==='hi' ? el.dataset.hi : (el.dataset.en||el.dataset.hi);
     });
+    qsa('[data-rss]').forEach(a => a.setAttribute('href', lang==='hi' ? 'feed.xml' : 'feed-en.xml'));
   }
 
   // Hamburger

@@ -1,0 +1,36 @@
+name: Build RSS feeds
+
+on:
+  push:
+    branches: [master]
+    paths: ['data/**', 'scripts/build-feed.js']
+  schedule:
+    - cron: '30 0 * * *'   # daily, 06:00 IST — publishes items whose date has arrived
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: feed
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/build-feed.js
+      - name: Commit feeds if changed
+        run: |
+          if git diff --quiet -- feed.xml feed-en.xml; then
+            echo "Feeds unchanged"; exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add feed.xml feed-en.xml
+          git commit -m "Rebuild RSS feeds"
+          git push
