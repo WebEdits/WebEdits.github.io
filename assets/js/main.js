@@ -801,9 +801,36 @@
   }
 
   // ── Static text swap ──────────────────────────────────────
+  // Published titles: first editions only (reprints/new editions of the same
+  // book don't add to the count) and nothing that is still coming_soon.
+  function publishedBookCount() {
+    return allBooks.filter(b => !b.coming_soon && (b.edition||1) === 1).length;
+  }
+  const NUM_WORDS = {
+    hi: ['शून्य','एक','दो','तीन','चार','पाँच','छह','सात','आठ','नौ','दस','ग्यारह','बारह','तेरह','चौदह','पन्द्रह','सोलह','सत्रह','अठारह','उन्नीस','बीस',
+         'इक्कीस','बाईस','तेईस','चौबीस','पच्चीस','छब्बीस','सत्ताईस','अट्ठाईस','उनतीस','तीस','इकतीस','बत्तीस','तैंतीस','चौंतीस','पैंतीस','छत्तीस','सैंतीस','अड़तीस','उनतालीस','चालीस'],
+    en: ['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen']
+  };
+  function numWord(n, l) {
+    if (NUM_WORDS[l][n]) return NUM_WORDS[l][n];
+    if (l === 'en' && n < 100) {
+      const tens = ['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+      return tens[Math.floor(n/10)] + (n%10 ? '-' + NUM_WORDS.en[n%10] : '');
+    }
+    return l === 'hi' ? String(n).replace(/\d/g, d => '०१२३४५६७८९'[d]) : String(n);
+  }
+  // Replaces {books} / {Books} (capitalised, English sentence start) in static text.
+  function fillCounts(str) {
+    if (!str || !str.includes('{')) return str;
+    if (!allBooks.length) return null; // data not loaded yet: keep the HTML fallback text
+    const w = numWord(publishedBookCount(), lang);
+    return str.replace(/\{books\}/g, w).replace(/\{Books\}/g, w.charAt(0).toUpperCase() + w.slice(1));
+  }
+
   function renderStaticText() {
     qsa('[data-hi]').forEach(el => {
-      el.textContent = lang==='hi' ? el.dataset.hi : (el.dataset.en||el.dataset.hi);
+      const txt = fillCounts(lang==='hi' ? el.dataset.hi : (el.dataset.en||el.dataset.hi));
+      if (txt !== null) el.textContent = txt;
     });
     qsa('[data-hi-html]').forEach(el => {
       el.innerHTML = lang==='hi' ? el.dataset.hiHtml : (el.dataset.enHtml||el.dataset.hiHtml);
