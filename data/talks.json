@@ -1,5 +1,20 @@
 [
   {
+    "id": "varnochchar-vidhan-2026",
+    "seriesTitle": {
+      "hi": "वर्णोच्चार विधान",
+      "en": "Varnochchar Vidhan"
+    },
+    "description": {
+      "hi": "भारतीय शास्त्रीय ध्वनितत्त्वशास्त्र पर केन्द्रित पुस्तक 'वर्णोच्चार विधान' पर व्याख्यान।",
+      "en": "A talk on Varnochchar Vidhan, the book on Indian classical phonology."
+    },
+    "videos": [
+      { "youtube_id": "gBZKwzW9C6w", "date": "2026-11-16", "title": { "hi": "भाग १", "en": "Part 1" } },
+      { "youtube_id": "h9wJfDifk1w", "date": "2026-11-19", "title": { "hi": "भाग २", "en": "Part 2" } }
+    ]
+  },
+  {
     "id": "abhinav-cinema-2026",
     "description": {
       "hi": "रस-सिद्धान्त के आलोक में विश्व सिनेमा का परिचय।",

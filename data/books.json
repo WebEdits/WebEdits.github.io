@@ -1,5 +1,24 @@
 [
   {
+    "id": "kal-ki-baat-pancham",
+    "canonical_id": "kal-ki-baat",
+    "year": 2027,
+    "date": "2027-01",
+    "coming_soon": true,
+    "edition": 1,
+    "edition_label": { "hi": "प्रथम संस्करण, जनवरी २०२७", "en": "1st edition, January 2027" },
+    "genre": { "key": "hindi-poetics", "hi": "हिन्दी काव्य", "en": "Hindi Poetics" },
+    "title": { "hi": "कल की बात : पञ्चम", "en": "Kal Ki Baat : Pancham" },
+    "subtitle": { "hi": "", "en": "" },
+    "publisher": "",
+    "cover": "assets/images/covers/kal-ki-baat-pancham.png",
+    "description": {
+      "hi": "'कल की बात' श्रृंखला का पाँचवाँ भाग — पञ्चम स्वर पर आधारित। जनवरी २०२७ में प्रकाश्य।",
+      "en": "The fifth volume of the Kal Ki Baat series, structured around the note Pancham. Releasing in January 2027."
+    },
+    "links": {}
+  },
+  {
     "id": "swarna-jhanak",
     "year": 2026,
     "date": "2026-07",

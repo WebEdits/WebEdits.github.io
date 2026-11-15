@@ -4,7 +4,10 @@ const { swipe } = require('./helpers');
 test.describe('Gallery lightbox', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
-    await page.waitForSelector('.gallery-item');
+    // .gallery-item is static HTML, but its click handlers are only wired up
+    // by initGalleryCarousel() after main.js finishes fetching all data JSON.
+    // The lightbox element is created in that same call, so wait for it.
+    await page.locator('#gallery-lightbox').waitFor({ state: 'attached' });
   });
 
   test('8 gallery items are present', async ({ page }) => {
@@ -101,6 +104,9 @@ test.describe('Gallery lightbox', () => {
     await page.locator('.gallery-item').first().click();
     await page.locator('.lightbox__close').click();
     await expect(page.locator('#gallery-lightbox')).not.toHaveClass(/open/);
+    // close() pops its history entry via an async history.back(); wait for
+    // that to land so our goBack() doesn't race it.
+    await expect.poll(() => page.evaluate(() => history.state?.ppModal ?? 0), { timeout: 15000 }).toBe(0);
     // The open→close cycle should have already consumed its own history
     // entry, so a single back press here now leaves the page.
     await page.goBack();

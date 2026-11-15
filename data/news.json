@@ -1,5 +1,19 @@
 [
   {
+    "id": "kal-ki-baat-pancham-coming-soon",
+    "date": "2026-11",
+    "type": "coming_soon",
+    "title": {
+      "hi": "कल की बात : पञ्चम — शीघ्र प्रकाश्य",
+      "en": "Kal Ki Baat : Pancham — Coming Soon"
+    },
+    "body": {
+      "hi": "'कल की बात' श्रृंखला का पाँचवाँ भाग 'पञ्चम' जनवरी २०२७ में प्रकाशित होगा।",
+      "en": "Pancham, the fifth volume of the Kal Ki Baat series, releases in January 2027."
+    },
+    "book_id": "kal-ki-baat-pancham"
+  },
+  {
     "id": "swarna-jhanak-published",
     "date": "2026-07",
     "type": "new_edition",

@@ -568,9 +568,10 @@
       groups[cid].push(r);
     });
 
-    // Order by most recent book year
+    // Order by most recent *published* book year — an announced (coming_soon)
+    // volume shouldn't jump its series to the top before it's out.
     const ordered = Object.entries(groups).sort(([a], [b]) => {
-      const yr = cid => Math.max(0, ...allBooks.filter(bk=>(bk.canonical_id||bk.id)===cid).map(bk=>bk.year||0));
+      const yr = cid => Math.max(0, ...allBooks.filter(bk=>(bk.canonical_id||bk.id)===cid && !bk.coming_soon).map(bk=>bk.year||0));
       return yr(b) - yr(a);
     });
 

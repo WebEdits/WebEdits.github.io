@@ -780,5 +780,25 @@
     "source": { "hi": "", "en": "" },
     "url": "https://pahleebar.blogspot.com/2026/10/blog-post_06.html",
     "archive_url": ""
+  },
+  {
+    "id": "anand-vardhan-dwivedi-uttarayan",
+    "type": "review",
+    "canonical_id": "uttarayan",
+    "date": "2020-09-29",
+    "photo": "assets/images/reviewers/anand-vardhan-dwivedi.jpg",
+    "bio": {
+      "hi": "पेशे से चिकित्सक; हिन्दी के सुधी कवि, समीक्षक तथा साहित्य विवेचक।",
+      "en": "A physician by profession; a discerning Hindi poet, reviewer and literary critic."
+    },
+    "quote": {
+      "hi": "हिन्दी भाषा के एक दुर्द्धर्ष और अपनी तरह के एक अप्रतिम लेखक हैं प्रचण्ड प्रवीर। 'मकर' एक विरल कृति है जिसके पाठक के रूप में कोई भी सजग और सक्रिय पाठक स्वयं को बड़भागी मान सकता है।",
+      "en": "Prachand Praveer is a formidable writer of the Hindi language, and one without equal of his kind. 'Makar' is a rare work — any alert and engaged reader may count themselves fortunate to be among its readers."
+    },
+    "attribution": { "hi": "डॉ॰ आनन्द वर्धन द्विवेदी", "en": "Dr. Anand Vardhan Dwivedi" },
+    "role": { "hi": "कवि, समीक्षक", "en": "Poet and critic" },
+    "source": { "hi": "समालोचन", "en": "Samalochan" },
+    "url": "https://samalochan.blogspot.com/2020/09/blog-post_29.html",
+    "archive_url": ""
   }
 ]
