@@ -5,9 +5,17 @@
     <link>https://prachandpraveer.com/</link>
     <description>New books, posts, talks and news from Prachand Praveer</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://prachandpraveer.com/feed-en.xml" rel="self" type="application/rss+xml"/>
     <atom:link href="https://prachandpraveer.com/feed.xml" rel="alternate" type="application/rss+xml"/>
+    <item>
+      <title>Talk: Varnochchar Vidhan — Part 1</title>
+      <link>https://www.youtube.com/watch?v=gBZKwzW9C6w</link>
+      <guid isPermaLink="false">https://prachandpraveer.com/#talk-varnochchar-vidhan-2026-gBZKwzW9C6w</guid>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A talk on Varnochchar Vidhan, the book on Indian classical phonology.</description>
+      <enclosure url="https://i.ytimg.com/vi/gBZKwzW9C6w/hqdefault.jpg" type="image/jpeg" length="0"/>
+    </item>
     <item>
       <title>Kal Ki Baat : Pancham — Coming Soon</title>
       <link>https://prachandpraveer.com/#news</link>
@@ -397,13 +405,6 @@
       <guid isPermaLink="false">https://prachandpraveer.com/#interview-hindu-post-academia-2021</guid>
       <pubDate>Mon, 22 Nov 2021 00:00:00 GMT</pubDate>
       <description>Hindu Post</description>
-    </item>
-    <item>
-      <title>Media: The Telegraph India</title>
-      <link>https://www.telegraphindia.com/culture/books/review-cinema-through-rasa-a-tryst-with-masterpieces-in-the-light-of-rasa-siddhanta-by-prachand-praveer/cid/1833863</link>
-      <guid isPermaLink="false">https://prachandpraveer.com/#media-telegraph</guid>
-      <pubDate>Fri, 08 Oct 2021 00:00:00 GMT</pubDate>
-      <description>A courageous attempt to view cinema through an entirely new perspective, bringing the ancient Rasa framework to bear on the masterpieces of world cinema.</description>
     </item>
   </channel>
 </rss>

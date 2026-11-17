@@ -5,9 +5,17 @@
     <link>https://prachandpraveer.com/</link>
     <description>प्रचण्ड प्रवीर की नई पुस्तकें, लेख, व्याख्यान और समाचार</description>
     <language>hi-IN</language>
-    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://prachandpraveer.com/feed.xml" rel="self" type="application/rss+xml"/>
     <atom:link href="https://prachandpraveer.com/feed-en.xml" rel="alternate" type="application/rss+xml"/>
+    <item>
+      <title>व्याख्यान: वर्णोच्चार विधान — भाग १</title>
+      <link>https://www.youtube.com/watch?v=gBZKwzW9C6w</link>
+      <guid isPermaLink="false">https://prachandpraveer.com/#talk-varnochchar-vidhan-2026-gBZKwzW9C6w</guid>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 GMT</pubDate>
+      <description>भारतीय शास्त्रीय ध्वनितत्त्वशास्त्र पर केन्द्रित पुस्तक 'वर्णोच्चार विधान' पर व्याख्यान।</description>
+      <enclosure url="https://i.ytimg.com/vi/gBZKwzW9C6w/hqdefault.jpg" type="image/jpeg" length="0"/>
+    </item>
     <item>
       <title>कल की बात : पञ्चम — शीघ्र प्रकाश्य</title>
       <link>https://prachandpraveer.com/#news</link>
@@ -397,13 +405,6 @@
       <guid isPermaLink="false">https://prachandpraveer.com/#interview-hindu-post-academia-2021</guid>
       <pubDate>Mon, 22 Nov 2021 00:00:00 GMT</pubDate>
       <description>Hindu Post</description>
-    </item>
-    <item>
-      <title>मीडिया: The Telegraph India</title>
-      <link>https://www.telegraphindia.com/culture/books/review-cinema-through-rasa-a-tryst-with-masterpieces-in-the-light-of-rasa-siddhanta-by-prachand-praveer/cid/1833863</link>
-      <guid isPermaLink="false">https://prachandpraveer.com/#media-telegraph</guid>
-      <pubDate>Fri, 08 Oct 2021 00:00:00 GMT</pubDate>
-      <description>Cinema through a new lens — सिनेमा को एक नई दृष्टि से देखने का साहसी प्रयास।</description>
     </item>
   </channel>
 </rss>
