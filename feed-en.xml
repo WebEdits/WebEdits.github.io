@@ -5,9 +5,17 @@
     <link>https://prachandpraveer.com/</link>
     <description>New books, posts, talks and news from Prachand Praveer</description>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://prachandpraveer.com/feed-en.xml" rel="self" type="application/rss+xml"/>
     <atom:link href="https://prachandpraveer.com/feed.xml" rel="alternate" type="application/rss+xml"/>
+    <item>
+      <title>Talk: Varnochchar Vidhan — Part 2</title>
+      <link>https://www.youtube.com/watch?v=h9wJfDifk1w</link>
+      <guid isPermaLink="false">https://prachandpraveer.com/#talk-varnochchar-vidhan-2026-h9wJfDifk1w</guid>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A talk on Varnochchar Vidhan, the book on Indian classical phonology.</description>
+      <enclosure url="https://i.ytimg.com/vi/h9wJfDifk1w/hqdefault.jpg" type="image/jpeg" length="0"/>
+    </item>
     <item>
       <title>Talk: Varnochchar Vidhan — Part 1</title>
       <link>https://www.youtube.com/watch?v=gBZKwzW9C6w</link>
@@ -398,13 +406,6 @@
       <guid isPermaLink="false">https://prachandpraveer.com/#interview-frontlist-kkb-2021</guid>
       <pubDate>Wed, 01 Dec 2021 00:00:00 GMT</pubDate>
       <description>Frontlist</description>
-    </item>
-    <item>
-      <title>Interview: Academia has created sharp divide among young Hindi writers</title>
-      <link>https://hindupost.in/education/academia-has-created-sharp-divide-among-young-hindi-writers/#</link>
-      <guid isPermaLink="false">https://prachandpraveer.com/#interview-hindu-post-academia-2021</guid>
-      <pubDate>Mon, 22 Nov 2021 00:00:00 GMT</pubDate>
-      <description>Hindu Post</description>
     </item>
   </channel>
 </rss>
